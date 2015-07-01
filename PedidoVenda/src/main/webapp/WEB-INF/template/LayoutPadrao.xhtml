@@ -8,6 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title><ui:insert name="titulo">Sistema de Pedidos de venda</ui:insert></title>
 	<h:outputStylesheet library="css" name="sistemas.css" />
+	<h:outputScript library="js" name="jquery.maskMoney.js"/>
 </h:head>
 <h:body>
 	<!-- Inserindo componente AJAX Status -->
@@ -45,6 +46,22 @@
 		<a href="http://Nãosei" target="_blank">LinkDaEmpresa</a>
 
 	</footer>
+	
+	<!--  Selecionando todos os componentes que com a classe css moeda (que apenas tem na pagina) 
+	     chamando o script maskMoney com as propriedade desejadas que são:
+	     simbolo decimal, simbolo de milhar e se aceita zero-->
+	<script>
+	 function configurarMoeda(){
+		 $(".moeda").maskMoney({decimal: ",", thousands: ".", allowZero:true});
+	 }
+	  
+	 <!--Quando este documento estiver pronto executar o configurar moeda-->
+	 $(document).ready(function(){
+		 configurarMoeda();
+		 
+	 });
+	 
+	</script>
 </h:body>
 </html>
 
