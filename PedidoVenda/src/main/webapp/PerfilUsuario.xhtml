@@ -14,7 +14,7 @@
 
 		<!-- Painel com Abas -->
 		<!-- activeIndex qual a página que irá carregar Padrão é o 0 ou primeiro-->
-		<p:tabView activeIndex="1" effect="fade" effectDuration="fast" dynamic="true">
+		<p:tabView  dynamic="true" cache="false">
 
 			<p:tab title="Dados pessoais" >
 				<h:panelGrid columns="2" cellpadding="4">
@@ -46,8 +46,12 @@
 					<p:outputLabel value="Cidade" for="cidade" />
 					<p:inputText id="cidade" size="30" />
 				</h:panelGrid>
+				
+				<h:outputText value="#{dataBean.dataAtual}">
+				<f:convertDateTime pattern="HH:mm:ss"/>
+				
+				</h:outputText>
 			</p:tab>
-
 
 		</p:tabView>
 
