@@ -11,8 +11,9 @@
 	<h:outputScript library="js" name="jquery.maskMoney.js"/>
 </h:head>
 <h:body>
-	<!-- Inserindo componente AJAX Status -->
-	<p:ajaxStatus styleClass="ajax-status">
+	<!-- Inserindo componente AJAX Status 
+	  quando houver uma nova renderização , o onsuccess chamará a reconfiguração da mascara de dinheiro-->
+	<p:ajaxStatus styleClass="ajax-status" onsuccess="configurarMoeda()">
 
 		<!--  Inserir o que será ixibido quando uma requisição ajax for iniciada -->
 		<f:facet name="start">
