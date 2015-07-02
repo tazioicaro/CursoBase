@@ -11,11 +11,25 @@
 </h:head>
 <h:body>
 <h:form id="frm">
-<p:dataTable value="#{funcionariosBean.funcionarios}" var="funcionario">
+<p:dataTable value="#{funcionariosBean.funcionarios}" var="funcionario" sortBy="#{funcionario.matricula}" rows="10" paginator="true">
 
-<p:column headerText="Matrícula">
- <h:outputText value="#{funcionario.matricula}"/>
- 
+<!-- Centralizar codigo  e largura em 90px-->
+<p:column headerText="Matrícula" style="text-align:center" width="90" sortBy="#{funcionario.matricula}">
+ <h:outputText value="#{funcionario.matricula}"/> 
+</p:column>
+
+<p:column headerText="Nome" width="250" sortBy="#{funcionario.nome}">
+<h:outputText value="#{funcionario.nome}"/>
+</p:column>
+
+<p:column headerText="Data de Admissão" width="180" style="text-align:center" sortBy="#{funcionario.dataAdmissao}">
+<h:outputText value="#{funcionario.dataAdmissao}">
+<f:convertDateTime pattern="dd/MM/yyyy"/></h:outputText>
+</p:column>
+
+<p:column headerText="Salário" width="140" style="text-align:right">
+<h:outputText value="#{funcionario.salario}">
+<f:convertNumber type="currency" locale="pt_BR"/></h:outputText>
 </p:column>
 
 
