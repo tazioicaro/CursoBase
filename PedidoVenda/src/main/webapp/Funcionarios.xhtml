@@ -11,7 +11,8 @@
 </h:head>
 <h:body>
 <h:form id="frm">
-<p:dataTable value="#{funcionariosBean.funcionarios}" var="funcionario" sortBy="#{funcionario.matricula}" rows="10" paginator="true">
+<p:dataTable value="#{funcionariosBean.funcionarios}" var="funcionario" sortBy="#{funcionario.matricula}" 
+rows="10" paginator="true" paginatorPosition="bottom">
 
 <!-- Centralizar codigo  e largura em 90px-->
 <p:column headerText="Matrícula" style="text-align:center" width="90" sortBy="#{funcionario.matricula}">
