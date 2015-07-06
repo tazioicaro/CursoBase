@@ -1,4 +1,4 @@
-package com.algaworks.cursojavaee;
+package com.algaworks.cursojavaee.controller;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -9,6 +9,8 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
+
+import com.algaworks.cursojavaee.Funcionario;
 
 @ManagedBean
 @ViewScoped
