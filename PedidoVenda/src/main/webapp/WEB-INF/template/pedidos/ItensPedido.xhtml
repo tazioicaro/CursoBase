@@ -4,25 +4,33 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 
-	<p:toolbar style="margin-top:20px">
-				<p:toolbarGroup>
+	<p:dataTable value="#{cadastroPedidoBean.itens}" var="itens"
+		id="tabelaItens">
+		<p:column headerText="SKU" style="text-align:center; width:100px">
+			<p:inputText size="8" />
+		</p:column>
+		
+		<p:column headerText="Produto" >
+			<p:autoComplete/>
+		</p:column>
+		
+		<p:column headerText="Valor Unitário"  style="text-align:right; width:120px">
+			<h:outputText value="R$0,00"/>
+		</p:column>
+		
+		<p:column headerText="Quantidade"  style="text-align:center; width:100px">
+			<p:inputText size="8" value="1"/>
+		</p:column>
+		
+		<p:column headerText="Estoque"  style="text-align:right; width:100px">
+			<h:outputText value="0"/>
+		</p:column>
+		
+		<p:column headerText="Valor total"  style="text-align:right; width:100px">
+			<h:outputText value="R$0,00"/>
+		</p:column>
 
-					<p:button value="Novo" outcome="/pedidos/CadastroPedido" />
-					<p:commandButton value="Salvar" id="botaoSalvar" />
+	</p:dataTable>
 
-				</p:toolbarGroup>
-
-				<p:toolbarGroup align="right">
-				<p:commandButton value="Emitir"/>
-				<p:commandButton value="Cancelar"/>
-				<p:commandButton value="Enviar pro e-mail"/>
-				
-				<p:separator/>
-				
-					<p:button value="Pesquisar" outcome="/pedidos/PesquisaPedidos"/>
-				</p:toolbarGroup>
-
-			</p:toolbar>
-	
 
 </ui:composition>
