@@ -58,7 +58,10 @@ h1{
 }
 .rotulo{
 	width: 150px;
+	
 }
+
+
 
 .ui-panelgrid td{	
 	height: 34px;	
@@ -70,4 +73,13 @@ h1{
 	right: 10px;
 	width: 35px;
 	height: 35px;
+}
+
+.ui-selectmanycheckbox td label{
+	padding-right: 10px;
+}
+
+.produto-tabela input{
+	width: 99%;
+	
 }

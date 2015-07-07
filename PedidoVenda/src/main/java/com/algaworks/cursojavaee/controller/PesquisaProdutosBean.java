@@ -1,4 +1,4 @@
-package com.algaworks.cursojavaee;
+package com.algaworks.cursojavaee.controller;
 
 import java.util.ArrayList;
 import java.util.List;

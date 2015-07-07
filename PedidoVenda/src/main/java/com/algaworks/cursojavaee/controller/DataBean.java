@@ -1,4 +1,4 @@
-package com.algaworks.cursojavaee;
+package com.algaworks.cursojavaee.controller;
 
 import java.io.Serializable;
 import java.util.Date;
