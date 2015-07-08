@@ -22,34 +22,39 @@ header{
 	
 }
 
+/* Primeiro div após a tag header */
 header > div{
 	
 	margin-left: 8px
 }
-footer{
+footer {
 	padding: 0px 8px;
 	margin-bottom: 10px;
 }
 
-#conteudo{
+
+/* # é id */
+
+#conteudo {
 	padding: 0px 8px;
 }
 
-h1{
+h1 {
 	font-size: 24px;
 	font-weight: 500;
 	padding: 0px;
 	margin: 0px;
 }
 
-#login-dialog{
+#login-dialog {
 	width: 290px;
 	margin: auto;
 	margin-top: 150px;
 	
 }
 
-.grid-login{
+/* '.' é classe */
+.grid-login {
 	background-color: #f2f2f2;
 	border-radius:8px;
 	border: 1px solid #ccc;
@@ -62,8 +67,7 @@ h1{
 }
 
 
-
-.ui-panelgrid td{	
+.ui-panelgrid td {	
 	height: 34px;	
 }
 
@@ -75,11 +79,29 @@ h1{
 	height: 35px;
 }
 
-.ui-selectmanycheckbox td label{
+/* todos os 'td' e 'label' da classe ui....  */
+.ui-selectmanycheckbox td label {
 	padding-right: 10px;
 }
 
-.produto-tabela input{
-	width: 99%;
+.produto-tabela input {
+	width: 100%;
 	
 }
+
+/*  Inicio Customização tabview */
+
+.ui-tabs .ui-tabs-panel {
+	padding: 0.5em 0.2em !important; 
+}
+.ui-tabs {
+	padding: 0px !important;
+}
+
+.ui-tabs ui-tabs-nav {
+	margin: -1px !important;
+}
+.ui-tabs.ui-tabs-top > .ui-tabs-nav{
+	padding: 0px !important;
+}
+/*  FIM Customização tabview */
