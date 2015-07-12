@@ -14,11 +14,17 @@
 
 	<dependencies>
 
-		<!-- Prime Faces 5.2 -->
+		<!-- Wel (Implementação do CDI) -->
 		<dependency>
-			<groupId>org.primefaces</groupId>
-			<artifactId>primefaces</artifactId>
-			<version>5.2</version>
+			<groupId>org.jboss.weld</groupId>
+			<artifactId>weld-core</artifactId>
+			<version>2.2.14.Final</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>2.2.14.Final</version>
 			<scope>compile</scope>
 		</dependency>
 
@@ -30,12 +36,17 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- Wel (Implementação do CDI) -->
+		<!-- Prime Faces 5.2 -->
 		<dependency>
-			<groupId>org.jboss.weld.servlet</groupId>
-			<artifactId>weld-servlet</artifactId>
-			<version>2.2.14.Final</version>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>5.2</version>
+			<scope>compile</scope>
 		</dependency>
+
+
+
+
 
 
 
