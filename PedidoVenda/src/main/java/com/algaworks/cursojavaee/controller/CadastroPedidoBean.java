@@ -1,6 +1,7 @@
 package com.algaworks.cursojavaee.controller;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,8 +11,10 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
 @Named
-@SessionScoped
-public class CadastroPedidoBean {
+@ViewScoped
+public class CadastroPedidoBean implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	private List<Integer> itens;
 	
