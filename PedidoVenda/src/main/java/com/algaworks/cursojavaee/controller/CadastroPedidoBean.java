@@ -5,13 +5,13 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-import javax.faces.view.ViewScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
+import com.algaworks.cursojavaee.service.NegocioException;
+
 @Named
-@ViewScoped
+@RequestScoped
 public class CadastroPedidoBean implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -25,6 +25,11 @@ public class CadastroPedidoBean implements Serializable{
 	public CadastroPedidoBean(){
 		itens = new ArrayList<Integer>();
 		itens.add(1);
+	}
+	
+	public void salvar(){
+		
+		throw new NegocioException("Pedido não pode ser Salvo, pois ainda não foi implementado");
 	}
 	
 
