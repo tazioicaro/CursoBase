@@ -4,15 +4,24 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Cliente  implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue
 	private Long id;
+	
+	
 	private String nome;
 	private String email;
 	private String documntoReceitaFederal;
-	private TipoPessoa tipoPessoa;
+	private TipoPessoa tipo;
 	private List<Endereco> enderecos = new ArrayList<>();
 	
 	
@@ -70,11 +79,11 @@ public class Cliente  implements Serializable{
 	public void setEnderecos(List<Endereco> enderecos) {
 		this.enderecos = enderecos;
 	}
-	public TipoPessoa getTipoPessoa() {
-		return tipoPessoa;
+	public TipoPessoa getTipo() {
+		return tipo;
 	}
-	public void setTipoPessoa(TipoPessoa tipoPessoa) {
-		this.tipoPessoa = tipoPessoa;
+	public void setTipo(TipoPessoa tipo) {
+		this.tipo = tipo;
 	}
 	
 	
