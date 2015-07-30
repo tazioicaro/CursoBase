@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Cliente  implements Serializable{
@@ -22,6 +23,8 @@ public class Cliente  implements Serializable{
 	private String email;
 	private String documntoReceitaFederal;
 	private TipoPessoa tipo;
+	
+	@Transient
 	private List<Endereco> enderecos = new ArrayList<>();
 	
 	
