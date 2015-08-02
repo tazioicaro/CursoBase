@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -21,10 +24,17 @@ public class Cliente  implements Serializable{
 	@GeneratedValue
 	private Long id;
 	
-	
+	@Column(nullable= false, length = 100) //Not null de tamanho 100
 	private String nome;
+	
+	@Column(nullable= false)
 	private String email;
+	
+	@Column(name="doc_receita_federal", nullable=false, length=14)
 	private String documntoReceitaFederal;
+	
+	@Enumerated(EnumType.STRING) //Salvar o texto do Enum
+	@Column ( nullable=false, length = 12)
 	private TipoPessoa tipo;
 	
 	//Informando que este relacionamento é o inverso do que foi 
