@@ -6,23 +6,62 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+
+@Entity
+@Table(name="pedido")
 public class Pedido implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	
+	@Id
+	@GeneratedValue
 	private Long id;
-	private Date dataCriacao;	
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dataCriacao;
+	
+	@Column (columnDefinition = "text") //Criar no banco um tipo texto e não um varchar
 	private String observacao;
+	
+	@Column (name="data_entrega", nullable=false)
+	@Temporal(TemporalType.DATE)
 	private Date dataEntrega;
+	
+	@Column(nullable=false, precision=10, scale=2, name="valor_frete")
 	private BigDecimal valorFrete;
+	
+	@Column(nullable=false, precision=10, scale=2, name="valor_desconto")
 	private BigDecimal valorDesconto;
+	
+	@Column(nullable=false, precision=10, scale=2, name="valor_total")
 	private BigDecimal valorTotal;
 	
+	@Enumerated(EnumType.STRING)
+	@Column(nullable=false, length=20)
 	private StatusPedido tatus;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name="forma_pagamento", nullable=false, length=20)
 	private FormaPagamento formaPagamento;
 	
+	@ManyToOne
+	@JoinColumn(name="vendedor_id", nullable=false)
 	private Usuario vendedor;
+	
+	@ManyToOne
+	@JoinColumn(name="cliente_id", nullable=false)
 	private Cliente cliente;
 	
 	private EnderecoEntregra enderecoEntregra;
