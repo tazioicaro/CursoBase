@@ -3,9 +3,12 @@ package com.algaworks.cursojavaee.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Produto implements Serializable {
@@ -17,8 +20,15 @@ public class Produto implements Serializable {
 		private Long id;
 		private String nome;
 		private String sku;
+		
+		@Column(name="valor_unitario")
 		private BigDecimal valorUnitario;
+		
+		@Column(name="quantidade_estoque")
 		private Integer quantidadeEstoque;
+		
+		@ManyToOne
+		@JoinColumn(name="categoria_id")
 		private Categoria categoria;
 
 		public Long getId() {

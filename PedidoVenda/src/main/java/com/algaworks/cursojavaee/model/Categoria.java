@@ -4,13 +4,26 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+@Entity
 public class Categoria implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue
 	private Long id;
 	private String descricao;
+	
+	@Column(name="categoria_pai_id")
 	private Categoria categoriaPai;
+	
+	@Transient
 	private List<Categoria> subcategorias = new ArrayList<>();
 
 	public Long getId() {

@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Usuario implements Serializable {
@@ -19,6 +20,8 @@ public class Usuario implements Serializable {
 	private String nome;
 	private String email;
 	private String senha;
+	
+	@OneToMany
 	private List<Grupo> grupos = new ArrayList<>();
 	
 	public Long getId() {
