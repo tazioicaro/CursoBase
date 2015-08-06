@@ -20,6 +20,13 @@ public class Cliente  implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
+	
+	
+	
+	public Cliente() {
+		super();
+	}
+
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -67,6 +74,21 @@ public class Cliente  implements Serializable{
 	public void setDocumntoReceitaFederal(String documntoReceitaFederal) {
 		this.documntoReceitaFederal = documntoReceitaFederal;
 	}
+	
+	
+	public List<Endereco> getEnderecos() {
+		return enderecos;
+	}
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
+	}
+	public TipoPessoa getTipo() {
+		return tipo;
+	}
+	public void setTipo(TipoPessoa tipo) {
+		this.tipo = tipo;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -91,18 +113,7 @@ public class Cliente  implements Serializable{
 			return false;
 		return true;
 	}
-	public List<Endereco> getEnderecos() {
-		return enderecos;
-	}
-	public void setEnderecos(List<Endereco> enderecos) {
-		this.enderecos = enderecos;
-	}
-	public TipoPessoa getTipo() {
-		return tipo;
-	}
-	public void setTipo(TipoPessoa tipo) {
-		this.tipo = tipo;
-	}
+
 	
 	
 	

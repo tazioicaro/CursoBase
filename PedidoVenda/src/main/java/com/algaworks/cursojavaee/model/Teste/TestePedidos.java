@@ -27,8 +27,8 @@ public class TestePedidos {
 	EntityTransaction trx = manager.getTransaction();
 	trx.begin();
 	
-	/*
-	Cliente cliente = manager.find(Cliente.class, 1L);
+	
+	Cliente cliente = manager.find(Cliente.class, 1L); // 1 Long
 	Produto produto = manager.find(Produto.class, 1L);
 	Usuario vendedor = manager.find(Usuario.class, 1L);
 	
@@ -61,7 +61,7 @@ public class TestePedidos {
 	
 	pedido.getItens().add(item);
 	
-	manager.persist(pedido); */
+	manager.persist(pedido); 
 	trx.commit();
 	
 	

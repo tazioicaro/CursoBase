@@ -5,10 +5,20 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="grupo")
 public class Grupo implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	
+
+	public Grupo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Id
 	@GeneratedValue

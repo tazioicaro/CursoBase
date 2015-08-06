@@ -11,9 +11,15 @@ import javax.persistence.Id;
 import javax.persistence.Transient;
 
 @Entity
-public class Categoria implements Serializable{
-	
+public class Categoria implements Serializable{	
 	private static final long serialVersionUID = 1L;
+	
+	
+	
+
+	public Categoria() {
+		super();
+	}
 
 	@Id
 	@GeneratedValue

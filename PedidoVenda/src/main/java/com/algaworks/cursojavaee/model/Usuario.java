@@ -11,9 +11,14 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Usuario implements Serializable {
-
 	private static final long serialVersionUID = 1L;
 	
+	
+	
+	public Usuario() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	@Id
 	@GeneratedValue
 	private Long id;

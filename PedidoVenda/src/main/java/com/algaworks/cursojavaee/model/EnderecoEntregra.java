@@ -10,11 +10,17 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class EnderecoEntregra implements Serializable {
-	
-
 	private static final long serialVersionUID = 1L;
 	
-	@Column(name="entrega_logradouro" , nullable=false, length=20)
+	
+	
+	
+	
+	public EnderecoEntregra() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Column(name="entrega_logradouro" , nullable=false, length=60)
 	private String logradouro;
 	
 	@Column(name="entrega_numero" , nullable=false, length=20)
@@ -70,6 +76,8 @@ public class EnderecoEntregra implements Serializable {
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
+	
+	
 	
 	
 

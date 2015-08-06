@@ -25,9 +25,15 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name="pedido")
 public class Pedido implements Serializable {
-
 	private static final long serialVersionUID = 1L;
 	
+	
+	
+	public Pedido() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -205,9 +211,8 @@ public class Pedido implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
-	
+
+
 	
 
 }
