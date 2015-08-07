@@ -15,14 +15,6 @@ import javax.persistence.Table;
 @Table(name="produto")
 public class Produto implements Serializable {
 		private static final long serialVersionUID = 1L;
-		
-		
-
-		
-		public Produto() {
-			super();
-			// TODO Auto-generated constructor stub
-		}
 
 		private Long id;
 		private String nome;
@@ -116,6 +108,8 @@ public class Produto implements Serializable {
 				return false;
 			return true;
 		}
+
+		
 
 		
 	}

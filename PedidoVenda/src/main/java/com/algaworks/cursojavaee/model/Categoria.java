@@ -4,34 +4,29 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
-public class Categoria implements Serializable{	
-	private static final long serialVersionUID = 1L;
-	
-	
-	
+@Table(name = "categoria")
+public class Categoria implements Serializable {
 
-	public Categoria() {
-		super();
-	}
+	private static final long serialVersionUID = 1L;
+
+	private Long id;
+	private String descricao;
+	private Categoria categoriaPai;
+	private List<Categoria> subcategorias = new ArrayList<>();
 
 	@Id
 	@GeneratedValue
-	private Long id;
-	private String descricao;
-	
-	@Column(name="categoria_pai_id")
-	private Categoria categoriaPai;
-	
-	@Transient
-	private List<Categoria> subcategorias = new ArrayList<>();
-
 	public Long getId() {
 		return id;
 	}
@@ -40,6 +35,7 @@ public class Categoria implements Serializable{
 		this.id = id;
 	}
 
+	@Column(nullable = false, length = 60)
 	public String getDescricao() {
 		return descricao;
 	}
@@ -48,6 +44,8 @@ public class Categoria implements Serializable{
 		this.descricao = descricao;
 	}
 
+	@ManyToOne
+	@JoinColumn(name = "categoria_pai_id")
 	public Categoria getCategoriaPai() {
 		return categoriaPai;
 	}
@@ -56,6 +54,7 @@ public class Categoria implements Serializable{
 		this.categoriaPai = categoriaPai;
 	}
 
+	@OneToMany(mappedBy = "categoriaPai", cascade = CascadeType.ALL)
 	public List<Categoria> getSubcategorias() {
 		return subcategorias;
 	}
@@ -88,6 +87,4 @@ public class Categoria implements Serializable{
 			return false;
 		return true;
 	}
-
-
 }
