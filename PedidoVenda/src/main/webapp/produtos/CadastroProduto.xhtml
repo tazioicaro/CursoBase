@@ -12,6 +12,8 @@
 	<ui:define name="corpo">
 		<h:form>
 			<h1>Novo produto</h1>
+			
+			<p:messages autoUpdate="true" closable="true"/>
 
 			<p:toolbar style="margin-top:20px">
 				<p:toolbarGroup>
@@ -49,7 +51,7 @@
 					styleClass="moeda" />
 
 				<p:outputLabel value="Estoque " for="estoque" />
-				<p:inputText id="estoque" size="10" maxlength="4" />
+				<p:inputText id="estoque" size="10" maxlength="5" value="#{cadastroProdutoBean.produto.quantidadeEstoque}" />
 
 			</p:panelGrid>
 		</h:form>

@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="produto")
@@ -63,7 +64,7 @@ public class Produto implements Serializable {
 			this.valorUnitario = valorUnitario;
 		}
 
-		
+		@NotNull
 		@Column(name="quantidade_estoque", nullable = false, length = 5)
 		public Integer getQuantidadeEstoque() {
 			return quantidadeEstoque;
