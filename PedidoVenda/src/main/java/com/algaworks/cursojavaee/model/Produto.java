@@ -17,6 +17,8 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
 
+import com.algaworks.cursojavaee.validation.SKU;
+
 @Entity
 @Table(name="produto")
 public class Produto implements Serializable {
@@ -50,7 +52,8 @@ public class Produto implements Serializable {
 			this.nome = nome;
 		}
 
-	    @NotBlank
+
+	    @NotBlank 
 		@Column(nullable = false, length = 20, unique = true)
 		public String getSku() {
 			return sku;
@@ -60,7 +63,7 @@ public class Produto implements Serializable {
 			this.sku = sku == null ? null : sku.toUpperCase();
 		}
 
-		@NotNull
+		@NotNull @SKU
 		@Column(name="valor_unitario", nullable = false, precision = 10, scale = 2)
 		public BigDecimal getValorUnitario() {
 			return valorUnitario;
@@ -70,7 +73,7 @@ public class Produto implements Serializable {
 			this.valorUnitario = valorUnitario;
 		}
 
-		@NotNull @Min(0) @Max(9999)
+		@NotNull @Min(0) @Max(value=9999, message="tem o valor muito alto")
 		@Column(name="quantidade_estoque", nullable = false, length = 5)
 		public Integer getQuantidadeEstoque() {
 			return quantidadeEstoque;
