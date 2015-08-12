@@ -36,12 +36,12 @@
 		
 		<p:outputLabel value="Valor do Frete" for="valorFrete" />
 		<h:inputText  id="valorFrete" size="10" maxlength="10" value="#{cadastroPedidoBean.pedido.valorFrete}" >
-		<f:convertNumber maxFractionDigits="2" minFractionDigits="2"/>
+		<f:convertNumber maxFractionDigits="2" minFractionDigits="2" />
 		</h:inputText>
 		
 		<p:outputLabel value="Subtotal" style="font-weight:bold" for="subtotal" />
 		<h:outputText value="#{cadastroPedidoBean.pedido.valorTotal}" id="subtotal" style="font-weight:bold;">
-		  <f:convertNumber maxFractionDigits="2" minFractionDigits="2"/>
+		  <f:convertNumber maxFractionDigits="2" minFractionDigits="2" />
 		</h:outputText>
 		
 		<p:outputLabel value="Valor de Desconto" for="valorDesconto" />
@@ -49,8 +49,10 @@
 		 <f:convertNumber maxFractionDigits="2" minFractionDigits="2"/>
 		</h:inputText>
 		
-		<p:outputLabel value="Valol Total Pedido" style="font-weight:bold; font-size: 1.1em" for="totalPedido"/>
-		<h:outputText value="#{cadastroPedidoBean.pedido.valorTotal}"  style="font-weight:bold; font-size:1.1em" id="totalPedido"/>
+		<p:outputLabel value="Total Pedido" style="font-weight:bold; font-size: 1.1em" for="totalPedido"/>
+		<h:outputText value="#{cadastroPedidoBean.pedido.valorTotal}"  style="font-weight:bold; font-size:1.1em" id="totalPedido">
+		<f:convertNumber type="currency"/>
+		</h:outputText>
 
 	</p:panelGrid>
 

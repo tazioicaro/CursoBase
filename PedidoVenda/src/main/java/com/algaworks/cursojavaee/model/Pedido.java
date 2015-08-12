@@ -20,6 +20,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 
 
 @Entity
@@ -38,37 +39,48 @@ public class Pedido implements Serializable {
 	@GeneratedValue
 	private Long id;
 	
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column (name="data_criacao", nullable=false)
 	private Date dataCriacao;
 	
 	@Column (columnDefinition = "text") //Criar no banco um tipo texto e não um varchar
 	private String observacao;
 	
+	@NotNull
 	@Column (name="data_entrega", nullable=false)
 	@Temporal(TemporalType.DATE)
 	private Date dataEntrega;
 	
+	@NotNull
 	@Column(nullable=false, precision=10, scale=2, name="valor_frete")
 	private BigDecimal valorFrete;
 	
+	@NotNull
 	@Column(nullable=false, precision=10, scale=2, name="valor_desconto")
 	private BigDecimal valorDesconto;
 	
+	@NotNull
 	@Column(nullable=false, precision=10, scale=2, name="valor_total")
 	private BigDecimal valorTotal;
 	
+	
+	@NotNull
 	@Enumerated(EnumType.STRING)
 	@Column(nullable=false, length=20)
 	private StatusPedido tatus;
 	
+	@NotNull
 	@Enumerated(EnumType.STRING)
 	@Column(name="forma_pagamento", nullable=false, length=20)
 	private FormaPagamento formaPagamento;
 	
+	@NotNull
 	@ManyToOne
 	@JoinColumn(name="vendedor_id", nullable=false)
 	private Usuario vendedor;
 	
+	@NotNull
 	@ManyToOne
 	@JoinColumn(name="cliente_id", nullable=false)
 	private Cliente cliente;
