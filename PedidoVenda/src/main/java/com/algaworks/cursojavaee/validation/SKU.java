@@ -22,16 +22,13 @@ import javax.validation.constraints.Pattern;
 @Pattern(regexp="([a-zA-Z]{2}\\d{4,18})?")
 public @interface SKU {
 	
-	//Fazendo com que a mensagem do  'message' do SKU substitua o message do Pattern 
+	//Fazendo com que a mensagem do  'message' do SKU substitua o message do Pattern //Atributos obrigatórios
 	@OverridesAttribute(constraint= Pattern.class, name="message")
+	String message() default "{com.algaworks.validator.constraints.SKU.message}";
 	
-	//Atributos obrigatórios
+	Class<?>[] groups() default {};
 	
-	String message() default "tem formato inválido";
-	
-	Class<?>[] groups() default{};
-	
-	Class<? extends Payload>[] payload() default{};
+	Class<? extends Payload>[] payload() default {};
 	
 
 }
