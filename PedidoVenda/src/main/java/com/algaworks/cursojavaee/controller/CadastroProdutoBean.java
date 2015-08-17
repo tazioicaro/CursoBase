@@ -7,6 +7,7 @@ import java.util.List;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.validation.constraints.NotNull;
 
 import com.algaworks.cursojavaee.model.Categoria;
 import com.algaworks.cursojavaee.model.Produto;
@@ -20,6 +21,9 @@ public class CadastroProdutoBean implements Serializable{
 	
 	private Produto produto;	
 	private List<Categoria> categoriaRaizes;
+	
+	@NotNull
+	private Categoria categoriaPai;
 	
 	@Inject
 	private Categorias categorias;
@@ -39,6 +43,8 @@ public class CadastroProdutoBean implements Serializable{
 
 	public void salvar(){
 		
+		System.out.println("Categoria Pai Selecionada" + categoriaPai.getDescricao());
+		
 	}
 
 
@@ -51,6 +57,16 @@ public class CadastroProdutoBean implements Serializable{
 
 	public List<Categoria> getCategoriaRaizes() {
 		return categoriaRaizes;
+	}
+
+
+	public Categoria getCategoriaPai() {
+		return categoriaPai;
+	}
+
+
+	public void setCategoriaPai(Categoria categoriaPai) {
+		this.categoriaPai = categoriaPai;
 	}
 
 

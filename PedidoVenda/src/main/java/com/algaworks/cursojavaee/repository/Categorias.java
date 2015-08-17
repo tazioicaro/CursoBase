@@ -20,5 +20,9 @@ public class Categorias implements Serializable{
 		return manager.createQuery("from Categoria", Categoria.class).getResultList(); //todas os objetos do tipo categoria, mapeado no banco
 		
 	}
+	
+	public Categoria porID(Long id){
+		return manager.find(Categoria.class, id);
+	}
 
 }
