@@ -17,7 +17,7 @@ public class CategoriaConverter implements Converter {
 	
 	//Para driblar a falta do Inject
 	public CategoriaConverter() {
-		categorias = CDIServiceLocator.gerBean(Categorias.class);
+		categorias = CDIServiceLocator.getBean(Categorias.class);
 	}
 	
 	

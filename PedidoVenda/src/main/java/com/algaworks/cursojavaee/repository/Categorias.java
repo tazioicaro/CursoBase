@@ -17,12 +17,17 @@ public class Categorias implements Serializable{
 	
 	public List<Categoria> raizes(){
 		
-		return manager.createQuery("from Categoria", Categoria.class).getResultList(); //todas os objetos do tipo categoria, mapeado no banco
+		return manager.createQuery("from Categoria where categoriaPai is null", Categoria.class).getResultList(); //todas os objetos do tipo categoria, mapeado no banco
 		
 	}
 	
 	public Categoria porID(Long id){
 		return manager.find(Categoria.class, id);
+	}
+	
+	public List<Categoria> subCategoriasDe (Categoria categoriaPai){
+		return manager.createQuery("from Categoria where categoriaPai = :raiz", Categoria.class)
+				.setParameter("raiz", categoriaPai).getResultList();
 	}
 
 }

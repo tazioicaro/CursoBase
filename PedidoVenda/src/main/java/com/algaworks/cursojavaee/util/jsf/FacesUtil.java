@@ -12,5 +12,17 @@ public class FacesUtil {
 				message, message));
 		
 	}
+	
+	//Verificar se é PostBack
+	
+	public static boolean isPostback(){
+		return FacesContext.getCurrentInstance().isPostback();
+	}
+	
+	public static boolean isNotPostBack(){
+		
+		return !isPostback();
+		
+	}
 
 }
