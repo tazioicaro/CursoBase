@@ -24,5 +24,11 @@ public class FacesUtil {
 		return !isPostback();
 		
 	}
+	
+	public static void addInforMessage(String message){
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, message, message));
+	
+	
+	}
 
 }

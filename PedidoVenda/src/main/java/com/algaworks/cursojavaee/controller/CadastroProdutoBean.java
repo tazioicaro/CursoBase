@@ -2,6 +2,7 @@ package com.algaworks.cursojavaee.controller;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.view.ViewScoped;
@@ -12,6 +13,7 @@ import javax.validation.constraints.NotNull;
 import com.algaworks.cursojavaee.model.Categoria;
 import com.algaworks.cursojavaee.model.Produto;
 import com.algaworks.cursojavaee.repository.Categorias;
+import com.algaworks.cursojavaee.service.CadastroProdutoService;
 import com.algaworks.cursojavaee.util.jsf.FacesUtil;
 
 @Named
@@ -30,9 +32,13 @@ public class CadastroProdutoBean implements Serializable{
 	@Inject
 	private Categorias categorias;
 	
+	@Inject
+	private CadastroProdutoService cadastroProdutoService;
+
+	
 	
 	public CadastroProdutoBean() {		
-		produto = new Produto();
+		limpar();
 	}
 
 
@@ -53,12 +59,19 @@ public class CadastroProdutoBean implements Serializable{
 
 	public void salvar(){
 		
-		System.out.println("Categoria Selecionada: " +categoriaPai.getDescricao());
 		
-		System.out.println("SubCategoria Selecionada: " +produto.getCategoria().getDescricao());
+		this.produto =  cadastroProdutoService.salvar(this.produto);				
+		FacesUtil.addInforMessage("Produto Salvo com sucesso");
 		
+		limpar();
+				
+	}
+	
+	private void limpar(){
 		
-		
+		produto = new Produto();
+		categoriaPai= null;
+		subCategorias= new ArrayList<Categoria>();
 	}
 
 	

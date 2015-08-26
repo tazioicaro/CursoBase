@@ -23,8 +23,7 @@ public class CadastroPedidoBean implements Serializable{
 	
 	private List<Integer> itens;
 	
-
-
+	
 	public CadastroPedidoBean(){
 		
 		pedido = new Pedido();
@@ -36,6 +35,8 @@ public class CadastroPedidoBean implements Serializable{
 	public void salvar(){
 		
 		throw new NegocioException("Pedido não pode ser Salvo, pois ainda não foi implementado");
+	
+
 	}
 
 	
