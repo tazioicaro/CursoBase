@@ -65,6 +65,11 @@ public class Produtos  implements Serializable{
 		//Retornando todos os resultados ordenados por nome
 		return criteria.addOrder(Order.asc("nome")).list();
 	}
+
+	public Produto porID(Long id) {
+		
+		return manager.find(Produto.class, id);
+	}
 	
 	
 

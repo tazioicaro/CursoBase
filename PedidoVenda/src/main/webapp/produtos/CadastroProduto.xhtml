@@ -5,7 +5,8 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:o="http://omnifaces.org/ui">
 
 	<ui:define name="titulo">Novo Produto</ui:define>
 
@@ -13,8 +14,10 @@
 	
 	
 	<!-- chamando(Inicializando) a lista de categorias -->
+	<!-- utilizando o omnifaces para evitar a execução de vários sets quando o parãmetro
+	     for preenchido, oriundo da tela de pesquisa  -->
 	<f:metadata>	
-	   <f:viewParam name="dummy"/>
+	   <o:viewParam name="produto" value="#{cadastroProdutoBean.produto}"/>
 	   <f:event listener="#{cadastroProdutoBean.inicializar}" type="preRenderView"/>
 	</f:metadata>
 	

@@ -82,6 +82,12 @@ public class CadastroProdutoBean implements Serializable{
 		return produto;
 	}
 
+	
+
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
 
 
 	public List<Categoria> getCategoriaRaizes() {
