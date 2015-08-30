@@ -47,6 +47,10 @@ public class CadastroProdutoBean implements Serializable{
 		//Se não for PostBack (Se o salvar não foi pressionado)
 		if(FacesUtil.isNotPostBack()){
 		categoriaRaizes = categorias.raizes();
+		
+		if(categoriaPai != null){
+			carregarSubCategorias();
+		}
 		}
 	}
 	
@@ -84,9 +88,13 @@ public class CadastroProdutoBean implements Serializable{
 
 	
 
-
+//irá receber do viewParam o produto preenchido da tela de pesquisaProduto
 	public void setProduto(Produto produto) {
 		this.produto = produto;
+		
+		if(this.produto != null){
+			this.categoriaPai = this.produto.getCategoria().getCategoriaPai();
+		}
 	}
 
 
