@@ -56,7 +56,7 @@ public class Produtos  implements Serializable{
 		criteria.add(Restrictions.eq("sku", filter.getSku()));
 		}
 		
-		if(StringUtils.isNoneBlank(filter.getNome())){
+		if(StringUtils.isNotBlank(filter.getNome())){
 			//ilike é case "insensitive"			
 			//MatchMode é o %, que no caso será antes e depois
 			criteria.add(Restrictions.ilike("nome", filter.getNome(), MatchMode.ANYWHERE));

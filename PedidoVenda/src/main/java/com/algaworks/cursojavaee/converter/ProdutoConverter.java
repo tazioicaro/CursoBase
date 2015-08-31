@@ -26,10 +26,12 @@ public class ProdutoConverter implements Converter {
 	public Object getAsObject(FacesContext context, UIComponent component, String value) {
          Produto retorno = null;
 		
-         if(value != null){
-        	 
+         if(value != null){ 	 
+        	
         	 Long id = new Long(value);
         	 retorno =  produtos.porID(id);
+        	
+        		 
          }
 		return retorno;
 	}
@@ -43,7 +45,7 @@ public class ProdutoConverter implements Converter {
 		Produto produto = (Produto) value;
 		return  produto.getId() == null ? null :  produto.getId().toString();
 	}
-		return null;
+		return "";
 	}
 
 
