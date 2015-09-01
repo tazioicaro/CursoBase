@@ -11,10 +11,13 @@ import javax.inject.Named;
 
 @Named
 @ViewScoped
-public class PesquisaPedidosBean implements Serializable{ 
-
+public class PesquisaPedidosBean implements Serializable{
 	private static final long serialVersionUID = 1L;
-	private List<Integer> pedidosFiltrados;
+	
+	
+	private List<Integer> pedidosFiltrados;	
+	
+	
 	
 	public List<Integer> getPedidosFiltrados() {
 		return pedidosFiltrados;
@@ -29,5 +32,8 @@ public class PesquisaPedidosBean implements Serializable{
 		
 		
 	}
+	
+	//G&S
 
+	
 }
