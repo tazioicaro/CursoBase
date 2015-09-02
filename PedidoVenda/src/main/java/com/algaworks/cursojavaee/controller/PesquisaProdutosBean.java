@@ -44,7 +44,7 @@ public class PesquisaProdutosBean implements Serializable {
 		//Excluíndo produtos da lista, sem precisar chamar a tela novamente
 		produtosFiltrados.remove(produtosSelecionados);
 		
-		FacesUtil.addInforMessage("Proputo" + produtosSelecionados.getSku() 
+		FacesUtil.addInforMessage("Produto" + produtosSelecionados.getSku() 
 				+" excluído com sucesso.");
 		
 	}

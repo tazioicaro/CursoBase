@@ -71,7 +71,8 @@
 					<p:button icon="ui-icon-pencil" title="Editar" outcome="/produtos/CadastroProduto">
 					 <f:param name="produto" value="#{produto.id}"/>
 					</p:button>
-					<p:commandButton icon="ui-icon-trash" title="Excluir" process="@this" update=":frmPesquisa:confirmacaoExclusaoDialog, :frmPesquisa:produtosTable" action="#{pesquisaProdutosBean.excluir}">
+					<p:commandButton icon="ui-icon-trash" title="Excluir" process="@this" update=":frmPesquisa:confirmacaoExclusaoDialog,
+					 :frmPesquisa:produtosTable" action="#{pesquisaProdutosBean.excluir}">
 						<p:confirm header="Exclusão de Produto"
 							message="Tem certeza que deseja excluir o produto #{pesquisaProdutosBean.produtosSelecionados.sku}?"
 							icon="ui-icon-alert" />
@@ -83,7 +84,8 @@
 
 			<p:confirmDialog global="true" id="confirmacaoExclusaoDialog">
 				<p:button value="Não" icon="ui-icon-close" styleClass="ui-confirmdialog-no" />
-				<p:commandButton type="button" value="Sim" icon="ui-icon-check"  styleClass="ui-confirmdialog-yes" process="@this" update=":frmPesquisa:produtosTable"/>
+				<p:commandButton type="button" value="Sim" icon="ui-icon-check"  styleClass="ui-confirmdialog-yes" 
+				process="@this" update=":frmPesquisa:produtosTable"/>
 			</p:confirmDialog>
 		</h:form>
 	</ui:define>
