@@ -64,12 +64,4 @@ public class PedidoFilter implements Serializable {
 		this.statuses = statuses;
 	}
 	
-	
-	
-	
-	
-	
-
-	
-
 }
