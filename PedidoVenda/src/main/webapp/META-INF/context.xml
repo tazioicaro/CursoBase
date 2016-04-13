@@ -2,6 +2,7 @@
 <Context>
 <!-- disables storage of sessions across restarts -->
 <Manager pathname=""/>
-<Resource name="BeanManager" auth="Container" type="javax.enterprise.inject.spi.BeanManager"
+<Resource name="BeanManager" auth="Container" 
+type="javax.enterprise.inject.spi.BeanManager"
 factory="org.jboss.weld.resources.ManagerObjectFactory"/>
 </Context>

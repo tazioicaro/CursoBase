@@ -12,8 +12,8 @@ import com.algaworks.cursojavaee.service.CalculadoraPreco;
 @Named("meuBean")
 @ViewScoped
 public class PrecoProdutoBean  implements Serializable{
-
 	private static final long serialVersionUID = 1L;
+	
 	@Inject
 	private CalculadoraPreco calculadora;
 	

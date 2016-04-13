@@ -7,9 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
 import com.algaworks.cursojavaee.Funcionario;
@@ -35,7 +33,6 @@ public class FuncionariosBean implements Serializable {
 		}
 	}
 	
-	@SuppressWarnings("unused")
 	private void adicionarFuncinario(){
 		
 		String nomeCompleto = getNomeAleatorio() +" "+ getSobrenomeAleatorio()+ " "+ getSobrenomeAleatorio();
