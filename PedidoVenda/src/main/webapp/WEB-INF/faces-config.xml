@@ -10,12 +10,15 @@
 		</locale-config>
 		
 		
-		<message-bundle>com.algaworks.cursojavaee.pedidovenda.Messages</message-bundle>
+		<message-bundle>
+		com.algaworks.cursojavaee.pedidovenda.Messages
+		</message-bundle>
 		
 	</application>  
     
     <factory>
-<exception-handler-factory>com.algaworks.cursojavaee.util.jsf.JsfExceptionHandlerFactory
+<exception-handler-factory>
+com.algaworks.cursojavaee.util.jsf.JsfExceptionHandlerFactory
 </exception-handler-factory>
 
 </factory>

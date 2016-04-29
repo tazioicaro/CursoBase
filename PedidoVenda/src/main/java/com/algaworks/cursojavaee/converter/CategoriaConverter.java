@@ -4,6 +4,7 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.FacesConverter;
 import javax.faces.convert.Converter;
+import javax.inject.Inject;
 
 import com.algaworks.cursojavaee.model.Categoria;
 import com.algaworks.cursojavaee.repository.Categorias;
@@ -12,13 +13,15 @@ import com.algaworks.cursojavaee.util.cdi.CDIServiceLocator;
 @FacesConverter(forClass=Categoria.class)
 public class CategoriaConverter implements Converter {
 
-	//@Inject Verificar na versão Mojarra 2.3 pronta o funcionamento do  Inject
+	
+	//Usando o @Inject	
+	@Inject
 	private Categorias categorias;
 	
 	//Para driblar a falta do Inject
-	public CategoriaConverter() {
-		categorias = CDIServiceLocator.getBean(Categorias.class);
-	}
+//	public CategoriaConverter() {
+//		categorias = CDIServiceLocator.getBean(Categorias.class);
+//	}
 	
 	
 	//Trabalhando com ID como referencia

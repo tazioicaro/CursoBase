@@ -10,12 +10,17 @@ import javax.inject.Named;
 import com.algaworks.cursojavaee.service.CalculadoraPreco;
 
 @Named("meuBean")
-@ViewScoped
+@ViewScoped //Se não inserir o escopo o padrão será depended
 public class PrecoProdutoBean  implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
 	private CalculadoraPreco calculadora;
+	
+	//Construtor padrão, para caracterizar o Bean CDI
+	public PrecoProdutoBean(){
+		
+	}
 	
 	//Utilizar qualquer nome no lugar o init
 	@PostConstruct	

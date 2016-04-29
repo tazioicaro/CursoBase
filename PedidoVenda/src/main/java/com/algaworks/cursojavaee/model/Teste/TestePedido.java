@@ -50,6 +50,8 @@ public class TestePedido {
 		pedido.setVendedor(vendedor);
 		pedido.setEnderecoEntregra(enderecoEntrega);
 		
+		
+		//Vai salvar também o ItemPedido devido ao Cascade inserido no classe ItemPedido
 		ItemPedido item = new ItemPedido();
 		item.setProduto(produto);
 		item.setQuantidade(10);

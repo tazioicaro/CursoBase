@@ -63,7 +63,7 @@ public class Produto implements Serializable {
 			this.sku = sku == null ? null : sku.toUpperCase();
 		}
 
-		@NotNull 
+		@NotNull(message= "é obrigatório") 
 		@Column(name="valor_unitario", nullable = false, precision = 10, scale = 2)
 		public BigDecimal getValorUnitario() {
 			return valorUnitario;

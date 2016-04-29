@@ -54,7 +54,7 @@ public class JsfExceptionHandler extends ExceptionHandlerWrapper {
 		return this.wrapped;
 	}
 
-	// Metodo resposnavel por tratar as exceções capuradas pelo JSF
+	// Metodo responsavel por tratar as exceções capuradas pelo JSF
 	@Override
 	public void handle() throws FacesException {
 		// Todos os evento de exceções enfileirados
@@ -88,7 +88,7 @@ public class JsfExceptionHandler extends ExceptionHandlerWrapper {
 				} else {
 					handled = true;
 					
-					//mensagem, e causa da exceção
+					//primeiro parâmetro é mensagem, e causa da exceção
 					log.error("Erro de sistema: " + exception.getMessage(), exception);
 					redirect("/Erro.xhtml");
 				}

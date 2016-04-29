@@ -20,14 +20,14 @@ public class EntityManagerProducer {
 		 factory= Persistence.createEntityManagerFactory("PedidoPU");
 
 	}
-	
+	//Um Entitymanager produzido pelo método tem um escopo de requisição
 	@Produces @RequestScoped
 	public EntityManager createEntityManager(){		
 		return factory.createEntityManager();
 		
 	}
 	
-	//Quando finalaizar a requisição ele será executado
+	// Quando finalizar a requisição o @Disposes será executado para fechar o entityM
 	public void closeEntityManager(@Disposes EntityManager manager){
 		manager.close();
 	}

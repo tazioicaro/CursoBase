@@ -23,6 +23,7 @@ public class CadastroProdutoBean implements Serializable {
 
 	private Produto produto;
 	
+	//Apenas o  método get é necessário, visto que somente iremos carregar ao site
 	private List<Categoria> categoriaRaizes;
 	private List<Categoria> subCategorias;
 
