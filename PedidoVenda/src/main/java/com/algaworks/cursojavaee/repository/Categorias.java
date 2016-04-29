@@ -25,6 +25,11 @@ public class Categorias implements Serializable{
 		return manager.find(Categoria.class, id);
 	}
 	
+	/**	 
+	 * @param categoriaPai
+	 * Está associado ao parâmetro :raiz
+	 * Assim é possível fazer um filtro 
+	 */
 	public List<Categoria> subCategoriasDe (Categoria categoriaPai){
 		return manager.createQuery("from Categoria where categoriaPai = :raiz", Categoria.class)
 				.setParameter("raiz", categoriaPai).getResultList();
