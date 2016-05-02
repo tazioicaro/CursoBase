@@ -8,7 +8,7 @@ import com.algaworks.cursojavaee.model.Produto;
 import com.algaworks.cursojavaee.repository.Produtos;
 import com.algaworks.cursojavaee.util.jpa.Transactional;
 
-//Regras de negócio do Cadastro de produtos (Ben CDI)
+//Regras de negócio do Cadastro de produtos (Bean CDI)
 public class CadastroProdutoService  implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
