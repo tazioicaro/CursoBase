@@ -93,7 +93,8 @@ public class Produtos  implements Serializable{
 		manager.remove(produto);
 		
 		//Chamado o flush dentro do método para que , se houver exception,
-		//seja lançado aqui mesmo
+		//seja lançado aqui mesmo e todas pendências sejam executadas (inluindo o commit)
+		//Se o objetivo estiver sendo usado por outro DB é lançadu uma exceção.
 		manager.flush();
 		} catch(PersistenceException e){
 			
