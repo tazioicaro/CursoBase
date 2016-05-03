@@ -63,8 +63,8 @@ public class CadastroProdutoBean implements Serializable {
 		
 		this.produto = cadastroProdutoService.salvar(this.produto);
 		FacesUtil.addInforMessage("Produto Salvo com sucesso");
-
 		limpar();
+		
 
 	}
 

@@ -10,6 +10,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
 
+
+/**
+ *  @author tazio.fernandes
+ *  As duas anotações informa que ele é um interceptador da
+ *  Anotação traansactional já criada
+ */
 @Interceptor
 @Transactional
 public class TransactionInterceptor implements Serializable {	
@@ -26,8 +32,12 @@ public class TransactionInterceptor implements Serializable {
 			
 			if(!trx.isActive()){
 				
-				//truque para fazer rollback o que já passou
-				//(Sendo, um futuro commit, confirmaria até mesmo operações sem transação)				
+				/**
+				  * truque para fazer rollback o que já passou
+				  *(Sendo, um futuro commit, confirmaria até mesmo operações sem transação)				
+				  * 
+				  */
+								
 				
 				trx.begin();
 				trx.rollback();
@@ -38,6 +48,7 @@ public class TransactionInterceptor implements Serializable {
 				criador = true;
 			}
 			
+			//Chama o método Salva da Classe CadastroProdutoService 
 			return context.proceed();	
 			
 		}catch(Exception e){

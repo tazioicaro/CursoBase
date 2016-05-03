@@ -49,12 +49,21 @@ public class Produtos  implements Serializable{
 	
 	@SuppressWarnings("unchecked")
 	public List<Produto> filtrados(ProdutoFilter filter){
-		//Session do Hibernate
+		//Desempacotar Session do Hibernate e colocar na variável Session do Hibernate
 		Session session = manager.unwrap(Session.class);
 		
+		/* Criteria do Hibernate faz de forma dinâmica
+		*Criando meios de adicionar criterios a Entidade produto */
+		
 		Criteria criteria = session.createCriteria(Produto.class);
+		
+		/*
+		 * Common Lang3 disponibiliza o StringUtils
+		 * Aqui está verificando se o parametro SKU não está em Branco
+		 */
 		if(StringUtils.isNotBlank(filter.getSku())){		
-		//Adicionando restrição de igualdade com sku		
+		
+			//Adicionando restrição de igualdade com sku		
 		criteria.add(Restrictions.eq("sku", filter.getSku()));
 		}
 		

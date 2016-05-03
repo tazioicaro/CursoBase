@@ -4,7 +4,11 @@ import java.io.Serializable;
 
 import com.algaworks.cursojavaee.validation.SKU;
 
-//Classe para padronizar os filtros para o produto
+/**
+ * @author tazio.fernandes
+ *Classe para padronizar e dinamizar os filtros para o produto
+ *visto que pode-se fazer incrementos das pesquisas com diferentes dados
+ */
 public class ProdutoFilter  implements Serializable{
 
 	private static final long serialVersionUID = 1L;
