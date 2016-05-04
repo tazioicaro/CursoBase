@@ -5,14 +5,22 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.enterprise.inject.Produces;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 //import javax.inject.Inject;
 import javax.inject.Named;
 
+import com.algaworks.cursojavaee.model.Cliente;
 import com.algaworks.cursojavaee.model.EnderecoEntregra;
+import com.algaworks.cursojavaee.model.FormaPagamento;
 import com.algaworks.cursojavaee.model.Pedido;
+import com.algaworks.cursojavaee.model.Usuario;
+import com.algaworks.cursojavaee.repository.Clientes;
+import com.algaworks.cursojavaee.repository.Usuarios;
+import com.algaworks.cursojavaee.service.CadastroPedidoService;
 import com.algaworks.cursojavaee.service.NegocioException;
+import com.algaworks.cursojavaee.util.jsf.FacesUtil;
 
 @Named
 @ViewScoped
@@ -20,32 +28,61 @@ public class CadastroPedidoBean implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Produces
+	private Pedido pedido;		
 	@Inject
-	private Pedido pedido;
+	private Usuarios usuarios;
+	@Inject
+	private Clientes clientes;	
+	@Inject
+	private CadastroPedidoService cadastroPedidoService;
 	
-	
-	private List<Integer> itens;
+		
+	private List<Usuario> vendedores;
 	
 	
 	public CadastroPedidoBean(){
+		limpar();
 		
-		//pedido = new Pedido();//Remover se for usar o Inject
-		pedido.setEnderecoEntregra(new EnderecoEntregra ());
-		itens = new ArrayList<Integer>();
-		itens.add(1);
+	
 	}
+	
+	public void incializar(){
+		
+		if(FacesUtil.isNotPostBack()){
+			this.vendedores = this.usuarios.vendedores();
+		}
+		
+	}
+	
+	public void limpar(){
+		pedido = new Pedido();
+		pedido.setEnderecoEntregra(new EnderecoEntregra());
+		
+	}
+	
+	public List<Cliente> completarCliente (String nome){
+		
+		return this.clientes.porNome(nome);
+		
+	}
+	
+
 	
 	public void salvar(){
+		//É atriuído ao pedido o objeto pedido completo com ID e outro objetos dependentes
+		this.pedido = this.cadastroPedidoService.salvar(this.pedido);
 		
-		throw new NegocioException("Pedido não pode ser Salvo, pois ainda não foi implementado");
+		FacesUtil.addInforMessage("Pedido salvo com sucesso!");
 	
 
 	}
-
 	
-	public List<Integer> getItens() {
-		return itens;
+	//retornar os valores de todos os pagamentos do Enum
+	public FormaPagamento[] getFormasPagamento(){
+		return FormaPagamento.values();
 	}
+
 	
 	public Pedido getPedido() {
 		return pedido;
@@ -54,6 +91,11 @@ public class CadastroPedidoBean implements Serializable{
 	public void setPedido(Pedido pedido) {
 		this.pedido = pedido;
 	}
+
+	public List<Usuario> getVendedores() {
+		return vendedores;
+	}
+
 	
 
 }

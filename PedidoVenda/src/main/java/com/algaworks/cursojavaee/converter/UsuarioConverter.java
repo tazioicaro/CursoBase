@@ -10,7 +10,7 @@ import com.algaworks.cursojavaee.model.Categoria;
 import com.algaworks.cursojavaee.model.Usuario;
 import com.algaworks.cursojavaee.repository.Usuarios;
 
-@FacesConverter(forClass=Categoria.class)
+@FacesConverter(forClass=Usuario.class)
 public class UsuarioConverter implements Converter {
 
 	

@@ -10,11 +10,11 @@ import com.algaworks.cursojavaee.model.Categoria;
 import com.algaworks.cursojavaee.model.Cliente;
 import com.algaworks.cursojavaee.repository.Clientes;
 
-@FacesConverter(forClass=Categoria.class)
+@FacesConverter(forClass=Cliente.class)
 public class ClienteConverter implements Converter {
 
 	
-	//Usando o @Inject	
+	
 	@Inject
 	private Clientes clientes;
 	

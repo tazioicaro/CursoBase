@@ -20,6 +20,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 
@@ -54,21 +55,21 @@ public class Pedido implements Serializable {
 	
 	@NotNull
 	@Column(nullable=false, precision=10, scale=2, name="valor_frete")
-	private BigDecimal valorFrete;
+	private BigDecimal valorFrete = BigDecimal.ZERO;
 	
 	@NotNull
 	@Column(nullable=false, precision=10, scale=2, name="valor_desconto")
-	private BigDecimal valorDesconto;
+	private BigDecimal valorDesconto = BigDecimal.ZERO;
 	
 	@NotNull
 	@Column(nullable=false, precision=10, scale=2, name="valor_total")
-	private BigDecimal valorTotal;
+	private BigDecimal valorTotal = BigDecimal.ZERO;
 	
-	
+	//valor padrão para o Status ao cadastrar um novo pedido
 	@NotNull
 	@Enumerated(EnumType.STRING)
 	@Column(nullable=false, length=20)
-	private StatusPedido tatus;
+	private StatusPedido tatus = StatusPedido.ORCAMENTO;
 	
 	@NotNull
 	@Enumerated(EnumType.STRING)
@@ -95,6 +96,21 @@ public class Pedido implements Serializable {
 	@OneToMany (mappedBy="pedido", cascade = CascadeType.ALL, orphanRemoval=true) //Mapado na clase ItemPedido, salva pedidos e seus ítens
 	private List<ItemPedido> itens = new ArrayList<>();
 
+	
+	
+	@Transient
+	public boolean isNovo(){
+		return getId() == null;
+	}
+	
+	@Transient
+	public boolean isExistente(){
+		
+		return !isNovo();
+		
+	}
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -198,6 +214,11 @@ public class Pedido implements Serializable {
 	public void setItens(List<ItemPedido> itens) {
 		this.itens = itens;
 	}
+	
+	
+	
+	
+	
 
 	@Override
 	public int hashCode() {

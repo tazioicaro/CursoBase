@@ -8,13 +8,12 @@
 		columnClasses="rotulo, campo, rotulo, campo">
 
 		<p:outputLabel value="Data da Entrega" for="dataEntrega" />
-		<p:calendar id="dataEntrega" size="10" pattern="dd/MM/yyyy" 
-		value="#{cadastroPedidoBean.pedido.dataEntrega}"/>
+		<p:calendar id="dataEntrega" size="10" pattern="dd/MM/yyyy" value="#{cadastroPedidoBean.pedido.dataEntrega}"/>
 		<p:spacer />
 		<p:spacer />
 
 		<p:outputLabel value="Logradouro" for="entregaLogradouro"/>
-		<p:inputText id="entregaLogradouro" size="5" value="#{cadastroPedidoBean.pedido.enderecoEntregra.logradouro}"/>
+		<p:inputText id="entregaLogradouro" size="50" value="#{cadastroPedidoBean.pedido.enderecoEntregra.logradouro}"/>
 		
 		<p:outputLabel value="Número" for="entregaNumero"/>
 		<p:inputText id="entregaNumero" size="5" value="#{cadastroPedidoBean.pedido.enderecoEntregra.numero}"/>
