@@ -5,13 +5,11 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 import javax.inject.Inject;
+
 import org.apache.commons.lang3.StringUtils;
 
 import com.algaworks.cursojavaee.model.Pedido;
-import com.algaworks.cursojavaee.model.Produto;
 import com.algaworks.cursojavaee.repository.Pedidos;
-import com.algaworks.cursojavaee.repository.Produtos;
-import com.algaworks.cursojavaee.util.cdi.CDIServiceLocator;
 
 @FacesConverter(forClass=Pedido.class)
 public class PedidoConverter implements Converter {

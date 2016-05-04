@@ -7,15 +7,16 @@ import javax.faces.convert.FacesConverter;
 import javax.inject.Inject;
 
 import com.algaworks.cursojavaee.model.Categoria;
-import com.algaworks.cursojavaee.repository.Categorias;
+import com.algaworks.cursojavaee.model.Usuario;
+import com.algaworks.cursojavaee.repository.Usuarios;
 
 @FacesConverter(forClass=Categoria.class)
-public class CategoriaConverter implements Converter {
+public class UsuarioConverter implements Converter {
 
 	
 	//Usando o @Inject	
 	@Inject
-	private Categorias categorias;
+	private Usuarios usuarios;
 	
 	//Para driblar a falta do Inject
 //	public CategoriaConverter() {
@@ -26,12 +27,12 @@ public class CategoriaConverter implements Converter {
 	//Trabalhando com ID como referencia
 	@Override
 	public Object getAsObject(FacesContext context, UIComponent component, String value) {
-         Categoria retorno = null;
+         Usuario retorno = null;
 		
          if(value != null){
         	 
         	 Long id = new Long(value);
-        	 retorno =  categorias.porID(id);
+        	 retorno =  this.usuarios.porID(id);
          }
 		return retorno;
 	}
@@ -41,7 +42,7 @@ public class CategoriaConverter implements Converter {
 	@Override
 	public String getAsString(FacesContext context, UIComponent component, Object value) {
 	if(value != null){
-		return ((Categoria) value).getId().toString();
+		return ((Usuario) value).getId().toString();
 	}
 		return null;
 	}
