@@ -39,6 +39,8 @@ public class PesquisaPedidosBean implements Serializable{
 	}
 	
 	public StatusPedido[] getStatuses(){
+		
+		//Retona um Array de StatusPedido
 		return StatusPedido.values();
 	}
 	

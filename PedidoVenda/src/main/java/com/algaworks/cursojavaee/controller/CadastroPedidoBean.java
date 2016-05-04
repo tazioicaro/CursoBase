@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
 //import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -19,7 +20,7 @@ public class CadastroPedidoBean implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	//@Inject
+	@Inject
 	private Pedido pedido;
 	
 	
@@ -28,7 +29,7 @@ public class CadastroPedidoBean implements Serializable{
 	
 	public CadastroPedidoBean(){
 		
-		pedido = new Pedido();//Remover se for usar o Inject
+		//pedido = new Pedido();//Remover se for usar o Inject
 		pedido.setEnderecoEntregra(new EnderecoEntregra ());
 		itens = new ArrayList<Integer>();
 		itens.add(1);
