@@ -12,6 +12,7 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -23,14 +24,11 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
-
 @Entity
-@Table(name="pedido")
+@Table(name = "pedido")
 public class Pedido implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	
-	
+
 	public Pedido() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -39,100 +37,126 @@ public class Pedido implements Serializable {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column (name="data_criacao", nullable=false)
+	@Column(name = "data_criacao", nullable = false)
 	private Date dataCriacao;
-	
-	@Column (columnDefinition = "text") //Criar no banco um tipo texto e não um varchar
+
+	@Column(columnDefinition = "text")
+	// Criar no banco um tipo texto e não um varchar
 	private String observacao;
-	
+
 	@NotNull
-	@Column (name="data_entrega", nullable=false)
+	@Column(name = "data_entrega", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date dataEntrega;
-	
+
 	@NotNull
-	@Column(nullable=false, precision=10, scale=2, name="valor_frete")
+	@Column(nullable = false, precision = 10, scale = 2, name = "valor_frete")
 	private BigDecimal valorFrete = BigDecimal.ZERO;
-	
+
 	@NotNull
-	@Column(nullable=false, precision=10, scale=2, name="valor_desconto")
+	@Column(nullable = false, precision = 10, scale = 2, name = "valor_desconto")
 	private BigDecimal valorDesconto = BigDecimal.ZERO;
-	
+
 	@NotNull
-	@Column(nullable=false, precision=10, scale=2, name="valor_total")
+	@Column(nullable = false, precision = 10, scale = 2, name = "valor_total")
 	private BigDecimal valorTotal = BigDecimal.ZERO;
-	
-	//valor padrão para o Status ao cadastrar um novo pedido
+
+	// valor padrão para o Status ao cadastrar um novo pedido
 	@NotNull
 	@Enumerated(EnumType.STRING)
-	@Column(nullable=false, length=20)
+	@Column(nullable = false, length = 20)
 	private StatusPedido tatus = StatusPedido.ORCAMENTO;
-	
+
 	@NotNull
 	@Enumerated(EnumType.STRING)
-	@Column(name="forma_pagamento", nullable=false, length=20)
+	@Column(name = "forma_pagamento", nullable = false, length = 20)
 	private FormaPagamento formaPagamento;
-	
+
 	@NotNull
 	@ManyToOne
-	@JoinColumn(name="vendedor_id", nullable=false)
+	@JoinColumn(name = "vendedor_id", nullable = false)
 	private Usuario vendedor;
-	
+
 	@NotNull
 	@ManyToOne
-	@JoinColumn(name="cliente_id", nullable=false)
+	@JoinColumn(name = "cliente_id", nullable = false)
 	private Cliente cliente;
-	
-	
-	@Embedded  //Imbutido dentro do pedido
-	private EnderecoEntregra enderecoEntregra; //Separado apenas para orientação ao OBJ
-	
-	/*orphanRemoval remover os itens orfãns
-	 */			
-	
-	@OneToMany (mappedBy="pedido", cascade = CascadeType.ALL, orphanRemoval=true) //Mapado na clase ItemPedido, salva pedidos e seus ítens
+
+	@Embedded
+	// Imbutido dentro do pedido
+	private EnderecoEntregra enderecoEntregra; // Separado apenas para
+												// orientação ao OBJ
+
+	/* orphanRemoval remover os itens orfãns */
+
+	@OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+	// Mapado na clase ItemPedido, salva pedidos e seus ítens
 	private List<ItemPedido> itens = new ArrayList<>();
 
-	
-	
 	@Transient
-	public boolean isNovo(){
+	public boolean isNovo() {
 		return getId() == null;
 	}
-	
+
 	@Transient
-	public boolean isExistente(){
-		
+	public boolean isExistente() {
+
 		return !isNovo();
-		
+
 	}
 
-	//Pegando o subtotal a partir do total
+	// Pegando o subtotal a partir do total
 	@Transient
-	public BigDecimal getValorSubTotal(){
-	return this.valorTotal.subtract(this.getValorFrete().add(this.getValorDesconto()));
+	public BigDecimal getValorSubTotal() {
+		return this.valorTotal.subtract(this.getValorFrete().add(
+				this.getValorDesconto()));
 	}
-	
-public void recalcularValorTotal() {
-	
-	BigDecimal total = BigDecimal.ZERO;
-	
-	total = total.add(this.getValorFrete().subtract(this.getValorDesconto()));
-	
-	for (ItemPedido item : this.getItens()){
-		
-		if(item.getProduto() != null && item.getProduto().getId() != null){
-		total = total.add(item.getValorTotal());
+
+	public void recalcularValorTotal() {
+
+		BigDecimal total = BigDecimal.ZERO;
+
+		total = total.add(this.getValorFrete()
+				.subtract(this.getValorDesconto()));
+
+		for (ItemPedido item : this.getItens()) {
+
+			if (item.getProduto() != null && item.getProduto().getId() != null) {
+				total = total.add(item.getValorTotal());
+			}
+		}
+
+		this.setValorTotal(total);
+
 	}
+
+	// Adicionar um produto para que fique uma linha editável na página
+	// ao gerar um novo pedido
+	public void adicionarItemVazio() {
+		if (this.isOrcamento()) {
+			Produto produto = new Produto();		
+
+			ItemPedido item = new ItemPedido();			
+			item.setProduto(produto);
+			item.setPedido(this);
+
+			// Adicionando na primeira posição na página
+			this.getItens().add(0, item);
+
+		}
+
 	}
-	
-	this.setValorTotal(total);
-		
+
+	// Orçamento é o status padrão e poderá conter pedidos sem itens
+	@Transient
+	private boolean isOrcamento() {
+
+		return StatusPedido.ORCAMENTO.equals(this.getTatus());
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -236,11 +260,6 @@ public void recalcularValorTotal() {
 	public void setItens(List<ItemPedido> itens) {
 		this.itens = itens;
 	}
-	
-	
-	
-	
-	
 
 	@Override
 	public int hashCode() {
@@ -266,10 +285,5 @@ public void recalcularValorTotal() {
 			return false;
 		return true;
 	}
-
-	
-
-
-	
 
 }

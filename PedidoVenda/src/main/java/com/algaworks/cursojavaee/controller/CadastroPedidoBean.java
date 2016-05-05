@@ -1,6 +1,5 @@
 package com.algaworks.cursojavaee.controller;
 
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -10,84 +9,149 @@ import javax.inject.Inject;
 //import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.apache.commons.lang3.StringUtils;
+
 import com.algaworks.cursojavaee.model.Cliente;
 import com.algaworks.cursojavaee.model.EnderecoEntregra;
 import com.algaworks.cursojavaee.model.FormaPagamento;
+import com.algaworks.cursojavaee.model.ItemPedido;
 import com.algaworks.cursojavaee.model.Pedido;
+import com.algaworks.cursojavaee.model.Produto;
 import com.algaworks.cursojavaee.model.Usuario;
 import com.algaworks.cursojavaee.repository.Clientes;
+import com.algaworks.cursojavaee.repository.Produtos;
 import com.algaworks.cursojavaee.repository.Usuarios;
 import com.algaworks.cursojavaee.service.CadastroPedidoService;
 import com.algaworks.cursojavaee.util.jsf.FacesUtil;
+import com.algaworks.cursojavaee.validation.SKU;
 
 @Named
 @ViewScoped
-public class CadastroPedidoBean implements Serializable{
-	
+public class CadastroPedidoBean implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Produces
-	private Pedido pedido;		
+	private Pedido pedido;
 	@Inject
 	private Usuarios usuarios;
 	@Inject
-	private Clientes clientes;	
+	private Clientes clientes;
 	@Inject
-	private CadastroPedidoService cadastroPedidoService;
-	
-		
+	private CadastroPedidoService cadastroPedidoService;	
+	@Inject
+	private Produtos produtos;
+
+	private Produto produtoLinhaEditavel;
 	private List<Usuario> vendedores;
 	
-	
-	public CadastroPedidoBean(){
+	@SKU
+	private String sku;
+
+	public CadastroPedidoBean() {
 		limpar();
-		
-	
+
+	}
+
+	public void incializar() {
+
+		if (FacesUtil.isNotPostBack()) {
+			this.vendedores = this.usuarios.vendedores();
+
+			this.pedido.adicionarItemVazio();
+			this.recalcularPedido();
+		}
+
+	}
+
+	public void limpar() {
+		pedido = new Pedido();
+		pedido.setEnderecoEntregra(new EnderecoEntregra());
+
+	}
+
+	public List<Cliente> completarCliente(String nome) {
+
+		return this.clientes.porNome(nome);
+
+	}
+
+	public void salvar() {
+		// É atriuído ao pedido o objeto pedido completo com ID e outro objetos
+		// dependentes
+		this.pedido = this.cadastroPedidoService.salvar(this.pedido);
+
+		FacesUtil.addInforMessage("Pedido salvo com sucesso!");
+	}
+
+	public void recalcularPedido() {
+		if (this.pedido != null) {
+			this.pedido.recalcularValorTotal();
+		}
 	}
 	
-	public void incializar(){
+	public void carregarProdutoPorSku(){
+		if(StringUtils.isNoneEmpty(this.sku)){
+			this.produtoLinhaEditavel = this.produtos.porSku(sku);
+			this.carregarProdutoLinhaEditavel();
+		}
+	}
+	
+	//Habilita nova linha para acrescentar itens
+	public void carregarProdutoLinhaEditavel(){		
 		
-		if(FacesUtil.isNotPostBack()){
-			this.vendedores = this.usuarios.vendedores();
+		//Pegando o primeiro item da lista. Neste caso é o da linha editável
+		ItemPedido item = this.pedido.getItens().get(0);
+		
+		if(this.produtoLinhaEditavel != null){
+			
+			if ( this.existeItemComProduto(this.produtoLinhaEditavel)){
+				
+				FacesUtil.addErrorMessage("Já existe no pedido com o produto informado");
+				
+			}else{
+			
+			//Adicionando produto e valor unitário no primeiro item da lista
+			item.setProduto(this.produtoLinhaEditavel);
+			item.setValorUnitario(this.produtoLinhaEditavel.getValorUnitario());
+			//Adicionando um novo elemento (item vazio) acima deste que editamos
+			this.pedido.adicionarItemVazio();			
+			this.produtoLinhaEditavel = null;
+			this.sku = null;
+			this.pedido.recalcularValorTotal();
+			}
 		}
 		
 	}
 	
-	public void limpar(){
-		pedido = new Pedido();
-		pedido.setEnderecoEntregra(new EnderecoEntregra());
-		
+	public List<Produto> completarProduto(String nome){
+		return this.produtos.porNome(nome);
 	}
 	
-	public List<Cliente> completarCliente (String nome){
 		
-		return this.clientes.porNome(nome);
-		
-	}
-	
 
+	public boolean isEditando() {
+		return this.pedido.getId() != null;
+	}
 	
-	public void salvar(){
-		//É atriuído ao pedido o objeto pedido completo com ID e outro objetos dependentes
-		this.pedido = this.cadastroPedidoService.salvar(this.pedido);
+	private boolean existeItemComProduto(Produto produto){
+		boolean existeItem = false;
 		
-		FacesUtil.addInforMessage("Pedido salvo com sucesso!");
+		for(ItemPedido item : this.getPedido().getItens()){
+			if(produto.equals(item.getProduto())){
+				existeItem = true;
+				break;
+			}
+		}
+		
+		return existeItem;
 	}
-	
-	public void recalcularPedido (){
-		this.pedido.recalcularValorTotal();
-	}
-	
-	public boolean isEditando(){
-		return this.pedido.getId() !=null;
-	}
-	
-	//retornar os valores de todos os pagamentos do Enum
-	public FormaPagamento[] getFormasPagamento(){
+
+	// retornar os valores de todos os pagamentos do Enum
+	public FormaPagamento[] getFormasPagamento() {
 		return FormaPagamento.values();
 	}
 
-	
 	public Pedido getPedido() {
 		return pedido;
 	}
@@ -99,7 +163,21 @@ public class CadastroPedidoBean implements Serializable{
 	public List<Usuario> getVendedores() {
 		return vendedores;
 	}
-
 	
+	public Produto getProdutoLinhaEditavel() {
+		return produtoLinhaEditavel;
+	}
+
+	public void setProdutoLinhaEditavel(Produto produtoLinhaEditavel) {
+		this.produtoLinhaEditavel = produtoLinhaEditavel;
+	}
+
+	public String getSku() {
+		return sku;
+	}
+
+	public void setSku(String sku) {
+		this.sku = sku;
+	}
 
 }
