@@ -16,7 +16,5 @@ public enum StatusPedido {
 		return descricao;
 	}
 	
-		
-	
 
 }

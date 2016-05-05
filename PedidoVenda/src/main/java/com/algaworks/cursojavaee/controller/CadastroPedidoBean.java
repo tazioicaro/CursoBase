@@ -2,7 +2,6 @@ package com.algaworks.cursojavaee.controller;
 
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.enterprise.inject.Produces;
@@ -19,7 +18,6 @@ import com.algaworks.cursojavaee.model.Usuario;
 import com.algaworks.cursojavaee.repository.Clientes;
 import com.algaworks.cursojavaee.repository.Usuarios;
 import com.algaworks.cursojavaee.service.CadastroPedidoService;
-import com.algaworks.cursojavaee.service.NegocioException;
 import com.algaworks.cursojavaee.util.jsf.FacesUtil;
 
 @Named
@@ -74,8 +72,14 @@ public class CadastroPedidoBean implements Serializable{
 		this.pedido = this.cadastroPedidoService.salvar(this.pedido);
 		
 		FacesUtil.addInforMessage("Pedido salvo com sucesso!");
+	}
 	
-
+	public void recalcularPedido (){
+		this.pedido.recalcularValorTotal();
+	}
+	
+	public boolean isEditando(){
+		return this.pedido.getId() !=null;
 	}
 	
 	//retornar os valores de todos os pagamentos do Enum

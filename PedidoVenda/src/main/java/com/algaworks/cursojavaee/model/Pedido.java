@@ -109,7 +109,29 @@ public class Pedido implements Serializable {
 		return !isNovo();
 		
 	}
+
+	//Pegando o subtotal a partir do total
+	@Transient
+	public BigDecimal getValorSubTotal(){
+	return this.valorTotal.subtract(this.getValorFrete().add(this.getValorDesconto()));
+	}
 	
+public void recalcularValorTotal() {
+	
+	BigDecimal total = BigDecimal.ZERO;
+	
+	total = total.add(this.getValorFrete().subtract(this.getValorDesconto()));
+	
+	for (ItemPedido item : this.getItens()){
+		
+		if(item.getProduto() != null && item.getProduto().getId() != null){
+		total = total.add(item.getValorTotal());
+	}
+	}
+	
+	this.setValorTotal(total);
+		
+	}
 	
 	public Long getId() {
 		return id;
@@ -244,6 +266,8 @@ public class Pedido implements Serializable {
 			return false;
 		return true;
 	}
+
+	
 
 
 	

@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 
 @Entity
@@ -21,7 +22,7 @@ public class ItemPedido implements Serializable {
 	
 	public ItemPedido() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	private Long id;
@@ -29,7 +30,16 @@ public class ItemPedido implements Serializable {
 	private BigDecimal valorUnitario = BigDecimal.ZERO;
 	private Produto produto;
 	private Pedido pedido;
-
+	
+	
+	@Transient
+	public BigDecimal getValorTotal() {
+		
+		return this.getValorUnitario().multiply(new BigDecimal(this.getQuantidade()));
+	}
+	
+	
+	
 	@Id
 	@GeneratedValue
 	public Long getId() {
@@ -102,6 +112,8 @@ public class ItemPedido implements Serializable {
 			return false;
 		return true;
 	}
+
+	
 
 	
 }
