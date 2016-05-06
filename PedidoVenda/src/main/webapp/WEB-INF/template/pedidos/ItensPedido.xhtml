@@ -45,14 +45,14 @@ para pode utilizar a remoção da linha quando digitar 0 na qtde -->
 			<p:inputText size="8" value="#{itens.quantidade}">
 				<p:ajax event="change" process="@this"
 					update="tabelaItens :frmCadastro:totalPedido :frmCadastro:subtotal"
-					listener="#{cadastroPedidoBean.atualizarQuantidade(itens, linha)}" />
+					listener="#{cadastroPedidoBean.atualizarQuantidade(itens,linha)}" />
 			</p:inputText>
 		</p:column>
 
 		<p:column headerText="Estoque" style="text-align:right; width:100px">
 			<h:outputText value="#{itens.produto.quantidadeEstoque}"
-				style="#{itens.estoqueInsuficiente ? 'color: red' : ''}" />
-			<h:graphicImage library="images" name="alerta.png" id="semEstoque"
+				style= "#{itens.estoqueInsuficiente ? 'color: red' : ''}" />
+			<h:graphicImage library="images" name="alerta.svg" height="12%" width="12%" id="semEstoque"
 				rendered="#{itens.estoqueInsuficiente}" />
 
 			<p:tooltip for="semEstoque" value="Estoque Insuficiente" rendered="#{itens.estoqueInsuficiente}"/>

@@ -119,8 +119,11 @@ h1 {
 }
 
 .menu-sistema .ui-icon-triangle-1-s {	
-    background: url(#{resource['images:setaParaBaixo.png']}) no-repeat;
+    background: url(#{resource['images:setaBaixo.svg']}) no-repeat;
 }
 
 /* Fim da customizaçao do menu-sistema */
 
+.ui-state-disabled {
+	opacity: .80 !important;
+}
