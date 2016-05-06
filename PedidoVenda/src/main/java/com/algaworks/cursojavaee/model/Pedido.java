@@ -137,9 +137,9 @@ public class Pedido implements Serializable {
 	// ao gerar um novo pedido
 	public void adicionarItemVazio() {
 		if (this.isOrcamento()) {
-			Produto produto = new Produto();		
+			Produto produto = new Produto();
 
-			ItemPedido item = new ItemPedido();			
+			ItemPedido item = new ItemPedido();
 			item.setProduto(produto);
 			item.setPedido(this);
 
@@ -150,11 +150,36 @@ public class Pedido implements Serializable {
 
 	}
 
+	/*
+	 * Removendo a linha editável antes de salvar os items do pedido
+	 */
+
+	public void removerItemVazio() {
+		ItemPedido primeiroItem = this.getItens().get(0);
+
+		if (primeiroItem != null && primeiroItem.getProduto().getId() == null) {
+			this.getItens().remove(0);
+		}
+
+	}
+
 	// Orçamento é o status padrão e poderá conter pedidos sem itens
 	@Transient
 	private boolean isOrcamento() {
 
 		return StatusPedido.ORCAMENTO.equals(this.getTatus());
+	}
+	
+	@Transient
+	public boolean isValorTotalNegativa() {
+	  //Se o valor total for menor que 0 é negativo o método retorna algo.		
+		return this.getValorSubTotal().compareTo(BigDecimal.ZERO)<0;
+	}
+	
+	@Transient
+	public boolean isEmitido() {		
+		//Verifica se o Status do pedido é Emitido
+		return StatusPedido.EMITIDO.equals(this.getTatus());
 	}
 
 	public Long getId() {
@@ -286,4 +311,5 @@ public class Pedido implements Serializable {
 		return true;
 	}
 
+	
 }

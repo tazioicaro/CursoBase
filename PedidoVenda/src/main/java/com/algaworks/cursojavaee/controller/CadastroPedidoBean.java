@@ -38,13 +38,13 @@ public class CadastroPedidoBean implements Serializable {
 	@Inject
 	private Clientes clientes;
 	@Inject
-	private CadastroPedidoService cadastroPedidoService;	
+	private CadastroPedidoService cadastroPedidoService;
 	@Inject
 	private Produtos produtos;
 
 	private Produto produtoLinhaEditavel;
 	private List<Usuario> vendedores;
-	
+
 	@SKU
 	private String sku;
 
@@ -75,13 +75,25 @@ public class CadastroPedidoBean implements Serializable {
 		return this.clientes.porNome(nome);
 
 	}
+	
+	/**
+	 * Antes de salvar é removida a primeira linha que contém um produto sem 
+	 * Id. Após salvar ele é readicionando ao datatable para que possibilite
+	 * novas inserções.
+	 */
 
 	public void salvar() {
-		// É atriuído ao pedido o objeto pedido completo com ID e outro objetos
-		// dependentes
-		this.pedido = this.cadastroPedidoService.salvar(this.pedido);
 
-		FacesUtil.addInforMessage("Pedido salvo com sucesso!");
+		this.pedido.removerItemVazio();
+
+		try {
+			this.pedido = this.cadastroPedidoService.salvar(this.pedido);
+
+			FacesUtil.addInforMessage("Pedido salvo com sucesso!");
+		} finally {
+
+			this.pedido.adicionarItemVazio();
+		}
 	}
 
 	public void recalcularPedido() {
@@ -89,75 +101,77 @@ public class CadastroPedidoBean implements Serializable {
 			this.pedido.recalcularValorTotal();
 		}
 	}
-	
-	public void carregarProdutoPorSku(){
-		if(StringUtils.isNoneEmpty(this.sku)){
+
+	public void carregarProdutoPorSku() {
+		if (StringUtils.isNoneEmpty(this.sku)) {
 			this.produtoLinhaEditavel = this.produtos.porSku(sku);
 			this.carregarProdutoLinhaEditavel();
 		}
 	}
-	
-	//Habilita nova linha para acrescentar itens
-	public void carregarProdutoLinhaEditavel(){		
-		
-		//Pegando o primeiro item da lista. Neste caso é o da linha editável
+
+	// Habilita nova linha para acrescentar itens
+	public void carregarProdutoLinhaEditavel() {
+
+		// Pegando o primeiro item da lista. Neste caso é o da linha editável
 		ItemPedido item = this.pedido.getItens().get(0);
-		
-		if(this.produtoLinhaEditavel != null){
-			
-			if ( this.existeItemComProduto(this.produtoLinhaEditavel)){
-				
-				FacesUtil.addErrorMessage("Já existe no pedido com o produto informado");
-				
-			}else{
-			
-			//Adicionando produto e valor unitário no primeiro item da lista
-			item.setProduto(this.produtoLinhaEditavel);
-			item.setValorUnitario(this.produtoLinhaEditavel.getValorUnitario());
-			//Adicionando um novo elemento (item vazio) acima deste que editamos
-			this.pedido.adicionarItemVazio();			
-			this.produtoLinhaEditavel = null;
-			this.sku = null;
-			this.pedido.recalcularValorTotal();
+
+		if (this.produtoLinhaEditavel != null) {
+
+			if (this.existeItemComProduto(this.produtoLinhaEditavel)) {
+
+				FacesUtil
+						.addErrorMessage("Já existe no pedido com o produto informado");
+
+			} else {
+
+				// Adicionando produto e valor unitário no primeiro item da
+				// lista
+				item.setProduto(this.produtoLinhaEditavel);
+				item.setValorUnitario(this.produtoLinhaEditavel
+						.getValorUnitario());
+				// Adicionando um novo elemento (item vazio) acima deste que
+				// editamos
+				this.pedido.adicionarItemVazio();
+				this.produtoLinhaEditavel = null;
+				this.sku = null;
+				this.pedido.recalcularValorTotal();
 			}
 		}
-		
+
 	}
-	
-	public void atualizarQuantidade(ItemPedido item, int linha){
-		
-		if(item.getQuantidade()<1){
-			//Se for a primeira linha, que é a editável, não será excluída
-			if(linha == 0){
+
+	public void atualizarQuantidade(ItemPedido item, int linha) {
+
+		if (item.getQuantidade() < 1) {
+			// Se for a primeira linha, que é a editável, não será excluída
+			if (linha == 0) {
 				item.setQuantidade(1);
-			} else{
+			} else {
 				this.getPedido().getItens().remove(linha);
-				
+
 			}
 		}
 		this.pedido.recalcularValorTotal();
 	}
-	
-	public List<Produto> completarProduto(String nome){
+
+	public List<Produto> completarProduto(String nome) {
 		return this.produtos.porNome(nome);
 	}
-	
-		
 
 	public boolean isEditando() {
 		return this.pedido.getId() != null;
 	}
-	
-	private boolean existeItemComProduto(Produto produto){
+
+	private boolean existeItemComProduto(Produto produto) {
 		boolean existeItem = false;
-		
-		for(ItemPedido item : this.getPedido().getItens()){
-			if(produto.equals(item.getProduto())){
+
+		for (ItemPedido item : this.getPedido().getItens()) {
+			if (produto.equals(item.getProduto())) {
 				existeItem = true;
 				break;
 			}
 		}
-		
+
 		return existeItem;
 	}
 
@@ -177,7 +191,7 @@ public class CadastroPedidoBean implements Serializable {
 	public List<Usuario> getVendedores() {
 		return vendedores;
 	}
-	
+
 	public Produto getProdutoLinhaEditavel() {
 		return produtoLinhaEditavel;
 	}

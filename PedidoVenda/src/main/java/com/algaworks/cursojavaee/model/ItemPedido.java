@@ -44,6 +44,22 @@ public class ItemPedido implements Serializable {
 	}
 	
 	
+	@Transient
+	public boolean isEstoqueSuficiente(){
+		//Se o status é emitido ou 
+		//Se a quantidade do produto for maior que a quantidade que o cliente precisa, retorna true.
+		return this.getPedido().isEmitido() 
+				|| (this.getProduto().getId() != null 
+				&& this.getProduto().getQuantidadeEstoque() >- this.getQuantidade());
+		
+	}
+	
+	@Transient
+	public boolean isEstoqueInsuficiente(){
+		return !this.isEstoqueSuficiente();		
+	}
+	
+	
 	@Id
 	@GeneratedValue
 	public Long getId() {

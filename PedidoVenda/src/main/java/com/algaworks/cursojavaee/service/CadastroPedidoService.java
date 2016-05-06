@@ -13,21 +13,31 @@ import com.algaworks.cursojavaee.util.jpa.Transactional;
 public class CadastroPedidoService implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Inject
 	private Pedidos pedidos;
-	
-	
+
 	@Transactional
-	public Pedido salvar (Pedido pedido){
-		
-		if(pedido.isNovo()){
+	public Pedido salvar(Pedido pedido) {
+
+		if (pedido.isNovo()) {
 			pedido.setDataCriacao(new Date());
 			pedido.setTatus(StatusPedido.ORCAMENTO);
 		}
-		
+
+		// Antes de salvar forçar o cálculo dos produtos
+
+		if (pedido.getItens().isEmpty()) {
+			throw new NegocioException(
+					"O pedido deve possuir pelo menos um item.");
+		}
+		if (pedido.isValorTotalNegativa()) {
+			throw new NegocioException(
+					"Valor total do pedido não pode ser negativo.");
+		}
+		pedido.recalcularValorTotal();
+
 		pedido = this.pedidos.guardar(pedido);
-		
 		return pedido;
 	}
 
