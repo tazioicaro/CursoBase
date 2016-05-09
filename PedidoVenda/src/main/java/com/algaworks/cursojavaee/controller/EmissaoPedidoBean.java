@@ -1,5 +1,4 @@
 package com.algaworks.cursojavaee.controller;
-
 import java.io.Serializable;
 
 import javax.faces.view.ViewScoped;
@@ -20,6 +19,7 @@ public class EmissaoPedidoBean implements Serializable {
 	@PedidoEdicao
 	private Pedido pedido;
 
+	@Inject
 	private EmissaoPedidoService emissaoPedidoService;
 
 	/*
