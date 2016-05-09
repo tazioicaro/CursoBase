@@ -18,12 +18,13 @@ public class CadastroPedidoService implements Serializable {
 	private Pedidos pedidos;
 
 	@Transactional
-	public Pedido salvar(Pedido pedido) {
+	public Pedido salvar(Pedido pedido) throws NegocioException {
 
 		if (pedido.isNovo()) {
 			pedido.setDataCriacao(new Date());
 			pedido.setTatus(StatusPedido.ORCAMENTO);
 		}
+		pedido.recalcularValorTotal();
 
 		// Antes de salvar forçar o cálculo dos produtos
 
@@ -35,7 +36,7 @@ public class CadastroPedidoService implements Serializable {
 			throw new NegocioException(
 					"Valor total do pedido não pode ser negativo.");
 		}
-		pedido.recalcularValorTotal();
+	
 		pedido = this.pedidos.guardar(pedido);
 		return pedido;
 	}

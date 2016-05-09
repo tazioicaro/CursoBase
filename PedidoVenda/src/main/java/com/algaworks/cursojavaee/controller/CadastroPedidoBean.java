@@ -107,7 +107,7 @@ public class CadastroPedidoBean implements Serializable {
 	}
 
 	public void carregarProdutoPorSku() {
-		if (StringUtils.isNoneEmpty(this.sku)) {
+		if (StringUtils.isNotEmpty(this.sku)) {
 			this.produtoLinhaEditavel = this.produtos.porSku(sku);
 			this.carregarProdutoLinhaEditavel();
 		}
@@ -184,6 +184,10 @@ public class CadastroPedidoBean implements Serializable {
 	// retornar os valores de todos os pagamentos do Enum
 	public FormaPagamento[] getFormasPagamento() {
 		return FormaPagamento.values();
+	}
+	
+	public String getNomeCliente(){
+		return pedido.getCliente() == null ? null: pedido.getCliente().getNome();
 	}
 
 	public Pedido getPedido() {

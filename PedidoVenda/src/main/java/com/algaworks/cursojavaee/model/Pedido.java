@@ -133,8 +133,11 @@ public class Pedido implements Serializable {
 
 	}
 
-	// Adicionar um produto para que fique uma linha editável na página
-	// ao gerar um novo pedido
+	/*  Adicionar um produto para que fique uma linha editável na página
+	 *  ao gerar um novo pedido
+	 */
+	 
+	
 	public void adicionarItemVazio() {
 		if (this.isOrcamento()) {
 			Produto produto = new Produto();
@@ -163,7 +166,15 @@ public class Pedido implements Serializable {
 
 	}
 	
-	public void naoAlteravel() {
+	@Transient
+	public boolean isAlteravel() {
+		return this.isOrcamento();
+	}
+	
+	@Transient
+	public boolean isNaoAlteravel() {
+		
+		return !this.isAlteravel();
 
 	}
 	
@@ -187,7 +198,19 @@ public class Pedido implements Serializable {
 		return StatusPedido.EMITIDO.equals(this.getTatus());
 	}
 
+	@Transient
+	public boolean isNaoEmissivel() {
+		
+		return !this.isEmissivel();
+	}
 	
+	@Transient
+	public boolean isEmissivel() {
+		
+		//para ser emissível primeiramente deverá ser existente e deverá
+		//Está com o status de orçamento
+		return this.isExistente() && this.isOrcamento();
+	}
 	
 
 	public Long getId() {
@@ -295,19 +318,6 @@ public class Pedido implements Serializable {
 	}
 	
 	
-	@Transient
-	public boolean isNaoEmissivel() {
-		
-		return !this.isEmissivel();
-	}
-	
-	@Transient
-	public boolean isEmissivel() {
-		
-		//para ser emissível primeiramente deverá ser existente e deverá
-		//Está com o status de orçamento
-		return this.isExistente() && this.isOrcamento();
-	}
 	
 
 	@Override
