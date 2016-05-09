@@ -134,8 +134,9 @@ public class CadastroPedidoBean implements Serializable {
 				item.setProduto(this.produtoLinhaEditavel);
 				item.setValorUnitario(this.produtoLinhaEditavel
 						.getValorUnitario());
-				// Adicionando um novo elemento (item vazio) acima deste que
-				// editamos
+				/* Adicionando um novo elemento (item vazio) acima deste que
+				*
+				*/ 
 				this.pedido.adicionarItemVazio();
 				this.produtoLinhaEditavel = null;
 				this.sku = null;
@@ -147,7 +148,7 @@ public class CadastroPedidoBean implements Serializable {
 
 	public void atualizarQuantidade(ItemPedido item, int linha) {
 
-		if (item.getQuantidade() <1) {
+		if (item.getQuantidade() <=0) {
 			// Se for a primeira linha, que é a editável, não será excluída
 			if (linha == 0) {
 				item.setQuantidade(1);
