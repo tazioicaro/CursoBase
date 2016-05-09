@@ -38,7 +38,8 @@
 		</p:selectOneMenu>
 		
 		<p:outputLabel value="Valor do Frete" for="valorFrete" />
-		<h:inputText  id="valorFrete" size="10" maxlength="10" value="#{cadastroPedidoBean.pedido.valorFrete}" >
+		<h:inputText  id="valorFrete" size="10" maxlength="10" value="#{cadastroPedidoBean.pedido.valorFrete}"
+		styleClass="moeda" >
 		<f:convertNumber maxFractionDigits="2" minFractionDigits="2" />
 		
 		 <p:ajax event="change" process="@this" update="totalPedido"
@@ -51,7 +52,8 @@
 		</h:outputText>
 		
 		<p:outputLabel value="Valor de Desconto" for="valorDesconto" />
-		<h:inputText id="valorDesconto" size="10" maxlength="10" value="#{cadastroPedidoBean.pedido.valorDesconto}">
+		<h:inputText id="valorDesconto" size="10" maxlength="10" value="#{cadastroPedidoBean.pedido.valorDesconto}"
+		styleClass="moeda">
 		 <f:convertNumber  maxFractionDigits="2" minFractionDigits="2"/>
 		 <p:ajax event="change" process="@this" update="totalPedido"
 		  listener="#{cadastroPedidoBean.recalcularPedido}"/>

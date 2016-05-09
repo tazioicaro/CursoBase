@@ -36,7 +36,6 @@ public class CadastroPedidoService implements Serializable {
 					"Valor total do pedido não pode ser negativo.");
 		}
 		pedido.recalcularValorTotal();
-
 		pedido = this.pedidos.guardar(pedido);
 		return pedido;
 	}

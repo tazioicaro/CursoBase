@@ -22,6 +22,7 @@ import com.algaworks.cursojavaee.repository.Clientes;
 import com.algaworks.cursojavaee.repository.Produtos;
 import com.algaworks.cursojavaee.repository.Usuarios;
 import com.algaworks.cursojavaee.service.CadastroPedidoService;
+import com.algaworks.cursojavaee.service.NegocioException;
 import com.algaworks.cursojavaee.util.jsf.FacesUtil;
 import com.algaworks.cursojavaee.validation.SKU;
 
@@ -32,6 +33,7 @@ public class CadastroPedidoBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Produces
+	@PedidoEdicao
 	private Pedido pedido;
 	@Inject
 	private Usuarios usuarios;
@@ -57,7 +59,6 @@ public class CadastroPedidoBean implements Serializable {
 
 		if (FacesUtil.isNotPostBack()) {
 			this.vendedores = this.usuarios.vendedores();
-
 			this.pedido.adicionarItemVazio();
 			this.recalcularPedido();
 		}
@@ -90,7 +91,10 @@ public class CadastroPedidoBean implements Serializable {
 			this.pedido = this.cadastroPedidoService.salvar(this.pedido);
 
 			FacesUtil.addInforMessage("Pedido salvo com sucesso!");
-		} finally {
+		}catch(NegocioException ne){
+		
+		    FacesUtil.addErrorMessage(ne.getMessage());
+		}finally {
 
 			this.pedido.adicionarItemVazio();
 		}
@@ -108,6 +112,7 @@ public class CadastroPedidoBean implements Serializable {
 			this.carregarProdutoLinhaEditavel();
 		}
 	}
+	
 
 	// Habilita nova linha para acrescentar itens
 	public void carregarProdutoLinhaEditavel() {
@@ -142,7 +147,7 @@ public class CadastroPedidoBean implements Serializable {
 
 	public void atualizarQuantidade(ItemPedido item, int linha) {
 
-		if (item.getQuantidade() < 1) {
+		if (item.getQuantidade() <1) {
 			// Se for a primeira linha, que é a editável, não será excluída
 			if (linha == 0) {
 				item.setQuantidade(1);
@@ -153,7 +158,8 @@ public class CadastroPedidoBean implements Serializable {
 		}
 		this.pedido.recalcularValorTotal();
 	}
-
+	
+	
 	public List<Produto> completarProduto(String nome) {
 		return this.produtos.porNome(nome);
 	}

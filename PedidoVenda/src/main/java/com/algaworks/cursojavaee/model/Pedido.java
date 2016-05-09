@@ -162,6 +162,11 @@ public class Pedido implements Serializable {
 		}
 
 	}
+	
+	public void naoAlteravel() {
+
+	}
+	
 
 	// Orçamento é o status padrão e poderá conter pedidos sem itens
 	@Transient
@@ -172,15 +177,18 @@ public class Pedido implements Serializable {
 	
 	@Transient
 	public boolean isValorTotalNegativa() {
-	  //Se o valor total for menor que 0 é negativo o método retorna algo.		
-		return this.getValorSubTotal().compareTo(BigDecimal.ZERO)<0;
+		// Se o valor total for menor que 0 é negativo o método retorna algo.
+		return this.getValorSubTotal().compareTo(BigDecimal.ZERO) < 0;
 	}
-	
+
 	@Transient
-	public boolean isEmitido() {		
-		//Verifica se o Status do pedido é Emitido
+	public boolean isEmitido() {
+		// Verifica se o Status do pedido é Emitido
 		return StatusPedido.EMITIDO.equals(this.getTatus());
 	}
+
+	
+	
 
 	public Long getId() {
 		return id;
@@ -285,6 +293,22 @@ public class Pedido implements Serializable {
 	public void setItens(List<ItemPedido> itens) {
 		this.itens = itens;
 	}
+	
+	
+	@Transient
+	public boolean isNaoEmissivel() {
+		
+		return !this.isEmissivel();
+	}
+	
+	@Transient
+	public boolean isEmissivel() {
+		
+		//para ser emissível primeiramente deverá ser existente e deverá
+		//Está com o status de orçamento
+		return this.isExistente() && this.isOrcamento();
+	}
+	
 
 	@Override
 	public int hashCode() {

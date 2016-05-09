@@ -12,17 +12,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-
 @Entity
-@Table (name="item_pedido")
+@Table(name = "item_pedido")
 public class ItemPedido implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	
-	
+
 	public ItemPedido() {
 		super();
-		
+
 	}
 
 	private Long id;
@@ -30,36 +27,7 @@ public class ItemPedido implements Serializable {
 	private BigDecimal valorUnitario = BigDecimal.ZERO;
 	private Produto produto;
 	private Pedido pedido;
-	
-	
-	@Transient
-	public BigDecimal getValorTotal() {
-		
-		return this.getValorUnitario().multiply(new BigDecimal(this.getQuantidade()));
-	}
-	
-	@Transient
-	public boolean isProdutoAssociado(){
-		return this.getPedido() != null && this.getProduto().getId() != null;
-	}
-	
-	
-	@Transient
-	public boolean isEstoqueSuficiente(){
-		//Se o status é emitido ou 
-		//Se a quantidade do produto for maior que a quantidade que o cliente precisa, retorna true.
-		return this.getPedido().isEmitido() 
-				|| (this.getProduto().getId() != null 
-				&& this.getProduto().getQuantidadeEstoque() >- this.getQuantidade());
-		
-	}
-	
-	@Transient
-	public boolean isEstoqueInsuficiente(){
-		return !this.isEstoqueSuficiente();		
-	}
-	
-	
+
 	@Id
 	@GeneratedValue
 	public Long getId() {
@@ -108,6 +76,33 @@ public class ItemPedido implements Serializable {
 		this.pedido = pedido;
 	}
 
+	@Transient
+	public BigDecimal getValorTotal() {
+		return this.getValorUnitario().multiply(
+				new BigDecimal(this.getQuantidade()));
+	}
+
+	@Transient
+	public boolean isProdutoAssociado() {
+		return this.getProduto() != null && this.getProduto().getId() != null;
+	}
+
+	@Transient
+	public boolean isEstoqueSuficiente() {
+		// Se o status é emitido ou
+		// Se a quantidade do produto for maior que a quantidade que o cliente
+		// precisa, retorna true.
+		return this.getPedido().isEmitido()
+				|| this.getProduto().getId() == null
+				|| this.getProduto().getQuantidadeEstoque() >= this
+						.getQuantidade();
+	}
+
+	@Transient
+	public boolean isEstoqueInsuficiente() {
+		return !this.isEstoqueSuficiente();
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -133,7 +128,4 @@ public class ItemPedido implements Serializable {
 		return true;
 	}
 
-	
-
-	
 }
