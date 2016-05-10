@@ -36,7 +36,7 @@ public class CancelamentoPedidoService implements Serializable {
 		
 		pedido.setTatus(StatusPedido.CANCELADO);
 		pedido = this.pedidos.guardar(pedido);
-		return null;
+		return pedido;
 	}
 
 }
