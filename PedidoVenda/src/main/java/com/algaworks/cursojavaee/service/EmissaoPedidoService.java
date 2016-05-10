@@ -32,7 +32,7 @@ public class EmissaoPedidoService implements Serializable {
 			throw new NegocioException("Pedido não pode ser emitido com status" 
 		+ pedido.getTatus().getDescricao() + ".");
 		}
-		//Dar baixo no estoque
+		//Dar baixa no estoque
 		this.estoqueService.baixarItensEstoque(pedido);
 		
 		pedido.setTatus(StatusPedido.EMITIDO);		

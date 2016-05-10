@@ -3,6 +3,7 @@ package com.algaworks.cursojavaee.controller;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.enterprise.event.Observes;
 import javax.enterprise.inject.Produces;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
@@ -11,6 +12,7 @@ import javax.inject.Named;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.algaworks.cursojavaee.events.PedidoAlteradoEvent;
 import com.algaworks.cursojavaee.model.Cliente;
 import com.algaworks.cursojavaee.model.EnderecoEntregra;
 import com.algaworks.cursojavaee.model.FormaPagamento;
@@ -148,7 +150,7 @@ public class CadastroPedidoBean implements Serializable {
 
 	public void atualizarQuantidade(ItemPedido item, int linha) {
 
-		if (item.getQuantidade() <=0) {
+		if (item.getQuantidade() < 1) {
 			// Se for a primeira linha, que é a editável, não será excluída
 			if (linha == 0) {
 				item.setQuantidade(1);
@@ -180,6 +182,17 @@ public class CadastroPedidoBean implements Serializable {
 		}
 
 		return existeItem;
+	}
+	
+	/*
+	 * O @Observes é para que haja a chamada deste método quando houver 
+	 * a alteração de um pedido. Assim, o que foi alterado  e persistido será exibido 
+	 * da tela em tempo real 
+	 */
+	public void pedidoAlterando (@Observes PedidoAlteradoEvent event){
+		
+		this.pedido = event.getPedido();
+		
 	}
 
 	// retornar os valores de todos os pagamentos do Enum
