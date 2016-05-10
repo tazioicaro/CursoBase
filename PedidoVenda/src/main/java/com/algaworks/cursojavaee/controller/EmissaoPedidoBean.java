@@ -1,8 +1,8 @@
 package com.algaworks.cursojavaee.controller;
 import java.io.Serializable;
 
+import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Event;
-import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -12,7 +12,7 @@ import com.algaworks.cursojavaee.service.EmissaoPedidoService;
 import com.algaworks.cursojavaee.util.jsf.FacesUtil;
 
 @Named
-@ViewScoped
+@RequestScoped
 public class EmissaoPedidoBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;

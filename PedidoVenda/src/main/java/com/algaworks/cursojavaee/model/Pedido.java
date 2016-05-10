@@ -212,6 +212,25 @@ public class Pedido implements Serializable {
 		return this.isExistente() && this.isOrcamento();
 	}
 	
+	//Retorna true se for status cancelado o status do pedido
+	@Transient
+	public boolean isCancelado(){
+		return StatusPedido.CANCELADO.equals(this.getTatus());
+	}
+	
+	
+	//Produto cancelável quando for existente e não pode está cancelado já
+	@Transient
+	public boolean isCancelavel(){
+		return this.isExistente() && !this.isCancelado();
+	}
+	
+    @Transient
+	public boolean isNaoCancelavel() {
+		
+		return !this.isCancelavel();
+	}
+	
 
 	public Long getId() {
 		return id;
@@ -344,6 +363,7 @@ public class Pedido implements Serializable {
 			return false;
 		return true;
 	}
-
+	
+	
 	
 }

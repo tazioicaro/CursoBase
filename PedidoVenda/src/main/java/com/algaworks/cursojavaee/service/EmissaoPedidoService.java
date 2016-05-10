@@ -15,11 +15,9 @@ public class EmissaoPedidoService implements Serializable {
 	
 	
 	@Inject
-	private CadastroPedidoService cadastroPedidoService;
-	
+	private CadastroPedidoService cadastroPedidoService;	
 	@Inject
-	private Pedidos pedidos;
-	
+	private Pedidos pedidos;	
 	@Inject
 	private EstoqueService estoqueService;
 	
