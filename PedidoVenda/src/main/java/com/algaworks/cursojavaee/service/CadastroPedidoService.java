@@ -25,6 +25,11 @@ public class CadastroPedidoService implements Serializable {
 			pedido.setTatus(StatusPedido.ORCAMENTO);
 		}
 		pedido.recalcularValorTotal();
+		
+		if( pedido.isNaoAlteravel()){
+			throw new NegocioException("Pedido não pode ser alterado no status "+
+		 pedido.getTatus().getDescricao() + ".");
+		}
 
 		// Antes de salvar forçar o cálculo dos produtos
 

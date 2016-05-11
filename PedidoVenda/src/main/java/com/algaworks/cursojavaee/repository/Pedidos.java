@@ -35,7 +35,7 @@ public class Pedidos implements Serializable {
 	
 	
 	
-	@SuppressWarnings({ "unchecked" })
+	@SuppressWarnings({ })
 	public Map<Date, BigDecimal> valoresTotaisPorData(Integer numeroDeDias, Usuario criadoPor) {
 		Session session = manager.unwrap(Session.class);
 		

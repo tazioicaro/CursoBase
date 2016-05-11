@@ -52,14 +52,16 @@ public class CadastroPedidoBean implements Serializable {
 	@SKU
 	private String sku;
 
+	
 	public CadastroPedidoBean() {
 		limpar();
 
 	}
 
+	
 	public void incializar() {
 
-		if (FacesUtil.isNotPostBack()) {
+		if (FacesUtil.isNotPostBack()) {			
 			this.vendedores = this.usuarios.vendedores();
 			this.pedido.adicionarItemVazio();
 			this.recalcularPedido();
