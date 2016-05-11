@@ -34,6 +34,7 @@ public class CadastroPedidoBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+
 	@Produces
 	@PedidoEdicao
 	private Pedido pedido;
@@ -58,17 +59,16 @@ public class CadastroPedidoBean implements Serializable {
 
 	}
 
-	
-	public void incializar() {
+	public void inicializar() {		
 
-		if (FacesUtil.isNotPostBack()) {			
-			this.vendedores = this.usuarios.vendedores();
+		if (FacesUtil.isNotPostBack()) {
+			this.vendedores = this.usuarios.vendedores();			
 			this.pedido.adicionarItemVazio();
 			this.recalcularPedido();
-		}
-
+		} 		
 	}
-
+ 
+	
 	public void limpar() {
 		pedido = new Pedido();
 		pedido.setEnderecoEntregra(new EnderecoEntregra());

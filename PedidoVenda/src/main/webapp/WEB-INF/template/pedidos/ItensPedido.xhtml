@@ -40,7 +40,7 @@
 		</p:column>
 		<p:column headerText="Quantidade"
 			style="text-align: center; width: 100px">
-			<p:inputText size="8" value="#{itens.quantidade}" disabled="#{cadastroPedidoBean.pedido.naoAlteravel}">
+			<p:inputText size="8" value="#{itens.quantidade}">
 				<p:ajax event="change" process="@this"
 					update="tabelaItens :frmCadastro:totalPedido :frmCadastro:subtotal"
 					listener="#{cadastroPedidoBean.atualizarQuantidade(itens, line)}" />
