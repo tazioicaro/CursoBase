@@ -1,5 +1,6 @@
 package com.algaworks.cursojavaee.model;
 
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -87,4 +88,5 @@ public class Categoria implements Serializable {
 			return false;
 		return true;
 	}
+
 }

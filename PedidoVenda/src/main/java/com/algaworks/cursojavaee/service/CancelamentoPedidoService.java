@@ -21,7 +21,7 @@ public class CancelamentoPedidoService implements Serializable {
 	private EstoqueService estoqueService;
 	
 	@Transactional
-	public Pedido cancelar(Pedido pedido) {
+	public Pedido cancelar(Pedido pedido)  throws NegocioException{
 		//Buscar no db o pedido
 		pedido = this.pedidos.porId(pedido.getId());
 		

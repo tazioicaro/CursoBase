@@ -1,5 +1,7 @@
 package com.algaworks.cursojavaee.model;
 
+
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -27,207 +29,25 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "pedido")
 public class Pedido implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
+	private Long id;
+	private Date dataCriacao;
+	private String observacao;
+	private Date dataEntrega;
+	private BigDecimal valorFrete = BigDecimal.ZERO;
+	private BigDecimal valorDesconto = BigDecimal.ZERO;
+	private BigDecimal valorTotal = BigDecimal.ZERO;
+	private StatusPedido tatus = StatusPedido.ORCAMENTO;
+	private FormaPagamento formaPagamento;
+	private Usuario vendedor;
+	private Cliente cliente;
+	private EnderecoEntregra enderecoEntregra;
+	private List<ItemPedido> itens = new ArrayList<>();
 
 	@Id
 	@GeneratedValue
-	private Long id;
-
-	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "data_criacao", nullable = false)
-	private Date dataCriacao;
-
-	@Column(columnDefinition = "text")
-	// Criar no banco um tipo texto e não um varchar
-	private String observacao;
-
-	@NotNull
-	@Column(name = "data_entrega", nullable = false)
-	@Temporal(TemporalType.DATE)
-	private Date dataEntrega;
-
-	@NotNull
-	@Column(nullable = false, precision = 10, scale = 2, name = "valor_frete")
-	private BigDecimal valorFrete = BigDecimal.ZERO;
-
-	@NotNull
-	@Column(nullable = false, precision = 10, scale = 2, name = "valor_desconto")
-	private BigDecimal valorDesconto = BigDecimal.ZERO;
-
-	@NotNull
-	@Column(nullable = false, precision = 10, scale = 2, name = "valor_total")
-	private BigDecimal valorTotal = BigDecimal.ZERO;
-
-	// valor padrão para o Status ao cadastrar um novo pedido
-	@NotNull
-	@Enumerated(EnumType.STRING)
-	@Column(nullable = false, length = 20)
-	private StatusPedido tatus = StatusPedido.ORCAMENTO;
-
-	@NotNull
-	@Enumerated(EnumType.STRING)
-	@Column(name = "forma_pagamento", nullable = false, length = 20)
-	private FormaPagamento formaPagamento;
-
-	@NotNull
-	@ManyToOne
-	@JoinColumn(name = "vendedor_id", nullable = false)
-	private Usuario vendedor;
-
-	@NotNull
-	@ManyToOne
-	@JoinColumn(name = "cliente_id", nullable = false)
-	private Cliente cliente;
-
-	@Embedded
-	// Imbutido dentro do pedido
-	private EnderecoEntregra enderecoEntregra; // Separado apenas para
-												// orientação ao OBJ
-
-	/* orphanRemoval remover os itens orfãns */
-
-	@OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-	// Mapado na clase ItemPedido, salva pedidos e seus ítens
-	private List<ItemPedido> itens = new ArrayList<>();
-
-	@Transient
-	public boolean isNovo() {
-		return getId() == null;
-	}
-
-	@Transient
-	public boolean isExistente() {
-
-		return !isNovo();
-
-	}
-
-	// Pegando o subtotal a partir do total
-	@Transient
-	public BigDecimal getValorSubTotal() {
-		return this.valorTotal.subtract(this.getValorFrete().add(
-				this.getValorDesconto()));
-	}
-
-	public void recalcularValorTotal() {
-
-		BigDecimal total = BigDecimal.ZERO;
-
-		total = total.add(this.getValorFrete()
-				.subtract(this.getValorDesconto()));
-
-		for (ItemPedido item : this.getItens()) {
-
-			if (item.getProduto() != null && item.getProduto().getId() != null) {
-				total = total.add(item.getValorTotal());
-			}
-		}
-
-		this.setValorTotal(total);
-
-	}
-
-	/*  Adicionar um produto para que fique uma linha editável na página
-	 *  ao gerar um novo pedido
-	 */
-	 
-	
-	public void adicionarItemVazio() {
-		if (this.isOrcamento()) {
-			Produto produto = new Produto();
-
-			ItemPedido item = new ItemPedido();
-			item.setProduto(produto);
-			item.setPedido(this);
-
-			// Adicionando na primeira posição na página
-			this.getItens().add(0, item);
-
-		}
-
-	}
-
-	/*
-	 * Removendo a linha editável antes de salvar os items do pedido
-	 */
-
-	public void removerItemVazio() {
-		ItemPedido primeiroItem = this.getItens().get(0);
-
-		if (primeiroItem != null && primeiroItem.getProduto().getId() == null) {
-			this.getItens().remove(0);
-		}
-
-	}
-	
-	@Transient
-	public boolean isAlteravel() {
-		return this.isOrcamento();
-	}
-	
-	@Transient
-	public boolean isNaoAlteravel() {
-		
-		return !this.isAlteravel();
-
-	}
-	
-
-	// Orçamento é o status padrão e poderá conter pedidos sem itens
-	@Transient
-	private boolean isOrcamento() {
-
-		return StatusPedido.ORCAMENTO.equals(this.getTatus());
-	}
-	
-	@Transient
-	public boolean isValorTotalNegativa() {
-		// Se o valor total for menor que 0 é negativo o método retorna algo.
-		return this.getValorSubTotal().compareTo(BigDecimal.ZERO) < 0;
-	}
-
-	@Transient
-	public boolean isEmitido() {
-		// Verifica se o Status do pedido é Emitido
-		return StatusPedido.EMITIDO.equals(this.getTatus());
-	}
-
-	@Transient
-	public boolean isNaoEmissivel() {
-		
-		return !this.isEmissivel();
-	}
-	
-	@Transient
-	public boolean isEmissivel() {
-		
-		//para ser emissível primeiramente deverá ser existente e deverá
-		//Está com o status de orçamento
-		return this.isExistente() && this.isOrcamento();
-	}
-	
-	//Retorna true se for status cancelado o status do pedido
-	@Transient
-	public boolean isCancelado(){
-		return StatusPedido.CANCELADO.equals(this.getTatus());
-	}
-	
-	
-	//Produto cancelável quando for existente e não pode está cancelado já
-	@Transient
-	public boolean isCancelavel(){
-		return this.isExistente() && !this.isCancelado();
-	}
-	
-    @Transient
-	public boolean isNaoCancelavel() {
-		
-		return !this.isCancelavel();
-	}
-	
-
 	public Long getId() {
 		return id;
 	}
@@ -236,6 +56,9 @@ public class Pedido implements Serializable {
 		this.id = id;
 	}
 
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "data_criacao", nullable = false)
 	public Date getDataCriacao() {
 		return dataCriacao;
 	}
@@ -244,6 +67,7 @@ public class Pedido implements Serializable {
 		this.dataCriacao = dataCriacao;
 	}
 
+	@Column(columnDefinition = "text")
 	public String getObservacao() {
 		return observacao;
 	}
@@ -252,6 +76,9 @@ public class Pedido implements Serializable {
 		this.observacao = observacao;
 	}
 
+	@NotNull
+	@Temporal(TemporalType.DATE)
+	@Column(name = "data_entrega", nullable = false)
 	public Date getDataEntrega() {
 		return dataEntrega;
 	}
@@ -260,6 +87,8 @@ public class Pedido implements Serializable {
 		this.dataEntrega = dataEntrega;
 	}
 
+	@NotNull
+	@Column(name = "valor_frete", nullable = false, precision = 10, scale = 2)
 	public BigDecimal getValorFrete() {
 		return valorFrete;
 	}
@@ -268,6 +97,8 @@ public class Pedido implements Serializable {
 		this.valorFrete = valorFrete;
 	}
 
+	@NotNull
+	@Column(name = "valor_desconto", nullable = false, precision = 10, scale = 2)
 	public BigDecimal getValorDesconto() {
 		return valorDesconto;
 	}
@@ -276,6 +107,8 @@ public class Pedido implements Serializable {
 		this.valorDesconto = valorDesconto;
 	}
 
+	@NotNull
+	@Column(name = "valor_total", nullable = false, precision = 10, scale = 2)
 	public BigDecimal getValorTotal() {
 		return valorTotal;
 	}
@@ -284,6 +117,9 @@ public class Pedido implements Serializable {
 		this.valorTotal = valorTotal;
 	}
 
+	@NotNull
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false, length = 20)
 	public StatusPedido getTatus() {
 		return tatus;
 	}
@@ -292,6 +128,9 @@ public class Pedido implements Serializable {
 		this.tatus = tatus;
 	}
 
+	@NotNull
+	@Enumerated(EnumType.STRING)
+	@Column(name = "forma_pagamento", nullable = false, length = 20)
 	public FormaPagamento getFormaPagamento() {
 		return formaPagamento;
 	}
@@ -300,6 +139,9 @@ public class Pedido implements Serializable {
 		this.formaPagamento = formaPagamento;
 	}
 
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "vendedor_id", nullable = false)
 	public Usuario getVendedor() {
 		return vendedor;
 	}
@@ -308,6 +150,9 @@ public class Pedido implements Serializable {
 		this.vendedor = vendedor;
 	}
 
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "cliente_id", nullable = false)
 	public Cliente getCliente() {
 		return cliente;
 	}
@@ -316,6 +161,7 @@ public class Pedido implements Serializable {
 		this.cliente = cliente;
 	}
 
+	@Embedded
 	public EnderecoEntregra getEnderecoEntregra() {
 		return enderecoEntregra;
 	}
@@ -324,6 +170,7 @@ public class Pedido implements Serializable {
 		this.enderecoEntregra = enderecoEntregra;
 	}
 
+	@OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
 	public List<ItemPedido> getItens() {
 		return itens;
 	}
@@ -331,10 +178,132 @@ public class Pedido implements Serializable {
 	public void setItens(List<ItemPedido> itens) {
 		this.itens = itens;
 	}
-	
-	
-	
 
+	
+	
+	public void recalcularValorTotal() {
+		BigDecimal total = BigDecimal.ZERO;
+		
+		total = total.add(this.getValorFrete()).subtract(this.getValorDesconto());
+		
+		for (ItemPedido item : this.getItens()) {
+			if (item.getProduto() != null && item.getProduto().getId() != null) {
+				total = total.add(item.getValorTotal());
+			}
+		}
+		
+		this.setValorTotal(total);
+	}
+	
+	/**  Adicionar um produto para que fique uma linha editável na página
+	 *  ao gerar um novo pedido
+	 */
+
+	public void adicionarItemVazio() {
+		if (this.isOrcamento()) {
+			Produto produto = new Produto();
+			
+			ItemPedido item = new ItemPedido();
+			item.setProduto(produto);
+			item.setPedido(this);
+			
+			this.getItens().add(0, item);
+		}
+	}
+	
+	/**
+	 * Removendo a linha editável antes de salvar os items do pedido
+	 */
+
+	public void removerItemVazio() {
+		ItemPedido primeiroItem = this.getItens().get(0);
+		
+		if (primeiroItem != null && primeiroItem.getProduto().getId() == null) {
+			this.getItens().remove(0);
+		}
+	}
+	
+	@Transient
+	public boolean isNovo() {
+		return getId() == null;
+	}
+	
+	@Transient
+	public boolean isExistente() {
+		return !isNovo();
+	}
+	
+	
+	@Transient
+	public BigDecimal getValorSubtotal() {
+		return this.getValorTotal().subtract(this.getValorFrete()).add(this.getValorDesconto());
+	}
+	
+	
+	@Transient
+	public boolean isOrcamento() {
+		return StatusPedido.ORCAMENTO.equals(this.getTatus());
+	}
+
+	@Transient
+	public boolean isValorTotalNegativo() {
+		
+		// Se o valor total for menor que 0 é negativo o método retorna	algo.
+		return this.getValorTotal().compareTo(BigDecimal.ZERO) < 0;
+	}
+
+	@Transient
+	public boolean isEmitido() {
+		
+		// Verifica se o Status do pedido é Emitido		
+		return StatusPedido.EMITIDO.equals(this.getTatus());
+	}
+
+	@Transient
+	public boolean isNaoEmissivel() {
+		return !this.isEmissivel();
+	}
+
+	@Transient
+	public boolean isEmissivel() {
+		return this.isExistente() && this.isOrcamento();
+	}
+
+	//Produto cancelável quando for existente e não pode está cancelado já
+	@Transient
+	public boolean isCancelavel() {
+		return this.isExistente() && !this.isCancelado();
+	}
+
+	//Retorna true se for status cancelado o status do pedido
+	@Transient
+	private boolean isCancelado() {
+		return StatusPedido.CANCELADO.equals(this.getTatus());
+	}
+
+	@Transient
+	public boolean isNaoCancelavel() {
+		return !this.isCancelavel();
+	}
+
+	@Transient
+	public boolean isAlteravel() {
+		return this.isOrcamento();
+	}
+	
+	@Transient
+	public boolean isNaoAlteravel() {
+		return !this.isAlteravel();
+	}
+	
+	@Transient
+	public boolean isNaoEnviavelPorEmail() {
+		return this.isNovo() || this.isCancelado();
+	}
+	
+	
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -359,7 +328,7 @@ public class Pedido implements Serializable {
 			return false;
 		return true;
 	}
+
 	
-	
-	
+
 }

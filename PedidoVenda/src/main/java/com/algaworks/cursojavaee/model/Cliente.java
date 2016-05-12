@@ -14,6 +14,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 @Entity
 @Table(name="cliente")
 public class Cliente  implements Serializable{
@@ -31,9 +33,11 @@ public class Cliente  implements Serializable{
 	@GeneratedValue
 	private Long id;
 	
+	@NotBlank
 	@Column(nullable= false, length = 100) //Not null de tamanho 100
 	private String nome;
 	
+	@NotBlank
 	@Column(nullable= false)
 	private String email;
 	

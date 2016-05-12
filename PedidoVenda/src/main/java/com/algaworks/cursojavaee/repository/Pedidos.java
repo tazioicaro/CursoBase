@@ -1,5 +1,7 @@
 package com.algaworks.cursojavaee.repository;
 
+
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Calendar;
@@ -25,16 +27,15 @@ import com.algaworks.cursojavaee.model.Pedido;
 import com.algaworks.cursojavaee.model.Usuario;
 import com.algaworks.cursojavaee.repository.filter.PedidoFilter;
 
+
+
 public class Pedidos implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Inject
 	private EntityManager manager;
-	
-	
-	
-	
+
 	@SuppressWarnings({ "unchecked" })
 	public Map<Date, BigDecimal> valoresTotaisPorData(Integer numeroDeDias, Usuario criadoPor) {
 		Session session = manager.unwrap(Session.class);
@@ -123,10 +124,9 @@ public class Pedidos implements Serializable {
 			criteria.add(Restrictions.ilike("v.nome", filtro.getNomeVendedor(), MatchMode.ANYWHERE));
 		}
 		
-		
 		if (filtro.getStatuses() != null && filtro.getStatuses().length > 0) {
 			// adicionamos uma restrição "in", passando um array de constantes da enum StatusPedido
-			criteria.add(Restrictions.in("tatus", filtro.getStatuses()));
+			criteria.add(Restrictions.in("status", filtro.getStatuses()));
 		}
 		
 		return criteria;
@@ -164,5 +164,4 @@ public class Pedidos implements Serializable {
 		return this.manager.find(Pedido.class, id);
 	}
 	
-
 }

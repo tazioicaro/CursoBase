@@ -31,7 +31,7 @@ public class CategoriaConverter implements Converter {
          if(value != null){
         	 
         	 Long id = new Long(value);
-        	 retorno =  categorias.porID(id);
+        	 retorno =  categorias.porId(id);
          }
 		return retorno;
 	}

@@ -1,13 +1,18 @@
 package com.algaworks.cursojavaee.controller;
 
 
+
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+
+
+import org.primefaces.model.LazyDataModel;
+import org.primefaces.model.SortOrder;
 
 import com.algaworks.cursojavaee.model.Pedido;
 import com.algaworks.cursojavaee.model.StatusPedido;
@@ -15,57 +20,73 @@ import com.algaworks.cursojavaee.repository.Pedidos;
 import com.algaworks.cursojavaee.repository.filter.PedidoFilter;
 
 
+
 @Named
 @ViewScoped
-public class PesquisaPedidosBean implements Serializable{
+public class PesquisaPedidosBean implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
 	private Pedidos pedidos;
 	
-	private List<Pedido> pedidosFiltrados;	
 	private PedidoFilter filtro;
-		
-
-	public PesquisaPedidosBean(){
-		setPedidosFiltrados(new ArrayList<Pedido>());		
+	private LazyDataModel<Pedido> model;
+	
+	public PesquisaPedidosBean() {
 		filtro = new PedidoFilter();
 		
-		
+		model = new LazyDataModel<Pedido>() {
+
+			private static final long serialVersionUID = 1L;
+			
+			@Override
+			public List<Pedido> load(int first, int pageSize, String sortField, SortOrder sortOrder, 
+					Map<String, Object> filters) {
+				
+				filtro.setPrimeiroRegistro(first);
+				filtro.setQuantidadeRegistros(pageSize);
+				filtro.setPropriedadeOrdenacao(sortField);
+				filtro.setAscendente(SortOrder.ASCENDING.equals(sortOrder));
+				
+				setRowCount(pedidos.quantidadeFiltrados(filtro));
+				
+				return pedidos.filtrados(filtro);
+			}
+			
+		};
 	}
+
+//	public void posProcessarXls(Object documento) {
+//		HSSFWorkbook planilha = (HSSFWorkbook) documento;
+//		HSSFSheet folha = planilha.getSheetAt(0);
+//		HSSFRow cabecalho = folha.getRow(0);
+//		HSSFCellStyle estiloCelula = planilha.createCellStyle();
+//		Font fonteCabecalho = planilha.createFont();
+//		
+//		fonteCabecalho.setColor(IndexedColors.WHITE.getIndex());
+//		fonteCabecalho.setBold(true);
+//		fonteCabecalho.setFontHeightInPoints((short) 16);
+//		
+//		estiloCelula.setFont(fonteCabecalho);
+//		estiloCelula.setFillForegroundColor(IndexedColors.BLACK.getIndex());
+//		estiloCelula.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+//		
+//		for (int i = 0; i < cabecalho.getPhysicalNumberOfCells(); i++) {
+//			cabecalho.getCell(i).setCellStyle(estiloCelula);
+//		}
+//	}
 	
-	public void pesquisar(){
-		pedidosFiltrados = pedidos.filtrados(filtro);
-	}
-	
-	public StatusPedido[] getStatuses(){
-		
-		//Retona um Array de StatusPedido
+	public StatusPedido[] getStatuses() {
 		return StatusPedido.values();
 	}
 	
-
-	//G&S
-	public List<Pedido> getPedidosFiltrados() {
-		return pedidosFiltrados;
-	}
-
-
-	public void setPedidosFiltrados(List<Pedido> pedidosFiltrados) {
-		this.pedidosFiltrados = pedidosFiltrados;
-	}
-
 	public PedidoFilter getFiltro() {
 		return filtro;
 	}
 
-	public void setFiltro(PedidoFilter filtro) {
-		this.filtro = filtro;
+	public LazyDataModel<Pedido> getModel() {
+		return model;
 	}
-	
-
-	
-	
-
 	
 }
