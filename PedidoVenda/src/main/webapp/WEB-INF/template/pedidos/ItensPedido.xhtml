@@ -43,9 +43,9 @@
 			<h:outputText value="#{item.produto.quantidadeEstoque}" 
 				style="#{item.estoqueInsuficiente ? 'color: red' : ''}"/>
 			
-			<h:graphicImage library="images" name="alerta.png" id="semEstoque"
+			<h:graphicImage library="images" name="alerta.svg" id="semEstoque"
 				style="vertical-align: bottom; margin-left: 5px" 
-				rendered="#{item.estoqueInsuficiente}" />
+				rendered="#{item.estoqueInsuficiente}" width="12%" height="12%"/>
 				
 			<p:tooltip for="semEstoque" value="Estoque insuficiente"
 				rendered="#{item.estoqueInsuficiente}" />

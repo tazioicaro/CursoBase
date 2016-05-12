@@ -81,10 +81,10 @@
 					 :frmPesquisa:produtosTable"
 						action="#{pesquisaProdutosBean.excluir}">
 						<p:confirm header="Exclusão de Produto"
-							message="Tem certeza que deseja excluir o produto #{pesquisaProdutosBean.produtosSelecionados.sku}?"
+							message="Tem certeza que deseja excluir o produto #{pesquisaProdutosBean.produtoSelecionado.sku}?"
 							icon="ui-icon-alert" />
 						<f:setPropertyActionListener value="#{produto}"
-							target="#{pesquisaProdutosBean.produtosSelecionados}" />
+							target="#{pesquisaProdutosBean.produtoSelecionado}" />
 					</p:commandButton>
 				</p:column>
 

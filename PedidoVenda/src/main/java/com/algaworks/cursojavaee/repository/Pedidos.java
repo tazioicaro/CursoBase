@@ -126,7 +126,7 @@ public class Pedidos implements Serializable {
 		
 		if (filtro.getStatuses() != null && filtro.getStatuses().length > 0) {
 			// adicionamos uma restrição "in", passando um array de constantes da enum StatusPedido
-			criteria.add(Restrictions.in("status", filtro.getStatuses()));
+			criteria.add(Restrictions.in("tatus", filtro.getStatuses()));
 		}
 		
 		return criteria;
