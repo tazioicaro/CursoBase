@@ -157,18 +157,20 @@ public class Pedido implements Serializable {
 		return cliente;
 	}
 
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-
 	@Embedded
 	public EnderecoEntregra getEnderecoEntregra() {
 		return enderecoEntregra;
 	}
-
+	
 	public void setEnderecoEntregra(EnderecoEntregra enderecoEntregra) {
 		this.enderecoEntregra = enderecoEntregra;
 	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
+	
 
 	@OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
 	public List<ItemPedido> getItens() {
