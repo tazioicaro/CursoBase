@@ -113,8 +113,22 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- Necessário atualizar os abaixo -->
+		
+		<!-- https://github.com/codylerum/simple-email faz parte do projeto O mesmo 
+			foi baixado e instalado através da importação de projeto maven axistente. 
+			Depois foi necessário ir em RunAs e clicar maven install. Assim será possível 
+			utilizar em vários projetos maven dentro do eclipe -->
 
+
+		<!-- Abstração para envio de e-mails -->
+		<dependency>
+			<groupId>com.outjected</groupId>
+			<artifactId>simple-email</artifactId>
+			<version>0.2.1</version>
+			<scope>compile</scope>
+		</dependency>
+
+        <!-- Requerido para envio de e-mails -->
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>javax.mail-api</artifactId>
