@@ -15,15 +15,16 @@ import com.outjected.email.api.MailMessage;
 @RequestScoped
 public class EnvioPedidoEmailBean implements Serializable {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;	
 	
+	@Inject
+	private Mailer mailer;
 	
 	@Inject
 	@PedidoEdicao
 	private Pedido pedido;
 	
-	@Inject
-	private Mailer mailer;
+	
 	
 	
 	public void enviarPedido(){
