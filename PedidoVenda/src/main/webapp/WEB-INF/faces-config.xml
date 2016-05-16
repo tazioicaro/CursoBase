@@ -17,10 +17,10 @@
 	</application>  
     
     <factory>
-<exception-handler-factory>
-com.algaworks.cursojavaee.util.jsf.JsfExceptionHandlerFactory
-</exception-handler-factory>
-
+	<exception-handler-factory>
+		com.algaworks.cursojavaee.util.jsf.JsfExceptionHandlerFactory
+	</exception-handler-factory>
 </factory>
+
 
 </faces-config>
