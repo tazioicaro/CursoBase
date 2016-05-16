@@ -113,7 +113,7 @@
 			<scope>compile</scope>
 		</dependency>
 
-		
+
 		<!-- https://github.com/codylerum/simple-email faz parte do projeto O mesmo 
 			foi baixado e instalado através da importação de projeto maven axistente. 
 			Depois foi necessário ir em RunAs e clicar maven install. Assim será possível 
@@ -128,19 +128,16 @@
 			<scope>compile</scope>
 		</dependency>
 
-        <!-- Requerido para envio de e-mails -->
-        
-        <dependency>
+		<!-- Requerido para envio de e-mails -->
+
+		<dependency>
 			<groupId>com.sun.mail</groupId>
 			<artifactId>javax.mail</artifactId>
 			<version>1.5.5</version>
 		</dependency>
-		
-		<!-- <dependency>
-			<groupId>javax.mail</groupId>
-			<artifactId>javax.mail-api</artifactId>
-			<version>1.5.5</version>
-		</dependency> -->
+
+		<!-- <dependency> <groupId>javax.mail</groupId> <artifactId>javax.mail-api</artifactId> 
+			<version>1.5.5</version> </dependency> -->
 
 
 		<!-- Usamos para templates de emails -->
@@ -163,17 +160,17 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
-			<version>3.2.5.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>3.2.5.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
-			<version>3.2.5.RELEASE</version>
+			<version>4.1.0.RELEASE</version>
 		</dependency>
 
 		<dependency>
