@@ -7,39 +7,45 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 
-<!--  Não será utilizado o template padrão -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Login</title>
+	<!--  Não será utilizado o template padrão -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Login</title>
 
-<h:outputStylesheet library="css" name="sistemas.css"/>
+	<h:outputStylesheet library="css" name="sistemas.css" />
 </h:head>
 <h:body>
-<!-- prependId= false é para tirar o nome do formulário da url dos campos 
+	<!-- prependId= false é para tirar o nome do formulário da url dos campos 
 com ID -->
-<!-- O value email é para vir preenchido ao errar a senha -->
+	<!-- O value email é para vir preenchido ao errar a senha -->
 
-<!-- Centralizado na Horinzontal -->
-<div id="login-dialog"> 
+	<!-- Centralizado na Horinzontal -->
+	
+	<f:metadata>
+	<f:viewParam name="dummy"/>
+	 <f:event listener="#{loginBean.preRender}" type="preRenderView"/>
+	</f:metadata>
+	<div id="login-dialog">
 
-<h1>Login</h1>
-<h:form id="frm" prependId="false">
-<p:messages id="messages" autoUpdate="true" closable="true"/>
+		<h1>Login</h1>
+		<h:form id="frm" prependId="false">
+			<p:messages id="messages" autoUpdate="true" closable="true" />
 
-<h:panelGrid columns="2" styleClass="grid-login">
-<p:outputLabel value="E-mail: "/>
-<p:inputText size="30" id="j_username" value="#{loginBean.email}"/>
+			<h:panelGrid columns="2" styleClass="grid-login">
+				<p:outputLabel value="E-mail: " />
+				<p:inputText size="30" id="j_username" value="#{loginBean.email}" />
 
-<p:outputLabel value="Senha: "/>
-<p:password size="30" id="j_password"/>
-<h:panelGrid/>
-<p:commandButton value="Login" action="#{loginBean.login}" ajax="false"/>
+				<p:outputLabel value="Senha: " />
+				<p:password size="30" id="j_password" />
+				<h:panelGrid />
+				<p:commandButton value="Login" action="#{loginBean.login}"
+					ajax="false" />
 
-</h:panelGrid>
+			</h:panelGrid>
 
 
-</h:form>
+		</h:form>
 
-</div>
+	</div>
 
 
 </h:body>

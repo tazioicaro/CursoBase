@@ -12,6 +12,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.algaworks.cursojavaee.util.jsf.FacesUtil;
+
 /**
  * 
  * @author tazio.fernandes
@@ -40,6 +42,17 @@ public class LoginBean implements Serializable {
 	private HttpServletResponse response;
 	
 	private String email;
+	
+	
+	public void preRender(){
+		
+		if ("true".equals(request.getParameter("invalid"))){
+			
+			FacesUtil.addErrorMessage("Usuário ou senha Inválido!");
+			
+		}
+		
+	}
 	
 	
 	//Bean despachar para o endereço abaixo
