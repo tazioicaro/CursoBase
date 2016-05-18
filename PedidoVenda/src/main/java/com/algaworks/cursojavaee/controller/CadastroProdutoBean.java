@@ -5,6 +5,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -42,6 +44,8 @@ public class CadastroProdutoBean implements Serializable {
 		limpar();
 	}
 	
+		
+	
 	public void inicializar() {
 		if (this.produto == null) {
 			limpar();
@@ -67,9 +71,11 @@ public class CadastroProdutoBean implements Serializable {
 	public void salvar() {
 		try {
 			this.produto = cadastroProdutoService.salvar(this.produto);
-			limpar();
 			
-			FacesUtil.addInforMessage("Produto salvo com sucesso!");
+			//limpar();
+			FacesUtil.addInforProductSucess(this.produto.getNome(), this.produto.getValorUnitario());			
+			
+			limpar();//FacesUtil.addInforMessage("Produto salvo com sucesso!");
 		} catch (NegocioException ne) {
 			FacesUtil.addErrorMessage(ne.getMessage());
 		}

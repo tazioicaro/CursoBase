@@ -24,10 +24,12 @@
             	itemValue="#{vendedor}" itemLabel="#{vendedor.nome}" />
         </p:selectOneMenu>
         
+        <!-- readonly="#{facesContext.currentPhaseId.name eq 'RENDER_RESPONSE'}" -->
+        
         <p:outputLabel value="Cliente" for="cliente"/>
         <h:panelGroup>
 	        <p:inputText id="cliente" size="40" value="#{cadastroPedidoBean.nomeCliente}" 
-	        	readonly="#{facesContext.currentPhaseId.name eq 'RENDER_RESPONSE'}" />
+	        	readonly="#{not facesContext.postback or facesContext.renderResponse}" />
 	        	
 	        <p:commandButton icon="ui-icon-search" title="Pesquisar" process="@this"
 	        	update="@none" disabled="#{cadastroPedidoBean.pedido.naoAlteravel}"

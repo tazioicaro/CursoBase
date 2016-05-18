@@ -1,5 +1,7 @@
 package com.algaworks.cursojavaee.util.jsf;
 
+import java.math.BigDecimal;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
@@ -29,6 +31,15 @@ public class FacesUtil {
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, message, message));
 	
 	
+	}
+	
+	public static void addInforProductSucess(String produto, BigDecimal valor){
+		
+		
+		String msg = "Produto '" + produto+ "' cadastrado com sucesso com preço R$ " + valor + "!";
+		FacesContext.getCurrentInstance().addMessage(null, 
+				new FacesMessage(FacesMessage.SEVERITY_INFO, msg, msg));
+		
 	}
 
 }

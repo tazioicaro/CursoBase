@@ -114,14 +114,30 @@
 		</dependency>
 
 
+
+
 		<!-- https://github.com/codylerum/simple-email faz parte do projeto O mesmo 
 			foi baixado e instalado através da importação de projeto maven axistente. 
 			Depois foi necessário ir em RunAs e clicar maven install. Assim será possível 
 			utilizar em vários projetos maven dentro do eclipe -->
 
+		
 
-		<!-- Abstração para envio de e-mails -->
+		<!-- Abstração para envio de e-mails <dependency> <groupId>com.outjected</groupId> 
+			<artifactId>simple-email</artifactId> <version>0.2.1</version> <scope>compile</scope> 
+			</dependency> -->
+		
+		
+		<!-- http://mvnrepository.com/artifact/javax.activation/activation -->
 		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+			<scope>compile</scope>
+			
+		</dependency>
+
+	<dependency>
 			<groupId>com.outjected</groupId>
 			<artifactId>simple-email</artifactId>
 			<version>0.2.1</version>
@@ -129,17 +145,13 @@
 		</dependency>
 
 		<!-- Requerido para envio de e-mails -->
-
 		<dependency>
-			<groupId>com.sun.mail</groupId>
-			<artifactId>javax.mail</artifactId>
-			<version>1.5.5</version>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+			<scope>compile</scope>
 		</dependency>
-
-		<!-- <dependency> <groupId>javax.mail</groupId> <artifactId>javax.mail-api</artifactId> 
-			<version>1.5.5</version> </dependency> -->
-
-
+		
 		<!-- Usamos para templates de emails -->
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
@@ -147,12 +159,12 @@
 			<version>1.7</version>
 			<scope>compile</scope>
 		</dependency>
-
+		
 		<!-- Usamos para formatar números em templates -->
 		<dependency>
 			<groupId>velocity-tools</groupId>
 			<artifactId>velocity-tools-generic</artifactId>
-			<version>1.4</version>
+			<version>1.1</version>
 			<scope>compile</scope>
 		</dependency>
 

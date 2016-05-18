@@ -42,7 +42,7 @@ public class SelecaoClienteBean implements Serializable {
 		opcoes.put("resizable", false);
 		opcoes.put("contentHeight", 470);
 		
-		RequestContext.getCurrentInstance().openDialog("/dialogos/SelecaoCliente", opcoes, null);
+		RequestContext.getCurrentInstance().openDialog("/dialogos/SelecaoCliente.xhtml", opcoes, null);
 	}
 	
 	public String getNome() {
