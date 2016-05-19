@@ -14,6 +14,21 @@
 		com.algaworks.cursojavaee.pedidovenda.Messages
 		</message-bundle>
 		
+		
+			<el-resolver>
+		org.primefaces.application.exceptionhandler.PrimeExceptionHandlerELResolver
+			</el-resolver>			
+			 <action-listener>
+			org.primefaces.application.DialogActionListener
+		 	</action-listener>
+		 	<navigation-handler>
+		org.primefaces.application.DialogNavigationHandler
+		 	</navigation-handler>
+		 	<view-handler>
+		org.primefaces.application.DialogViewHandler
+		 	</view-handler>		
+		
+		
 	</application>  
     
     <factory>
