@@ -4,6 +4,10 @@
     xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
     xmlns:p="http://primefaces.org/ui">
 
+
+<!-- também poderia ser assim:
+readonly="#{facesContext.currentPhaseId.name eq 'RENDER_RESPONSE'}" -->
+
 	<p:panelGrid columns="4" style="width: 100%; margin-top: 20px" columnClasses="rotulo, campo, rotulo, campo">
 		<p:outputLabel value="Número" rendered="#{cadastroPedidoBean.pedido.existente}" />
 		<h:outputText value="#{cadastroPedidoBean.pedido.id}" rendered="#{cadastroPedidoBean.pedido.existente}" />
@@ -22,9 +26,7 @@
             <f:selectItem itemLabel="Selecione" />
             <f:selectItems value="#{cadastroPedidoBean.vendedores}" var="vendedor"
             	itemValue="#{vendedor}" itemLabel="#{vendedor.nome}" />
-        </p:selectOneMenu>
-        
-        <!-- readonly="#{facesContext.currentPhaseId.name eq 'RENDER_RESPONSE'}" -->
+        </p:selectOneMenu>       
         
         <p:outputLabel value="Cliente" for="cliente"/>
         <h:panelGroup>
