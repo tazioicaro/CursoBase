@@ -4,12 +4,89 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
+
+
+
+<!-- 
+
+
+<head>
+
+
+<link type="text/css" rel="stylesheet"
+	href="/venture/javax.faces.resource/theme.css.xhtml?ln=primefaces-venture" />
+<link type="text/css" rel="stylesheet"
+	href="/venture/javax.faces.resource/primefaces.css.xhtml?ln=primefaces&amp;v=5.3" />
+<script type="text/javascript"
+	src="/venture/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=5.3"></script>
+<script type="text/javascript"
+	src="/venture/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=5.3"></script>
+<script type="text/javascript"
+	src="/venture/javax.faces.resource/primefaces.js.xhtml?ln=primefaces&amp;v=5.3"></script>
+<link type="text/css" rel="stylesheet"
+	href="/venture/javax.faces.resource/css/core-layout.css.xhtml?ln=venture-layout" />
+<link type="text/css" rel="stylesheet"
+	href="/venture/javax.faces.resource/css/animate.css.xhtml?ln=venture-layout" />
+<link type="text/css" rel="stylesheet"
+	href="/venture/javax.faces.resource/css/nanoscroller.css.xhtml?ln=venture-layout" />
+<link type="text/css" rel="stylesheet"
+	href="/venture/javax.faces.resource/css/venture-font.css.xhtml?ln=venture-layout" />
+<link type="text/css" rel="stylesheet"
+	href="/venture/javax.faces.resource/css/font-awesome.css.xhtml?ln=venture-layout" />
+<link type="text/css" rel="stylesheet"
+	href="/venture/javax.faces.resource/css/venture-layout.css.xhtml?ln=venture-layout" />
+<script type="text/javascript">if(window.PrimeFaces){}</script>
+<title>PrimeFaces Venture - Responsive Layout</title>
+<script type="text/javascript"
+	src="/venture/javax.faces.resource/js/nanoscroller.js.xhtml?ln=venture-layout"></script>
+<script type="text/javascript"
+	src="/venture/javax.faces.resource/js/layout.js.xhtml?ln=venture-layout"></script>
+</head>
+
+<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/sunny/skin.css" />
+ -->
+
+
+
+
 <h:head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+
 	<title><ui:insert name="titulo">Sistema de Pedidos de venda</ui:insert></title>
-	<h:outputStylesheet library="css" name="sistemas.css" />
+
 	<h:outputScript library="js" name="jquery.maskMoney.js" />
-	<h:outputScript library="js" name="validadores.js"/>
+
+	<!--<h:outputScript library="js" name="jquery-plugins.js" />-->
+	<!--<h:outputScript library="js" name="jquery.js" /> -->
+	<h:outputScript library="js" name="primefaces.js" /> 
+	<h:outputScript library="js" name="layout.js" />
+	<h:outputScript library="js" name="nanoscroller.js" />
+	
+	
+	
+	
+	<h:outputStylesheet library="css" name="primefaces.css" /> 
+	<h:outputStylesheet library="css" name="theme.css" />
+	<h:outputStylesheet library="css" name="venture-font.css" />
+	<h:outputStylesheet library="css" name="venture-layout.css" />
+	<h:outputStylesheet library="css" name="animate.css" />
+	<h:outputStylesheet library="css" name="core-layout.css" />
+	<h:outputStylesheet library="css" name="font-awesome.css" />
+	<h:outputStylesheet library="css" name="nanoscroller.css" />
+	
+
+	<!--
+	<h:outputStylesheet library="css" name="sistemas.css" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 	
+		<h:outputStylesheet library="css" name="sistemas.css" />
+		<h:outputScript library="js" name="jquery.maskMoney.js" />
+		<h:outputScript library="js" name="validadores.js" /> -->
 </h:head>
 <h:body>
 	<!-- Inserindo componente AJAX Status 
@@ -48,15 +125,15 @@
 						<p:menuitem value="Categorias" />
 						<p:menuitem value="Produtos" outcome="/produtos/PesquisaProdutos" />
 					</p:submenu>
-					
+
 					<p:submenu label="Pedidos">
-					  <p:menuitem value="Novo pedido" outcome="/pedidos/CadastroPedido"/>
-					  <p:menuitem value="Pesquisa" outcome="/pedidos/PesquisaPedidos"/>
-					
+						<p:menuitem value="Novo pedido" outcome="/pedidos/CadastroPedido" />
+						<p:menuitem value="Pesquisa" outcome="/pedidos/PesquisaPedidos" />
+
 					</p:submenu>
-					
-					<p:menuitem value="Sair"  url="/j_spring_security_logout" />
-					
+
+					<p:menuitem value="Sair" url="/j_spring_security_logout" />
+
 				</p:menubar>
 			</h:form>
 		</div>
@@ -96,6 +173,7 @@
 	</script>
 </h:body>
 </html>
+
 
 
 

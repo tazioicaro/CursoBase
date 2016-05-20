@@ -12,8 +12,7 @@
 
 	</properties>
 
-	<dependencies>
-
+	<dependencies>	
 
 		<!-- Prime Faces 5.3 -->
 		<dependency>
@@ -21,8 +20,8 @@
 			<artifactId>primefaces</artifactId>
 			<version>5.3</version>
 			<scope>compile</scope>
-		</dependency>
-
+		</dependency>		
+		
 		<!-- JSF MOJARRA 2.2 -->
 		<dependency>
 			<groupId>org.glassfish</groupId>
@@ -89,6 +88,14 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- Usado para geração de arquivos Excel -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.11</version>
+			<scope>compile</scope>
+		</dependency>
+
 		<!-- Núcleo do Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -121,23 +128,23 @@
 			Depois foi necessário ir em RunAs e clicar maven install. Assim será possível 
 			utilizar em vários projetos maven dentro do eclipe -->
 
-		
+
 
 		<!-- Abstração para envio de e-mails <dependency> <groupId>com.outjected</groupId> 
 			<artifactId>simple-email</artifactId> <version>0.2.1</version> <scope>compile</scope> 
 			</dependency> -->
-		
-		
+
+
 		<!-- http://mvnrepository.com/artifact/javax.activation/activation -->
 		<dependency>
 			<groupId>javax.activation</groupId>
 			<artifactId>activation</artifactId>
 			<version>1.1.1</version>
 			<scope>compile</scope>
-			
+
 		</dependency>
 
-	<dependency>
+		<dependency>
 			<groupId>com.outjected</groupId>
 			<artifactId>simple-email</artifactId>
 			<version>0.2.1</version>
@@ -151,7 +158,7 @@
 			<version>1.4.7</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<!-- Usamos para templates de emails -->
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
@@ -159,7 +166,7 @@
 			<version>1.7</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<!-- Usamos para formatar números em templates -->
 		<dependency>
 			<groupId>velocity-tools</groupId>
