@@ -1521,7 +1521,10 @@ label {
 	.ui-datatable .ui-datatable-sticky table thead tr .ui-state-active .ui-icon-triangle-1-n
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/uparrow-gray.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/uparrow.svg']}"); 
+	
+		
 	background-position: center !important;
 	background-size: 110%;
 	background-repeat: no-repeat;
@@ -1532,7 +1535,10 @@ label {
 	.ui-datatable .ui-datatable-sticky table thead tr .ui-state-active .ui-icon-triangle-1-s
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/downarrow-gray.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/downarrow.svg']}"); 
+	
+	
 	background-position: center !important;
 	background-size: 110%;
 	background-repeat: no-repeat;
@@ -3070,7 +3076,7 @@ hr.ui-widget-header {
 .ui-tree .ui-treenode-content .ui-chkbox-box .ui-icon-minus {
 	background-image:
 	
-	url( "#{resource['images/images/minus-sign.svg']}");	
+	url( "#{resource['images/minus-sign.svg']}");	
 		
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -3084,7 +3090,7 @@ hr.ui-widget-header {
 .ui-tree .ui-icon-triangle-1-e {
 	background-image:
 	
-	url( "#{resource['images/images/rightarrow-navy.svg']}");
+	url( "#{resource['images/rightarrow-navy.svg']}");
 		
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -3102,7 +3108,7 @@ hr.ui-widget-header {
 .ui-tree .ui-icon-triangle-1-w {
 	background-image:
 	
-		url( "#{resource['images/images/left-one-arrow-for-data.svg']}");
+		url( "#{resource['images/left-one-arrow-for-data.svg']}");
 		
 	
 	background-position: center !important;
@@ -3112,7 +3118,7 @@ hr.ui-widget-header {
 
 .ui-tree .ui-icon-folder-collapsed {
 	background-image:
-		url( "#{resource['images/images/folder-close-navy.svg']}");	
+		url( "#{resource['images/folder-close-navy.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 140%;
@@ -3303,7 +3309,7 @@ hr.ui-widget-header {
 .ui-treetable .ui-icon-triangle-1-e {
 	background-image:
 	
-	url( "#{resource['images/images/rightarrow-navy.svg']}");	
+	url( "#{resource['images/rightarrow-navy.svg']}");	
 	
 	
 	background-position: center !important;
