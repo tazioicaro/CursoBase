@@ -5605,7 +5605,9 @@ hr.ui-widget-header {
 .ui-chkbox-box .ui-icon-check {
 	border-radius: 1px;
 	background-image:
-		url("/venture/javax.faces.resource/images/check.svg.xhtml?ln=primefaces-venture")
+	
+	url( "#{resource['fonts/images/check.svg']}"); 
+	
 		!important;
 	background-size: 100%;
 	background-position: center;
@@ -5676,7 +5678,9 @@ hr.ui-widget-header {
 .ui-radiobutton .ui-state-active .ui-icon-bullet, .ui-radiobutton .ui-state-focus .ui-icon-bullet
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/radio-on.svg.xhtml?ln=primefaces-venture")
+	
+	url( "#{resource['fonts/images/radio-on.svg']}"); 
+	
 		!important;
 	background-size: 100%;
 	background-position: center;
@@ -5850,7 +5854,10 @@ hr.ui-widget-header {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image:
-		url("/venture/javax.faces.resource/images/search-icon.svg.xhtml?ln=primefaces-venture");
+	
+	url( "#{resource['fonts/images/search-icon.svg']}"); 
+	
+		
 	left: 0px;
 	top: 2px;
 }
@@ -5875,7 +5882,8 @@ hr.ui-widget-header {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image:
-		url("/venture/javax.faces.resource/images/search-icon.svg.xhtml?ln=primefaces-venture");
+	url( "#{resource['fonts/images/search-icon.svg']}"); 
+	
 	left: 0px;
 	top: 2px;
 }
@@ -5959,8 +5967,8 @@ hr.ui-widget-header {
 /*Style For Rating --------------------------------------------------------------------------------------*/
 .ui-rating-cancel a {
 	background-image:
-		url("/venture/javax.faces.resource/images/dislike-on.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url( "#{resource['fonts/images/dislike-on.svg']}")!important;
 	opacity: 1;
 	background-position: center !important;
 	background-size: 100% !important;
@@ -5972,8 +5980,7 @@ hr.ui-widget-header {
 
 .ui-rating-cancel-hover a {
 	background-image:
-		url("/venture/javax.faces.resource/images/dislike-on.svg.xhtml?ln=primefaces-venture")
-		!important;
+		url( "#{resource['fonts/images/dislike-on.svg']}")!important;
 	opacity: 0.5;
 	background-position: center !important;
 	background-size: 100% !important;
@@ -5981,8 +5988,7 @@ hr.ui-widget-header {
 
 .ui-rating-star a {
 	background-image:
-		url("/venture/javax.faces.resource/images/star.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url( "#{resource['fonts/images/star.svg']}")!important;
 	background-position: center !important;
 	background-size: 100% !important;
 	margin: 0px 1px;
@@ -5990,8 +5996,7 @@ hr.ui-widget-header {
 
 .ui-rating-star-on a {
 	background-image:
-		url("/venture/javax.faces.resource/images/star-on.svg.xhtml?ln=primefaces-venture")
-		!important;
+		url( "#{resource['fonts/images/star.svg']}")!important;
 	background-position: center !important;
 	background-size: 100% !important;
 }
@@ -6040,8 +6045,9 @@ hr.ui-widget-header {
 
 .ui-spinner .ui-spinner-up .ui-button-text .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/plus-sign.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['fonts/images/plus-sign.svg']}")!important;
+		
 	background-position: center !important;
 	background-size: 80% !important;
 	margin-left: 12px;
@@ -6050,8 +6056,8 @@ hr.ui-widget-header {
 
 .ui-spinner .ui-spinner-down .ui-button-text .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/minus-sign.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['fonts/images/minus-sign.svg']}")!important;	
 	background-position: center !important;
 	background-size: 80% !important;
 	margin-left: 12px;
@@ -6211,6 +6217,7 @@ hr.ui-widget-header {
 
 .ui-datepicker-trigger .ui-icon {
 	background-image:
+	
 		url("/venture/javax.faces.resource/images/calendar.svg.xhtml?ln=primefaces-venture");
 	background-position: center !important;
 	background-size: 145% !important;
