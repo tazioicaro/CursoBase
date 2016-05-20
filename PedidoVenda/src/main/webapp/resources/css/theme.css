@@ -3951,6 +3951,8 @@ hr.ui-widget-header {
 .ui-tabs-bottom .ui-tabs-navscroller .ui-tabs-navscroller-btn-right .ui-icon
 	{
 	background-image:
+	
+	
 		url("/venture/javax.faces.resource/images/right-arrow.svg.xhtml?ln=primefaces-venture");
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -5195,7 +5197,7 @@ hr.ui-widget-header {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image:
-		url("/venture/javax.faces.resource/images/search-icon.svg.xhtml?ln=primefaces-venture");
+	url( "#{resource['images/search-icon.svg']}"); 		
 	left: 5px !important;
 	top: 8px !important;
 }
@@ -5308,7 +5310,8 @@ hr.ui-widget-header {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image:
-		url("/venture/javax.faces.resource/images/search-icon.svg.xhtml?ln=primefaces-venture");
+	url( "#{resource['images/search-icon.svg']}");
+		
 	left: 0px;
 }
 
