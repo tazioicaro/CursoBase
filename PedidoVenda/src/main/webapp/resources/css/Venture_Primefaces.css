@@ -4,14 +4,14 @@
 	display: none;
 }
 
-.ui-helper-hidden-accessible {
-	border: 0;
-	clip: rect(0, 0, 0, 0);
-	height: 0px;
-	margin: -1px;
-	overflow: hidden;
+.ui-helper-hidden-accessible{
+	border: 0 !important;
+	clip: rect(0, 0, 0, 0) !important;
+	height: 0px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
 	padding: 0;
-	position: absolute;
+	position: absolute !important;
 	width: 0px;
 }
 
@@ -20,18 +20,18 @@
 	padding: 0;
 	border: 0;
 	outline: 0;
-	line-height: 1.3;
+	line-height: 1.3 !important;
 	text-decoration: none;
-	font-size: 100%;
+	font-size: 100% !important;
 	list-style: none;
 }
 
 .ui-helper-clearfix:after {
 	content: ".";
-	display: block;
+	display: block !important;
 	height: 0;
-	clear: both;
-	visibility: hidden;
+	clear: both !important;
+	visibility: hidden !important;
 }
 
 .ui-helper-clearfix {
@@ -57,47 +57,47 @@
 	cursor: default !important;
 } /* Icons----------------------------------*/ /* states and images */
 .ui-icon {
-	display: block;
-	text-indent: -99999px;
-	overflow: hidden;
-	background-repeat: no-repeat;
+	display: block !important;
+	text-indent: -99999px !important;
+	overflow: hidden !important;
+	background-repeat: no-repeat !important;
 } /* Misc visuals----------------------------------*/ /* Overlays */
 .ui-widget-overlay {
-	position: absolute;
+	position: absolute !important;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 100% !important;
+	height: 100% !important;
 }
 /*!* jQuery UI Resizable 1.8.20** Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)* Dual licensed under the MIT or GPL Version 2 licenses.* http://jquery.org/license** http://docs.jquery.com/UI/Resizable#theming*/
 .ui-resizable {
-	position: relative;
+	position: relative !important;
 }
 
 .ui-resizable-handle {
-	position: absolute;
-	font-size: 0.1px;
-	display: block;
+	position: absolute !important;
+	font-size: 0.1px !important;
+	display: block !important;
 }
 
 .ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle
 	{
-	display: none;
+	display: none !important;
 }
 
 .ui-resizable-n {
-	cursor: n-resize;
-	height: 7px;
-	width: 100%;
-	top: -5px;
+	cursor: n-resize !important;
+	height: 7px !important;
+	width: 100% !important;
+	top: -5px !important;
 	left: 0;
 }
 
 .ui-resizable-s {
-	cursor: s-resize;
-	height: 7px;
-	width: 100%;
-	bottom: -5px;
+	cursor: s-resize !important;
+	height: 7px !important;
+	width: 100% !important;
+	bottom: -5px !important;
 	left: 0;
 }
 
@@ -224,21 +224,21 @@
 }
 /*!* jQuery UI Datepicker 1.8.20** Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)* Dual licensed under the MIT or GPL Version 2 licenses.* http://jquery.org/license** http://docs.jquery.com/UI/Datepicker#theming*/
 .ui-datepicker {
-	width: 17em;
-	padding: .2em .2em 0;
-	display: none;
+	width: 17em !important;
+	padding: .2em .2em 0 !important;
+	display: none !important;
 }
 
 .ui-datepicker .ui-datepicker-header {
-	position: relative;
-	padding: .2em 0;
+	position: relative !important;
+	padding: .2em 0 !important;
 }
 
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
-	position: absolute;
-	top: 2px;
-	width: 1.8em;
-	height: 1.8em;
+	position: absolute !important;
+	top: 2px !important;
+	width: 1.8em !important;
+	height: 1.8em !important;
 }
 
 .ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover
@@ -293,16 +293,16 @@
 }
 
 .ui-datepicker table {
-	width: 100%;
-	font-size: .9em;
-	border-collapse: collapse;
-	margin: 0 0 .4em;
+	width: 100% !important;
+	font-size: .9em !important;
+	border-collapse: collapse !important;
+	margin: 0 0 .4em !important;
 }
 
 .ui-datepicker th {
-	padding: .7em .3em;
-	text-align: center;
-	font-weight: bold;
+	padding: .7em .3em !important;
+	text-align: center !important;
+	font-weight: bold !important;
 	border: 0;
 }
 
@@ -377,9 +377,9 @@
 }
 
 .ui-datepicker-row-break {
-	clear: both;
-	width: 100%;
-	font-size: 0em;
+	clear: both !important;
+	width: 100% !important;
+	font-size: 0em !important;
 } /* RTL support */
 .ui-datepicker-rtl {
 	direction: rtl;
@@ -433,14 +433,14 @@
 } /* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
 .ui-datepicker-cover {
 	display: none; /*sorry for IE5*/
-	display /**/: block; /*sorry for IE5*/
-	position: absolute; /*must have*/
-	z-index: -1; /*must have*/
-	filter: mask(); /*must have*/
-	top: -4px; /*must have*/
-	left: -4px; /*must have*/
-	width: 200px; /*must have*/
-	height: 200px; /*must have*/
+	display /**/: block !important; /*sorry for IE5*/
+	position: absolute !important; /*must have*/
+	z-index: -1 !important; /*must have*/
+	filter: mask() !important; /*must have*/
+	top: -4px !important; /*must have*/
+	left: -4px !important; /*must have*/
+	width: 200px !important; /*must have*/
+	height: 200px !important; /*must have*/
 } /* css for timepicker */
 .ui-timepicker-div .ui-widget-header {
 	margin-bottom: 8px;
@@ -534,20 +534,20 @@
 }
 
 .ui-autocomplete {
-	width: auto;
-	zoom: 1;
-	cursor: pointer;
+	width: auto !important;
+	zoom: 1 !important;
+	cursor: pointer !important;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	position: relative;
+	position: relative !important;
 	display: inline-block;
 }
 
 .ui-autocomplete .ui-autocomplete-dropdown {
-	position: absolute;
-	height: 100%;
-	width: 2.4em;
+	position: absolute !important;
+	height: 100% !important;
+	width: 2.4em !important;
 }
 
 .ui-autocomplete-query {
@@ -569,11 +569,11 @@
 }
 
 .ui-autocomplete-panel .ui-autocomplete-list-item {
-	border: 0px none;
-	font-weight: normal;
-	margin: 1px 0;
-	padding: 3px 5px;
-	text-align: left;
+	border: 0px none !important;
+	font-weight: normal !important;
+	margin: 1px 0 !important;
+	padding: 3px 5px !important;
+	text-align: left !important;
 }
 
 .ui-autocomplete-panel .ui-autocomplete-table {
@@ -586,7 +586,7 @@
 	border-width: 1px;
 	border-style: solid;
 	border-color: inherit;
-	padding: 4px 10px 4px 10px;
+	padding: 4px 10px 4px 10px !important;
 }
 
 .ui-autocomplete .ui-button-icon-only .ui-button-text {
@@ -611,22 +611,22 @@
 	float: left;
 	overflow: hidden;
 	padding: 1px 3px;
-	white-space: nowrap;
+	white-space: nowrap !important;
 	position: relative;
 	margin: 2px;
 }
 
 .ui-autocomplete-token-label {
-	display: block;
-	padding: 0em 2.1em 0em 0.5em;
+	display: block !important;
+	padding: 0em 2.1em 0em 0.5em !important;
 }
 
 .ui-autocomplete-token-icon {
-	margin-top: -9px;
-	position: absolute;
-	right: 0.2em;
+	margin-top: -9px !important;
+	position: absolute !important;
+	right: 0.2em !important;
 	top: 50%;
-	cursor: pointer;
+	cursor: pointer !important;
 }
 
 .ui-autocomplete-input-token {
@@ -640,7 +640,7 @@
 	border: 0 none;
 	width: 140px;
 	outline: medium none;
-	background-color: transparent;
+	background-color: transparent !important;
 	margin: 2px;
 }
 
@@ -808,9 +808,9 @@
 }
 
 .ui-shadow {
-	-moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
-	-webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !important;
+	-webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !important;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !important;
 }
 
 .ui-overlay-visible {
@@ -1028,14 +1028,14 @@ ui-overlay-visible * {
 
 .ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td,
 	.ui-datatable tfoot th {
-	padding: 4px 10px;
-	overflow: hidden;
-	border-width: 1px;
-	border-style: solid;
+	padding: 4px 10px !important;
+	overflow: hidden !important;
+	border-width: 1px !important;
+	border-style: solid !important;
 }
 
 .ui-datatable tbody td {
-	border-color: inherit;
+	border-color: inherit !important;
 }
 
 .ui-datatable .ui-sortable-column {
@@ -1076,7 +1076,7 @@ ui-overlay-visible * {
 }
 
 .ui-datatable-scrollable-body {
-	overflow: auto;
+	overflow: auto !important;
 }
 
 .ui-datatable-scrollable-header, .ui-datatable-scrollable-footer {
@@ -1094,19 +1094,19 @@ ui-overlay-visible * {
 }
 
 .ui-datatable-scrollable-body::-webkit-scrollbar {
-	-webkit-appearance: none;
-	width: 15px;
-	background-color: transparent;
+	-webkit-appearance: none !important;
+	width: 15px !important;
+	background-color: transparent !important;
 }
 
 .ui-datatable-scrollable-body::-webkit-scrollbar-thumb {
-	border-radius: 8px;
-	border: 1px solid white;
-	background-color: rgba(194, 194, 194, .5);
+	border-radius: 8px !important;
+	border: 1px solid white !important;
+	background-color: rgba(194, 194, 194, .5) !important;
 }
 
 .ui-datatable .ui-datatable-scrollable-body {
-	min-height: 0%;
+	min-height: 0% !important;
 }
 
 .ui-datatable .ui-datatable-data tr.ui-state-hover {
@@ -1212,7 +1212,7 @@ ui-overlay-visible * {
 
 .ui-datatable-resizable thead th, .ui-datatable-resizable tbody td,
 	.ui-datatable-resizable tfoot td {
-	white-space: nowrap;
+	white-space: nowrap !important;
 }
 
 .ui-datatable-resizable table {
@@ -1248,7 +1248,7 @@ ui-overlay-visible * {
 }
 
 .ui-datatable-frozen-container .ui-datatable-scrollable-body {
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 .ui-datatable .ui-datatable-frozen-container .ui-row-toggler {
@@ -2425,7 +2425,7 @@ div.ui-button, .ui-splitbutton {
 .ui-lightbox-loading {
 	background:
 	
-		src: url( "#{resource['images/loading.gif']}")#000000 
+		src: url("#{resource['images/loading.gif']}")#000000 
 		center center no-repeat;
 }
 
@@ -2494,25 +2494,25 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-menu .ui-menuitem-link {
-	display: block;
-	width: 92%;
-	outline: none;
-	text-decoration: none;
-	font-weight: 400;
-	border: solid 1px transparent;
-	float: left;
-	line-height: 16px;
-	padding: 0.3em;
-	cursor: pointer;
+	display: block !important;
+	width: 92% !important;
+	outline: none !important;
+	text-decoration: none !important;
+	font-weight: 400 !important;
+	border: solid 1px transparent !important;
+	float: left !important;
+	line-height: 16px !important;
+	padding: 0.3em !important;
+	cursor: pointer !important;
 }
 
 .ui-menu .ui-menuitem-link .ui-menuitem-icon {
-	display: inline-block;
-	float: left;
+	display: inline-block  !important;
+	float: left  !important;
 }
 
 .ui-menu .ui-menuitem-text {
-	float: left;
+	float: left !important;
 }
 
 .ui-menu .ui-widget-header h1, .ui-menu .ui-widget-header h2, .ui-menu .ui-widget-header h3,
@@ -3156,7 +3156,7 @@ div.ui-button, .ui-splitbutton {
 
 .ui-outputpanel-loading {
 	background:
-		url( "#{resource['images/loading.gif']}");  		
+		url("#{resource['images/loading.gif']}");  		
 		center center no-repeat;
 	width: 32px;
 	height: 32px;
@@ -3269,8 +3269,8 @@ div.ui-button, .ui-splitbutton {
 	.ui-panelgrid.ui-panelgrid-blank tbody>tr.ui-widget-content>td.ui-panelgrid-cell,
 	.ui-panelgrid.ui-panelgrid-blank .ui-panelgrid-footer>tr.ui-widget-footer
 	{
-	background: none;
-	border: 0 none;
+	background: none !important;
+	border: 0 none !important;
 } /* Grid CSS */
 .ui-panelgrid .ui-grid-responsive .ui-panelgrid-cell {
 	border: 0 none;
@@ -4123,15 +4123,15 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-treetable thead th, .ui-treetable tbody td, .ui-treetable tfoot td {
-	padding: 4px 10px;
-	overflow: hidden;
-	white-space: nowrap;
-	border-width: 1px;
-	border-style: solid;
+	padding: 4px 10px !important;
+	overflow: hidden !important;
+	white-space: nowrap !important;
+	border-width: 1px !important;
+	border-style: solid !important;
 }
 
 .ui-treetable tbody td {
-	border-color: inherit;
+	border-color: inherit !important;
 }
 
 .ui-treetable .ui-treetable-toggler {
@@ -4146,7 +4146,7 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-treetable-scrollable-body {
-	overflow: auto;
+	overflow: auto !important;
 }
 
 .ui-treetable-scrollable-header, .ui-treetable-scrollable-footer {
@@ -4205,13 +4205,13 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-treetable-scrollable-body::-webkit-scrollbar {
-	-webkit-appearance: none;
-	width: 15px;
-	background-color: transparent;
+	-webkit-appearance: none !important;
+	width: 15px !important;
+	background-color: transparent !important;
 }
 
 .ui-treetable-scrollable-body::-webkit-scrollbar-thumb {
-	border-radius: 8px;
+	border-radius: 8px !important;
 	border: 1px solid white;
 	background-color: rgba(194, 194, 194, .5);
 }

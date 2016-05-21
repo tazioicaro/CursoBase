@@ -10,11 +10,21 @@
 		<o:viewParam name="pedido" value="#{cadastroPedidoBean.pedido}" />
 		<f:viewAction action="#{cadastroPedidoBean.inicializar}" />
 	</f:metadata>
-
+    <div accesskey="layout-menu-cover" >
     <ui:define name="titulo">#{cadastroPedidoBean.editando ? "Edição de pedido" : "Novo pedido"}</ui:define>
-    
+    </div>
     <ui:define name="corpo">
-    	<h:form id="frmCadastro">
+    	<h:form id="frmCadastro" styleClass="layout-portlets-cover" style="
+    	display: block !important;
+    height: 100% !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    color: #282828 !important;
+    vertical-align: top !important;
+    padding: 1rem !important;
+    	">
 	    	<h1>#{cadastroPedidoBean.editando ? "Edição de pedido" : "Novo pedido"}</h1>
 	    	
 	    	<p:messages autoUpdate="true" closable="true" />

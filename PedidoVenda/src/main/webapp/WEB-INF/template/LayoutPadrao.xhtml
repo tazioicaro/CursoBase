@@ -49,30 +49,29 @@
 
 
 
-<h:head>
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<h:head >
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 
-
 	<title><ui:insert name="titulo">Sistema de Pedidos de venda</ui:insert></title>
+	
 
 	<h:outputScript library="js" name="jquery.maskMoney.js" />
 
 	<!--<h:outputScript library="js" name="jquery-plugins.js" />-->
 	<!--<h:outputScript library="js" name="jquery.js" /> -->
-	<h:outputScript library="js" name="primefaces.js" /> 
-	<h:outputScript library="js" name="layout.js" />
+	<h:outputScript library="js" name="VenturePrimefaces.js" /> 
+	<h:outputScript library="js" name="VentureLayout.js" />
 	<h:outputScript library="js" name="nanoscroller.js" />
 	
 	
 	
 	
-	<h:outputStylesheet library="css" name="primefaces.css" /> 
-	<h:outputStylesheet library="css" name="theme.css" />
+	<h:outputStylesheet library="css" name="Venture_Primefaces.css" /> 
+	<h:outputStylesheet library="css" name="Venture_Theme.css" />
 	<h:outputStylesheet library="css" name="venture-font.css" />
 	<h:outputStylesheet library="css" name="venture-layout.css" />
 	<h:outputStylesheet library="css" name="animate.css" />
@@ -80,15 +79,16 @@
 	<h:outputStylesheet library="css" name="font-awesome.css" />
 	<h:outputStylesheet library="css" name="nanoscroller.css" />
 	
-
+	
 	<!--
-	<h:outputStylesheet library="css" name="sistemas.css" />
+	    
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 	
 		<h:outputStylesheet library="css" name="sistemas.css" />
 		<h:outputScript library="js" name="jquery.maskMoney.js" />
 		<h:outputScript library="js" name="validadores.js" /> -->
+		
 </h:head>
-<h:body>
+<h:body styleClass="YellowTopbar PaleBlueBG">
 	<!-- Inserindo componente AJAX Status 
 	  quando houver uma nova renderização , o onsuccess chamará a reconfiguração da mascara de dinheiro-->
 	<p:ajaxStatus styleClass="ajax-status" onsuccess="configurarMoeda()">
@@ -104,19 +104,21 @@
 		</f:facet>
 	</p:ajaxStatus>
 
-	<header>
-		<div style="float: left">
+	<header id="layout-topbar-cover">
+	<div id="layout-topbar-row">
+		
+		<div style="float: left; margin-left: 1%" id="layout-topbar-left">
 			<h:link outcome="/Home">
 				<h:graphicImage library="images" name="logo-algaworks-branca.png" />
 			</h:link>
 		</div>
 
-		<div style="float: right; margin-right: 110px">
+		<div style="float: right; margin-right: 4%" id="layout-topbar-right">
 			<span
 				style="float: left; height: 30px; line-height: 30px; margin-right: 60px">
 				Olá #{seguranca.nomeUsuario}! </span>
 
-			<h:form style="display: inline-block">
+			<h:form id="layout-topbar-menu-cover" style="display: inline-block">
 				<p:menubar styleClass="menu-sistema">
 					<p:submenu label="Cadastros">
 						<p:menuitem value="Clientes" />
@@ -137,14 +139,15 @@
 				</p:menubar>
 			</h:form>
 		</div>
-
+</div>
 		<!-- Limpar as flutuações para não afetar outros componentes abaixo-->
 		<div style="clear: both"></div>
+		
 	</header>
 
 
 
-	<div id="conteudo">
+	<div id="layout-container">
 		<ui:insert name="corpo" />
 	</div>
 

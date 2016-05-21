@@ -115,7 +115,7 @@ font-face {
     -ms-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;*/
-	font-family: 'poppinsregular';
+	font-family: 'poppinsregular' !important;
 }
 
 .ui-widget .ui-widget {
@@ -124,7 +124,7 @@ font-face {
     -ms-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;*/
-	font-family: 'poppinsregular';
+	font-family: 'poppinsregular' !important;
 }
 
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button
@@ -159,23 +159,23 @@ font-face {
 }
 
 .ui-widget-content a {
-	color: #ffffff;
+	color: #ffffff !important;
 }
 
 .ui-widget-header {
 	/*border: 1px solid #3f7506;*/
 	/*background: #3a8104 url("images/ui-bg_highlight-soft_33_3a8104_1x100.png") 50% 50% repeat-x;*/
-	color: #ffffff;
-	font-weight: normal;
+	color: #ffffff !important;
+	font-weight: normal !important;
 }
 
 .ui-widget-header a {
-	color: #ffffff;
+	color: #ffffff !important;
 }
 
 .ui-widget .ui-state-focus, .ui-widget.ui-state-focus {
-	-webkit-box-shadow: 0 0 5px 0 rgba(11, 195, 241, 0.7);
-	box-shadow: 0 0 4px 0 rgba(11, 195, 241, 0.7);
+	-webkit-box-shadow: 0 0 5px 0 rgba(11, 195, 241, 0.7) !important;
+	box-shadow: 0 0 4px 0 rgba(11, 195, 241, 0.7) !important;
 }
 /* Interaction states
 ----------------------------------*/
@@ -223,21 +223,21 @@ font-face {
 
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a,
 	.ui-widget-header .ui-state-highlight a {
-	color: #363636;
+	color: #363636 !important;
 }
 
 input[type="text"].ui-state-error, input[type="password"].ui-state-error,
 	.ui-inputtextarea.ui-state-error, .ui-widget-content .ui-state-error,
 	.ui-widget-header .ui-state-error {
 	border: 1px solid #f03369 !important;
-	color: #f03369;
+	color: #f03369 !important;
 }
 
 .ui-widget-content label.ui-state-error {
 	border: 0px !important;
-	border: none;
-	box-shadow: none;
-	-webkit-box-shadow: none;
+	border: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
 }
 
 label.ui-state-error {
@@ -246,31 +246,31 @@ label.ui-state-error {
 
 .ui-state-error a, .ui-widget-content .ui-state-error a,
 	.ui-widget-header .ui-state-error a {
-	color: #2b2b2b;
+	color: #2b2b2b !important;
 }
 
 .ui-state-error-text, .ui-widget-content .ui-state-error-text,
 	.ui-widget-header .ui-state-error-text {
-	color: #2b2b2b;
+	color: #2b2b2b !important;
 }
 
 .ui-proninrity-primary, .ui-widget-content .ui-proninrity-primary,
 	.ui-widget-header .ui-proninrity-primary {
-	font-weight: bold;
+	font-weight: bold !important;
 }
 
 .ui-proninrity-secondary, .ui-widget-content .ui-proninrity-secondary,
 	.ui-widget-header .ui-proninrity-secondary {
-	opacity: .7;
-	filter: alpha(opacity = 70);
-	font-weight: normal;
+	opacity: .7 !important;
+	filter: alpha(opacity = 70)!important;
+	font-weight: normal!important;
 }
 
 .ui-state-disabled, .ui-widget-content .ui-state-disabled,
 	.ui-widget-header .ui-state-disabled {
-	opacity: .30;
-	filter: alpha(opacity = 50);
-	background-image: none;
+	opacity: .30 !important;
+	filter: alpha(opacity = 50) !important;
+	background-image: none !important;
 }
 
 .ui-state-disabled .ui-icon {
@@ -328,8 +328,8 @@ label.ui-state-error {
 
 .ui-icon-blank {
 	background-image:
-		url("/venture/javax.faces.resource/images/blank.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['images/blank.svg']}")!important;
 	background-position: center;
 	background-size: 100%;
 }
@@ -644,7 +644,10 @@ label.ui-state-error {
 
 .ui-icon-note {
 	background-image:
-		url("/venture/javax.faces.resource/images/note.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/note.svg']}");
+	
+		
 	background-position: center;
 	background-size: 100%;
 }
@@ -1056,18 +1059,18 @@ label.ui-state-error {
 }
 /* Overlays */
 .ui-widget-overlay {
-	background: #444444;
-	opacity: .3;
-	filter: alpha(opacity = 30);
+	background: #444444 !important;
+	opacity: .3 !important;
+	filter: alpha(opacity = 30)!important;
 }
 
 .ui-widget-shadow {
-	margin: 4px 0 0 4px;
-	padding: 0px;
-	background: #aaaaaa;
-	opacity: .3;
-	filter: alpha(opacity = 30);
-	border-radius: 4px;
+	margin: 4px 0 0 4px !important;
+	padding: 0px !important;
+	background: #aaaaaa !important;
+	opacity: .3 !important;
+	filter: alpha(opacity = 30) !important;
+	border-radius: 4px !important;
 }
 
 label {
@@ -1104,8 +1107,7 @@ label {
 
 .ui-breadcrumb .ui-icon-home {
 	background-image:
-		url("/venture/javax.faces.resource/images/breadcrumb-home.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/breadcrumb-home.svg']}")!important;
 	background-position: center 4px !important;
 	background-size: 100% !important;
 	height: 27px;
@@ -1114,8 +1116,8 @@ label {
 .ui-breadcrumb-chevron {
 	height: 18px !important;
 	background-image:
-		url("/venture/javax.faces.resource/images/breadcrumb-arrow.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['images/breadcrumb-arrow.svg']}")!important;
 	background-position: center !important;
 	background-size: 40% !important;
 	margin-top: 2px !important;
@@ -1151,8 +1153,7 @@ label {
 .ui-datatable .ui-icon-arrowthick-1-s {
 	background-image:
 	
-	
-		url("/venture/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	url("#{resource['images/right-one-arrow-for-data.svg']}");
 	background-position: center !important;
 	background-size: 110%;
 	background-repeat: no-repeat;
@@ -1160,7 +1161,7 @@ label {
 
 .ui-datatable .ui-icon-arrowthick-1-s {
 	background-image:
-		url("/venture/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	url("#{resource['images/right-one-arrow-for-data.svg']}");
 	background-position: center !important;
 	background-size: 110%;
 	background-repeat: no-repeat;
@@ -1292,7 +1293,9 @@ label {
 
 .ui-datatable .ui-paginator .ui-paginator-first .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/left-double-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/left-double-arrow-for-data.svg']}");	
+	
 	background-position: center !important;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -1300,7 +1303,8 @@ label {
 
 .ui-datatable .ui-paginator .ui-paginator-last .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/right-double-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	url("#{resource['images/right-double-arrow-for-data.svg']}");
+
 	background-position: center !important;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -1308,7 +1312,9 @@ label {
 
 .ui-datatable .ui-paginator .ui-paginator-prev .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/left-one-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/left-one-arrow-for-data.svg']}");
+	
 	background-position: center !important;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -1316,7 +1322,8 @@ label {
 
 .ui-datatable .ui-paginator .ui-paginator-next .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+		url("#{resource['images/right-one-arrow-for-data.svg']}");
+
 	background-position: center !important;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -1355,8 +1362,8 @@ label {
 }
 
 .ui-datatable table tbody td {
-	font-family: 'poppinsregular';
-	padding: 6px 10px !important;
+	font-family: 'poppinsregular' !important;
+	padding: 6px 10px !important !important;
 }
 
 .ui-datatable-fs .ui-datatable-frozenlayout-right, .ui-datatable-fs .ui-datatable-frozenlayout-left
@@ -1421,10 +1428,10 @@ label {
 }
 
 .ui-datatable table tbody tr td {
-	color: #525252;
-	border: solid 1px #d1d1d1;
-	font-size: 12px;
-	font-family: 'poppinsregular';
+	color: #525252 !important;
+	border: solid 1px #d1d1d1 !important;
+	font-size: 12px !important;
+	font-family: 'poppinsregular' !important;
 	-webkit-transition: all 0.2s ease !important;
 	-moz-transition: all 0.2s ease !important;
 	-ms-transition: all 0.2s ease !important;
@@ -1435,61 +1442,64 @@ label {
 .ui-datatable table tbody tr td .ui-row-toggler.ui-icon-circle-triangle-s
 	{
 	background-image:
+	/* Falta */
 		url("/venture/javax.faces.resource/images/downarrow-gray.svg.xhtml?ln=primefaces-venture");
 	background-position: center !important;
-	background-size: 110%;
+	background-size: 110% !important;
 }
 
 .ui-datatable table tbody tr td .ui-row-toggler.ui-icon-circle-triangle-e
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	
+		url("#{resource['images/right-one-arrow-for-data.svg']}");
+	
 	background-position: center !important;
-	background-size: 110%;
+	background-size: 110% !important;
 }
 
 .ui-datatable table tbody tr td .ui-row-editor .ui-icon-pencil {
 	background-image:
 		url("/venture/javax.faces.resource/images/pen-gray.svg.xhtml?ln=primefaces-venture");
 	background-position: center !important;
-	background-size: 120%;
+	background-size: 120% !important;
 }
 
 .ui-datatable table tbody tr td .ui-row-editor .ui-icon-check {
 	background-image:
 		url("/venture/javax.faces.resource/images/check-gray.svg.xhtml?ln=primefaces-venture");
 	background-position: center !important;
-	background-size: 120%;
+	background-size: 120% !important;
 }
 
 .ui-datatable table tbody tr td .ui-row-editor .ui-icon-close {
 	background-image:
 		url("/venture/javax.faces.resource/images/delete-red.svg.xhtml?ln=primefaces-venture");
 	background-position: center !important;
-	background-size: 120%;
+	background-size: 120% !important;
 }
 
 .ui-datatable table tbody .ui-state-hover>td {
-	background-color: #e0e0e0;
-	color: #525252;
+	background-color: #e0e0e0 !important;
+	color: #525252 !important;
 }
 
 .ui-datatable table tbody .ui-state-highlight>td {
-	background-color: #96dcf6;
-	color: #525252;
-	font-family: 'poppinssemibold';
+	background-color: #96dcf6 !important;
+	color: #525252 !important;
+	font-family: 'poppinssemibold' !important;
 }
 
 .ui-datatable table tbody .ui-state-highlight.ui-row-editing>td {
-	background-color: #dde4ed;
-	color: #f1f6f9;
+	background-color: #dde4ed !important;
+	color: #f1f6f9 !important;
 }
 
 .ui-datatable table tbody tr td .ui-icon-arrow-4 {
 	background-image:
 		url("/venture/javax.faces.resource/images/movearrow-gray.svg.xhtml?ln=primefaces-venture");
 	background-position: center !important;
-	background-size: 100%;
+	background-size: 100% !important;
 }
 
 .ui-datatable table thead tr .ui-state-default .ui-icon-carat-2-n-s,
@@ -1731,7 +1741,8 @@ label {
 
 .ui-datagrid .ui-paginator .ui-paginator-last .ui-icon {
 	background-image:
-	url( "#{resource['images/right-double-arrow-for-data.svg']}");
+	
+	url("#{resource['images/right-double-arrow-for-data.svg']}");
 		
 	background-position: center !important;
 	background-size: 100%;
@@ -1740,7 +1751,7 @@ label {
 
 .ui-datagrid .ui-paginator .ui-paginator-prev .ui-icon {
 	background-image:
-	url( "#{resource['images/left-one-arrow.svg']}");
+	url("#{resource['images/left-one-arrow.svg']}");
 		
 	background-position: center !important;
 	background-size: 100%;
@@ -1750,7 +1761,7 @@ label {
 .ui-datagrid .ui-paginator .ui-paginator-next .ui-icon {
 	background-image:
 	
-	url( "#{resource['images/right-one-arrow-for-data.svg']}");		
+	url("#{resource['images/right-one-arrow-for-data.svg']}");		
 	background-position: center !important;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -1902,7 +1913,7 @@ label {
 
 .ui-datalist .ui-paginator .ui-paginator-last .ui-icon {
 	background-image:
-	url( "#{resource['images/right-double-arrow-for-data.svg']}");
+	url("#{resource['images/right-double-arrow-for-data.svg']}");
 
 	background-position: center !important;
 	background-size: 100%;
@@ -1911,7 +1922,7 @@ label {
 
 .ui-datalist .ui-paginator .ui-paginator-prev .ui-icon {
 	background-image:
-	url( "#{resource['images/left-one-arrow-for-data.svg']}");
+	url("#{resource['images/left-one-arrow-for-data.svg']}");
 		
 	background-position: center !important;
 	background-size: 100%;
@@ -1920,7 +1931,7 @@ label {
 
 .ui-datalist .ui-paginator .ui-paginator-next .ui-icon {
 	background-image:
-	url( "#{resource['images/right-one-arrow-for-data.svg']}");
+	url("#{resource['images/right-one-arrow-for-data.svg']}");
 	
 	background-position: center !important;
 	background-size: 100%;
@@ -2007,57 +2018,56 @@ label {
 }
 
 .fc-header tbody tr td {
-	vertical-align: middle;
-	padding: 2.5% 1.5%;
+	vertical-align: middle !important;
+	padding: 2.5% 1.5% !important;
 }
 
 .fc-header tbody tr td .fc-button {
 	margin: 0px 2px !important;
-	font-size: 15px;
-	overflow: hidden;
+	font-size: 15px !important;
+	overflow: hidden !important;
 	height: auto !important;
-	color: #EF3F61;
+	color: #EF3F61 !important;
 	padding: 2px 3px !important;
-	border-radius: 0px;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	font-weight: bold;
-	border: solid 1px transparent;
+	border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	font-weight: bold !important;
+	border: solid 1px transparent !important;
 }
 
 .fc-header tbody tr td .ui-state-hover, .fc-header tbody tr td .ui-state-active
 	{
-	color: #EF3F61;
-	background-repeat: no-repeat;
-	border-bottom: solid 1px #EF3F61;
+	color: #EF3F61 !important;
+	background-repeat: no-repeat !important;
+	border-bottom: solid 1px #EF3F61 !important;
 }
 
 .fc-header tbody tr td .fc-button .fc-icon-wrap .ui-icon {
-	margin: 5px;
+	margin: 5px !important;
 }
 
 .fc-header tbody tr td .fc-button-next .fc-icon-wrap .ui-icon {
 	background-image:
 	
-	url( "#{resource['images/right-one-arrow-for-data.svg']}")!important;
+	url("#{resource['images/right-one-arrow-for-data.svg']}")!important;
 	background-position: center !important;
-	background-repeat: no-repeat;
-	background-size: 130%;
+	background-repeat: no-repeat !important;
+	background-size: 130% !important;
 }
 
 .fc-header tbody tr td .fc-button-prev .fc-icon-wrap .ui-icon {
 	background-image:
-		url( "#{resource['images/images/left-one-arrow-for-data.svg']}")
-		!important;
+	url("#{resource['images/left-one-arrow-for-data.svg']}")!important;
 	background-position: center !important;
-	background-repeat: no-repeat;
-	background-size: 130%;
+	background-repeat: no-repeat !important;
+	background-size: 130% !important;
 }
 
 .fc-header tbody tr td span h2 {
-	font-size: 26px;
-	margin: 0px;
-	color: #003D50;
+	font-size: 26px !important;
+	margin: 0px !important;
+	color: #003D50 !important;
 }
 
 .fc-content {
@@ -2093,24 +2103,24 @@ label {
 }
 
 .fc-content table tbody tr td {
-	border: solid 1px #e5ebf0;
-	color: #003D50;
-	border-collapse: separate;
-	padding: 5px;
+	border: solid 1px #e5ebf0 !important;
+	color: #003D50 !important;
+	border-collapse: separate !important;
+	padding: 5px !important;
 	border-radius: 3px !important;
 	-webkit-border-radius: 3px !important;
 	-moz-border-radius: 3px !important;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease !important;
+	-moz-transition: all 0.2s ease !important;
+	-ms-transition: all 0.2s ease !important;
+	-o-transition: all 0.2s ease !important;
+	transition: all 0.2s ease !important;
 	border-top-width: 1px !important;
 }
 
 .fc-content .fc-view-month table tbody tr td:hover {
-	border-color: #003D50;
-	background-color: #dce6ec;
+	border-color: #003D50 !important;
+	background-color: #dce6ec !important;
 }
 
 .fc-content .fc-view-month .ui-state-highlight {
@@ -2169,7 +2179,7 @@ label {
 .fc-toolbar .fc-prev-button .ui-icon {
 	background-image:
 	
-	url( "#{resource['images/images/left-arrow.svg']}");
+	url("#{resource['images/left-arrow.svg']}");
 		
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2180,7 +2190,7 @@ label {
 
 .fc-toolbar .fc-next-button .ui-icon {
 	background-image:
-	url( "#{resource['images/images/right-arrow.svg']}");
+	url("#{resource['images/right-arrow.svg']}");
 		
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2258,9 +2268,9 @@ label {
 
 .fc-view-container table tbody tr .fc-day {
 	border: solid 1px #d1d1d1 !important;
-	color: #525252;
-	border-collapse: separate;
-	padding: 5px;
+	color: #525252 !important;
+	border-collapse: separate !important;
+	padding: 5px !important;
 	border-radius: 3px !important;
 	-webkit-border-radius: 3px !important;
 	-moz-border-radius: 3px !important;
@@ -2270,32 +2280,32 @@ label {
 	-o-transition: all 0.2s ease !important;
 	transition: all 0.2s ease !important;
 	border-top-width: 1px !important;
-	font-family: 'poppinsregular';
+	font-family: 'poppinsregular' !important;
 }
 
 .fc-view-container .fc-month-view table tbody tr .fc-day:hover {
 	border-color: #0893c7 !important;
-	background-color: #96dcf6;
-	color: #0893c7;
+	background-color: #96dcf6 !important;
+	color: #0893c7 !important;
 }
 
 .fc-view-container .fc-month-view .fc-bg table tbody tr .fc-today {
 	border-color: #96dcf6 !important;
-	color: #96dcf6;
+	color: #96dcf6 !important;
 }
 
 .fc-view-container .fc-agendaWeek-view .fc-bg table tbody tr .fc-today {
-	background-color: #96dcf6;
-	color: #f686a6;
+	background-color: #96dcf6 !important;
+	color: #f686a6 !important;
 }
 
 .fc-view-container table tbody tr>.ui-widget-content {
-	border-width: 0px;
+	border-width: 0px !important;
 }
 
 .fc-slats table tbody tr td {
 	border-width: 1px !important;
-	border-color: #e5ebf0;
+	border-color: #e5ebf0 !important;
 }
 
 .fc-agenda-slots tbody tr .ui-widget-header, .fc-agenda-allday tbody tr .ui-widget-header
@@ -2308,8 +2318,8 @@ label {
 }
 
 hr.ui-widget-header {
-	background-color: #E5EBF0;
-	border-width: 0px;
+	background-color: #E5EBF0 !important;
+	border-width: 0px !important;
 }
 
 .fc-more-cell .fc-more {
@@ -2353,7 +2363,7 @@ hr.ui-widget-header {
 
 .ui-picklist .ui-picklist-filter-container .ui-icon {
 	background-image:
-	url( "#{resource['images/images/search-icon.svg']}");		
+	url("#{resource['images/search-icon.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -2460,7 +2470,7 @@ hr.ui-widget-header {
 	.ui-picklist .ui-picklist-source-controls .ui-picklist-button-move-up .ui-icon
 	{
 	background-image:
-	url( "#{resource['images/images/uparrow.svg']}");
+	url("#{resource['images/uparrow.svg']}");
 	
 	
 	background-position: center !important;
@@ -2479,7 +2489,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/toparrow.svg']}");
+	url("#{resource['images/toparrow.svg']}");
 		
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2497,7 +2507,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/downarrow-white.svg']}");
+	url("#{resource['images/downarrow-white.svg']}");
 	
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2515,7 +2525,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-		url( "#{resource['images/images/bottomarrow.svg']}");
+		url("#{resource['images/bottomarrow.svg']}");
 		
 	
 	background-position: center !important;
@@ -2533,7 +2543,7 @@ hr.ui-widget-header {
 	.ui-picklist td .ui-picklist-button-add .ui-icon {
 	background-image:
 	
-	url( "#{resource['images/images/right-arrowsvg.svg']}");
+	url("#{resource['images/right-arrowsvg.svg']}");
 	
 	
 	background-position: center !important;
@@ -2551,7 +2561,7 @@ hr.ui-widget-header {
 	.ui-picklist td .ui-picklist-button-add-all .ui-icon {
 	background-image:
 	
-	url( "#{resource['images/images/right-end-arrow.svg']}");
+	url("#{resource['images/right-end-arrow.svg']}");
 	
 	
 	background-position: center !important;
@@ -2569,7 +2579,7 @@ hr.ui-widget-header {
 	.ui-picklist td .ui-picklist-button-remove .ui-icon {
 	background-image:
 	
-	url( "#{resource['images/images/left-arrow.svg']}");
+	url( "#{resource['images/left-arrow.svg']}");
 	
 		
 	background-position: center !important;
@@ -2587,7 +2597,7 @@ hr.ui-widget-header {
 	.ui-picklist td .ui-picklist-button-remove-all .ui-icon {
 	background-image:
 	
-	url( "#{resource['images/images/left-end-arrow.svg']}");
+	url( "#{resource['images/left-end-arrow.svg']}");
 	
 	
 	background-position: center !important;
@@ -2606,7 +2616,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/uparrow.svg']}");
+	url( "#{resource['images/uparrow.svg']}");
 	
 
 	background-position: center !important;
@@ -2625,7 +2635,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/toparrow.svg']}");
+	url( "#{resource['images/toparrow.svg']}");
 	
 	
 	background-position: center !important;
@@ -2644,7 +2654,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/downarrow-white.svg']}");
+	url( "#{resource['images/downarrow-white.svg']}");
 	
 	
 	background-position: center !important;
@@ -2662,7 +2672,7 @@ hr.ui-widget-header {
 	.ui-picklist .ui-picklist-target-controls .ui-picklist-button-move-bottom .ui-icon
 	{
 	background-image:
-	url( "#{resource['images/images/bottomarrow.svg']}");	
+	url( "#{resource['images/bottomarrow.svg']}");	
 	
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2679,7 +2689,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/downarrow.svg']}");	
+	url( "#{resource['images/downarrow.svg']}");	
 		
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2695,7 +2705,7 @@ hr.ui-widget-header {
 .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-add-all .ui-icon
 	{
 	background-image:
-	url( "#{resource['images/images/bottomarrow.svg']}");	
+	url( "#{resource['images/bottomarrow.svg']}");	
 	
 	
 	background-position: center !important;
@@ -2713,7 +2723,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/uparrow.svg']}");	
+	url( "#{resource['images/uparrow.svg']}");	
 	
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2730,7 +2740,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/toparrow.svg']}");	
+	url( "#{resource['images/toparrow.svg']}");	
 	
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2774,7 +2784,7 @@ hr.ui-widget-header {
 	font-size: 12px;
 	background-image:
 	
-	url( "#{resource['images/images/move-gray.svg']}");	
+	url( "#{resource['images/move-gray.svg']}");	
 	
 	background-position: center right !important;
 	background-repeat: no-repeat;
@@ -2804,7 +2814,7 @@ hr.ui-widget-header {
 .ui-orderlist .ui-orderlist-controls .ui-orderlist-button-move-up .ui-icon
 	{
 	background-image:
-	url( "#{resource['images/images/uparrow.svg']}");	
+	url( "#{resource['images/uparrow.svg']}");	
 
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2821,7 +2831,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/toparrow.svg']}");	
+	url( "#{resource['images/toparrow.svg']}");	
 
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2838,7 +2848,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/downarrow-white.svg']}");
+	url( "#{resource['images/downarrow-white.svg']}");
 	
 
 	background-position: center !important;
@@ -2856,7 +2866,7 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-		url( "#{resource['images/images/bottomarrow.svg']}");
+		url( "#{resource['images/bottomarrow.svg']}");
 		
 
 	background-position: center !important;
@@ -2906,7 +2916,7 @@ hr.ui-widget-header {
 .ui-carousel .ui-carousel-header .ui-carousel-next-button {
 	background-image:
 	
-	url( "#{resource['images/images/right-arrow.svg']}");	
+	url( "#{resource['images/right-arrow.svg']}");	
 	
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -2922,7 +2932,7 @@ hr.ui-widget-header {
 .ui-carousel .ui-carousel-header .ui-carousel-prev-button {
 	background-image:
 	
-	url( "#{resource['images/images/left-arrow.svg']}");
+	url( "#{resource['images/left-arrow.svg']}");
 	
 
 	background-position: center !important;
@@ -2949,7 +2959,7 @@ hr.ui-widget-header {
 .ui-carousel .ui-carousel-header .ui-carousel-page-links .ui-carousel-page-link
 	{
 	background-image:
-		url( "#{resource['images/images/blank.svg']}");
+		url( "#{resource['images/blank.svg']}");
 		
 	
 	background-position: center !important;
@@ -2965,20 +2975,20 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/images/blank-active.svg']}");
+	url( "#{resource['images/blank-active.svg']}");
 	
 		
 }
 
 .ui-carousel-viewport ul .ui-carousel-item table tbody tr td {
-	border: solid 1px #e5ebf0;
+	border: solid 1px #e5ebf0  !important;
 	-webkit-transition: all 0.2s ease !important;
 	-moz-transition: all 0.2s ease !important;
 	-ms-transition: all 0.2s ease !important;
 	-o-transition: all 0.2s ease !important;
 	transition: all 0.2s ease !important;
-	color: #525252;
-	font-size: 12px;
+	color: #525252 !important;
+	font-size: 12px !important;
 }
 
 .ui-carousel-viewport ul .ui-carousel-item table tbody tr:hover td {
@@ -3076,7 +3086,7 @@ hr.ui-widget-header {
 .ui-tree .ui-treenode-content .ui-chkbox-box .ui-icon-minus {
 	background-image:
 	
-	url( "#{resource['images/minus-sign.svg']}");	
+	url("#{resource['images/minus-sign.svg']}");	
 		
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -3090,7 +3100,7 @@ hr.ui-widget-header {
 .ui-tree .ui-icon-triangle-1-e {
 	background-image:
 	
-	url( "#{resource['images/rightarrow-navy.svg']}");
+	url("#{resource['images/rightarrow-navy.svg']}");
 		
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -3108,7 +3118,7 @@ hr.ui-widget-header {
 .ui-tree .ui-icon-triangle-1-w {
 	background-image:
 	
-		url( "#{resource['images/left-one-arrow-for-data.svg']}");
+		url("#{resource['images/left-one-arrow-for-data.svg']}");
 		
 	
 	background-position: center !important;
@@ -3118,7 +3128,7 @@ hr.ui-widget-header {
 
 .ui-tree .ui-icon-folder-collapsed {
 	background-image:
-		url( "#{resource['images/folder-close-navy.svg']}");	
+		url("#{resource['images/folder-close-navy.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 140%;
@@ -3126,7 +3136,8 @@ hr.ui-widget-header {
 
 .ui-tree .ui-icon-folder-open {
 	background-image:
-		url("/venture/javax.faces.resource/images/folder-open-navy.svg.xhtml?ln=primefaces-venture");
+	url("#{resource['images/folder-open-navy.svg']}");
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 160%;
@@ -3142,7 +3153,8 @@ hr.ui-widget-header {
 
 .ui-tree .ui-icon-note {
 	background-image:
-		url("/venture/javax.faces.resource/images/note-navy.svg.xhtml?ln=primefaces-venture");
+	
+	url( "#{resource['images/note-navy.svg']}");
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 150%;
@@ -3198,7 +3210,8 @@ hr.ui-widget-header {
 
 .ui-tree-horizontal .ui-icon-plus {
 	background-image:
-		url("/venture/javax.faces.resource/images/plus-sign-navy.svg.xhtml?ln=primefaces-venture");
+	url("#{resource['images/plus-sign-navy.svg']}");
+	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -3224,14 +3237,14 @@ hr.ui-widget-header {
 }
 
 .ui-treetable table tbody tr td .ui-chkbox-box {
-	margin-top: -1px;
+	margin-top: -1px !important;
 	width: 12px !important;
 	height: 12px !important;
 }
 
 .ui-treetable table tbody tr td .ui-chkbox-box .ui-icon {
-	width: 12px;
-	height: 12px;
+	width: 12px !important;
+	height: 12px !important;
 }
 
 .ui-treetable .ui-treetable-header {
@@ -3280,26 +3293,26 @@ hr.ui-widget-header {
 }
 
 .ui-treetable table tbody tr td {
-	color: #525252;
-	border: solid 1px #d1d1d1;
+	color: #525252 !important;
+	border: solid 1px #d1d1d1 !important;
 	-webkit-transition: all 0.2s ease !important;
 	-moz-transition: all 0.2s ease !important;
 	-ms-transition: all 0.2s ease !important;
 	-o-transition: all 0.2s ease !important;
 	transition: all 0.2s ease !important;
-	padding: 8px;
-	font-size: 14px;
+	padding: 8px !important;
+	font-size: 14px !important;
 }
 
 .ui-treetable table tbody .ui-state-hover td {
 	color: #00aeef !important;
-	background-color: #eff3f5;
+	background-color: #eff3f5 !important;
 }
 
 .ui-treetable table tbody .ui-state-highlight td {
 	color: #00aeef !important;
-	background-color: #edf8fd;
-	font-family: 'poppinsregular';
+	background-color: #edf8fd !important;
+	font-family: 'poppinsregular' !important;
 }
 
 .ui-treetable .ui-icon {
@@ -3309,7 +3322,7 @@ hr.ui-widget-header {
 .ui-treetable .ui-icon-triangle-1-e {
 	background-image:
 	
-	url( "#{resource['images/rightarrow-navy.svg']}");	
+	url("#{resource['images/rightarrow-navy.svg']}");	
 	
 	
 	background-position: center !important;
@@ -3448,7 +3461,9 @@ hr.ui-widget-header {
 
 .ui-accordion-header .ui-icon-triangle-1-s {
 	background-image:
-		url("/venture/javax.faces.resource/images/downarrow.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/downarrow.svg']}");
+	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -3456,16 +3471,19 @@ hr.ui-widget-header {
 
 .ui-accordion-header .ui-icon-triangle-1-e {
 	background-image:
-		url("/venture/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/right-one-arrow-for-data.svg']}");
+	
+		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .ui-accordion .ui-accordion-content.ui-widget-content {
-	padding: 5px;
+	padding: 5px !important;
 	font-size: 12px !important;
-	color: #525252;
+	color: #525252 !important;
 }
 /*Style For UI PanelGrid --------------------------------------------------------------------------------------*/
 .ui-panelgrid {
@@ -3487,7 +3505,7 @@ hr.ui-widget-header {
 
 .ui-panelgrid tbody tr td {
 	border: solid 1px #d1d1d1 !important;
-	background-color: #fff;
+	background-color: #fff !important;
 }
 
 .ui-selectmanycheckbox.ui-widget td, .ui-selectoneradio.ui-widget td {
@@ -3606,7 +3624,9 @@ hr.ui-widget-header {
 .ui-tabs-top .ui-tabs-navscroller .ui-tabs-navscroller-btn-left .ui-icon
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/left-arrow.svg.xhtml?ln=primefaces-venture");
+	
+		url("#{resource['images/left-arrow.svg']}");
+	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -3623,7 +3643,9 @@ hr.ui-widget-header {
 .ui-tabs-top .ui-tabs-navscroller .ui-tabs-navscroller-btn-right .ui-icon
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/right-arrow.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/right-arrow.svg']}");
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -3939,7 +3961,9 @@ hr.ui-widget-header {
 .ui-tabs-bottom .ui-tabs-navscroller .ui-tabs-navscroller-btn-left .ui-icon
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/left-arrow.svg.xhtml?ln=primefaces-venture");
+	
+		url("#{resource['images/left-arrow.svg']}");
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -3958,8 +3982,8 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	
-		url("/venture/javax.faces.resource/images/right-arrow.svg.xhtml?ln=primefaces-venture");
+	url("#{resource['images/right-arrow.svg']}");
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -4108,15 +4132,18 @@ hr.ui-widget-header {
 
 .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon .ui-icon-minus {
 	background-image:
-		url("/venture/javax.faces.resource/images/minus-sign.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/minus-sign.svg']}");
+	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .ui-dialog-docking-zone .ui-icon-plus {
-	background-image:
-		url("/venture/javax.faces.resource/images/plus-sign.svg.xhtml?ln=primefaces-venture");
+	background-image:	
+		url("#{resource['images/plus-sign.svg']}");
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -4221,7 +4248,9 @@ hr.ui-widget-header {
 .ui-lightbox .ui-lightbox-content-wrapper .ui-lightbox-nav-left .ui-icon
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/left-arrow.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/left-arrow.svg']}");
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 130%;
@@ -4240,7 +4269,9 @@ hr.ui-widget-header {
 .ui-lightbox .ui-lightbox-content-wrapper .ui-lightbox-nav-right .ui-icon
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/right-arrow.svg.xhtml?ln=primefaces-venture");
+	
+		url("#{resource['images/right-arrow.svg']}");
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 130%;
@@ -4318,7 +4349,10 @@ hr.ui-widget-header {
 
 .ui-fieldset-legend .ui-icon-plusthick {
 	background-image:
-		url("/venture/javax.faces.resource/images/plus-sign.svg.xhtml?ln=primefaces-venture");
+	
+		url("#{resource['images/plus-sign.svg']}");
+		
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -4328,7 +4362,9 @@ hr.ui-widget-header {
 
 .ui-fieldset-legend .ui-icon-minusthick {
 	background-image:
-		url("/venture/javax.faces.resource/images/minus-sign.svg.xhtml?ln=primefaces-venture");
+	
+		url("#{resource['images/minus-sign.svg']}");
+		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -4527,8 +4563,8 @@ hr.ui-widget-header {
 
 .ui-splitbutton .ui-splitbutton-menubutton .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/menu-dots.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+		url( "#{resource['images/menu-dots.svg']}")!important;
 	background-size: 100%;
 	background-position: center;
 }
@@ -4590,17 +4626,17 @@ hr.ui-widget-header {
 }
 
 .ui-menu .ui-menu-list .ui-widget-header {
-	font-size: 12px;
-	color: #525252;
-	background-color: #efefef;
+	font-size: 12px !important;
+	color: #525252!important;
+	background-color: #efefef!important;
 	width: 100% !important;
-	border-radius: 2px;
-	font-family: 'poppinsregular';
+	border-radius: 2px!important;
+	font-family: 'poppinsregular'!important;
 }
 
 .ui-menu .ui-menu-list .ui-widget-header:hover {
-	color: #00aeef;
-	background-color: #efefef;
+	color: #00aeef!important;
+	background-color: #efefef!important;
 }
 
 .ui-menu.ui-menu-toggleable li.ui-widget-header h3 {
@@ -4609,15 +4645,20 @@ hr.ui-widget-header {
 
 .ui-menu .ui-menu-list .ui-widget-header .ui-icon-triangle-1-s {
 	background-image:
-		url("/venture/javax.faces.resource/images/downarrow.svg.xhtml?ln=primefaces-venture");
+	
+		url("#{resource['images/downarrow.svg']}")!important;
+
 	background-position: center !important;
-	background-repeat: no-repeat;
-	background-size: 100%;
+	background-repeat: no-repeat!important;
+	background-size: 100%!important;
 }
 
 .ui-menu .ui-menu-list .ui-widget-header .ui-icon-triangle-1-e {
 	background-image:
-		url("/venture/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/right-one-arrow-for-data.svg']}")!important;
+	
+		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -4670,7 +4711,10 @@ hr.ui-widget-header {
 
 .ui-menu .ui-menuitem .ui-menuitem-link .ui-icon-triangle-1-e {
 	background-image:
-		url("/venture/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	
+		url("#{resource['images/right-one-arrow-for-data.svg']}");
+		
+		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -4678,7 +4722,9 @@ hr.ui-widget-header {
 
 .ui-menu .ui-menuitem .ui-menuitem-link .ui-icon-triangle-1-s {
 	background-image:
-		url("/venture/javax.faces.resource/images/downarrow.svg.xhtml?ln=primefaces-venture");
+	
+		url("#{resource['images/downarrow.svg']}");
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -4710,8 +4756,11 @@ hr.ui-widget-header {
 
 .ui-menu .ui-slidemenu-wrapper .ui-slidemenu-backward .ui-icon-triangle-1-w
 	{
-	background-image:
-		url("/venture/javax.faces.resource/images/left-one-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	background-image:	
+		
+		url("#{resource['images/left-one-arrow-for-data.svg']}");
+		
+		
 	margin: 0px 5px 0px 0px;
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -4750,7 +4799,10 @@ hr.ui-widget-header {
 .ui-panelmenu .ui-panelmenu-panel .ui-panelmenu-header .ui-icon-triangle-1-e
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-venture");
+	
+			url("#{resource['images/right-one-arrow-for-data.svg']}");
+			
+		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 105%;
@@ -4759,7 +4811,9 @@ hr.ui-widget-header {
 .ui-panelmenu .ui-panelmenu-panel .ui-panelmenu-header .ui-icon-triangle-1-s
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/downarrow.svg.xhtml?ln=primefaces-venture");
+	
+		url("#{resource['images/downarrow.svg']}");
+	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -4788,7 +4842,9 @@ hr.ui-widget-header {
 .ui-panelmenu .ui-panelmenu-panel .ui-panelmenu-content .ui-menuitem .ui-menuitem-link .ui-icon-triangle-1-e
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/rightarrow-navy.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/rightarrow-navy.svg']}");
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -4797,7 +4853,10 @@ hr.ui-widget-header {
 .ui-panelmenu .ui-panelmenu-panel .ui-panelmenu-content .ui-menuitem .ui-menuitem-link .ui-icon-triangle-1-s
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/downarrow.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/downarrow.svg']}");
+	
+
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -5030,8 +5089,8 @@ hr.ui-widget-header {
 
 .ui-panel .ui-panel-titlebar .ui-icon-plusthick {
 	background-image:
-		url("/venture/javax.faces.resource/images/plus-sign-navy.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['images/plus-sign-navy.svg']}")!important;
 	background-position: center !important;
 	background-size: 110% !important;
 }
@@ -5045,10 +5104,10 @@ hr.ui-widget-header {
 }
 
 .ui-panel .ui-panel-content.ui-widget-content {
-	padding: 5px;
-	font-size: 12px;
-	color: #525252;
-	font-family: 'poppinsregular';
+	padding: 5px!important;
+	font-size: 12px!important;
+	color: #525252!important;
+	font-family: 'poppinsregular'!important;
 }
 
 .ui-panel .ui-panel-footer {
@@ -5184,8 +5243,8 @@ hr.ui-widget-header {
 .ui-selectonemenu-trigger .ui-icon-triangle-1-s,
 	.ui-selectcheckboxmenu-trigger .ui-icon-triangle-1-s {
 	background-image:
-		url("/venture/javax.faces.resource/images/downarrow.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['images/downarrow.svg']}")!important;
 	margin-top: 9px !important;
 	background-size: 100%;
 	background-position: center;
@@ -5974,7 +6033,8 @@ hr.ui-widget-header {
 .ui-rating-cancel a {
 	background-image:
 	
-	url( "#{resource['images/dislike-on.svg']}")!important;
+	url("#{resource['images/dislike-on.svg']}")!important;
+	
 	opacity: 1;
 	background-position: center !important;
 	background-size: 100% !important;
@@ -5986,7 +6046,8 @@ hr.ui-widget-header {
 
 .ui-rating-cancel-hover a {
 	background-image:
-		url( "#{resource['images/dislike-on.svg']}")!important;
+		url("#{resource['images/dislike-on.svg']}")!important;
+		
 	opacity: 0.5;
 	background-position: center !important;
 	background-size: 100% !important;
@@ -5994,7 +6055,7 @@ hr.ui-widget-header {
 
 .ui-rating-star a {
 	background-image:
-	url( "#{resource['images/star.svg']}")!important;
+	url("#{resource['images/star.svg']}")!important;
 	background-position: center !important;
 	background-size: 100% !important;
 	margin: 0px 1px;
@@ -6002,7 +6063,8 @@ hr.ui-widget-header {
 
 .ui-rating-star-on a {
 	background-image:
-		url( "#{resource['images/star.svg']}")!important;
+		url("#{resource['images/star.svg']}")!important;
+		
 	background-position: center !important;
 	background-size: 100% !important;
 }
@@ -6064,6 +6126,7 @@ hr.ui-widget-header {
 	background-image:
 	
 	url("#{resource['images/minus-sign.svg']}")!important;	
+	
 	background-position: center !important;
 	background-size: 80% !important;
 	margin-left: 12px;
@@ -6129,7 +6192,9 @@ hr.ui-widget-header {
 
 .ui-datepicker-header .ui-datepicker-prev .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/left-arrow.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/left-arrow.svg']}");
+	
 	background-position: center !important;
 	background-size: 100% !important;
 	top: 50%;
@@ -6138,7 +6203,9 @@ hr.ui-widget-header {
 
 .ui-datepicker-header .ui-datepicker-next .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/right-arrow.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/right-arrow.svg']}");	
+	
 	background-position: center !important;
 	background-size: 100% !important;
 	top: 50%;
@@ -6165,12 +6232,12 @@ hr.ui-widget-header {
 }
 
 .ui-datepicker-calendar tbody tr td {
-	border: solid 1px #d1d1d1;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	cursor: default;
-	padding: 5px 0px;
+	border: solid 1px #d1d1d1 !important;
+	border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+	cursor: default !important;
+	padding: 5px 0px !important;
 	-webkit-transition: all 0.2s ease !important;
 	-moz-transition: all 0.2s ease !important;
 	-ms-transition: all 0.2s ease !important;
@@ -6179,16 +6246,16 @@ hr.ui-widget-header {
 }
 
 .ui-datepicker-calendar tbody tr td:hover {
-	background-color: #96dcf6;
-	border: solid 1px #0893c7;
+	background-color: #96dcf6 !important;
+	border: solid 1px #0893c7 !important;
 }
 
 .ui-datepicker-calendar tbody tr td:hover a {
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-ms-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out !important;
+	-moz-transition: all 0.2s ease-in-out !important;
+	-ms-transition: all 0.2s ease-in-out !important;
+	-o-transition: all 0.2s ease-in-out !important;
+	transition: all 0.2s ease-in-out !important;
 }
 
 .ui-datepicker-calendar tbody tr td a {
@@ -6197,18 +6264,18 @@ hr.ui-widget-header {
 }
 
 .ui-datepicker-calendar tbody tr .ui-datepicker-today {
-	background-color: #ffffff;
-	border: solid 1px #0893c7;
+	background-color: #ffffff !important;
+	border: solid 1px #0893c7 !important;
 }
 
 .ui-datepicker-calendar tbody tr .ui-datepicker-today a {
 	color: #0893c7 !important;
-	font-family: 'poppinssemibold';
+	font-family: 'poppinssemibold' !important;
 }
 
 .ui-datepicker-calendar tbody tr .ui-datepicker-current-day {
-	background-color: #96dcf6;
-	border: solid 1px #0893c7;
+	background-color: #96dcf6 !important;
+	border: solid 1px #0893c7 !important;
 }
 
 .ui-datepicker-calendar tbody tr .ui-datepicker-current-day a {
@@ -6224,7 +6291,9 @@ hr.ui-widget-header {
 .ui-datepicker-trigger .ui-icon {
 	background-image:
 	
-		url("/venture/javax.faces.resource/images/calendar.svg.xhtml?ln=primefaces-venture");
+		url("#{resource['images/calendar.svg']}");	
+		
+
 	background-position: center !important;
 	background-size: 145% !important;
 }
@@ -6242,14 +6311,14 @@ hr.ui-widget-header {
 }
 
 .ui-timepicker-div .ui-widget-header {
-	font-size: 14px;
-	padding: 3px;
-	border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	background-color: rgba(40, 40, 40, 0.1);
-	color: #525252;
-	font-family: 'poppinssemibold';
+	font-size: 14px !important;
+	padding: 3px !important;
+	border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	-moz-border-radius: 2px !important;
+	background-color: rgba(40, 40, 40, 0.1) !important;
+	color: #525252 !important;
+	font-family: 'poppinssemibold' !important;
 }
 /*Style For UI Tooltip --------------------------------------------------------------------------------------*/
 .ui-tooltip {
@@ -6306,7 +6375,7 @@ hr.ui-widget-header {
 }
 
 .ui-outputlabel, table tbody tr td {
-	color: #525252;
+	color: #525252 !important;
 }
 /*Style For UI Galleria --------------------------------------------------------------------------------------*/
 .ui-galleria {
@@ -6331,8 +6400,8 @@ hr.ui-widget-header {
 .ui-galleria-nav-prev {
 	left: 2px !important;
 	background-image:
-		url("/venture/javax.faces.resource/images/left-one-arrow-for-data.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+		url("#{resource['images/left-one-arrow-for-data.svg']}")!important;
 	background-position: center !important;
 	background-size: 100% !important;
 }
@@ -6340,8 +6409,9 @@ hr.ui-widget-header {
 .ui-galleria-nav-next {
 	right: 2px !important;
 	background-image:
-		url("/venture/javax.faces.resource/images/right-one-arrow-for-data.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+			url("#{resource['images/right-one-arrow-for-data.svg']}")!important;			
+	
 	background-position: center !important;
 	background-size: 100% !important;
 }
@@ -6423,7 +6493,10 @@ hr.ui-widget-header {
 
 .ui-autocomplete .ui-autocomplete-dropdown .ui-icon-triangle-1-s {
 	background-image:
-		url("/venture/javax.faces.resource/images/downarrow.svg.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/downarrow.svg']}");
+
+
 	background-position: center !important;
 	background-size: 100% !important;
 	margin-top: -7px;
@@ -6574,8 +6647,10 @@ hr.ui-widget-header {
 /* Style For UI MenuButton --------------------------------------------------------------------------------------*/
 .ui-menubutton .ui-icon-triangle-1-s {
 	background-image:
-		url("/venture/javax.faces.resource/images/downarrow-white.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+		url("#{resource['images/downarrow-white.svg']}")!important;
+		
+		
 	background-position: center !important;
 	background-size: 120% !important;
 }
@@ -6612,8 +6687,9 @@ hr.ui-widget-header {
 .ui-fileupload-choose .ui-icon-plusthick, .ui-fileupload-simple .ui-icon-plusthick
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/plus-sign.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+		url("#{resource['images/plus-sign.svg']}")!important;
+
 	background-position: center !important;
 	background-size: 100% !important;
 }
@@ -6783,8 +6859,10 @@ hr.ui-widget-header {
 .ui-layout-unit .ui-layout-unit-header .ui-layout-unit-header-icon .ui-icon-triangle-1-n
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/uparrow.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['images/uparrow.svg']}")!important;
+	
+		
 	background-position: center !important;
 	background-size: 120% !important;
 	margin-top: 3px;
@@ -6793,8 +6871,10 @@ hr.ui-widget-header {
 .ui-layout-unit .ui-layout-unit-header .ui-layout-unit-header-icon .ui-icon-triangle-1-w
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/left-arrow.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+		url("#{resource['images/left-arrow.svg']}")!important;
+		
+	
 	background-position: center !important;
 	background-size: 100% !important;
 	margin-top: 3px;
@@ -6803,8 +6883,10 @@ hr.ui-widget-header {
 .ui-layout-unit .ui-layout-unit-header .ui-layout-unit-header-icon .ui-icon-triangle-1-e
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/right-arrow.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+		url("#{resource['images/right-arrow.svg']}")!important;
+		
+
 	background-position: center !important;
 	background-size: 100% !important;
 	margin-top: 3px;
@@ -6813,8 +6895,11 @@ hr.ui-widget-header {
 .ui-layout-unit .ui-layout-unit-header .ui-layout-unit-header-icon .ui-icon-triangle-1-s
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/downarrow.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['images/downarrow.svg']}")!important;
+	
+	
+	
 	background-position: center !important;
 	background-size: 120% !important;
 	margin-top: 3px;
@@ -6845,16 +6930,18 @@ hr.ui-widget-header {
 
 .ui-wizard .ui-wizard-nav-back .ui-icon-arrowthick-1-w {
 	background-image:
-		url("/venture/javax.faces.resource/images/left-arrow.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['images/left-arrow.svg']}")!important;
+	
 	background-position: center !important;
 	background-size: 110% !important;
 }
 
 .ui-wizard .ui-wizard-nav-next .ui-icon-arrowthick-1-e {
 	background-image:
-		url("/venture/javax.faces.resource/images/right-arrow.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['images/right-arrow.svg']}")!important;
+	
 	background-position: center !important;
 	background-size: 110% !important;
 }
@@ -7245,23 +7332,36 @@ hr.ui-widget-header {
 @media ( max-width : 640px) {
 	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons .ui-icon-arrow-1-e
 		{
-		background-image:
-			url("/venture/javax.faces.resource/images/downarrow-white.svg.xhtml?ln=primefaces-venture");
+		background-image:	
+			
+		url("#{resource['images/downarrow-white.svg']}");
+		
+
 	}
 	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons .ui-icon-arrow-1-w
 		{
 		background-image:
-			url("/venture/javax.faces.resource/images/uparrow.svg.xhtml?ln=primefaces-venture");
+		
+		url("#{resource['images/uparrow.svg']}");
+		
+		
 	}
 	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons .ui-icon-arrowstop-1-e
 		{
 		background-image:
-			url("/venture/javax.faces.resource/images/bottomarrow.svg.xhtml?ln=primefaces-venture");
+		
+			url("#{resource['images/bottomarrow.svg']}");
+			
+	
 	}
 	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons .ui-icon-arrowstop-1-w
 		{
 		background-image:
-			url("/venture/javax.faces.resource/images/toparrow.svg.xhtml?ln=primefaces-venture");
+		
+			url("#{resource['images/toparrow.svg']}");
+			
+			
+		
 	}
 	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons button {
 		max-width: 50px;
@@ -7329,12 +7429,12 @@ hr.ui-widget-header {
 /* Menu - Panel Menu */
 .ui-fluid .ui-menu.ui-menu-toggleable li.ui-widget-header h3 {
 	padding-left: 33px !important;
-	font-size: 12px;
+	font-size: 12px !important;
 }
 
 .ui-fluid .ui-menu.ui-menu-toggleable li.ui-widget-header {
 	width: 100% !important;
-	padding: 2px 0px;
+	padding: 2px 0px !important;
 }
 /* ============================================================================================================================== */
 /* Issue 924 */

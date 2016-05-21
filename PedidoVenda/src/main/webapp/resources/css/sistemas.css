@@ -42,9 +42,63 @@ footer {
 h1 {
 	font-size: 24px;
 	font-weight: 500;
+    padding-top: 1%;
+    margin-top: 1%;
 	padding: 0px;
 	margin: 0px;
-	
+   	
+}
+
+#layout-menu-cover {	
+	 
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    z-index: 997;
+    background: black;
+    background-color: rgba(0, 0, 0, 0.35);
+    vertical-align: top;
+    margin-left: 1%;
+}
+
+#frmCadastro {
+    display: block !important;
+    height: 100% !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    color: #282828 !important;
+    vertical-align: top !important;
+    padding: 1rem !important;
+    }
+    
+ #frmConsulta {
+    display: block !important;
+    height: 100% !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    color: #282828 !important;
+    vertical-align: top !important;
+    padding: 1rem !important;
+    }
+
+.layout-portlets-cover{
+
+	display: block !important;
+    height: 100% !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    color: #282828 !important;
+    vertical-align: top !important;
+    padding: 1rem !important;
 }
 
 #login-dialog {
