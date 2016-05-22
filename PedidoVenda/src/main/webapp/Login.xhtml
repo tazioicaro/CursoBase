@@ -8,43 +8,167 @@
 <h:head>
 
 	<!--  Não será utilizado o template padrão -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<h:outputScript library="js" name="VenturePrimefaces.js" />
+	<h:outputScript library="js" name="VentureLayout.js" />
+	<h:outputScript library="js" name="nanoscroller.js" />
+
+
+
+
+	<h:outputStylesheet library="css" name="Venture_Primefaces.css" />
+	<h:outputStylesheet library="css" name="Venture_Theme.css" />
+	<h:outputStylesheet library="css" name="venture-font.css" />
+	<h:outputStylesheet library="css" name="venture-layout.css" />
+	<h:outputStylesheet library="css" name="animate.css" />
+	<h:outputStylesheet library="css" name="core-layout.css" />
+	<h:outputStylesheet library="css" name="font-awesome.css" />
+	<h:outputStylesheet library="css" name="nanoscroller.css" />
+
+	<style>
+.ui-button-text, .ui-button-text-only .ui-button-text {
+	padding: 15px !important;
+	transition: none !important;
+}
+</style>
+	<!--  
+
+	<script id="j_idt18_s" type="text/javascript">
+		PrimeFaces.cw("CommandButton", "widget_j_idt18", {
+			id : "j_idt18"
+		});
+	</script> 
+
+
+
+	<script type="text/javascript">
+		if (window.PrimeFaces) {
+		}
+	</script>-->
+
 	<title>Login</title>
 
-	<h:outputStylesheet library="css" name="sistemas.css" />
 </h:head>
+
 <h:body>
-	<!-- prependId= false é para tirar o nome do formulário da url dos campos 
-com ID -->
-	<!-- O value email é para vir preenchido ao errar a senha -->
 
-	<!-- Centralizado na Horinzontal -->
-	
-	<f:metadata>
-	<f:viewParam name="dummy"/>
-	 <f:event listener="#{loginBean.preRender}" type="preRenderView"/>
-	</f:metadata>
-	<div id="login-dialog">
+	<div class="PaleBlueBG">
 
-		<h1>Login</h1>
-		<h:form id="frm" prependId="false">
+		<f:metadata>
+			<f:viewParam name="dummy" />
+			<f:event listener="#{loginBean.preRender}" type="preRenderView" />
+		</f:metadata>
+
+
+		<div class="Wid100 YellowBack" style="height: 20rem;"></div>
+
+		<h:form id="frm" prependId="false" styleClass="Wid80 MarAuto"
+			style="margin-top: -20rem">
+
 			<p:messages id="messages" autoUpdate="true" closable="true" />
 
-			<h:panelGrid columns="2" styleClass="grid-login">
-				<p:outputLabel value="E-mail: " />
-				<p:inputText size="30" id="j_username" value="#{loginBean.email}" />
 
-				<p:outputLabel value="Senha: " />
-				<p:password size="30" id="j_password" />
-				<h:panelGrid />
-				<p:commandButton value="Login" action="#{loginBean.login}"
-					ajax="false" />
+			<div class="Wid70 MarAuto WidAutoOnMobile TexAlCenter">
 
-			</h:panelGrid>
+				<div class="Wid70 MarAuto WidAutoOnMobile">
+					<div class="EmptyBox30"></div>
+					<div class="Container100 TexAlCenter">
+						<a href="paginaEmpresa.xhtml" class="DispBlock"><img
+						
+						src = "#{resource['/images/logo-algaworks.png']}"						
+							
+							style="height: 25px;" /></a>
+					</div>
+
+					<div class="EmptyBox30"></div>
+					<div class="Card ui-fluid ShadowEffect">
+						<div class="Wid100 FontLatoRegular Leaden Fs18"
+							style="margin: 2rem 0px;">Seja Bem vindo, faça seu Login! !</div>
+
+						<div class="Container100">
+						<p:inputText id="j_username" value="#{loginBean.email}" 
+						styleClass="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+						placeholder="Endereço de E-mail" style="padding: 15px !important;"
+						 />						 
+													
+						</div>
+						<div class="Container100">
+						
+						<p:password  id="j_password"  placeholder="Senha"
+						styleClass="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all"
+						style="padding: 15px !important;"/>
+						
+									
+						</div>
+						<div class="Container100 TexAlLeft">
+							<div class="EmptyBox10"></div>
+							
+							
+							<p:selectManyCheckbox styleClass="ui-selectmanycheckbox ui-widget ui-grid ui-grid-responsive">
+							<f:selectItem itemLabel="Lembrar" itemValue="Lembrar"/>	    			
+	    		</p:selectManyCheckbox>
+							
+									
+							
+							
+						</div>
+						
+						
+						
+						<div class="EmptyBox20"></div>
+						<div class="Container100">
+							<p:commandButton id="login" name="login"
+								styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only GreenButton"
+								action="#{loginBean.login}" ajax="false" value="Entrar" style="GreenButton" >								
+							</p:commandButton>
+
+						</div>
+
+						<div class="EmptyBox10"></div>
+						<div class="Separator"></div>
+						<div class="EmptyBox10"></div>
+
+						<span class="DispBlock OvHidden FontLatoBold Fs16 Leaden">Or
+							Sign In</span>
+						<div class="EmptyBox10"></div>
+
+						<div class="Container50 Responsive100">
+							<button id="j_idt18" name="j_idt18"
+								class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left NavyButton White"
+								type="button">
+								<span
+									class="ui-button-icon-left ui-icon ui-c fa fa-facebook Fs16"></span><span
+									class="ui-button-text ui-c">With Facebook</span>
+							</button>
+
+						</div>
 
 
+
+
+					</div>
+					
+					</div>
+					
+					<div class="EmptyBox20"></div>
+		<div class="Wid100 FontLatoRegular Fs12 TransparentWhite">
+			<i class="fa fa-copyright DispInlBlock"></i> PrimeFaces Venture Theme
+			And Layout <br />All rights reserved.
+		</div>
+		<div class="EmptyBox30"></div>
+	</div>
+	
+	
+	
+	
 		</h:form>
 
+		
 	</div>
 
 
