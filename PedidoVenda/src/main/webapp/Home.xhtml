@@ -6,12 +6,571 @@
 	xmlns:p="http://primefaces.org/ui">
 
 	<ui:define name="titulo">Dashboard</ui:define>
-	
+
 	<ui:define name="corpo">
-	<br/><br/><br/><br/>
-	
-	Seja bem vindo
-	
+		
+
+		<!--   Inicio -->
+
+
+
+		<!-- LAYOUT TOPBAR COVER 
+	<div id="layout-topbar-cover">
+		<div id="layout-topbar-row">
+			<div id="layout-topbar-left">
+				<a id="mobile-menu-btn" class="topbar-link Animated03">
+				<i class="fa fa-navicon">
+				</i>
+				</a> 
+				<a href="dashboard-social.xhtml" id="logo"><img id="logo"
+					src = "#{resource['/images/logo-algaworks-branca.png']}" />
+					</a>
+			</div>
+			<div id="layout-topbar-right">
+				<a id="topbar-menu-btn" class="topbar-link Animated03 Fright">
+				<i	class="icon-dots-3">
+				</i>
+				</a>
+
+-->
+		<!-- LAYOUT TOPBAR MENU -->
+		<!-- 
+				<ul id="layout-topbar-menu-cover">
+				
+
+					<li><a id="" class="topbar-link Animated03 Fright"><i
+							class="icon-gear"></i> <span>Settings</span></a>
+						<ul class="">
+							<li><a href="#" class="menulink TexAlCenter Fs14"> <i
+									class="icon-user Blue Fs30 Wid100 Fnone DispBlock MarBot10"></i>
+									Account Settings
+							</a></li>
+							<li><a href="#" class="menulink TexAlCenter Fs14"> <i
+									class="icon-message Blue Fs30 Wid100 Fnone DispBlock MarBot10"></i>
+									E-Mail Settings
+							</a></li>
+							<li><a href="#" class="menulink TexAlCenter Fs14"> <i
+									class="icon-wifi Blue Fs30 Wid100 Fnone DispBlock MarBot10"></i>
+									Connection Settings
+							</a></li>
+						</ul></li>
+						
+						
+					<li><a id="" class="topbar-link Animated03 Fright"><i
+							class="icon-stopwatch"></i> <span>TODOs</span></a>
+						<ul class="">
+							<li><a href="#" class="menulink"> <i
+									class="icon-bell60 Red"></i> <span class="Fs10 DispBlock">Today</span>
+									<span class="DispBlock Blue Fs14 FontPoppinsRegular">Poe
+										Dameron</span> <span class="DispBlock FontPoppinsLight">Hi
+										Luke, Cursus est primis euismod auctor sem nascetur..</span>
+							</a></li>
+							<li><a href="#" class="menulink"> <i
+									class="icon-bell60 Blue"></i> <span class="Fs10 DispBlock">Today</span>
+									<span class="DispBlock Blue Fs14 FontPoppinsRegular">Kylo
+										Ren</span> <span class="DispBlock FontPoppinsLight">Hi Luke,
+										Cursus est primis euismod auctor sem nascetur est..</span>
+							</a></li>
+							<li><a href="#" class="menulink"> <i
+									class="icon-bell60 Green"></i> <span class="Fs10 DispBlock">Yesterday</span>
+									<span class="DispBlock Blue Fs14 FontPoppinsRegular">Leia
+										Solo</span> <span class="DispBlock FontPoppinsLight">Hi Luke,
+										Cursus est primis euismod auctor..</span>
+							</a></li>
+							<li><a href="#" class="menulink"> <i
+									class="icon-bell60 Red"></i> <span class="Fs10 DispBlock">Yesterday</span>
+									<span class="DispBlock Blue Fs14 FontPoppinsRegular">Obi-Wan
+										Kenobi</span> <span class="DispBlock FontPoppinsLight">Hi
+										Luke, Cursus est primis euismod auctor sem nascetur est
+										laoreet sagittis dui..</span>
+							</a></li>
+						</ul></li>
+						
+						
+					<li><a id="" class="topbar-link Animated03 Fright"><i
+							class="icon-message"></i> <span>Messages</span></a>
+						<ul class="">
+							<li><a href="#" class="menulink"> <i
+									class="icon-podcast3 Fs20 Green"></i> <span
+									class="Fs10 DispBlock">18.08.2016</span> <span
+									class="Fs10 DispBlock">At My Office</span> <span
+									class="DispBlock Red Fs14 FontPoppinsRegular">Office
+										Orientations</span>
+							</a></li>
+							<li><a href="#" class="menulink"> <i
+									class="icon-podcast3 Fs20 Green"></i> <span
+									class="Fs10 DispBlock">18.08.2016</span> <span
+									class="Fs10 DispBlock">At Meeting Room</span> <span
+									class="DispBlock Blue Fs14 FontPoppinsRegular">Meeting
+										With Boss</span>
+							</a></li>
+							<li><a href="#" class="menulink"> <i
+									class="icon-podcast3 Fs20 Green"></i> <span
+									class="Fs10 DispBlock">18.08.2016</span> <span
+									class="Fs10 DispBlock">At Customer Office</span> <span
+									class="DispBlock Blue Fs14 FontPoppinsRegular">New
+										Products Setup</span>
+							</a></li>
+							<li><a href="#" class="menulink"> <i
+									class="icon-podcast3 Fs20 Green"></i> <span
+									class="Fs10 DispBlock">18.08.2016</span> <span
+									class="Fs10 DispBlock">At My Office</span> <span
+									class="DispBlock Green Fs14 FontPoppinsRegular">Office
+										Orientations</span>
+							</a></li>
+						</ul></li>
+				</ul>
+
+				<div id="search-bar">
+					<input type="text" placeholder="Search" /> <a id="search-btn"
+						class="Animated03"><i class="fa fa-hand-o-right"></i></a>
+				</div> 
+
+			</div>
+		</div>
+	</div> -->
+
+		<!-- LAYOUT CONTAINER -->
+
+		<div id="layout-container">
+
+			<div id="layout-container-row">
+
+				<!-- LAYOUT MENU COVER -->
+				<!--  
+			<div id="layout-menu-cover" class="">
+				<div id="layout-menu-cover-scroll-content" class="">
+				
+					<form id="menuform" name="menuform" method="post"
+						action="/venture/empty-page.xhtml"
+						enctype="application/x-www-form-urlencoded">
+						<input type="hidden" name="menuform" value="menuform" />
+						<ul id="layout-menu" class="layout-tab-submenu active">
+							<li id="menuform:om_dashboards" role="menuitem"><a href="#"
+								class="menulink"> <span> DASHBOARD</span></a>
+							<ul role="menu">
+									<li id="menuform:om_db_landing" role="menuitem"><a
+										class="menulink" href="/venture/promotion-page.xhtml"><i
+											class="icon-jewel"></i><span>Your Promotion Page</span></a></li>
+									<li id="menuform:om_db_sc" role="menuitem"><a
+										class="menulink" href="/venture/dashboard-social.xhtml"><i
+											class="icon-lightbulb"></i><span>Dashboard Social</span></a></li>
+									<li id="menuform:om_db_pm1" role="menuitem"><a
+										class="menulink" href="/venture/dashboard-pm.xhtml"><i
+											class="icon-lightbulb"></i><span>Dashboard Project
+												Management 1</span></a></li>
+									<li id="menuform:om_db_pm2" role="menuitem"><a
+										class="menulink" href="/venture/dashboard-pm-2.xhtml"><i
+											class="icon-lightbulb"></i><span>Dashboard Project
+												Management 2</span></a></li>
+								</ul></li>
+							<li id="menuform:om_menuoptcolor" role="menuitem"><a
+								href="#" class="menulink"> <span> MENU AND COLOR
+										OPTIONS</span></a>
+							<ul role="menu">
+									<li id="menuform:om_def" role="menuitem"><a
+										class="menulink" href="#"
+										onclick="Venture.changeBodyClass('');return false;"><i
+											class="icon-checklist"></i><span>Default Menu Option</span></a></li>
+									<li id="menuform:om_fixed" role="menuitem"><a
+										class="menulink" href="#"
+										onclick="Venture.changeBodyClass('FixedMenu');return false;"><i
+											class="icon-checklist"></i><span>Fixed Default Menu
+												Option</span></a></li>
+									<li id="menuform:om_popup" role="menuitem"><a
+										class="menulink" href="#"
+										onclick="Venture.changeBodyClass('PopupMenu');return false;"><i
+											class="icon-duplicate"></i><span>Popup Menu Option</span></a></li>
+									<li id="menuform:tpbr_colors" role="menuitem"><a href="#"
+										class="menulink"><i class="icon-chevron-down"></i> <span>
+												Topbar Color Options</span></a>
+									<ul role="menu">
+											<li id="menuform:om_bg_yellow" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('YellowTopbar');return false;"><i
+													class="icon-brush"></i><span>Yellow Color</span></a></li>
+											<li id="menuform:om_bg_orange" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('OrangeTopbar');return false;"><i
+													class="icon-brush"></i><span>Orange Color</span></a></li>
+											<li id="menuform:om_bg_aqua" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('AquaTopbar');return false;"><i
+													class="icon-brush"></i><span>Aqua Color</span></a></li>
+											<li id="menuform:om_bg_blue" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('BlueTopbar');return false;"><i
+													class="icon-brush"></i><span>Blue Color</span></a></li>
+											<li id="menuform:om_bg_red" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('RedTopbar');return false;"><i
+													class="icon-brush"></i><span>Red Color</span></a></li>
+											<li id="menuform:om_bg_green" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('GreenTopbar');return false;"><i
+													class="icon-brush"></i><span>Green Color</span></a></li>
+											<li id="menuform:om_bg_purple" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('PurpleTopbar');return false;"><i
+													class="icon-brush"></i><span>Purple Color</span></a></li>
+											<li id="menuform:om_bg_pink" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('PinkTopbar');return false;"><i
+													class="icon-brush"></i><span>Pink Color</span></a></li>
+										</ul></li>
+									<li id="menuform:bg_colors" role="menuitem"><a href="#"
+										class="menulink"><i class="icon-chevron-down"></i> <span>
+												Background Color Options</span></a>
+									<ul role="menu">
+											<li id="menuform:bg_palegreen" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('PaleGreenBG');return false;"><i
+													class="icon-brush"></i><span>Pale Green</span></a></li>
+											<li id="menuform:bg_paleblue" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('PaleBlueBG');return false;"><i
+													class="icon-brush"></i><span>Pale Blue</span></a></li>
+											<li id="menuform:bg_leaden" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('LeadenBG');return false;"><i
+													class="icon-brush"></i><span>Leaden</span></a></li>
+											<li id="menuform:bg_dark" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('DarkBG');return false;"><i
+													class="icon-brush"></i><span>Dark</span></a></li>
+											<li id="menuform:bg_darkpurple" role="menuitem"><a
+												class="menulink" href="#"
+												onclick="Venture.changeBodyClass('DarkPurpleBG');return false;"><i
+													class="icon-brush"></i><span>Dark Purple</span></a></li>
+										</ul></li>
+								</ul></li>
+							<li id="menuform:om_theme" role="menuitem"><a href="#"
+								class="menulink"> <span> VENTURE THEME</span></a>
+							<ul role="menu">
+									<li id="menuform:om_sample" role="menuitem"><a
+										class="menulink" href="/venture/sample.xhtml"><i
+											class="icon-pill"></i><span>Sample Page</span></a></li>
+									<li id="menuform:om_forms" role="menuitem"><a
+										class="menulink" href="/venture/forms.xhtml"><i
+											class="icon-article"></i><span>Form Elements</span></a></li>
+									<li id="menuform:om_data" role="menuitem"><a
+										class="menulink" href="/venture/data.xhtml"><i
+											class="icon-stack"></i><span>Data Components</span></a></li>
+									<li id="menuform:om_datatable" role="menuitem"><a
+										class="menulink" href="/venture/datatable.xhtml"><i
+											class="icon-browser"></i><span>DataTable</span></a></li>
+									<li id="menuform:om_panels" role="menuitem"><a
+										class="menulink" href="/venture/panel.xhtml"><i
+											class="icon-to-do"></i><span>Panels</span></a></li>
+									<li id="menuform:om_overlays" role="menuitem"><a
+										class="menulink" href="/venture/overlay.xhtml"><i
+											class="icon-box"></i><span>Overlays</span></a></li>
+									<li id="menuform:om_menus" role="menuitem"><a
+										class="menulink" href="/venture/menu.xhtml"><i
+											class="icon-list"></i><span>Menus</span></a></li>
+									<li id="menuform:om_messages" role="menuitem"><a
+										class="menulink" href="/venture/messages.xhtml"><i
+											class="icon-conversation"></i><span>Messages</span></a></li>
+									<li id="menuform:om_charts" role="menuitem"><a
+										class="menulink" href="/venture/charts.xhtml"><i
+											class="icon-graph-pie"></i><span>Charts</span></a></li>
+									<li id="menuform:om_fileupload" role="menuitem"><a
+										class="menulink" href="/venture/file.xhtml"><i
+											class="icon-cloud-upload"></i><span>FileUpload</span></a></li>
+									<li id="menuform:om_misc" role="menuitem"><a
+										class="menulink" href="/venture/misc.xhtml"><i
+											class="icon-view-thumb"></i><span>Misc</span></a></li>
+								</ul></li>
+							<li id="menuform:om_default" role="menuitem"><a href="#"
+								class="menulink"> <span> DEFAULT PAGES</span></a>
+							<ul role="menu">
+									<li id="menuform:om_empty" role="menuitem"><a
+										class="menulink" href="/venture/empty-page.xhtml"><i
+											class="icon-copy"></i><span>Empty Page</span></a></li>
+									<li id="menuform:om_login" role="menuitem"><a
+										class="menulink" href="/venture/login.xhtml"><i
+											class="icon-lock-open"></i><span>Login Page</span></a></li>
+									<li id="menuform:om_error" role="menuitem"><a
+										class="menulink" href="/venture/error.xhtml"><i
+											class="icon-thumbs-down"></i><span>Error Page</span></a></li>
+									<li id="menuform:om_404" role="menuitem"><a
+										class="menulink" href="/venture/404.xhtml"><i
+											class="icon-document-delete"></i><span>404 Page</span></a></li>
+									<li id="menuform:om_access" role="menuitem"><a
+										class="menulink" href="/venture/access-denied.xhtml"><i
+											class="icon-tag-delete"></i><span>Access Denied Page</span></a></li>
+								</ul></li>
+							<li id="menuform:om_hierarchy" role="menuitem"><a href="#"
+								class="menulink"> <span> MENU HIERARCHY</span></a>
+							<ul role="menu">
+									<li id="menuform:om_sm1" role="menuitem"><a href="#"
+										class="menulink"><i class="icon-chevron-down"></i> <span>
+												Submenu 1</span></a>
+									<ul role="menu">
+											<li id="menuform:om_sm11" role="menuitem"><a href="#"
+												class="menulink"><i class="icon-chevron-down"></i> <span>
+														Submenu 1.1</span></a>
+											<ul role="menu">
+													<li id="menuform:om_sm111" role="menuitem"><a href="#"
+														class="menulink"><i class="icon-chevron-down"></i> <span>
+																Submenu 1.1.1</span></a>
+													<ul role="menu">
+															<li id="menuform:om_lnk1111" role="menuitem"><a
+																class="menulink" href="#"><i class="icon-link"></i><span>Link
+																		1</span></a></li>
+															<li id="menuform:om_lnk1112" role="menuitem"><a
+																class="menulink" href="#"><i class="icon-link"></i><span>Link
+																		2</span></a></li>
+															<li id="menuform:om_lnk1113" role="menuitem"><a
+																class="menulink" href="#"><i class="icon-link"></i><span>Link
+																		3</span></a></li>
+														</ul></li>
+												</ul></li>
+											<li id="menuform:om_lnk12" role="menuitem"><a
+												class="menulink" href="#"><i class="icon-link"></i><span>Submenu
+														1.2</span></a></li>
+											<li id="menuform:om_lnk13" role="menuitem"><a
+												class="menulink" href="#"><i class="icon-link"></i><span>Submenu
+														1.3</span></a></li>
+										</ul></li>
+									<li id="menuform:om_sm2" role="menuitem"><a href="#"
+										class="menulink"><i class="icon-chevron-down"></i> <span>
+												Submenu 2</span></a>
+									<ul role="menu">
+											<li id="menuform:om_21" role="menuitem"><a href="#"
+												class="menulink"><i class="icon-chevron-down"></i> <span>
+														Submenu 2.1</span></a>
+											<ul role="menu">
+													<li id="menuform:om_211" role="menuitem"><a href="#"
+														class="menulink"><i class="icon-chevron-down"></i> <span>
+																Submenu 2.1.1</span></a>
+													<ul role="menu">
+															<li id="menuform:om_lnk2111" role="menuitem"><a
+																class="menulink" href="#"><i class="icon-link"></i><span>Link
+																		1</span></a></li>
+															<li id="menuform:om_lnk2112" role="menuitem"><a
+																class="menulink" href="#"><i class="icon-link"></i><span>Link
+																		2</span></a></li>
+															<li id="menuform:om_lnk2113" role="menuitem"><a
+																class="menulink" href="#"><i class="icon-link"></i><span>Link
+																		3</span></a></li>
+														</ul></li>
+												</ul></li>
+										</ul></li>
+								</ul></li>
+							<li id="menuform:om_fonticon" role="menuitem"><a href="#"
+								class="menulink"> <span> FONT ICON</span></a>
+							<ul role="menu">
+									<li id="menuform:om_icons" role="menuitem"><a
+										class="menulink" href="/venture/font-icons.xhtml"><i
+											class="icon-rocket"></i><span>Font Icons</span></a></li>
+								</ul></li>
+							<li id="menuform:om_docs" role="menuitem"><a href="#"
+								class="menulink"> <span> DOCUMENTATION</span></a>
+							<ul role="menu">
+									<li id="menuform:om_docs_core" role="menuitem"><a href="#"
+										class="menulink"><i class="icon-folder"></i> <span>
+												Core CSS Docs</span></a>
+									<ul role="menu">
+											<li id="menuform:om_docs_1" role="menuitem"><a
+												class="menulink"
+												href="/venture/docs/core/installation.xhtml"><i
+													class="icon-tags"></i><span>Installation</span></a></li>
+											<li id="menuform:om_docs_2" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/menus.xhtml"><i
+													class="icon-tags"></i><span>Menus</span></a></li>
+											<li id="menuform:om_docs_3" role="menuitem"><a
+												class="menulink"
+												href="/venture/docs/core/responsive-mode.xhtml"><i
+													class="icon-tags"></i><span>Responsive Mode</span></a></li>
+											<li id="menuform:om_docs_4" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/containerx.xhtml"><i
+													class="icon-tags"></i><span>ContainerX</span></a></li>
+											<li id="menuform:om_docs_5" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/flex.xhtml"><i
+													class="icon-tags"></i><span>Flex Boxes</span></a></li>
+											<li id="menuform:om_docs_6" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/widx.xhtml"><i
+													class="icon-tags"></i><span>WidX</span></a></li>
+											<li id="menuform:om_docs_7" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/selection.xhtml"><i
+													class="icon-tags"></i><span>Selection</span></a></li>
+											<li id="menuform:om_docs_8" role="menuitem"><a
+												class="menulink"
+												href="/venture/docs/core/visibilities.xhtml"><i
+													class="icon-tags"></i><span>Visibility</span></a></li>
+											<li id="menuform:om_docs_9" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/displaying.xhtml"><i
+													class="icon-tags"></i><span>Displaying</span></a></li>
+											<li id="menuform:om_docs_10" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/positioning.xhtml"><i
+													class="icon-tags"></i><span>Positioning</span></a></li>
+											<li id="menuform:om_docs_11" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/underline.xhtml"><i
+													class="icon-tags"></i><span>Underline</span></a></li>
+											<li id="menuform:om_docs_12" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/floating.xhtml"><i
+													class="icon-tags"></i><span>Floating</span></a></li>
+											<li id="menuform:om_docs_13" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/overflows.xhtml"><i
+													class="icon-tags"></i><span>Overflows</span></a></li>
+											<li id="menuform:om_docs_14" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/empty-boxes.xhtml"><i
+													class="icon-tags"></i><span>Empty Boxes</span></a></li>
+											<li id="menuform:om_docs_15" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/opacity.xhtml"><i
+													class="icon-tags"></i><span>Opacity</span></a></li>
+											<li id="menuform:om_docs_16" role="menuitem"><a
+												class="menulink"
+												href="/venture/docs/core/text-aligning.xhtml"><i
+													class="icon-tags"></i><span>Text Aligning</span></a></li>
+											<li id="menuform:om_docs_17" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/box-sizing.xhtml"><i
+													class="icon-tags"></i><span>Box Sizing</span></a></li>
+											<li id="menuform:om_docs_18" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/font-size.xhtml"><i
+													class="icon-tags"></i><span>Font Size</span></a></li>
+											<li id="menuform:om_docs_19" role="menuitem"><a
+												class="menulink"
+												href="/venture/docs/core/font-weights.xhtml"><i
+													class="icon-tags"></i><span>Font Weights</span></a></li>
+											<li id="menuform:om_docs_20" role="menuitem"><a
+												class="menulink" href="/venture/docs/core/transitions.xhtml"><i
+													class="icon-tags"></i><span>Transitions</span></a></li>
+										</ul></li>
+									<li id="menuform:om_docs_layout" role="menuitem"><a
+										href="#" class="menulink"><i class="icon-folder"></i> <span>
+												Layout CSS Docs</span></a>
+									<ul role="menu">
+											<li id="menuform:om_docs_21" role="menuitem"><a
+												class="menulink" href="/venture/docs/layout/less.xhtml"><i
+													class="icon-tags"></i><span>LESS</span></a></li>
+											<li id="menuform:om_docs_22" role="menuitem"><a
+												class="menulink" href="/venture/docs/layout/cards.xhtml"><i
+													class="icon-tags"></i><span>Cards</span></a></li>
+											<li id="menuform:om_docs_23" role="menuitem"><a
+												class="menulink"
+												href="/venture/docs/layout/text-colors.xhtml"><i
+													class="icon-tags"></i><span>Text Colors</span></a></li>
+											<li id="menuform:om_docs_24" role="menuitem"><a
+												class="menulink"
+												href="/venture/docs/layout/background-colors.xhtml"><i
+													class="icon-tags"></i><span>Background Colors</span></a></li>
+											<li id="menuform:om_docs_25" role="menuitem"><a
+												class="menulink" href="/venture/docs/layout/borders.xhtml"><i
+													class="icon-tags"></i><span>Borders</span></a></li>
+											<li id="menuform:om_docs_26" role="menuitem"><a
+												class="menulink"
+												href="/venture/docs/layout/separators.xhtml"><i
+													class="icon-tags"></i><span>Separators</span></a></li>
+											<li id="menuform:om_docs_27" role="menuitem"><a
+												class="menulink" href="/venture/docs/layout/effects.xhtml"><i
+													class="icon-tags"></i><span>Effects</span></a></li>
+											<li id="menuform:om_docs_28" role="menuitem"><a
+												class="menulink" href="/venture/docs/layout/headings.xhtml"><i
+													class="icon-tags"></i><span>Headings</span></a></li>
+										</ul></li>
+								</ul></li>
+						</ul>
+						<script type="text/javascript">
+							Venture.restoreMenuState();
+						</script>
+						<input type="hidden" name="javax.faces.ViewState"
+							id="j_id1:javax.faces.ViewState:0"
+							value="-42902658088057259:1667392289482768445" autocomplete="off" />
+					</form>
+
+				</div>
+			</div>  -->
+
+				<!-- PORTLETS COVER -->
+				<div id="layout-portlets-cover">
+					<div class="Container100">
+						<div class="Card TexAlCenter">
+							<h1 class="BigTopic">Empty Page</h1>
+							<span class="gray">Use this page to start from scratch and
+								place your custom content.</span>
+						</div>
+					</div>
+
+
+					<div class="Container100" id="layout-footer">
+						<div class="Card">
+
+							<!-- FOOTER  -->
+							<div class="Container100 NoIndent"
+								style="border-bottom: dashed 1px #ccc;" id="footerlinks">
+								<img
+									src = "#{resource['/images/logo-algaworks-branca.png']}"
+									style="height: 20px;" class="Fleft" />
+
+								<div class="DispInlBlock Fright">
+									<a href="#layout-footer" class="Leaden Fs22"><i
+										class="fa fa-facebook-square"></i></a> <a href="#layout-footer"
+										class="Leaden Fs22"><i class="fa fa-twitter-square"></i></a> <a
+										href="#layout-footer" class="Leaden Fs22"><i
+										class="fa fa-linkedin-square"></i></a> <a href="#layout-footer"
+										class="Leaden Fs22"><i class="fa fa-google-plus-square"></i></a>
+								</div>
+
+								<div class="EmptyBox10"></div>
+							</div>
+
+							<div class="EmptyBox10"></div>
+
+							<div class="Container50 NoIndent Responsive100">
+								<div class="Container100 NoIndent">
+									<a href="#"
+										class="DispInlBlock FontLatoRegular Blue Fs12 Fleft HoverEffect">TERMS
+										OF CONDITIONS</a> <span class="Fleft Black Fs12"
+										style="padding: 0px 5px;">|</span> <a href="#"
+										class="DispInlBlock FontLatoRegular Blue Fs12 Fleft HoverEffect">SITEMAP</a>
+									<span class="Fleft Black Fs12" style="padding: 0px 5px;">|</span>
+									<a href="#"
+										class="DispInlBlock FontLatoRegular Blue Fs12 Fleft HoverEffect">PRIVACY</a>
+									<span class="Fleft Black Fs12" style="padding: 0px 5px;">|</span>
+									<a href="#"
+										class="DispInlBlock FontLatoRegular Blue Fs12 Fleft HoverEffect">LINKING
+										POLICY</a>
+								</div>
+							</div>
+
+							<div class="EmptyBox10 ShowOnMobile"></div>
+
+							<div class="Container50 NoIndent Responsive100">
+								<span
+									class="DispBlock FontLatoRegular Black Fs12 HoverEffect TexAlRight FloatNoneOnMobile">
+									PrimeFaces Venture Theme And Layout</span>
+								<div class="EmptyBox10"></div>
+								<span
+									class="DispBlock FontLatoRegular Black Fs12 HoverEffect TexAlRight">
+									<i class="icon-services1"></i> +1 888 123 4 567 <br />
+									info@ventureventure.com
+								</span>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+		<!-- FIM -->
+
+
+
+
+
+
 	</ui:define>
 
 </ui:composition>

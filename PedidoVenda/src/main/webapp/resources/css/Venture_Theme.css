@@ -1408,8 +1408,8 @@ label {
 
 .ui-datatable table thead tr .ui-chkbox-box.ui-state-hover,
 	.ui-datatable table thead tr .ui-chkbox-box.ui-state-active {
-	background-color: transparent;
-	color: #ffffff;
+	background-color: transparent !important;
+	color: #ffffff !important;
 }
 
 .ui-datatable table thead tr th .ui-column-customfilter .ui-spinner-button.ui-state-active,
@@ -3073,7 +3073,7 @@ hr.ui-widget-header {
 }
 
 .ui-tree .ui-treenode-content .ui-chkbox-box {
-	margin-top: 0px;
+	margin-top: 0px !important;
 }
 
 .ui-tree .ui-treenode .ui-treenode-label {
@@ -3084,13 +3084,12 @@ hr.ui-widget-header {
 }
 
 .ui-tree .ui-treenode-content .ui-chkbox-box .ui-icon-minus {
-	background-image:
-	
-	url("#{resource['images/minus-sign.svg']}");	
+	background-image:	
+	url("#{resource['images/minus-sign.svg']}") !important;	
 		
 	background-position: center !important;
-	background-repeat: no-repeat;
-	background-size: 100%;
+	background-repeat: no-repeat !important;
+	background-size: 100% !important;
 }
 
 .ui-tree .ui-icon {
@@ -3348,10 +3347,10 @@ hr.ui-widget-header {
 
 .ui-treetable .ui-chkbox-box .ui-icon-minus {
 	background-image:
-		url("/venture/javax.faces.resource/images/minus-sign-navy.svg.xhtml?ln=primefaces-venture");
+	url("#{resource['images/minus-sign-navy.svg']}") !important;			
 	background-position: center !important;
-	background-repeat: no-repeat;
-	background-size: 110%;
+	background-repeat: no-repeat !important;
+	background-size: 110% !important;
 }
 
 .ui-treetable table thead tr th .ui-icon-triangle-1-n {
@@ -4378,20 +4377,20 @@ hr.ui-widget-header {
 }
 /*Style For UI InputField ------------------------------------------------------------------------------------- */
 .ui-inputfield {
-	color: #525252;
-	font-size: 12px;
+	color: #525252 !important;
+	font-size: 12px !important;
 	font-family: 'poppinsregular' !important;
 	padding: 6px 9px !important;
-	border: solid 1px #d1d1d1;
+	border: solid 1px #d1d1d1 !important;
 	-webkit-transition: all 0.2s ease !important;
 	-moz-transition: all 0.2s ease !important;
 	-ms-transition: all 0.2s ease !important;
 	-o-transition: all 0.2s ease !important;
 	transition: all 0.2s ease !important;
-	background-color: #fafafa;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
+	background-color: #fafafa !important;
+	border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
 }
 
 .ui-inputfield.ui-state-hover, .ui-inputfield.ui-state-focus {
@@ -5633,16 +5632,16 @@ hr.ui-widget-header {
 }
 
 .ui-chkbox .ui-chkbox-box {
-	background: none;
-	box-shadow: none;
-	margin-right: 5px;
-	margin-top: 2px;
-	color: #a9a9a9;
-	border: solid 1px #d1d1d1;
-	cursor: pointer;
+	background: none !important;
+	box-shadow: none !important;
+	margin-right: 5px !important;
+	margin-top: 2px !important;
+	color: #a9a9a9 !important;
+	border: solid 1px #d1d1d1 !important;
+	cursor: pointer !important;
 	width: 16px !important;
 	height: 16px !important;
-	background-color: #fafafa;
+	background-color: #fafafa !important;
 }
 
 .ui-chkbox .ui-state-hover, .ui-chkbox .ui-state-active {
@@ -5651,15 +5650,15 @@ hr.ui-widget-header {
 }
 
 .ui-chkbox .ui-state-focus {
-	outline: dotted 1px #0bc3f1;
-	outline-offset: 2px;
-	border: solid 1px #0893c7;
+	outline: dotted 1px #0bc3f1 !important;
+	outline-offset: 2px !important;
+	border: solid 1px #0893c7 !important;
 }
 
 .ui-chkbox-box .ui-icon-blank {
 	background-image: none !important;
-	background-size: 100%;
-	background-position: center;
+	background-size: 100% !important;
+	background-position: center !important;
 	-webkit-transition: all 0.2s ease !important;
 	-moz-transition: all 0.2s ease !important;
 	-ms-transition: all 0.2s ease !important;
@@ -5668,15 +5667,12 @@ hr.ui-widget-header {
 }
 
 .ui-chkbox-box .ui-icon-check {
-	border-radius: 1px;
-	background-image:	
-	
-	url("#{resource['images/check.svg']}"); 
-	
-		!important;
-	background-size: 100%;
-	background-position: center;
-	background-color: #00aeef;
+	border-radius: 1px !important;
+	background-image:		
+	url("#{resource['images/check.svg']}") !important;	
+	background-size: 100% !important;
+	background-position: center !important;
+	background-color: #00aeef !important;
 	-webkit-transition: all 0.2s ease !important;
 	-moz-transition: all 0.2s ease !important;
 	-ms-transition: all 0.2s ease !important;
@@ -5686,14 +5682,14 @@ hr.ui-widget-header {
 
 .ui-chkbox .ui-chkbox-label {
 	margin: 1px 15px 0px 5px !important;
-	font-size: 16px;
-	color: #003d50;
+	font-size: 16px !important;
+	color: #003d50 !important;
 }
 /*Style For Radio Button --------------------------------------------------------------------------------------*/
 .ui-selectoneradio label {
 	margin: 6px 15px 0px 0px !important;
-	color: #525252;
-	font-size: 12px;
+	color: #525252 !important;
+	font-size: 12px !important;
 }
 
 .ui-radiobutton {
@@ -5710,27 +5706,27 @@ hr.ui-widget-header {
 }
 
 .ui-radiobutton .ui-state-hover {
-	border: solid 1px #0893c7;
-	background-color: #fafafa;
+	border: solid 1px #0893c7 !important;
+	background-color: #fafafa !important;
 }
 
 .ui-radiobutton .ui-state-active {
-	border: solid 1px #0893c7;
-	background-color: #00aeef;
+	border: solid 1px #0893c7 !important;
+	background-color: #00aeef !important;
 }
 
 .ui-radiobutton .ui-state-focus {
-	outline: dotted 1px #0bc3f1;
-	outline-offset: 2px;
-	border: solid 1px #0893c7;
+	outline: dotted 1px #0bc3f1 !important;
+	outline-offset: 2px !important;
+	border: solid 1px #0893c7 !important;
 }
 
 .ui-radiobutton .ui-radiobutton-icon {
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	background-size: 100%;
-	background-position: center;
+	border-radius: 50% !important;
+	-webkit-border-radius: 50% !important;
+	-moz-border-radius: 50% !important;
+	background-size: 100% !important;
+	background-position: center !important;
 	margin: 0px !important;
 	-webkit-transition: all 0.2s ease !important;
 	-moz-transition: all 0.2s ease !important;
@@ -5744,16 +5740,15 @@ hr.ui-widget-header {
 	{
 	background-image:
 	
-	url( "#{resource['images/radio-on.svg']}"); 
-	
-		!important;
-	background-size: 100%;
-	background-position: center;
-	margin: 0px;
-	background-color: #00aeef;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
+	url( "#{resource['images/radio-on.svg']}")!important; 	
+		
+	background-size: 100% !important;
+	background-position: center !important;
+	margin: 0px !important;
+	background-color: #00aeef !important;
+	border-radius: 50% !important;
+	-webkit-border-radius: 50% !important;
+	-moz-border-radius: 50% !important;
 	-webkit-transition: all 0.2s ease !important;
 	-moz-transition: all 0.2s ease !important;
 	-ms-transition: all 0.2s ease !important;
@@ -5929,7 +5924,7 @@ hr.ui-widget-header {
 
 .ui-selectonelistbox .ui-selectlistbox-filter-container .ui-inputfield {
 	padding-left: 30px !important;
-	width: 70%;
+	width: 70% !important;
 }
 /*Style For SelectManyMenu --------------------------------------------------------------------------------------*/
 .ui-selectmanymenu {
@@ -5954,7 +5949,7 @@ hr.ui-widget-header {
 }
 
 .ui-selectmanymenu .ui-selectlistbox-filter-container .ui-inputfield {
-	width: 70%;
+	width: 70%!important;
 	padding-left: 30px !important;
 }
 
@@ -5973,7 +5968,7 @@ hr.ui-widget-header {
 
 .ui-selectmanymenu .ui-selectlistbox-item .ui-chkbox {
 	margin: 0px 0px 0px 3px !important;
-	float: left;
+	float: left !important;
 }
 
 .ui-selectmanymenu tr.ui-selectlistbox-item td .ui-chkbox {
@@ -6985,76 +6980,77 @@ hr.ui-widget-header {
 		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5) !important;
 	}
 }
+
 /* button colors */
 .GreenButton .ui-button-text {
-	background-color: #5fb95e;
-	border-color: #0ca533;
+	background-color: #5fb95e !important;
+	border-color: #0ca533 !important;
 }
 
 .GreenButton.ui-state-hover .ui-button-text {
-	background-color: #7BD27A;
+	background-color: #7BD27A  !important;
 }
 
 .GreenButton.ui-state-active .ui-button-text {
-	background-color: #569f58;
+	background-color: #569f58  !important;
 }
 
 .RedButton .ui-button-text {
-	background-color: #e0245e;
-	border-color: #bd0a39;
+	background-color: #e0245e  !important;
+	border-color: #bd0a39  !important;
 }
 
 .RedButton.ui-state-hover .ui-button-text {
-	background-color: #e6507e;
+	background-color: #e6507e  !important;
 }
 
 .RedButton.ui-state-active .ui-button-text {
-	background-color: #bd2758;
+	background-color: #bd2758  !important;
 }
 
 .AquaButton .ui-button-text {
-	background-color: #43bcf2;
-	border-color: #087298;
+	background-color: #43bcf2  !important;
+	border-color: #087298  !important;
 }
 
 .AquaButton.ui-state-hover .ui-button-text {
-	background-color: #69c9f5;
+	background-color: #69c9f5  !important;
 }
 
 .AquaButton.ui-state-active .ui-button-text {
-	background-color: #3fa1cf;
+	background-color: #3fa1cf  !important;
 }
 
 .NavyButton .ui-button-text {
-	background-color: #1f3b59;
-	border-color: #21374f;
+	background-color: #1f3b59  !important;
+	border-color: #21374f  !important;
 }
 
 .NavyButton.ui-state-hover .ui-button-text {
-	background-color: #3C6592;
+	background-color: #3C6592  !important;
 }
 
 .NavyButton.ui-state-active .ui-button-text {
-	background-color: #21374f;
+	background-color: #21374f  !important;
 }
 
 .OrangeButton .ui-button-text {
-	background-color: #f15f5f;
-	border-color: #d4871d;
+	background-color: #f15f5f  !important;
+	border-color: #d4871d  !important;
 }
 
 .OrangeButton.ui-state-hover .ui-button-text {
-	background-color: #f47f7f;
+	background-color: #f47f7f  !important;
 }
 
 .OrangeButton.ui-state-active .ui-button-text {
-	background-color: #cb5759;
+	background-color: #cb5759 !important;
 }
 
 .GrayButton .ui-button-text {
-	background-color: #ECEFF1;
-	color: #525252;
-	border-color: #CCCFD2;
+	background-color: #ECEFF1 !important;
+	color: #525252 !important;
+	border-color: #CCCFD2 !important;
 }
 
 .GrayButton.ui-state-hover .ui-button-text {
@@ -7066,8 +7062,8 @@ hr.ui-widget-header {
 }
 
 .PinkButton .ui-button-text {
-	background-color: #ea5285;
-	border-color: #DA2A66;
+	background-color: #ea5285 !important;
+	border-color: #DA2A66 !important;
 }
 
 .PinkButton.ui-state-hover .ui-button-text {
@@ -7079,8 +7075,8 @@ hr.ui-widget-header {
 }
 
 .PurpleButton .ui-button-text {
-	background-color: #8766c3;
-	border-color: #a108c6;
+	background-color: #8766c3 !important;
+	border-color: #a108c6 !important;
 }
 
 .PurpleButton.ui-state-hover .ui-button-text {
@@ -7092,8 +7088,8 @@ hr.ui-widget-header {
 }
 
 .YellowButton .ui-button-text {
-	background-color: #fed857;
-	border-color: #cead0a;
+	background-color: #fed857 !important;
+	border-color: #cead0a !important;
 }
 
 .YellowButton.ui-state-hover .ui-button-text {
@@ -7105,8 +7101,8 @@ hr.ui-widget-header {
 }
 
 .BrownButton .ui-button-text {
-	background-color: #6D4C41;
-	border-color: #4A3129;
+	background-color: #6D4C41 !important;
+	border-color: #4A3129 !important;
 }
 
 .BrownButton.ui-state-hover .ui-button-text {
@@ -7133,19 +7129,19 @@ hr.ui-widget-header {
 }
 
 .ui-fluid .ui-selectcheckboxmenu {
-	box-sizing: border-box;
+	box-sizing: border-box !important;
 }
 /* SelectManyMenu */
 .ui-selectmanymenu .ui-selectlistbox-item .ui-chkbox {
-	margin-top: -1px;
+	margin-top: -1px !important;
 }
 /* Spinner - Slider */
 .ui-fluid .ui-spinner {
-	box-sizing: border-box;
+	box-sizing: border-box !important;
 }
 
 .ui-fluid .ui-slider {
-	margin-top: 8px;
+	margin-top: 8px !important;
 }
 
 .ui-fluid .ui-spinner .ui-spinner-button .ui-icon {
@@ -7161,12 +7157,13 @@ hr.ui-widget-header {
 }
 
 .ui-fluid .ui-chkbox .ui-chkbox-box {
-	margin: 0px 7px 0px 0px;
+	margin: 0px 7px 0px 0px !important;
 }
 
 .ui-fluid .ui-selectmanycheckbox label {
 	margin-top: 1px !important;
 }
+
 /* Calendar */
 .ui-fluid .ui-datepicker-trigger {
 	margin: 0px 0px 0px -41px !important;

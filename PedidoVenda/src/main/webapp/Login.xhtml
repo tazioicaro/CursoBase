@@ -7,6 +7,651 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 
+	<style>
+
+/* button colors */
+.GreenButton .ui-button-text {
+	background-color: #5fb95e !important;
+	border-color: #0ca533 !important;
+}
+
+.GreenButton.ui-state-hover .ui-button-text {
+	background-color: #7BD27A  !important;
+}
+
+.GreenButton.ui-state-active .ui-button-text {
+	background-color: #569f58  !important;
+}
+
+.RedButton .ui-button-text {
+	background-color: #e0245e  !important;
+	border-color: #bd0a39  !important;
+}
+
+.RedButton.ui-state-hover .ui-button-text {
+	background-color: #e6507e  !important;
+}
+
+.RedButton.ui-state-active .ui-button-text {
+	background-color: #bd2758  !important;
+}
+
+.AquaButton .ui-button-text {
+	background-color: #43bcf2  !important;
+	border-color: #087298  !important;
+}
+
+.AquaButton.ui-state-hover .ui-button-text {
+	background-color: #69c9f5  !important;
+}
+
+.AquaButton.ui-state-active .ui-button-text {
+	background-color: #3fa1cf  !important;
+}
+
+.NavyButton .ui-button-text {
+	background-color: #1f3b59  !important;
+	border-color: #21374f  !important;
+}
+
+.NavyButton.ui-state-hover .ui-button-text {
+	background-color: #3C6592  !important;
+}
+
+.NavyButton.ui-state-active .ui-button-text {
+	background-color: #21374f  !important;
+}
+
+.OrangeButton .ui-button-text {
+	background-color: #f15f5f  !important;
+	border-color: #d4871d  !important;
+}
+
+.OrangeButton.ui-state-hover .ui-button-text {
+	background-color: #f47f7f  !important;
+}
+
+.OrangeButton.ui-state-active .ui-button-text {
+	background-color: #cb5759 !important;
+}
+
+.GrayButton .ui-button-text {
+	background-color: #ECEFF1 !important;
+	color: #525252 !important;
+	border-color: #CCCFD2 !important;
+}
+
+.GrayButton.ui-state-hover .ui-button-text {
+	background-color: #F5FBFF !important;
+}
+
+.GrayButton.ui-state-active .ui-button-text {
+	background-color: #CCCFD2 !important;
+}
+
+.PinkButton .ui-button-text {
+	background-color: #ea5285 !important;
+	border-color: #DA2A66 !important;
+}
+
+.PinkButton.ui-state-hover .ui-button-text {
+	background-color: #ee759d !important;
+}
+
+.PinkButton.ui-state-active .ui-button-text {
+	background-color: #c54c77 !important;
+}
+
+.PurpleButton .ui-button-text {
+	background-color: #8766c3 !important;
+	border-color: #a108c6 !important;
+}
+
+.PurpleButton.ui-state-hover .ui-button-text {
+	background-color: #9f85cf !important;
+}
+
+.PurpleButton.ui-state-active .ui-button-text {
+	background-color: #765ca9 !important;
+}
+
+.YellowButton .ui-button-text {
+	background-color: #fed857 !important;
+	border-color: #cead0a !important;
+}
+
+.YellowButton.ui-state-hover .ui-button-text {
+	background-color: #fee079 !important;
+}
+
+.YellowButton.ui-state-active .ui-button-text {
+	background-color: #d5b753 !important;
+}
+
+.BrownButton .ui-button-text {
+	background-color: #6D4C41 !important;
+	border-color: #4A3129 !important;
+}
+
+.BrownButton.ui-state-hover .ui-button-text {
+	background-color: #906A5D !important;
+}
+
+.BrownButton.ui-state-active .ui-button-text {
+	background-color: #4A3129 !important;
+}
+
+.ui-chkbox-icon.ui-icon {
+    overflow: visible !important;
+}
+.ui-chkbox-box .ui-icon-check {
+    border-radius: 1px !important;
+    background-image: url("#{resource['images/check.svg']}") !important;	
+    background-size: 100% !important;
+    background-position: center !important;
+    background-color: #00aeef !important;
+    -webkit-transition: all 0.2s ease !important;
+    -moz-transition: all 0.2s ease !important;
+    -ms-transition: all 0.2s ease !important;
+    -o-transition: all 0.2s ease !important;
+    transition: all 0.2s ease !important;
+}
+
+@media ( max-width : 1024px) {
+	.ui-inputfield.ui-inputtextarea {
+		-webkit-transition: none !important;
+		-moz-transition: none !important;
+		-ms-transition: none !important;
+		-o-transition: none !important;
+		transition: none !important;
+	}
+}
+
+/*Style For UI InputField */
+.ui-inputfield {
+	color: #525252 !important;
+	font-size: 12px !important;
+	font-family: 'poppinsregular' !important;
+	padding: 6px 9px !important;
+	border: solid 1px #d1d1d1 !important;
+	-webkit-transition: all 0.2s ease !important;
+	-moz-transition: all 0.2s ease !important;
+	-ms-transition: all 0.2s ease !important;
+	-o-transition: all 0.2s ease !important;
+	transition: all 0.2s ease !important;
+	background-color: #fafafa !important;
+	border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+	
+	background: #fafafa !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: 0 !important;
+    box-shadow: none !important;
+    
+}
+
+.ui-inputfield.ui-state-hover, .ui-inputfield.ui-state-focus {
+	border: solid 1px #00aeef !important;
+	color: #525252 !important;
+	background-color: #fafafa !important;
+}
+
+.ui-inputfield.ui-inputtextarea {
+	border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+}
+.ui-menu .ui-menu-list .ui-inputfield.ui-state-hover, .ui-menu .ui-menu-list .ui-button.ui-state-hover
+	{
+	border-radius: 3px  !important;
+}
+
+.ui-selectonemenu-panel .ui-selectonemenu-filter-container .ui-inputfield
+	{
+	padding-left: 30px !important;
+	width: 75% !important;
+}
+
+.ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-filter-container .ui-inputfield
+	{
+	width: 75% !important;
+	padding-left: 30px !important;
+}
+
+.ui-selectonelistbox .ui-selectlistbox-filter-container .ui-inputfield {
+	padding-left: 30px !important;
+	width: 70% !important;
+}
+
+
+.ui-selectmanymenu .ui-selectlistbox-filter-container .ui-inputfield {
+	width: 70%!important;
+	padding-left: 30px !important;
+}
+
+
+@media ( max-width : 1024px) {
+	.ui-inputfield.ui-inputtextarea {
+		-webkit-transition: none !important;
+		-moz-transition: none !important;
+		-ms-transition: none !important;
+		-o-transition: none !important;
+		transition: none !important;
+	}
+}
+
+
+input[type="text"].ui-state-error, input[type="password"].ui-state-error,
+	.ui-inputtextarea.ui-state-error, .ui-widget-content .ui-state-error,
+	.ui-widget-header .ui-state-error {
+	border: 1px solid #f03369 !important;
+	color: #f03369 !important;
+}
+
+.ui-inputfield.ui-inputtextarea {
+	border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+}
+
+.ui-menu .ui-menu-list .ui-inputtext.ui-state-hover {
+	background-color: #ffffff !important;
+}
+
+
+.ui-picklist .ui-button .ui-button-text {
+	background-color: transparent !important;
+}
+.ui-picklist .ui-picklist-buttons-cell .ui-button-text, .ui-picklist .ui-picklist-buttons .ui-button-tetx,
+	.ui-picklist .ui-picklist-target-controls .ui-button-text {
+	border-radius: 3px !important;
+	background-color: transparent;
+}
+.ui-orderlist .ui-orderlist-controls .ui-button .ui-button-text {
+	border-radius: 3px !important;
+}
+.ui-ribbon .ui-button .ui-button-text, .ui-ribbon .ui-selectonemenu-label
+	{
+	font-size: 12px !important;
+}
+
+.ui-button-text-only .ui-button-text {
+	padding: 7px 20px 7px 20px !important;
+}
+
+.ui-button-text, .ui-datepicker-buttonpane button {
+	padding: 7px 20px 7px 40px !important;
+	font-size: 12px;
+	font-family: 'poppinsregular';
+	color: #ffffff;
+	text-shadow: none;
+	border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+	background-color: #00aeef;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	-webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.2);
+	-moz-box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.2);
+	box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+.ui-button.ui-state-hover .ui-button-text, .ui-datepicker-buttonpane button:hover
+	{
+	background-color: #29c0f9;
+}
+
+.ui-button.ui-state-active .ui-button-text {
+	background-color: #0893c7;
+}
+
+.ui-button.ui-state-focus .ui-button-text {
+	-webkit-box-shadow: 0px 0px 0px 2px #0BC3F1;
+	-moz-box-shadow: 0px 0px 0px 2px #0BC3F1;
+	box-shadow: 0px 0px 0px 2px #0BC3F1;
+}
+
+.ui-buttonset .ui-state-hover .ui-button-text {
+	background-color: #29c0f9;
+}
+
+.ui-buttonset .ui-button.ui-state-active .ui-button-text {
+	background-color: #0893c7;
+}
+
+.ui-button-icon-only .ui-button-text {
+	padding: 7px 2px !important;
+}
+
+.ui-button-text-icon-right .ui-button-text {
+	padding: 6px 40px 6px 20px !important;
+}
+
+.ui-button-text-icon-right .ui-button-icon-right {
+	right: 11px;
+}
+
+.ui-button-icon-only .ui-icon.fa, .ui-button-text-icon-left .ui-icon.fa,
+	.ui-button-text-icon-right .ui-icon.fa {
+	margin-top: -7px !important;
+}
+/* dropdown button height fix.. */
+
+
+.ui-splitbutton>.ui-button-text-icon-left .ui-button-text {
+	border-bottom-right-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}
+
+.ui-splitbutton .ui-splitbutton-menubutton .ui-button-text {
+	padding: 7px 2px !important;
+	border-bottom-left-radius: 0px !important;
+	border-top-left-radius: 0px !important;
+}
+
+.ui-selectonebutton .ui-button .ui-button-text, .ui-selectmanybutton .ui-button .ui-button-text
+	{
+	border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+}
+
+.ui-selectonebutton .ui-button.ui-corner-left .ui-button-text,
+	.ui-selectmanybutton .ui-button.ui-corner-left .ui-button-text {
+	border-top-left-radius: 3px !important;
+	border-bottom-left-radius: 3px !important;
+	-webkit-border-top-left-radius: 3px !important;
+	-webkit-border-bottom-left-radius: 3px !important;
+	-moz-border-top-left-radius: 3px !important;
+	-moz-border-bottom-left-radius: 3px !important;
+}
+
+.ui-selectonebutton .ui-button.ui-corner-right .ui-button-text,
+	.ui-selectmanybutton .ui-button.ui-corner-right .ui-button-text {
+	border-top-right-radius: 3px !important;
+	border-bottom-right-radius: 3px !important;
+	-webkit-border-top-right-radius: 3px !important;
+	-webkit-border-bottom-right-radius: 3px !important;
+	-moz-border-top-right-radius: 3px !important;
+	-moz-border-bottom-right-radius: 3px !important;
+}
+
+
+.ui-spinner .ui-spinner-up .ui-button-text {
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	border-top-right-radius: 2px !important;
+	border-top-left-radius: 0px !important;
+}
+
+.ui-spinner .ui-spinner-down .ui-button-text {
+	margin-top: 1px;
+	border-bottom-right-radius: 2px !important;
+	border-bottom-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+	border-top-left-radius: 0px !important;
+}
+
+.ui-spinner .ui-spinner-button .ui-button-text {
+	height: 7px;
+	text-align: center;
+	padding: 4px 20px 3px 20px !important;
+}
+
+.ui-spinner .ui-spinner-up .ui-button-text .ui-icon {
+	background-image:
+	
+	url("#{resource['images/plus-sign.svg']}")!important;
+		
+	background-position: center !important;
+	background-size: 80% !important;
+	margin-left: 12px;
+	margin-top: -8px;
+}
+
+.ui-spinner .ui-spinner-down .ui-button-text .ui-icon {
+	background-image:
+	
+	url("#{resource['images/minus-sign.svg']}")!important;	
+	
+	background-position: center !important;
+	background-size: 80% !important;
+	margin-left: 12px;
+}
+
+
+.ui-autocomplete .ui-autocomplete-dropdown .ui-button-text {
+	border-bottom-right-radius: 2px !important;
+	border-top-right-radius: 2px !important;
+	border: 0px none;
+	border: solid 1px #d1d1d1 !important;
+	border-left: 0px;
+	border-bottom-left-radius: 0px !important;
+	border-top-left-radius: 0px !important;
+	padding: 0px 2px !important;
+	height: 31px;
+	background-color: #fafafa;
+}
+
+@ -moz-document url-prefix () {
+	/* Firefox specific styles go here */ .ui-autocomplete
+	.ui-autocomplete-dropdown .ui-button-text { height:32px;
+	
+}
+
+}
+.ui-autocomplete .ui-autocomplete-dropdown.ui-state-hover .ui-button-text
+	{
+	background-color: #EFEFEF;
+}
+
+
+.ui-datepicker-trigger.ui-button-icon-only .ui-button-text {
+	padding: 6px 0px !important;
+}
+
+
+.ui-fluid .ui-autocomplete .ui-autocomplete-dropdown .ui-button-text {
+	border: 0px none !important;
+}
+
+@ -moz-document url-prefix () {
+	/* Firefox specific styles go here */ .ui-fluid .ui-autocomplete
+	.ui-autocomplete-dropdown .ui-button-text { font-size:13px!important;
+	
+}
+
+
+.ui-autocomplete .ui-autocomplete-dropdown .ui-button-text {
+	border: 0px none;
+}
+
+.ui-fluid .ui-datepicker-trigger, .ui-fluid .ui-datepicker-trigger.ui-button-icon-only .ui-button-text
+	{
+	border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-top-right-radius: 3px !important;
+	border-bottom-right-radius: 3px !important;
+	-webkit-border-top-right-radius: 3px !important;
+	-webkit-border-bottom-right-radius: 3px !important;
+	-moz-border-top-right-radius: 3px !important;
+	-moz-border-bottom-right-radius: 3px !important;
+}
+
+.ui-fluid .ui-buttonset.ui-buttonset-2 .ui-button .ui-button-text,
+	.ui-fluid .ui-buttonset.ui-buttonset-3 .ui-button .ui-button-text {
+	box-sizing: border-box;
+	margin: 0px !important;
+}
+.ui-fluid .ui-buttonset.ui-buttonset-2 .ui-button .ui-button-text,
+		.ui-fluid .ui-buttonset.ui-buttonset-3 .ui-button .ui-button-text {
+		border-radius: 3px !important;
+	}
+}
+
+.ui-picklist.ui-picklist-responsive .ui-picklist-buttons button .ui-button-text,
+	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons button.ui-state-active .ui-button-text
+	{
+	background-color: transparent !important;
+}
+
+.ui-fluid .ui-orderlist .ui-orderlist-controls button .ui-button-text,
+	.ui-orderlist.ui-grid-responsive .ui-orderlist-controls button .ui-button-text,
+	.ui-fluid .ui-orderlist .ui-orderlist-controls button.ui-state-active .ui-button-text,
+	.ui-orderlist.ui-grid-responsive .ui-orderlist-controls button.ui-state-active .ui-button-text
+	{
+	background-color: transparent !important;
+}
+
+/* Check Box */
+
+.ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-list-item .ui-chkbox .ui-chkbox-box
+	{
+	margin-top: -3px !important;
+}
+.ui-chkbox .ui-chkbox-box {
+	background: none !important;
+	box-shadow: none !important;
+	margin-right: 5px !important;
+	margin-top: 2px !important;
+	color: #a9a9a9 !important;
+	border: solid 1px #d1d1d1 !important;
+	cursor: pointer !important;
+	width: 16px !important;
+	height: 16px !important;
+	background-color: #fafafa !important;
+}
+.ui-fluid .ui-chkbox .ui-chkbox-box {
+	margin: 0px 7px 0px 0px !important;
+}
+
+
+/* -------------  PF ---------------------- */
+
+/* PrimeFaces Extensions */
+.ui-datepicker-trigger.ui-button-icon-only .ui-button-text {
+	padding: 0.3em;
+}
+.ui-autocomplete .ui-button-icon-only .ui-button-text {
+	padding: 0.29em;
+}
+.ui-button .ui-button-text {
+	display: block;
+	line-height: normal;
+}
+
+.ui-button-text-only .ui-button-text {
+	padding: .3em 1em;
+}
+
+.ui-button-icon-only .ui-button-text {
+	padding: .3em;
+	text-indent: -9999999px;
+}
+
+.ui-button-text-icon-left .ui-button-text {
+	padding: .3em 1em .3em 2.1em;
+}
+
+.ui-button-text-icon-right .ui-button-text {
+	padding: .3em 2.1em .3em 1em;
+} /*button icon element(s) */
+.ui-button-icon-only .ui-icon, .ui-button-text-icon-left .ui-icon,
+	.ui-button-text-icon-right .ui-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+} 
+/* FontAwesome icon */
+.ui-button-icon-only .ui-icon.fa, .ui-button-text-icon-left .ui-icon.fa,
+	.ui-button-text-icon-right .ui-icon.fa {
+	margin-top: -7px;
+}
+.ui-inplace .ui-inplace-editor .ui-button-icon-only .ui-button-text {
+	padding: 0
+}
+
+.ui-orderlist .ui-orderlist-button.ui-button-text-icon-primary {
+	width: 100%;
+}
+.ui-picklist .ui-button-text-icon-left {
+	width: 100%;
+}
+
+.ui-autocomplete-multiple-container.ui-inputfield {
+	padding: 0 !important;
+}
+
+.ui-inputfield {
+	margin: 0 !important;
+	outline: medium none !important;
+	padding: 4px !important;
+	font-weight: normal!important;
+}
+
+.ui-widget-header .ui-inputfield, .ui-widget-content .ui-inputfield {
+	font-weight: normal!important;
+}
+
+
+.ui-selectlistbox-filter.ui-inputfield {
+	padding-right: 12% !important;
+	padding-left: 2% !important;
+	width: 85% !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+
+.ui-selectcheckboxmenu-header .ui-inputfield {
+	padding: 1px 20px 1px 2px !important;
+}
+
+.ui-fluid .ui-inputfield {
+	box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+}
+
+/** InputText **/
+.ui-fluid .ui-inputtext {
+	width: 100%;
+}
+ /** InputTextarea **/
+.ui-fluid .ui-inputtextarea {
+	width: 100%;
+}
+.ui-inputtextarea-resizable {
+	overflow: hidden;
+	resize: none;
+}
+
+/* Check-box */
+
+.ui-chkbox .ui-chkbox-box {
+	width: 16px !important;
+	height: 16px !important;
+	display: inline-block !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+
+</style>
+
+
+
+
+
+
+
 	<!--  Não será utilizado o template padrão -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -14,28 +659,24 @@
 		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 
-	<h:outputScript library="js" name="VenturePrimefaces.js" />
+	
 	<h:outputScript library="js" name="VentureLayout.js" />
+	<h:outputScript library="js" name="VenturePrimefaces.js" />
 	<h:outputScript library="js" name="nanoscroller.js" />
 
 
 
 
-	<h:outputStylesheet library="css" name="Venture_Primefaces.css" />
+	
 	<h:outputStylesheet library="css" name="Venture_Theme.css" />
-	<h:outputStylesheet library="css" name="venture-font.css" />
+	<h:outputStylesheet library="css" name="venture-font.css" />	
 	<h:outputStylesheet library="css" name="venture-layout.css" />
 	<h:outputStylesheet library="css" name="animate.css" />
 	<h:outputStylesheet library="css" name="core-layout.css" />
+	<h:outputStylesheet library="css" name="Venture_Primefaces.css" />
 	<h:outputStylesheet library="css" name="font-awesome.css" />
 	<h:outputStylesheet library="css" name="nanoscroller.css" />
 
-	<style>
-.ui-button-text, .ui-button-text-only .ui-button-text {
-	padding: 15px !important;
-	transition: none !important;
-}
-</style>
 	<!--  
 
 	<script id="j_idt18_s" type="text/javascript">
@@ -78,9 +719,8 @@
 				<div class="Wid70 MarAuto WidAutoOnMobile">
 					<div class="EmptyBox30"></div>
 					<div class="Container100 TexAlCenter">
-						<a href="paginaEmpresa.xhtml" class="DispBlock"><img
-						
-						src = "#{resource['/images/logo-algaworks.png']}"						
+						<a href="paginaEmpresa.xhtml" class="DispBlock">
+						<img src = "#{resource['/images/logo-algaworks-branca.png']}"						
 							
 							style="height: 25px;" /></a>
 					</div>
@@ -124,7 +764,7 @@
 						<div class="Container100">
 							<p:commandButton id="login" name="login"
 								styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only GreenButton"
-								action="#{loginBean.login}" ajax="false" value="Entrar" style="GreenButton" >								
+								action="#{loginBean.login}" ajax="false" value="Entrar"  >								
 							</p:commandButton>
 
 						</div>
@@ -132,7 +772,7 @@
 						<div class="EmptyBox10"></div>
 						<div class="Separator"></div>
 						<div class="EmptyBox10"></div>
-
+<!-- 
 						<span class="DispBlock OvHidden FontLatoBold Fs16 Leaden">Or
 							Sign In</span>
 						<div class="EmptyBox10"></div>
@@ -146,7 +786,7 @@
 									class="ui-button-text ui-c">With Facebook</span>
 							</button>
 
-						</div>
+						</div>  -->
 
 
 
