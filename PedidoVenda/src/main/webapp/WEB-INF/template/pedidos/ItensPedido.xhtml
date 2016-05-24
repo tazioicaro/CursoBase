@@ -16,7 +16,7 @@
 					listener="#{cadastroPedidoBean.carregarProdutoPorSku}" />
 			</p:inputText>
 		</p:column>
-		<p:column headerText="Produto" style="text-align: center; width: 50%" >
+		<p:column headerText="Produto" style="text-align: center; width: 49%" >
 			<h:outputText value="#{item.produto.nome}" rendered="#{item.produtoAssociado}"/>
 		
 			<p:autoComplete styleClass="produto-tabela" value="#{cadastroPedidoBean.produtoLinhaEditavel}"
@@ -27,12 +27,12 @@
 					listener="#{cadastroPedidoBean.carregarProdutoLinhaEditavel}"/>
 			</p:autoComplete >
 		</p:column>
-		<p:column headerText="Valor unitário" style="text-align: right; width: 12%">
+		<p:column headerText="Valor unitário" style="text-align: right; width: 10%">
 			<h:outputText value="#{item.valorUnitario}">
 				<f:convertNumber type="currency"/>
 			</h:outputText>
 		</p:column>
-		<p:column headerText="Quantidade" style="text-align: center; width: 8%">
+		<p:column headerText="Quantidade" style="text-align: center; width: 10%">
 			<p:inputText size="8" value="#{item.quantidade}" disabled="#{cadastroPedidoBean.pedido.naoAlteravel}">
 				<p:ajax event="change" process="@this"
 					update="tabelaItens :frmCadastro:totalPedido :frmCadastro:subtotal"
