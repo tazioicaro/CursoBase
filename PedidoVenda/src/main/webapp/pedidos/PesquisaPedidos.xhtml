@@ -19,7 +19,9 @@
     vertical-align: top !important;
     padding: 1rem !important;
     	" >
+    	<div id="titulosH1">
 	    	<h1>Pesquisa de pedidos</h1>
+	    	</div>
 	    	
 	    	<p:toolbar style="margin-top: 20px">
 	    		<p:toolbarGroup>
@@ -36,7 +38,7 @@
 	    	</p:toolbar>
 	    	
 	    	<p:panelGrid columns="2" id="painel" style="width: 100%; margin-top: 20px"
-	    			columnClasses="rotulo, campo">
+	    			columnClasses="rotuloP, campoP">
 	    		<p:outputLabel value="Número" />
 	    		<h:panelGroup>
 	    			<p:inputText size="10" value="#{pesquisaPedidosBean.filtro.numeroDe}" />

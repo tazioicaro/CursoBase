@@ -9,6 +9,13 @@
 
 
 	<style>
+	
+#titulosH1{
+color: white;  
+border-bottom: outset; 
+border-bottom-color: white;
+
+}
 
 .ui-helper-hidden {
 	display: none;
@@ -1003,8 +1010,7 @@ ui-overlay-visible * {
 }
 
 .ui-datascroller .ui-datascroller-loading {
-	background: url("#{resource['images/load.gif']}"); 	
-   center center no-repeat;
+	background: url("#{resource['images/load.gif']}")center center no-repeat;
 	width: 220px;
 	height: 19px;
 	padding: 0;
@@ -1998,9 +2004,7 @@ div.ui-button, .ui-splitbutton {
 .ui-password-panel .ui-password-meter {
 	height: 10px;
 	background: transparent
-	url("#{resource['images/password-meter.png']}")
-	
-		no-repeat left top;
+	url("#{resource['images/password-meter.png']}")no-repeat left top;
 	padding: 0;
 	margin: 0;
 }
@@ -2450,10 +2454,8 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-lightbox-loading {
-	background:
-	
-		src: url("#{resource['images/load.gif']}")#000000 
-		center center no-repeat;
+	background:	
+		src: url("#{resource['images/load.gif']}")#000000 center center no-repeat;
 }
 
 .ui-lightbox-caption {
@@ -2935,7 +2937,8 @@ div.ui-button, .ui-splitbutton {
 .ui-steps .ui-steps-title {
 	display: block;
 	white-space: nowrap;
-} /* Responsive */
+} 
+/* Responsive */
 @media ( max-width :640px) {
 	.ui-steps .ui-steps-item .ui-menuitem-link {
 		padding: 0.5em;
@@ -2943,7 +2946,8 @@ div.ui-button, .ui-splitbutton {
 	.ui-steps .ui-steps-item .ui-steps-title {
 		display: none;
 	}
-} /* Fluid */
+} 
+/* Fluid */
 .ui-fluid .ui-menu {
 	width: 100%;
 	box-sizing: border-box;
@@ -3300,10 +3304,12 @@ div.ui-button, .ui-splitbutton {
 	{
 	background: none !important;
 	border: 0 none !important;
-} /* Grid CSS */
+} 
+/* Grid CSS */
 .ui-panelgrid .ui-grid-responsive .ui-panelgrid-cell {
 	border: 0 none;
-} /* Responsive */
+} 
+/* Responsive */
 @media ( max-width :640px) {
 	.ui-panelgrid .ui-grid-responsive .ui-grid-row {
 		border-top: 1px solid #BCC7CF;
@@ -3367,7 +3373,8 @@ div.ui-button, .ui-splitbutton {
 	box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
-} /* Responsive */
+}
+ /* Responsive */
 @media ( max-width :640px) {
 	.ui-paginator .ui-paginator-pages {
 		display: none;
@@ -3475,7 +3482,8 @@ div.ui-button, .ui-splitbutton {
 
 .ui-picklist.ui-picklist-vertical .ui-button {
 	margin-top: 0.3em;
-} /* Responsive */
+} 
+/* Responsive */
 .ui-picklist.ui-picklist-responsive * {
 	box-sizing: border-box;
 }
@@ -3503,7 +3511,8 @@ div.ui-button, .ui-splitbutton {
 .ui-picklist.ui-picklist-responsive .ui-chkbox-box {
 	width: 18px !important;
 	height: 18px !important;
-} /* Responsive */
+} 
+/* Responsive */
 @media ( max-width :640px) {
 	.ui-picklist.ui-picklist-responsive {
 		display: block;
@@ -3716,7 +3725,8 @@ div.ui-button, .ui-splitbutton {
 	float: left;
 	margin: 0.4em 0.2em 0 0;
 	cursor: pointer;
-} /* per orientation settings */ /* top and bottom */
+} 
+/* per orientation settings */ /* top and bottom */
 .ui-tabs.ui-tabs-top>.ui-tabs-nav li {
 	border-bottom: 0;
 	top: 1px;
@@ -3732,7 +3742,8 @@ div.ui-button, .ui-splitbutton {
 
 .ui-tabs.ui-tabs-bottom>.ui-tabs-nav li {
 	border-top: 0;
-} /* left and right*/
+} 
+/* left and right*/
 .ui-tabs-left:after, .ui-tabs-right:after {
 	clear: both;
 	content: ".";
@@ -3795,14 +3806,16 @@ div.ui-button, .ui-splitbutton {
 .ui-tabs.ui-tabs-right>.ui-tabs-nav li {
 	margin: 0 0.2em 1px 0;
 	border-left: 0 none;
-} /** RTL **/
+} 
+/** RTL **/
 .ui-tabs-rtl {
 	direction: rtl;
 }
 
 .ui-tabs-rtl .ui-tabs-nav li, .ui-tabs-rtl .ui-tabs-nav li a {
 	float: right;
-} /** Scroll **/
+} 
+/** Scroll **/
 .ui-tabs-scrollable .ui-tabs-nav {
 	width: 5000px;
 }
@@ -4029,12 +4042,8 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-tree.ui-tree-horizontal .ui-treenode {
-	background:
-	
-		url("#{resource['images/line.gif']}")
-		
-		
-		repeat-x scroll center center transparent;
+	background:	
+		url("#{resource['images/line.gif']}")repeat-x scroll center center transparent;
 	padding: 5px 40px;
 }
 
@@ -4058,12 +4067,8 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-tree.ui-tree-horizontal .ui-treenode-connector-line {
-	background:
-	
-	url("#{resource['images/line.gif']}")
-	
-		
-		repeat-y scroll 0 0 transparent;
+	background:	
+	url("#{resource['images/line.gif']}")repeat-y scroll 0 0 transparent;
 	width: 1px;
 }
 
@@ -4219,9 +4224,7 @@ div.ui-button, .ui-splitbutton {
 	padding: 0px;
 	cursor: col-resize;
 	background-image:
-	url("#{resource['images/dot_clear.gif']}");
-	
-		
+	url("#{resource['images/dot_clear.gif']}");		
 	margin: -4px -10px -4px 0px;
 	float: right;
 }
@@ -4296,7 +4299,8 @@ div.ui-button, .ui-splitbutton {
 .ui-treetable-scrollable-theadclone th span {
 	display: block;
 	height: 0px;
-} /** Reflow **/
+} 
+/** Reflow **/
 .ui-treetable-reflow .ui-treetable-data td .ui-column-title {
 	display: none;
 }
@@ -4543,8 +4547,10 @@ label.ui-state-error {
 }
 
 .ui-icon, .ui-widget-content .ui-icon {
+/*url("#{resource['images/icons/ui-icons_4eb305_256x240.png']}");*/
 	background-image:
-		url("/venture/javax.faces.resource/images/ui-icons_72b42d_256x240.png.xhtml?ln=primefaces-venture");
+	url("#{resource['images/icons/ui-icons_38667f_256x240.png']}");
+		
 }
 
 .ui-widget-header .ui-icon {
@@ -4556,36 +4562,42 @@ label.ui-state-error {
 	background-image:
 		/*url("/venture/javax.faces.resource/images/ui-icons_ffffff_256x240.png.xhtml?ln=primefaces-venture");*/
 		
-		url("#{resource['primefaces-aristo:images/ui-icons_ffffff_256x240.png']}");
+		url("#{resource['images/icons/ui-icons_ffffff_256x240.png']}");
 }
 
 .ui-state-active .ui-icon {
 	background-image:
 		
-		url("#{resource['primefaces-aristo:images/ui-icons_ffffff_256x240.png']}");
+		url("#{resource['images/icons/ui-icons_ffffff_256x240.png']}");
+		/*
+		url("#{resource['primefaces-aristo:images/ui-icons_ffffff_256x240.png']}");*/
 }
 
 .ui-state-highlight .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/ui-icons_4eb305_256x240.png.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/icons/ui-icons_88a206_256x240.png']}");
+	
+	/*
+		url("/venture/javax.faces.resource/images/ui-icons_4eb305_256x240.png.xhtml?ln=primefaces-venture");*/
 }
 
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/ui-icons_cd0a0a_256x240.png.xhtml?ln=primefaces-venture");
+	
+	url("#{resource['images/icons/ui-icons_red_256x240.png']}");	
+		
 }
 /* positioning */
 .ui-icon-default {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/default.svg']}")!important;
 	background-position: center;
 	background-size: 100%;
 }
 
 .ui-icon-blank {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/blank.svg']}")!important;
 	background-position: center;
 	background-size: 100%;
@@ -4900,10 +4912,8 @@ label.ui-state-error {
 }
 
 .ui-icon-note {
-	background-image:
-	
-	url("#{resource['images/note.svg']}");
-	
+	background-image:	
+	url("#{resource['images/note.svg']}");	
 		
 	background-position: center;
 	background-size: 100%;
@@ -5372,8 +5382,7 @@ label {
 
 .ui-breadcrumb-chevron {
 	height: 18px !important;
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/breadcrumb-arrow.svg']}")!important;
 	background-position: center !important;
 	background-size: 40% !important;
@@ -5408,8 +5417,7 @@ label {
 /*.ui-datatable-scrollable{border:0px; background-color:transparent;}
 .ui-datatable-scrollable:hover{border:0px !important; background-color:transparent;}*/
 .ui-datatable .ui-icon-arrowthick-1-s {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/right-one-arrow-for-data.svg']}");
 	background-position: center !important;
 	background-size: 110%;
@@ -5549,8 +5557,7 @@ label {
 }
 
 .ui-datatable .ui-paginator .ui-paginator-first .ui-icon {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/left-double-arrow-for-data.svg']}");	
 	
 	background-position: center !important;
@@ -5568,8 +5575,7 @@ label {
 }
 
 .ui-datatable .ui-paginator .ui-paginator-prev .ui-icon {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/left-one-arrow-for-data.svg']}");
 	
 	background-position: center !important;
@@ -5698,9 +5704,7 @@ label {
 
 .ui-datatable table tbody tr td .ui-row-toggler.ui-icon-circle-triangle-s
 	{
-	background-image:
-	/* Falta */
-	
+	background-image:	
 	url("#{resource['images/downarrow-white.svg']}");
 	background-position: center !important;
 	background-size: 110% !important;
@@ -5708,8 +5712,7 @@ label {
 
 .ui-datatable table tbody tr td .ui-row-toggler.ui-icon-circle-triangle-e
 	{
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/right-one-arrow-for-data.svg']}");
 	
 	background-position: center !important;
@@ -5728,8 +5731,8 @@ label {
 .ui-datatable table tbody tr td .ui-row-editor .ui-icon-check {
 	background-image:
 	
-	/* checkgray */
-	url("#{resource['images/check.svg']}");
+
+	url("#{resource['images/check-gray.svg']}");
 	
 	
 	background-position: center !important;
@@ -5739,8 +5742,7 @@ label {
 .ui-datatable table tbody tr td .ui-row-editor .ui-icon-close {
 	background-image:
 	
-		/* delete-red */
-	url("#{resource['images/delete-pink.svg']}");
+	url("#{resource['images/delete-red.svg']}");
 	
 	
 	background-position: center !important;
@@ -5774,10 +5776,7 @@ label {
 	.ui-datatable .ui-datatable-sticky table thead tr .ui-state-default .ui-icon-carat-2-n-s
 	{
 	background-image:
-	
-	
-	 
-		url("/venture/javax.faces.resource/images/updown-arrow.svg.xhtml?ln=primefaces-venture");
+		url("#{resource['images/updown-arrow.svg']}");
 	background-position: center !important;
 	background-size: 110%;
 	background-repeat: no-repeat;
@@ -5788,7 +5787,7 @@ label {
 	.ui-datatable .ui-datatable-sticky table thead tr .ui-state-hover .ui-icon-carat-2-n-s
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/updown-arrow.svg.xhtml?ln=primefaces-venture");
+	url("#{resource['images/updown-arrow.svg']}");	
 	background-position: center !important;
 	background-size: 110%;
 	background-repeat: no-repeat;
@@ -5798,10 +5797,8 @@ label {
 .ui-datatable table thead tr .ui-state-active .ui-icon-triangle-1-n,
 	.ui-datatable .ui-datatable-sticky table thead tr .ui-state-active .ui-icon-triangle-1-n
 	{
-	background-image:
-	
-	url("#{resource['images/uparrow.svg']}"); 
-	
+	background-image:	
+	url("#{resource['images/uparrow.svg']}"); 	
 		
 	background-position: center !important;
 	background-size: 110%;
@@ -5812,10 +5809,8 @@ label {
 .ui-datatable table thead tr .ui-state-active .ui-icon-triangle-1-s,
 	.ui-datatable .ui-datatable-sticky table thead tr .ui-state-active .ui-icon-triangle-1-s
 	{
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/downarrow.svg']}"); 
-	
 	
 	background-position: center !important;
 	background-size: 110%;
@@ -5900,8 +5895,7 @@ label {
 }
 
 .ui-datatable>.ui-icon-arrowthick-1-n {
-	background-image:
-	
+	background-image:	
 	 url("#{resource['images/uparrow.svg']}");  
 	
 	background-position: center !important;
@@ -6008,8 +6002,7 @@ label {
 }
 
 .ui-datagrid .ui-paginator .ui-paginator-last .ui-icon {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/right-double-arrow-for-data.svg']}");
 		
 	background-position: center !important;
@@ -6027,8 +6020,7 @@ label {
 }
 
 .ui-datagrid .ui-paginator .ui-paginator-next .ui-icon {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/right-one-arrow-for-data.svg']}");		
 	background-position: center !important;
 	background-size: 100%;
@@ -6316,8 +6308,7 @@ label {
 }
 
 .fc-header tbody tr td .fc-button-next .fc-icon-wrap .ui-icon {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/right-one-arrow-for-data.svg']}")!important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
@@ -6609,10 +6600,8 @@ hr.ui-widget-header {
 }
 
 .fc-popover .fc-header .fc-close {
-	background-image:
-	
-	url("#{resource['images/delete-gray.svg']}");
-		
+	background-image:	
+	url("#{resource['images/delete-gray.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -6740,9 +6729,7 @@ hr.ui-widget-header {
 	.ui-picklist .ui-picklist-source-controls .ui-picklist-button-move-up .ui-icon
 	{
 	background-image:
-	url("#{resource['images/uparrow.svg']}");
-	
-	
+	url("#{resource['images/uparrow.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 75%;
@@ -6757,10 +6744,8 @@ hr.ui-widget-header {
 .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-move-top .ui-icon,
 	.ui-picklist .ui-picklist-source-controls .ui-picklist-button-move-top .ui-icon
 	{
-	background-image:
-	
-	url("#{resource['images/toparrow.svg']}");
-		
+	background-image:	
+	url("#{resource['images/toparrow.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -6775,10 +6760,8 @@ hr.ui-widget-header {
 .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-move-down .ui-icon,
 	.ui-picklist .ui-picklist-source-controls .ui-picklist-button-move-down .ui-icon
 	{
-	background-image:
-	
-	url("#{resource['images/downarrow-white.svg']}");
-	
+	background-image:	
+	url("#{resource['images/downarrow-white.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 75%;
@@ -6793,11 +6776,8 @@ hr.ui-widget-header {
 .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-move-bottom .ui-icon,
 	.ui-picklist .ui-picklist-source-controls .ui-picklist-button-move-bottom .ui-icon
 	{
-	background-image:
-	
-		url("#{resource['images/bottomarrow.svg']}");
-		
-	
+	background-image:	
+		url("#{resource['images/bottomarrow.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -6811,11 +6791,8 @@ hr.ui-widget-header {
 
 .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-add .ui-icon,
 	.ui-picklist td .ui-picklist-button-add .ui-icon {
-	background-image:
-	
-	url("#{resource['images/right-arrowsvg.svg']}");
-	
-	
+	background-image:	
+	url("#{resource['images/right-arrow.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 75%;
@@ -6829,11 +6806,8 @@ hr.ui-widget-header {
 
 .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-add-all .ui-icon,
 	.ui-picklist td .ui-picklist-button-add-all .ui-icon {
-	background-image:
-	
-	url("#{resource['images/right-end-arrow.svg']}");
-	
-	
+	background-image:	
+	url("#{resource['images/right-end-arrow.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -6847,11 +6821,8 @@ hr.ui-widget-header {
 
 .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-remove .ui-icon,
 	.ui-picklist td .ui-picklist-button-remove .ui-icon {
-	background-image:
-	
-	url("#{resource['images/left-arrow.svg']}");
-	
-		
+	background-image:	
+	url("#{resource['images/left-arrow.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 75%;
@@ -6865,11 +6836,8 @@ hr.ui-widget-header {
 
 .ui-picklist .ui-picklist-buttons-cell .ui-picklist-button-remove-all .ui-icon,
 	.ui-picklist td .ui-picklist-button-remove-all .ui-icon {
-	background-image:
-	
-	url("#{resource['images/left-end-arrow.svg']}");
-	
-	
+	background-image:	
+	url("#{resource['images/left-end-arrow.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -6884,11 +6852,8 @@ hr.ui-widget-header {
 .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-move-up .ui-icon,
 	.ui-picklist .ui-picklist-target-controls .ui-picklist-button-move-up .ui-icon
 	{
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/uparrow.svg']}");
-	
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -6903,11 +6868,8 @@ hr.ui-widget-header {
 .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-move-top .ui-icon,
 	.ui-picklist .ui-picklist-target-controls .ui-picklist-button-move-top .ui-icon
 	{
-	background-image:
-	
-	url("#{resource['images/toparrow.svg']}");
-	
-	
+	background-image:	
+	url("#{resource['images/toparrow.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -6922,11 +6884,8 @@ hr.ui-widget-header {
 .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-move-down .ui-icon,
 	.ui-picklist .ui-picklist-target-controls .ui-picklist-button-move-down .ui-icon
 	{
-	background-image:
-	
-	url("#{resource['images/downarrow-white.svg']}");
-	
-	
+	background-image:	
+	url("#{resource['images/downarrow-white.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 75%;
@@ -6942,8 +6901,7 @@ hr.ui-widget-header {
 	.ui-picklist .ui-picklist-target-controls .ui-picklist-button-move-bottom .ui-icon
 	{
 	background-image:
-	url("#{resource['images/bottomarrow.svg']}");	
-	
+	url("#{resource['images/bottomarrow.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -6957,10 +6915,8 @@ hr.ui-widget-header {
 
 .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-add .ui-icon
 	{
-	background-image:
-	
-	url("#{resource['images/downarrow.svg']}");	
-		
+	background-image:	
+	url("#{resource['images/downarrow.svg']}");			
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 75%;
@@ -6975,9 +6931,7 @@ hr.ui-widget-header {
 .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-add-all .ui-icon
 	{
 	background-image:
-	url("#{resource['images/bottomarrow.svg']}");	
-	
-	
+	url("#{resource['images/bottomarrow.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -6991,10 +6945,8 @@ hr.ui-widget-header {
 
 .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-remove .ui-icon
 	{
-	background-image:
-	
-	url("#{resource['images/uparrow.svg']}");	
-	
+	background-image:	
+	url("#{resource['images/uparrow.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -7008,10 +6960,8 @@ hr.ui-widget-header {
 
 .ui-picklist-vertical .ui-picklist-buttons-cell .ui-picklist-button-remove-all .ui-icon
 	{
-	background-image:
-	
-	url("#{resource['images/toparrow.svg']}");	
-	
+	background-image:	
+	url("#{resource['images/toparrow.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -7099,10 +7049,8 @@ hr.ui-widget-header {
 
 .ui-orderlist .ui-orderlist-controls .ui-orderlist-button-move-top .ui-icon
 	{
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/toparrow.svg']}");	
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -7116,11 +7064,8 @@ hr.ui-widget-header {
 
 .ui-orderlist .ui-orderlist-controls .ui-orderlist-button-move-down .ui-icon
 	{
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/downarrow-white.svg']}");
-	
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -7134,11 +7079,8 @@ hr.ui-widget-header {
 
 .ui-orderlist .ui-orderlist-controls .ui-orderlist-button-move-bottom .ui-icon
 	{
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/bottomarrow.svg']}");
-		
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 70%;
@@ -7200,11 +7142,8 @@ hr.ui-widget-header {
 }
 
 .ui-carousel .ui-carousel-header .ui-carousel-prev-button {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/left-arrow.svg']}");
-	
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 80%;
@@ -7229,9 +7168,7 @@ hr.ui-widget-header {
 .ui-carousel .ui-carousel-header .ui-carousel-page-links .ui-carousel-page-link
 	{
 	background-image:
-		url("#{resource['images/blank.svg']}");
-		
-	
+		url("#{resource['images/blank.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 140%;
@@ -7244,10 +7181,7 @@ hr.ui-widget-header {
 .ui-carousel .ui-carousel-header .ui-carousel-page-links .ui-icon-radio-on
 	{
 	background-image:
-	
-	url("#{resource['images/blank-active.svg']}");
-	
-		
+	url("#{resource['images/blank-active.svg']}");	
 }
 
 .ui-carousel-viewport ul .ui-carousel-item table tbody tr td {
@@ -7355,7 +7289,6 @@ hr.ui-widget-header {
 
 .ui-tree .ui-treenode-content .ui-chkbox-box .ui-icon-minus {
 	background-image:	
-	
 	url("#{resource['images/minus-sign.svg']}") !important;	
 		
 	background-position: center !important;
@@ -7368,8 +7301,7 @@ hr.ui-widget-header {
 }
 
 .ui-tree .ui-icon-triangle-1-e {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/rightarrow-navy.svg']}");
 		
 	background-position: center !important;
@@ -7378,9 +7310,9 @@ hr.ui-widget-header {
 }
 
 .ui-tree .ui-icon-triangle-1-s {
-	background-image:
-	/*downarrow-navy*/
-	url("#{resource['images/downarrow-white.svg']}");
+/*downarrow-navy*/
+	background-image:	
+	url("#{resource['images/downarrow.svg']}");
 	
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -7388,8 +7320,7 @@ hr.ui-widget-header {
 }
 
 .ui-tree .ui-icon-triangle-1-w {
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/left-one-arrow-for-data.svg']}");
 		
 	
@@ -7417,16 +7348,14 @@ hr.ui-widget-header {
 
 .ui-tree .ui-icon-document {
 	background-image:
-		url("#{resource['images/document-navy.svg']}");
-		
+		url("#{resource['images/document-navy.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 160%;
 }
 
 .ui-tree .ui-icon-note {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/note-navy.svg']}");
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -7435,14 +7364,15 @@ hr.ui-widget-header {
 
 .ui-tree .ui-icon-image {
 	background-image:
-		url("/venture/javax.faces.resource/images/image-navy.svg.xhtml?ln=primefaces-venture");
+	url("#{resource['images/image-navy.svg']}");
+	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 150%;
 }
 
 .ui-tree .ui-icon-video {
-	background-image:
+	background-image:	
 		url("/venture/javax.faces.resource/images/video-navy.svg.xhtml?ln=primefaces-venture");
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -7451,7 +7381,7 @@ hr.ui-widget-header {
 
 .ui-tree .ui-icon-music {
 	background-image:
-		url("/venture/javax.faces.resource/images/music-navy.svg.xhtml?ln=primefaces-venture");
+	url("#{resource['images/music-navy.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 160%;
@@ -7483,8 +7413,7 @@ hr.ui-widget-header {
 
 .ui-tree-horizontal .ui-icon-plus {
 	background-image:
-	url("#{resource['images/plus-sign-navy.svg']}");
-	
+	url("#{resource['images/plus-sign-navy.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -7493,7 +7422,6 @@ hr.ui-widget-header {
 .ui-tree-horizontal .ui-icon-minus {
 	background-image:
 	url("#{resource['images/minus-sign-navy.svg']}");
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -7594,30 +7522,25 @@ hr.ui-widget-header {
 }
 
 .ui-treetable .ui-icon-triangle-1-e {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/rightarrow-navy.svg']}");	
-	
-	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
 }
 
 .ui-treetable .ui-icon-triangle-1-s {
-	background-image:
-	/*downarrow-navy*/
-	url("#{resource['images/downarrow.svg']}");
-	
-	
+/*downarrow-navy*/
+	background-image:	
+	url("#{resource['images/downarrow.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
 }
 
 .ui-treetable .ui-icon-triangle-1-s {
-	background-image:
-		/*downarrow-navy*/
+/*downarrow-navy*/
+	background-image:		
 	url("#{resource['images/downarrow.svg']}");
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -7642,20 +7565,17 @@ hr.ui-widget-header {
 }
 
 .ui-treetable table thead tr th .ui-icon-triangle-1-s {
-	background-image:
-	
 	/*uparrow-gray*/
-	url("#{resource['images/updown-navy-arrow.svg']}")!important;
-	
+	background-image:	
+	url("#{resource['images/updown-navy-arrow.svg']}")!important;	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
 }
 
 .ui-treetable table thead tr th .ui-icon-carat-2-n-s {
-	background-image:
-	
 	/*updown-arrow*/
+	background-image:	
 	url("#{resource['images/updown-navy-arrow.svg']}");
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -7663,9 +7583,9 @@ hr.ui-widget-header {
 }
 
 .ui-treetable table thead tr th.ui-state-hover .ui-icon-carat-2-n-s {
-	background-image:
-		/*updown-arrow*/
-	url("#{resource['images/updown-navy-arrow.svg']}");
+	
+	background-image:		
+	url("#{resource['images/updown-arrow.svg']}");
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -7743,21 +7663,16 @@ hr.ui-widget-header {
 }
 
 .ui-accordion-header .ui-icon-triangle-1-s {
-	background-image:
-	
-	url("#{resource['images/downarrow.svg']}");
-	
+	background-image:	
+	url("#{resource['images/downarrow.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
 }
 
 .ui-accordion-header .ui-icon-triangle-1-e {
-	background-image:
-	
-	url("#{resource['images/right-one-arrow-for-data.svg']}");
-	
-		
+	background-image:	
+	url("#{resource['images/right-one-arrow-for-data.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -7906,10 +7821,8 @@ hr.ui-widget-header {
 
 .ui-tabs-top .ui-tabs-navscroller .ui-tabs-navscroller-btn-left .ui-icon
 	{
-	background-image:
-	
-		url("#{resource['images/left-arrow.svg']}");
-	
+	background-image:	
+		url("#{resource['images/left-arrow.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -7954,8 +7867,7 @@ hr.ui-widget-header {
 
 .ui-tabs-top .ui-tabs-nav li .ui-icon-close {
 	background-image:
-	url("#{resource['images/delete-gray.svg']}");
-	
+	url("#{resource['images/delete-gray.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -7964,11 +7876,8 @@ hr.ui-widget-header {
 
 .ui-tabs-top .ui-tabs-nav li.ui-state-hover .ui-icon-close, .ui-tabs-top .ui-tabs-nav li.ui-state-active .ui-icon-close
 	{
-	background-image:
-	
-	url("#{resource['images/delete-pink.svg']}");
-	
-	
+	background-image:	
+	url("#{resource['images/delete-pink.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -8247,10 +8156,8 @@ hr.ui-widget-header {
 
 .ui-tabs-bottom .ui-tabs-navscroller .ui-tabs-navscroller-btn-left .ui-icon
 	{
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/left-arrow.svg']}");
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -8267,10 +8174,8 @@ hr.ui-widget-header {
 
 .ui-tabs-bottom .ui-tabs-navscroller .ui-tabs-navscroller-btn-right .ui-icon
 	{
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/right-arrow.svg']}");
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -8293,10 +8198,8 @@ hr.ui-widget-header {
 }
 
 .ui-tabs-bottom .ui-tabs-nav li .ui-icon-close {
-	background-image:
-	
-	url("#{resource['images/delete-gray.svg']}");
-	
+	background-image:	
+	url("#{resource['images/delete-gray.svg']}");	
 	
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -8306,11 +8209,8 @@ hr.ui-widget-header {
 
 .ui-tabs-bottom .ui-tabs-nav li.ui-state-hover .ui-icon-close,
 	.ui-tabs-bottom .ui-tabs-nav li.ui-state-active .ui-icon-close {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/delete-pink.svg']}");
-	
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -8416,20 +8316,16 @@ hr.ui-widget-header {
 
 .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon .ui-icon-closethick
 	{
-	background-image:
-	
-	url("#{resource['images/delete.svg']}");
-	
+	background-image:	
+	url("#{resource['images/delete.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon .ui-icon-minus {
-	background-image:
-	
-	url("#{resource['images/minus-sign.svg']}");
-	
+	background-image:	
+	url("#{resource['images/minus-sign.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -8438,7 +8334,6 @@ hr.ui-widget-header {
 .ui-dialog-docking-zone .ui-icon-plus {
 	background-image:	
 		url("#{resource['images/plus-sign.svg']}");
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -8471,10 +8366,8 @@ hr.ui-widget-header {
 }
 
 .ui-dialog .ui-dialog-content .ui-icon-alert {
-	background-image:
-	
-	url("#{resource['images/warn-red.svg']}");
-	
+	background-image:	
+	url("#{resource['images/warn-red.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 140%;
@@ -8494,11 +8387,8 @@ hr.ui-widget-header {
 }
 
 .ui-dialog .ui-resizable-se {
-	background-image:
-	
-	url("#{resource['images/handle-gray.svg']}");
-	
-	
+	background-image:	
+	url("#{resource['images/handle-gray.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -8513,10 +8403,8 @@ hr.ui-widget-header {
 }
 
 .ui-overlaypanel .ui-overlaypanel-close .ui-icon-closethick {
-	background-image:
-	
-	url("#{resource['images/delete.svg']}");
-	
+	background-image:	
+	url("#{resource['images/delete.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -8549,10 +8437,8 @@ hr.ui-widget-header {
 
 .ui-lightbox .ui-lightbox-content-wrapper .ui-lightbox-nav-left .ui-icon
 	{
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/left-arrow.svg']}");
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 130%;
@@ -8570,10 +8456,8 @@ hr.ui-widget-header {
 
 .ui-lightbox .ui-lightbox-content-wrapper .ui-lightbox-nav-right .ui-icon
 	{
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/right-arrow.svg']}");
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 130%;
@@ -8605,10 +8489,8 @@ hr.ui-widget-header {
 }
 
 .ui-lightbox .ui-lightbox-caption .ui-lightbox-close .ui-icon {
-	background-image:
-	
-	url("#{resource['images/delete-gray.svg']}");
-	
+	background-image:	
+	url("#{resource['images/delete-gray.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -8652,11 +8534,8 @@ hr.ui-widget-header {
 }
 
 .ui-fieldset-legend .ui-icon-plusthick {
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/plus-sign.svg']}");
-		
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -8665,10 +8544,8 @@ hr.ui-widget-header {
 }
 
 .ui-fieldset-legend .ui-icon-minusthick {
-	background-image:
-	
-		url("#{resource['images/minus-sign.svg']}");
-		
+	background-image:	
+		url("#{resource['images/minus-sign.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -8866,8 +8743,7 @@ hr.ui-widget-header {
 }
 
 .ui-splitbutton .ui-splitbutton-menubutton .ui-icon {
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/menu-dots.svg']}")!important;
 	background-size: 100%;
 	background-position: center;
@@ -8948,21 +8824,16 @@ hr.ui-widget-header {
 }
 
 .ui-menu .ui-menu-list .ui-widget-header .ui-icon-triangle-1-s {
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/downarrow.svg']}")!important;
-
 	background-position: center !important;
 	background-repeat: no-repeat!important;
 	background-size: 100%!important;
 }
 
 .ui-menu .ui-menu-list .ui-widget-header .ui-icon-triangle-1-e {
-	background-image:
-	
-	url("#{resource['images/right-one-arrow-for-data.svg']}")!important;
-	
-		
+	background-image:	
+	url("#{resource['images/right-one-arrow-for-data.svg']}")!important;		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -9014,21 +8885,16 @@ hr.ui-widget-header {
 }
 
 .ui-menu .ui-menuitem .ui-menuitem-link .ui-icon-triangle-1-e {
-	background-image:
-	
-		url("#{resource['images/right-one-arrow-for-data.svg']}");
-		
-		
+	background-image:	
+		url("#{resource['images/right-one-arrow-for-data.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .ui-menu .ui-menuitem .ui-menuitem-link .ui-icon-triangle-1-s {
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/downarrow.svg']}");
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -9060,11 +8926,8 @@ hr.ui-widget-header {
 
 .ui-menu .ui-slidemenu-wrapper .ui-slidemenu-backward .ui-icon-triangle-1-w
 	{
-	background-image:	
-		
-		url("#{resource['images/left-one-arrow-for-data.svg']}");
-		
-		
+	background-image:			
+		url("#{resource['images/left-one-arrow-for-data.svg']}");		
 	margin: 0px 5px 0px 0px;
 	background-position: center !important;
 	background-repeat: no-repeat;
@@ -9102,11 +8965,8 @@ hr.ui-widget-header {
 
 .ui-panelmenu .ui-panelmenu-panel .ui-panelmenu-header .ui-icon-triangle-1-e
 	{
-	background-image:
-	
-			url("#{resource['images/right-one-arrow-for-data.svg']}");
-			
-		
+	background-image:	
+			url("#{resource['images/right-one-arrow-for-data.svg']}");		
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 105%;
@@ -9114,10 +8974,8 @@ hr.ui-widget-header {
 
 .ui-panelmenu .ui-panelmenu-panel .ui-panelmenu-header .ui-icon-triangle-1-s
 	{
-	background-image:
-	
-		url("#{resource['images/downarrow.svg']}");
-	
+	background-image:	
+		url("#{resource['images/downarrow.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -9145,10 +9003,8 @@ hr.ui-widget-header {
 
 .ui-panelmenu .ui-panelmenu-panel .ui-panelmenu-content .ui-menuitem .ui-menuitem-link .ui-icon-triangle-1-e
 	{
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/rightarrow-navy.svg']}");
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -9156,11 +9012,8 @@ hr.ui-widget-header {
 
 .ui-panelmenu .ui-panelmenu-panel .ui-panelmenu-content .ui-menuitem .ui-menuitem-link .ui-icon-triangle-1-s
 	{
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/downarrow.svg']}");
-	
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 90%;
@@ -9229,8 +9082,7 @@ hr.ui-widget-header {
 
 .ui-messages-info .ui-icon-close, .ui-messages-warn .ui-icon-close,
 	.ui-messages-error .ui-icon-close, .ui-messages-fatal .ui-icon-close {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/delete-gray.svg']}")!important;
 	background-size: 110%;
 	background-position: center;
@@ -9299,8 +9151,7 @@ hr.ui-widget-header {
 }
 
 .ui-messages-warn-icon {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/warn-hardal.svg']}")!important;
 	background-size: 90% !important;
 	width: 30px !important;
@@ -9309,8 +9160,7 @@ hr.ui-widget-header {
 }
 
 .ui-messages-fatal-icon {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/warn-red.svg']}")!important;
 	background-size: 90% !important;
 	width: 30px !important;
@@ -9374,23 +9224,20 @@ hr.ui-widget-header {
 
 .ui-panel .ui-panel-titlebar .ui-icon-closethick {
 	background-image:
-		url("/venture/javax.faces.resource/images/delete-navy.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/delete-navy.svg']}")!important;
 	background-position: center !important;
 	background-size: 110% !important;
 }
 
 .ui-panel .ui-panel-titlebar .ui-icon-minusthick {
 	background-image:
-		url("/venture/javax.faces.resource/images/minus-sign-navy.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/minus-sign-navy.svg']}")!important;		
 	background-position: center !important;
 	background-size: 110% !important;
 }
 
 .ui-panel .ui-panel-titlebar .ui-icon-plusthick {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/plus-sign-navy.svg']}")!important;
 	background-position: center !important;
 	background-size: 110% !important;
@@ -9398,8 +9245,7 @@ hr.ui-widget-header {
 
 .ui-panel .ui-panel-titlebar .ui-icon-gear {
 	background-image:
-		url("/venture/javax.faces.resource/images/gear-navy.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/gear-navy.svg']}")!important;		
 	background-position: center !important;
 	background-size: 140% !important;
 }
@@ -9543,8 +9389,7 @@ hr.ui-widget-header {
 
 .ui-selectonemenu-trigger .ui-icon-triangle-1-s,
 	.ui-selectcheckboxmenu-trigger .ui-icon-triangle-1-s {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/downarrow.svg']}")!important;
 	margin-top: 9px !important;
 	background-size: 100%;
@@ -9562,8 +9407,7 @@ hr.ui-widget-header {
 	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image:
-	url("#{resource['images/search-icon.svg']}"); 		
+	background-image:	url("#{resource['images/search-icon.svg']}"); 		
 	left: 5px !important;
 	top: 8px !important;
 }
@@ -9697,9 +9541,7 @@ hr.ui-widget-header {
 
 .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-close .ui-icon-circle-close
 	{
-	background-image:
-		url("/venture/javax.faces.resource/images/delete-gray.svg.xhtml?ln=primefaces-venture")
-		!important;
+	background-image:	url("#{resource['images/delete-gray.svg']}")!important;		
 	background-size: 90%;
 	background-position: center;
 }
@@ -9738,8 +9580,9 @@ hr.ui-widget-header {
 
 .ui-growl-image-error {
 	background-image:
-		url("/venture/javax.faces.resource/images/warn-pink.svg.xhtml?ln=primefaces-venture")
-		!important;
+	
+	url("#{resource['images/warn-pink.svg']}")!important;
+	
 	background-position: center !important;
 	background-size: 140% !important;
 	margin-top: 5px;
@@ -9747,8 +9590,7 @@ hr.ui-widget-header {
 
 .ui-growl-image-warn {
 	background-image:
-		url("/venture/javax.faces.resource/images/warn-hardal.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/warn-hardal.svg']}")!important;	
 	background-position: center !important;
 	background-size: 140% !important;
 	margin-top: 5px;
@@ -9756,8 +9598,7 @@ hr.ui-widget-header {
 
 .ui-growl-image-info {
 	background-image:
-		url("/venture/javax.faces.resource/images/warn-blue.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/warn-blue.svg']}")!important;		
 	background-position: center !important;
 	background-size: 140% !important;
 	margin-top: 5px;
@@ -9765,8 +9606,7 @@ hr.ui-widget-header {
 
 .ui-growl-image-fatal {
 	background-image:
-		url("/venture/javax.faces.resource/images/warn-red.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/warn-red.svg']}")!important;
 	background-position: center !important;
 	background-size: 140% !important;
 	margin-top: 5px;
@@ -9776,8 +9616,7 @@ hr.ui-widget-header {
 	width: 10px !important;
 	height: 10px !important;
 	background-image:
-		url("/venture/javax.faces.resource/images/delete-pink.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/delete-pink.svg']}")!important;
 	background-position: center !important;
 	background-size: 130% !important;
 }
@@ -9844,7 +9683,7 @@ hr.ui-widget-header {
 }
 
 .ui-log-item-info .ui-icon {
-	background-image:
+	background-image:	
 		url("/venture/javax.faces.resource/images/info-gray.svg.xhtml?ln=primefaces-venture")
 		!important;
 	background-position: center !important;
@@ -9855,16 +9694,14 @@ hr.ui-widget-header {
 
 .ui-log-header .ui-log-warn .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/warn.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/warn.svg']}")!important;
 	background-position: center !important;
 	background-size: 140%;
 }
 
 .ui-log-item-warn .ui-icon {
 	background-image:
-		url("/venture/javax.faces.resource/images/warn-gray.svg.xhtml?ln=primefaces-venture")
-		!important;
+		url("#{resource['images/warn-gray.svg']}")!important;
 	background-position: center !important;
 	background-size: 140%;
 	width: 20px;
@@ -10040,10 +9877,8 @@ hr.ui-widget-header {
 
 .ui-radiobutton .ui-state-active .ui-icon-bullet, .ui-radiobutton .ui-state-focus .ui-icon-bullet
 	{
-	background-image:
-	
-	url( "#{resource['images/radio-on.svg']}")!important; 	
-		
+	background-image:	
+	url( "#{resource['images/radio-on.svg']}")!important; 		
 	background-size: 100% !important;
 	background-position: center !important;
 	margin: 0px !important;
@@ -10119,8 +9954,7 @@ hr.ui-widget-header {
 
 .ui-password-panel .ui-password-meter {
 	background-image:
-		url("/venture/javax.faces.resource/images/password-meter.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/password-meter.svg']}")!important;
 	background-size: 100% !important;
 }
 /*Style For Input Switch --------------------------------------------------------------------------------------*/
@@ -10215,11 +10049,8 @@ hr.ui-widget-header {
 	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image:
-	
-	url("#{resource['images/search-icon.svg']}");
-	
-		
+	background-image:	
+	url("#{resource['images/search-icon.svg']}");		
 	left: 0px;
 	top: 2px;
 }
@@ -10244,8 +10075,7 @@ hr.ui-widget-header {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image:
-	url("#{resource['images/search-icon.svg']}");
-	
+	url("#{resource['images/search-icon.svg']}");	
 	left: 0px;
 	top: 2px;
 }
@@ -10328,10 +10158,8 @@ hr.ui-widget-header {
 }
 /*Style For Rating --------------------------------------------------------------------------------------*/
 .ui-rating-cancel a {
-	background-image:
-	
-	url("#{resource['images/dislike-on.svg']}")!important;
-	
+	background-image:	
+	url("#{resource['images/dislike-on.svg']}")!important;	
 	opacity: 1;
 	background-position: center !important;
 	background-size: 100% !important;
@@ -10343,8 +10171,7 @@ hr.ui-widget-header {
 
 .ui-rating-cancel-hover a {
 	background-image:
-		url("#{resource['images/dislike-on.svg']}")!important;
-		
+		url("#{resource['images/dislike-on.svg']}")!important;		
 	opacity: 0.5;
 	background-position: center !important;
 	background-size: 100% !important;
@@ -10360,8 +10187,7 @@ hr.ui-widget-header {
 
 .ui-rating-star-on a {
 	background-image:
-		url("#{resource['images/star.svg']}")!important;
-		
+		url("#{resource['images/star.svg']}")!important;		
 	background-position: center !important;
 	background-size: 100% !important;
 }
@@ -10409,10 +10235,8 @@ hr.ui-widget-header {
 }
 
 .ui-spinner .ui-spinner-up .ui-button-text .ui-icon {
-	background-image:
-	
-	url("#{resource['images/plus-sign.svg']}")!important;
-		
+	background-image:	
+	url("#{resource['images/plus-sign.svg']}")!important;		
 	background-position: center !important;
 	background-size: 80% !important;
 	margin-left: 12px;
@@ -10420,10 +10244,8 @@ hr.ui-widget-header {
 }
 
 .ui-spinner .ui-spinner-down .ui-button-text .ui-icon {
-	background-image:
-	
-	url("#{resource['images/minus-sign.svg']}")!important;	
-	
+	background-image:	
+	url("#{resource['images/minus-sign.svg']}")!important;		
 	background-position: center !important;
 	background-size: 80% !important;
 	margin-left: 12px;
@@ -10488,10 +10310,8 @@ hr.ui-widget-header {
 }
 
 .ui-datepicker-header .ui-datepicker-prev .ui-icon {
-	background-image:
-	
-	url("#{resource['images/left-arrow.svg']}");
-	
+	background-image:	
+	url("#{resource['images/left-arrow.svg']}");	
 	background-position: center !important;
 	background-size: 100% !important;
 	top: 50%;
@@ -10499,10 +10319,8 @@ hr.ui-widget-header {
 }
 
 .ui-datepicker-header .ui-datepicker-next .ui-icon {
-	background-image:
-	
-	url("#{resource['images/right-arrow.svg']}");	
-	
+	background-image:	
+	url("#{resource['images/right-arrow.svg']}");		
 	background-position: center !important;
 	background-size: 100% !important;
 	top: 50%;
@@ -10586,11 +10404,8 @@ hr.ui-widget-header {
 }
 
 .ui-datepicker-trigger .ui-icon {
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/calendar.svg']}");	
-		
-
 	background-position: center !important;
 	background-size: 145% !important;
 }
@@ -10696,8 +10511,7 @@ hr.ui-widget-header {
 
 .ui-galleria-nav-prev {
 	left: 2px !important;
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/left-one-arrow-for-data.svg']}")!important;
 	background-position: center !important;
 	background-size: 100% !important;
@@ -10705,10 +10519,8 @@ hr.ui-widget-header {
 
 .ui-galleria-nav-next {
 	right: 2px !important;
-	background-image:
-	
-			url("#{resource['images/right-one-arrow-for-data.svg']}")!important;			
-	
+	background-image:	
+			url("#{resource['images/right-one-arrow-for-data.svg']}")!important;		
 	background-position: center !important;
 	background-size: 100% !important;
 }
@@ -10789,11 +10601,8 @@ hr.ui-widget-header {
 }
 
 .ui-autocomplete .ui-autocomplete-dropdown .ui-icon-triangle-1-s {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/downarrow.svg']}");
-
-
 	background-position: center !important;
 	background-size: 100% !important;
 	margin-top: -7px;
@@ -10853,9 +10662,8 @@ hr.ui-widget-header {
 
 .ui-autocomplete-multiple .ui-autocomplete-multiple-container .ui-autocomplete-token .ui-icon-close
 	{
-	background-image:
-		url("/venture/javax.faces.resource/images/delete-gray.svg.xhtml?ln=primefaces-venture")
-		!important;
+	background-image:	
+	url("#{resource['images/delete-gray.svg']}")!important;	
 	background-position: center !important;
 	background-size: 100% !important;
 }
@@ -10943,11 +10751,8 @@ hr.ui-widget-header {
 }
 /* Style For UI MenuButton --------------------------------------------------------------------------------------*/
 .ui-menubutton .ui-icon-triangle-1-s {
-	background-image:
-	
-		url("#{resource['images/downarrow-white.svg']}")!important;
-		
-		
+	background-image:	
+		url("#{resource['images/downarrow-white.svg']}")!important;	
 	background-position: center !important;
 	background-size: 120% !important;
 }
@@ -10983,42 +10788,36 @@ hr.ui-widget-header {
 
 .ui-fileupload-choose .ui-icon-plusthick, .ui-fileupload-simple .ui-icon-plusthick
 	{
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/plus-sign.svg']}")!important;
-
 	background-position: center !important;
 	background-size: 100% !important;
 }
 
 .ui-fileupload-upload .ui-icon-arrowreturnthick-1-n {
 	background-image:
-		url("/venture/javax.faces.resource/images/upload.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/upload.svg']}")!important;
 	background-position: center !important;
 	background-size: 100% !important;
 }
 
 .ui-fileupload-cancel .ui-icon-cancel {
 	background-image:
-		url("/venture/javax.faces.resource/images/delete.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/delete.svg']}")!important;
 	background-position: center !important;
 	background-size: 100% !important;
 }
 
 .ui-fileupload-content .ui-fileupload-cancel .ui-icon-close {
 	background-image:
-		url("/venture/javax.faces.resource/images/delete.svg.xhtml?ln=primefaces-venture")
-		!important;
+		url("#{resource['images/delete.svg']}")!important;
 	background-position: center !important;
 	background-size: 100% !important;
 }
 
 .ui-fileupload-content .ui-messages-error .ui-icon-close {
 	background-image:
-		url("/venture/javax.faces.resource/images/delete-pink.svg.xhtml?ln=primefaces-venture")
-		!important;
+		url("#{resource['images/delete-pink.svg']}")!important;
 	background-position: center !important;
 	background-size: 100% !important;
 }
@@ -11079,17 +10878,14 @@ hr.ui-widget-header {
 }
 /*Style For UI Inplace --------------------------------------------------------------------------------------*/
 .ui-inplace .ui-inplace-editor .ui-button .ui-icon-check {
-	background-image:
-		url("/venture/javax.faces.resource/images/check-white.svg.xhtml?ln=primefaces-venture")
-		!important;
+	background-image:url("#{resource['images/check-white.svg']}")!important;
 	background-position: center !important;
 	background-size: 110% !important;
 }
 
 .ui-inplace .ui-inplace-editor .ui-button .ui-icon-close {
-	background-image:
-		url("/venture/javax.faces.resource/images/delete.svg.xhtml?ln=primefaces-venture")
-		!important;
+	background-image:	
+	url("#{resource['images/delete.svg']}")!important;		
 	background-position: center !important;
 	background-size: 110% !important;
 }
@@ -11146,8 +10942,7 @@ hr.ui-widget-header {
 .ui-layout-unit .ui-layout-unit-header .ui-layout-unit-header-icon .ui-icon-close
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/delete.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/delete.svg']}")!important;
 	background-position: center !important;
 	background-size: 110% !important;
 	margin-top: 3px;
@@ -11155,11 +10950,8 @@ hr.ui-widget-header {
 
 .ui-layout-unit .ui-layout-unit-header .ui-layout-unit-header-icon .ui-icon-triangle-1-n
 	{
-	background-image:
-	
-	url("#{resource['images/uparrow.svg']}")!important;
-	
-		
+	background-image:	
+	url("#{resource['images/uparrow.svg']}")!important;		
 	background-position: center !important;
 	background-size: 120% !important;
 	margin-top: 3px;
@@ -11167,11 +10959,8 @@ hr.ui-widget-header {
 
 .ui-layout-unit .ui-layout-unit-header .ui-layout-unit-header-icon .ui-icon-triangle-1-w
 	{
-	background-image:
-	
-		url("#{resource['images/left-arrow.svg']}")!important;
-		
-	
+	background-image:	
+		url("#{resource['images/left-arrow.svg']}")!important;	
 	background-position: center !important;
 	background-size: 100% !important;
 	margin-top: 3px;
@@ -11179,11 +10968,8 @@ hr.ui-widget-header {
 
 .ui-layout-unit .ui-layout-unit-header .ui-layout-unit-header-icon .ui-icon-triangle-1-e
 	{
-	background-image:
-	
+	background-image:	
 		url("#{resource['images/right-arrow.svg']}")!important;
-		
-
 	background-position: center !important;
 	background-size: 100% !important;
 	margin-top: 3px;
@@ -11191,12 +10977,8 @@ hr.ui-widget-header {
 
 .ui-layout-unit .ui-layout-unit-header .ui-layout-unit-header-icon .ui-icon-triangle-1-s
 	{
-	background-image:
-	
-	url("#{resource['images/downarrow.svg']}")!important;
-	
-	
-	
+	background-image:	
+	url("#{resource['images/downarrow.svg']}")!important;	
 	background-position: center !important;
 	background-size: 120% !important;
 	margin-top: 3px;
@@ -11226,19 +11008,15 @@ hr.ui-widget-header {
 }
 
 .ui-wizard .ui-wizard-nav-back .ui-icon-arrowthick-1-w {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/left-arrow.svg']}")!important;
-	
 	background-position: center !important;
 	background-size: 110% !important;
 }
 
 .ui-wizard .ui-wizard-nav-next .ui-icon-arrowthick-1-e {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/right-arrow.svg']}")!important;
-	
 	background-position: center !important;
 	background-size: 110% !important;
 }
@@ -11631,35 +11409,26 @@ hr.ui-widget-header {
 @media ( max-width : 640px) {
 	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons .ui-icon-arrow-1-e
 		{
-		background-image:	
-			
-		url("#{resource['images/downarrow-white.svg']}");
-		
+		background-image:				
+		url("#{resource['images/downarrow-white.svg']}");		
 
 	}
 	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons .ui-icon-arrow-1-w
 		{
-		background-image:
-		
-		url("#{resource['images/uparrow.svg']}");
-		
+		background-image:		
+		url("#{resource['images/uparrow.svg']}");		
 		
 	}
 	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons .ui-icon-arrowstop-1-e
 		{
-		background-image:
-		
-			url("#{resource['images/bottomarrow.svg']}");
-			
+		background-image:		
+			url("#{resource['images/bottomarrow.svg']}");			
 	
 	}
 	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons .ui-icon-arrowstop-1-w
 		{
-		background-image:
-		
-			url("#{resource['images/toparrow.svg']}");
-			
-			
+		background-image:		
+			url("#{resource['images/toparrow.svg']}");			
 		
 	}
 	.ui-picklist.ui-picklist-responsive .ui-picklist-buttons button {
@@ -11975,7 +11744,6 @@ a, div, span, input, textarea, li, strong, button {
 
 
 
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -11985,16 +11753,17 @@ a, div, span, input, textarea, li, strong, button {
 	
 
 	<h:outputScript library="js" name="jquery.maskMoney.js" />
+	<!--<h:outputScript library="js" name="validadores.js" />
 
-	<!--<h:outputScript library="js" name="jquery-plugins.js" />-->
-	<!--<h:outputScript library="js" name="jquery.js" /> -->
+	<h:outputScript library="js" name="jquery-plugins.js" />-->
+	<!--<h:outputScript library="js" name="jquery.js" /> 
 	<h:outputScript library="js" name="VenturePrimefaces.js" /> 
-	<h:outputScript library="js" name="VentureLayout.js" />
+	<h:outputScript library="js" name="VentureLayout.js" />-->
 	<h:outputScript library="js" name="nanoscroller.js" />
 	
 	
-	<h:outputStylesheet library="css" name="NovaConfiguracao.css" />
-	<!--
+	<!--<h:outputStylesheet library="css" name="NovaConfiguracao.css" />
+	
 	<h:outputStylesheet library="css" name="Venture_Primefaces.css" /> 
 	<h:outputStylesheet library="css" name="Venture_Theme.css" />-->
 	<h:outputStylesheet library="css" name="venture-font.css" />
@@ -12003,7 +11772,7 @@ a, div, span, input, textarea, li, strong, button {
 	<h:outputStylesheet library="css" name="core-layout.css" />
 	<h:outputStylesheet library="css" name="font-awesome.css" />
 	<h:outputStylesheet library="css" name="nanoscroller.css" />
-	
+	<h:outputStylesheet library="css" name="sistemas.css" />
 	
 	<!--
 	    
@@ -12016,18 +11785,8 @@ a, div, span, input, textarea, li, strong, button {
 <h:body styleClass="YellowTopbar PaleBlueBG">
 	<!-- Inserindo componente AJAX Status 
 	  quando houver uma nova renderização , o onsuccess chamará a reconfiguração da mascara de dinheiro-->
-	<p:ajaxStatus styleClass="ajax-status" onsuccess="configurarMoeda()">
-
-		<!--  Inserir o que será ixibido quando uma requisição ajax for iniciada -->
-		<f:facet name="start">
-			<h:graphicImage library="images" name="loading.gif" />
-		</f:facet>
-
-		<!-- Quando for carregado a imagem será substituido por nada -->
-		<f:facet name="complete">
-			<h:outputText value="" />
-		</f:facet>
-	</p:ajaxStatus>
+	  
+	
 
 	<header id="layout-topbar-cover">
 	<div id="layout-topbar-row">
@@ -12073,6 +11832,21 @@ a, div, span, input, textarea, li, strong, button {
 
 
 	<div id="layout-container">
+	<div style="float: right;">
+	 <p:ajaxStatus styleClass="ajax-status" onsuccess="configurarMoeda()">
+
+		<!--  Inserir o que será ixibido quando uma requisição ajax for iniciada -->
+		<f:facet name="start">
+			<h:graphicImage library="images" name="load.gif" />
+		</f:facet>
+
+		<!-- Quando for carregado a imagem será substituido por nada -->
+		<f:facet name="complete">
+			<h:outputText value="" />
+		</f:facet>
+	</p:ajaxStatus>
+	</div>
+	
 		<ui:insert name="corpo" />
 	</div>
 
@@ -12088,6 +11862,8 @@ a, div, span, input, textarea, li, strong, button {
 	     chamando o script maskMoney com as propriedade desejadas que são:
 	     simbolo decimal, simbolo de milhar e se aceita zero-->
 	<script>
+	
+		
 	 function configurarMoeda(){
 		 $(".moeda").maskMoney({decimal: ",", thousands: ".", allowZero:true});
 	 }

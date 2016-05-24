@@ -22,7 +22,7 @@ readonly="#{facesContext.currentPhaseId.name eq 'RENDER_RESPONSE'}" -->
         
         <p:outputLabel value="Vendedor" for="vendedor"/>
         <p:selectOneMenu id="vendedor" value="#{cadastroPedidoBean.pedido.vendedor}"
-        		disabled="#{cadastroPedidoBean.pedido.naoAlteravel}">
+        		disabled="#{cadastroPedidoBean.pedido.naoAlteravel}" styleClass="ui-selectonemenu-label ui-inputfield ui-corner-all">
             <f:selectItem itemLabel="Selecione" />
             <f:selectItems value="#{cadastroPedidoBean.vendedores}" var="vendedor"
             	itemValue="#{vendedor}" itemLabel="#{vendedor.nome}" />
@@ -44,8 +44,8 @@ readonly="#{facesContext.currentPhaseId.name eq 'RENDER_RESPONSE'}" -->
         
         <p:outputLabel value="Forma de pagamento" for="formaPagamento"/>
         <p:selectOneMenu id="formaPagamento" value="#{cadastroPedidoBean.pedido.formaPagamento}"
-        		disabled="#{cadastroPedidoBean.pedido.naoAlteravel}">
-            <f:selectItem itemLabel="Selecione" />
+        		disabled="#{cadastroPedidoBean.pedido.naoAlteravel}" styleClass="ui-selectonemenu-label ui-inputfield ui-corner-all">
+            <f:selectItem itemLabel="Selecione"  />
             <f:selectItems value="#{cadastroPedidoBean.formasPagamento}" var="formaPagamento"
             	itemValue="#{formaPagamento}" itemLabel="#{formaPagamento.descricao}" />
         </p:selectOneMenu>

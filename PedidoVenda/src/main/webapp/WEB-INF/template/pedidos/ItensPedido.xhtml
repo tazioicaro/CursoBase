@@ -4,8 +4,9 @@
     xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
     xmlns:p="http://primefaces.org/ui">
 
-	<p:dataTable value="#{cadastroPedidoBean.pedido.itens}" var="item" rowIndexVar="linha" id="tabelaItens">
-		<p:column headerText="SKU" style="text-align: center; width: 100px">
+	<p:dataTable value="#{cadastroPedidoBean.pedido.itens}" var="item" rowIndexVar="linha" id="tabelaItens" >
+		
+		<p:column headerText="SKU" style="text-align: center; width: 10%">
 			<h:outputText value="#{item.produto.sku}" rendered="#{item.produtoAssociado}"/>
 			
 			<p:inputText size="8" value="#{cadastroPedidoBean.sku}" label="SKU" id="sku"
@@ -15,23 +16,23 @@
 					listener="#{cadastroPedidoBean.carregarProdutoPorSku}" />
 			</p:inputText>
 		</p:column>
-		<p:column headerText="Produto">
-			<h:outputText value="#{item.produto.nome}" rendered="#{item.produtoAssociado}" />
+		<p:column headerText="Produto" style="text-align: center; width: 50%" >
+			<h:outputText value="#{item.produto.nome}" rendered="#{item.produtoAssociado}"/>
 		
 			<p:autoComplete styleClass="produto-tabela" value="#{cadastroPedidoBean.produtoLinhaEditavel}"
 				completeMethod="#{cadastroPedidoBean.completarProduto}"
 				var="produto" itemLabel="#{produto.nome}" itemValue="#{produto}" 
-				forceSelection="true" rendered="#{not item.produtoAssociado}">
+				forceSelection="true" rendered="#{not item.produtoAssociado}" >
 				<p:ajax event="itemSelect" update="tabelaItens :frmCadastro:totalPedido :frmCadastro:subtotal" 
 					listener="#{cadastroPedidoBean.carregarProdutoLinhaEditavel}"/>
-			</p:autoComplete>
+			</p:autoComplete >
 		</p:column>
-		<p:column headerText="Valor unitário" style="text-align: right; width: 120px">
+		<p:column headerText="Valor unitário" style="text-align: right; width: 12%">
 			<h:outputText value="#{item.valorUnitario}">
 				<f:convertNumber type="currency"/>
 			</h:outputText>
 		</p:column>
-		<p:column headerText="Quantidade" style="text-align: center; width: 100px">
+		<p:column headerText="Quantidade" style="text-align: center; width: 8%">
 			<p:inputText size="8" value="#{item.quantidade}" disabled="#{cadastroPedidoBean.pedido.naoAlteravel}">
 				<p:ajax event="change" process="@this"
 					update="tabelaItens :frmCadastro:totalPedido :frmCadastro:subtotal"
@@ -39,7 +40,7 @@
 			</p:inputText>
 		</p:column>
 		
-		<p:column headerText="Estoque" style="text-align: center; width: 100px">
+		<p:column headerText="Estoque" style="text-align: center; width: 10%">
 			<h:outputText value="#{item.produto.quantidadeEstoque}" 
 				style="#{item.estoqueInsuficiente ? 'color: red' : ''}"/>
 			
@@ -51,7 +52,7 @@
 				rendered="#{item.estoqueInsuficiente}" />
 		</p:column>
 		
-		<p:column headerText="Valor total" style="text-align: right; width: 100px">
+		<p:column headerText="Valor total" style="text-align: right; width: 10%">
 			<h:outputText value="#{item.valorTotal}">
 				<f:convertNumber type="currency"/>
 			</h:outputText>

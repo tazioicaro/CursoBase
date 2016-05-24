@@ -2047,10 +2047,12 @@ div.ui-button, .ui-splitbutton {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-} /** Calendar **/
+} 
+/** Calendar **/
 .ui-fluid .ui-calendar, .ui-fluid .ui-calendar input {
 	width: 100%;
-} /** Spinner **/
+} 
+/** Spinner **/
 .ui-fluid .ui-spinner {
 	width: 100%;
 }
@@ -2066,23 +2068,28 @@ div.ui-button, .ui-splitbutton {
 
 .ui-fluid .ui-spinner .ui-spinner-button .ui-icon {
 	left: 6px;
-} /** AutoComplete **/
+} 
+/** AutoComplete **/
 .ui-fluid .ui-autocomplete, .ui-fluid .ui-autocomplete-input {
 	width: 100%;
 }
 
 .ui-fluid .ui-autocomplete .ui-autocomplete-dropdown.ui-button {
 	width: 2.4em;
-} /** InputMask **/
+} 
+/** InputMask **/
 .ui-fluid .ui-inputmask {
 	width: 100%;
-} /** Password **/
+} 
+/** Password **/
 .ui-fluid .ui-password {
 	width: 100%;
-} /** Keyboard **/
+} 
+/** Keyboard **/
 .ui-fluid .ui-keyboard-input {
 	width: 100%;
-} /** CheckboxMenu **/
+} 
+/** CheckboxMenu **/
 .ui-fluid .ui-selectcheckboxmenu {
 	width: 100%;
 }
