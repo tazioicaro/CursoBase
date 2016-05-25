@@ -9,7 +9,12 @@ footer {
 
 /* # é id */
 
+#titulosH1{
+color: white;  
+border-bottom: outset; 
+border-bottom-color: white;
 
+}
 #nomeTelas{
 	 width: 99% !important;
 	 padding-left: 1% !important; 

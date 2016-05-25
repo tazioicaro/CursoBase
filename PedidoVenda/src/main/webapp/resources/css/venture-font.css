@@ -1,18 +1,10 @@
 @font-face {
-    font-family: 'Venture';
-    
+    font-family: 'Venture';    
     src:    url("");    
     src: url("#{resource['fonts/Venture.eot']}?#iefix")format('embedded-opentype'), 
   url("#{resource['fonts/Venture.woff']}")format('woff'),
    url("#{resource['fonts/Venture.ttf']}")format('truetype'),
-    url("#{resource['fonts/Venture.svg']}?")format('svg');   
-    
-    /*
-    src:    url("/PedidoVenda/javax.faces.resource/fonts/Venture.eot.xhtml?ln=venture-layout#iefix") format('embedded-opentype'),
-        url("/PedidoVenda/javax.faces.resource/fonts/Venture.ttf.xhtml?ln=venture-layout") format('truetype'),
-        url("/PedidoVenda/javax.faces.resource/fonts/Venture.woff.xhtml?ln=venture-layout") format('woff'),
-        url("/PedidoVenda/javax.faces.resource/fonts/Venture.svg.xhtml?ln=venture-layoutVenture") format('svg');*/
-        
+    url("#{resource['fonts/Venture.svg']}?")format('svg');          
     font-weight: normal;
     font-style: normal; 
 }

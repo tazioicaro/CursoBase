@@ -4,14 +4,14 @@
 	display: none;
 }
 
-.ui-helper-hidden-accessible{
-	border: 0 !important;
-	clip: rect(0, 0, 0, 0) !important;
-	height: 0px !important;
-	margin: -1px !important;
-	overflow: hidden !important;
+.ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 0px;
+	margin: -1px;
+	overflow: hidden;
 	padding: 0;
-	position: absolute !important;
+	position: absolute;
 	width: 0px;
 }
 
@@ -20,18 +20,18 @@
 	padding: 0;
 	border: 0;
 	outline: 0;
-	line-height: 1.3 !important;
+	line-height: 1.3;
 	text-decoration: none;
-	font-size: 100% !important;
+	font-size: 100%;
 	list-style: none;
 }
 
 .ui-helper-clearfix:after {
 	content: ".";
-	display: block !important;
+	display: block;
 	height: 0;
-	clear: both !important;
-	visibility: hidden !important;
+	clear: both;
+	visibility: hidden;
 }
 
 .ui-helper-clearfix {
@@ -57,47 +57,47 @@
 	cursor: default !important;
 } /* Icons----------------------------------*/ /* states and images */
 .ui-icon {
-	display: block !important;
-	text-indent: -99999px !important;
-	overflow: hidden !important;
-	background-repeat: no-repeat !important;
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
 } /* Misc visuals----------------------------------*/ /* Overlays */
 .ui-widget-overlay {
-	position: absolute !important;
+	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100% !important;
-	height: 100% !important;
+	width: 100%;
+	height: 100%;
 }
-/*!* jQuery UI Resizable 1.8.20** Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)* Dual licensed under the MIT or GPL Version 2 licenses.* http://jquery.org/license** http://docs.jquery.com/UI/Resizable#theming*/
+	/*!* jQuery UI Resizable 1.8.20** Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)* Dual licensed under the MIT or GPL Version 2 licenses.* http://jquery.org/license** http://docs.jquery.com/UI/Resizable#theming*/
 .ui-resizable {
-	position: relative !important;
+	position: relative;
 }
 
 .ui-resizable-handle {
-	position: absolute !important;
-	font-size: 0.1px !important;
-	display: block !important;
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
 }
 
 .ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle
 	{
-	display: none !important;
+	display: none;
 }
 
 .ui-resizable-n {
-	cursor: n-resize !important;
-	height: 7px !important;
-	width: 100% !important;
-	top: -5px !important;
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
 	left: 0;
 }
 
 .ui-resizable-s {
-	cursor: s-resize !important;
-	height: 7px !important;
-	width: 100% !important;
-	bottom: -5px !important;
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
 	left: 0;
 }
 
@@ -148,13 +148,13 @@
 	right: -5px;
 	top: -5px;
 }
-/*!* jQuery UI Selectable 1.8.20** Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)* Dual licensed under the MIT or GPL Version 2 licenses.* http://jquery.org/license** http://docs.jquery.com/UI/Selectable#theming*/
+	/*!* jQuery UI Selectable 1.8.20** Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)* Dual licensed under the MIT or GPL Version 2 licenses.* http://jquery.org/license** http://docs.jquery.com/UI/Selectable#theming*/
 .ui-selectable-helper {
 	position: absolute;
 	z-index: 100;
 	border: 1px dotted black;
 }
-/*!* jQuery UI Slider 1.8.20** Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)* Dual licensed under the MIT or GPL Version 2 licenses.* http://jquery.org/license** http://docs.jquery.com/UI/Slider#theming*/
+	/*!* jQuery UI Slider 1.8.20** Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)* Dual licensed under the MIT or GPL Version 2 licenses.* http://jquery.org/license** http://docs.jquery.com/UI/Slider#theming*/
 .ui-slider {
 	position: relative;
 	text-align: left;
@@ -222,23 +222,23 @@
 .ui-slider-vertical .ui-slider-range-max {
 	top: 0;
 }
-/*!* jQuery UI Datepicker 1.8.20** Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)* Dual licensed under the MIT or GPL Version 2 licenses.* http://jquery.org/license** http://docs.jquery.com/UI/Datepicker#theming*/
+	/*!* jQuery UI Datepicker 1.8.20** Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)* Dual licensed under the MIT or GPL Version 2 licenses.* http://jquery.org/license** http://docs.jquery.com/UI/Datepicker#theming*/
 .ui-datepicker {
-	width: 17em !important;
-	padding: .2em .2em 0 !important;
-	display: none !important;
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
 }
 
 .ui-datepicker .ui-datepicker-header {
-	position: relative !important;
-	padding: .2em 0 !important;
+	position: relative;
+	padding: .2em 0;
 }
 
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
-	position: absolute !important;
-	top: 2px !important;
-	width: 1.8em !important;
-	height: 1.8em !important;
+	position: absolute;
+	top: 2px;
+	width: 1.8em;
+	height: 1.8em;
 }
 
 .ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover
@@ -293,16 +293,16 @@
 }
 
 .ui-datepicker table {
-	width: 100% !important;
-	font-size: .9em !important;
-	border-collapse: collapse !important;
-	margin: 0 0 .4em !important;
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
 }
 
 .ui-datepicker th {
-	padding: .7em .3em !important;
-	text-align: center !important;
-	font-weight: bold !important;
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
 	border: 0;
 }
 
@@ -377,9 +377,9 @@
 }
 
 .ui-datepicker-row-break {
-	clear: both !important;
-	width: 100% !important;
-	font-size: 0em !important;
+	clear: both;
+	width: 100%;
+	font-size: 0em;
 } /* RTL support */
 .ui-datepicker-rtl {
 	direction: rtl;
@@ -433,17 +433,17 @@
 } /* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
 .ui-datepicker-cover {
 	display: none; /*sorry for IE5*/
-	display /**/: block !important; /*sorry for IE5*/
-	position: absolute !important; /*must have*/
-	z-index: -1 !important; /*must have*/
-	filter: mask() !important; /*must have*/
-	top: -4px !important; /*must have*/
-	left: -4px !important; /*must have*/
-	width: 200px !important; /*must have*/
-	height: 200px !important; /*must have*/
+	display /**/: block; /*sorry for IE5*/
+	position: absolute; /*must have*/
+	z-index: -1; /*must have*/
+	filter: mask(); /*must have*/
+	top: -4px; /*must have*/
+	left: -4px; /*must have*/
+	width: 200px; /*must have*/
+	height: 200px; /*must have*/
 } /* css for timepicker */
 .ui-timepicker-div .ui-widget-header {
-	margin-bottom: 8px !important;
+	margin-bottom: 8px;
 }
 
 .ui-timepicker-div dl {
@@ -480,9 +480,7 @@
 
 .ui-timepicker-rtl dl dd {
 	margin: 0 65px 10px 10px;
-}
-
- /* PrimeFaces Extensions */
+} /* PrimeFaces Extensions */
 .ui-datepicker-trigger.ui-button-icon-only .ui-button-text {
 	padding: 0.3em;
 }
@@ -536,20 +534,20 @@
 }
 
 .ui-autocomplete {
-	width: auto !important;
-	zoom: 1 !important;
-	cursor: pointer !important;
+	width: auto;
+	zoom: 1;
+	cursor: pointer;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	position: relative !important;
+	position: relative;
 	display: inline-block;
 }
 
 .ui-autocomplete .ui-autocomplete-dropdown {
-	position: absolute !important;
-	height: 100% !important;
-	width: 2.4em !important;
+	position: absolute;
+	height: 100%;
+	width: 2.4em;
 }
 
 .ui-autocomplete-query {
@@ -571,11 +569,11 @@
 }
 
 .ui-autocomplete-panel .ui-autocomplete-list-item {
-	border: 0px none !important;
-	font-weight: normal !important;
-	margin: 1px 0 !important;
-	padding: 3px 5px !important;
-	text-align: left !important;
+	border: 0px none;
+	font-weight: normal;
+	margin: 1px 0;
+	padding: 3px 5px;
+	text-align: left;
 }
 
 .ui-autocomplete-panel .ui-autocomplete-table {
@@ -588,7 +586,7 @@
 	border-width: 1px;
 	border-style: solid;
 	border-color: inherit;
-	padding: 4px 10px 4px 10px !important;
+	padding: 4px 10px 4px 10px;
 }
 
 .ui-autocomplete .ui-button-icon-only .ui-button-text {
@@ -605,7 +603,7 @@
 }
 
 .ui-autocomplete-multiple-container.ui-inputfield {
-	padding: 0 !important;
+	padding: 0;
 }
 
 .ui-autocomplete-token {
@@ -613,22 +611,22 @@
 	float: left;
 	overflow: hidden;
 	padding: 1px 3px;
-	white-space: nowrap !important;
+	white-space: nowrap;
 	position: relative;
 	margin: 2px;
 }
 
 .ui-autocomplete-token-label {
-	display: block !important;
-	padding: 0em 2.1em 0em 0.5em !important;
+	display: block;
+	padding: 0em 2.1em 0em 0.5em;
 }
 
 .ui-autocomplete-token-icon {
-	margin-top: -9px !important;
-	position: absolute !important;
-	right: 0.2em !important;
+	margin-top: -9px;
+	position: absolute;
+	right: 0.2em;
 	top: 50%;
-	cursor: pointer !important;
+	cursor: pointer;
 }
 
 .ui-autocomplete-input-token {
@@ -642,7 +640,7 @@
 	border: 0 none;
 	width: 140px;
 	outline: medium none;
-	background-color: transparent !important;
+	background-color: transparent;
 	margin: 2px;
 }
 
@@ -799,9 +797,9 @@
 }
 
 .ui-columntoggler .ui-columntoggler-item .ui-chkbox {
-	position: absolute !important;
-	top: 50% !important;
-	margin-top: -8px !important;
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
 }
 
 .ui-columntoggler .ui-columntoggler-item label {
@@ -810,9 +808,9 @@
 }
 
 .ui-shadow {
-	-moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !important;
-	-webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !important;
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !important;
+	-moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 .ui-overlay-visible {
@@ -992,8 +990,9 @@ ui-overlay-visible * {
 }
 
 .ui-datascroller .ui-datascroller-loading {
-	background: url("#{resource['images/loading.gif']}"); 	
-   center center no-repeat;
+	background:
+		url("/venture/javax.faces.resource/datascroller/images/loading.gif.xhtml?ln=primefaces&v=5.3")
+		center center no-repeat;
 	width: 220px;
 	height: 19px;
 	padding: 0;
@@ -1030,14 +1029,14 @@ ui-overlay-visible * {
 
 .ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td,
 	.ui-datatable tfoot th {
-	padding: 4px 10px !important;
-	overflow: hidden !important;
-	border-width: 1px !important;
-	border-style: solid !important;
+	padding: 4px 10px;
+	overflow: hidden;
+	border-width: 1px;
+	border-style: solid;
 }
 
 .ui-datatable tbody td {
-	border-color: inherit !important;
+	border-color: inherit;
 }
 
 .ui-datatable .ui-sortable-column {
@@ -1068,17 +1067,17 @@ ui-overlay-visible * {
 }
 
 .ui-datatable .ui-selection-column .ui-chkbox-all {
-	display: block !important;
-	margin: 0px auto !important;
-	width: 16px !important;
-	height: 16px !important;
+	display: block;
+	margin: 0px auto;
+	width: 16px;
+	height: 16px;
 } /* Scrollable */
 .ui-datatable-scrollable table, .ui-datatable-sticky table {
 	table-layout: fixed;
 }
 
 .ui-datatable-scrollable-body {
-	overflow: auto !important;
+	overflow: auto;
 }
 
 .ui-datatable-scrollable-header, .ui-datatable-scrollable-footer {
@@ -1096,19 +1095,19 @@ ui-overlay-visible * {
 }
 
 .ui-datatable-scrollable-body::-webkit-scrollbar {
-	-webkit-appearance: none !important;
-	width: 15px !important;
-	background-color: transparent !important;
+	-webkit-appearance: none;
+	width: 15px;
+	background-color: transparent;
 }
 
 .ui-datatable-scrollable-body::-webkit-scrollbar-thumb {
-	border-radius: 8px !important;
-	border: 1px solid white !important;
-	background-color: rgba(194, 194, 194, .5) !important;
+	border-radius: 8px;
+	border: 1px solid white;
+	background-color: rgba(194, 194, 194, .5);
 }
 
 .ui-datatable .ui-datatable-scrollable-body {
-	min-height: 0% !important;
+	min-height: 0%;
 }
 
 .ui-datatable .ui-datatable-data tr.ui-state-hover {
@@ -1214,7 +1213,7 @@ ui-overlay-visible * {
 
 .ui-datatable-resizable thead th, .ui-datatable-resizable tbody td,
 	.ui-datatable-resizable tfoot td {
-	white-space: nowrap !important;
+	white-space: nowrap;
 }
 
 .ui-datatable-resizable table {
@@ -1250,7 +1249,7 @@ ui-overlay-visible * {
 }
 
 .ui-datatable-frozen-container .ui-datatable-scrollable-body {
-	overflow: hidden !important;
+	overflow: hidden;
 }
 
 .ui-datatable .ui-datatable-frozen-container .ui-row-toggler {
@@ -1286,11 +1285,11 @@ ui-overlay-visible * {
 		clear: left;
 	}
 	.ui-datatable-reflow .ui-datatable-data.ui-widget-content {
-		border: 0px none !important;
+		border: 0px none;
 	}
 	.ui-datatable-reflow .ui-datatable-data tr.ui-widget-content {
-		border-left: 0px none !important;
-		border-right: 0px none !important;
+		border-left: 0px none;
+		border-right: 0px none;
 	}
 	.ui-datatable-reflow .ui-datatable-data td .ui-column-title {
 		padding: .4em;
@@ -1453,14 +1452,14 @@ ui-overlay-visible * {
 }
 
 .ui-inputfield {
-	margin: 0 !important;
-	outline: medium none !important;
-	padding: 4px !important;
-	font-weight: normal!important;
+	margin: 0;
+	outline: medium none;
+	padding: 4px;
+	font-weight: normal;
 }
 
 .ui-widget-header .ui-inputfield, .ui-widget-content .ui-inputfield {
-	font-weight: normal!important;
+	font-weight: normal;
 }
 
 .ui-inputtextarea-resizable {
@@ -1545,29 +1544,29 @@ ui-overlay-visible * {
 	border-bottom: 0px none;
 } /*** Checkbox*/
 .ui-chkbox {
-	display: inline-block !important;
+	display: inline-block;
 }
 
 .ui-chkbox .ui-chkbox-box {
-	width: 16px !important;
-	height: 16px !important;
-	display: inline-block !important;
-	-moz-border-radius: 2px !important;
-	-webkit-border-radius: 2px !important;
-	border-radius: 2px !important;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
 }
 
 .ui-chkbox-icon.ui-icon {
-	overflow: visible !important;
+	overflow: visible;
 }
 
 .ui-chkbox .ui-chkbox-label {
-	cursor: pointer !important;
-	margin: 3px 0 0 3px !important;
-	outline: medium none !important;
-	z-index: 1 !important;
-	display: inline-block !important;
-	vertical-align: top !important;
+	cursor: pointer;
+	margin: 3px 0 0 3px;
+	outline: medium none;
+	z-index: 1;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .ui-selectoneradio label {
@@ -1576,7 +1575,7 @@ ui-overlay-visible * {
 }
 
 .ui-selectmanycheckbox.ui-widget td, .ui-selectoneradio.ui-widget td {
-	border: 0 none !important;
+	border: 0 none;
 }
 
 .ui-selectmanycheckbox.ui-grid label, .ui-selectoneradio.ui-grid label {
@@ -1895,9 +1894,9 @@ button.ui-button::-moz-focus-inner {
 
 .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-list-item .ui-chkbox
 	{
-	position: absolute !important;
-	top: 50% !important;
-	margin-top: -8px !important;
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
 }
 
 .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-list-item label {
@@ -1911,8 +1910,8 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-selectcheckboxmenu-header .ui-chkbox {
-	float: left !important;
-	cursor: pointer !important;
+	float: left;
+	cursor: pointer;
 }
 
 .ui-selectcheckboxmenu-header .ui-selectcheckboxmenu-filter-container {
@@ -1929,7 +1928,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-selectcheckboxmenu-header .ui-inputfield {
-	padding: 1px 20px 1px 2px !important;
+	padding: 1px 20px 1px 2px;
 }
 
 .ui-selectcheckboxmenu-header span.ui-icon {
@@ -2024,9 +2023,9 @@ div.ui-button, .ui-splitbutton {
 	outline: none;
 } /** Fluid **/
 .ui-fluid .ui-inputfield {
-	box-sizing: border-box !important;
-	-webkit-box-sizing: border-box !important;
-	-moz-box-sizing: border-box !important;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 } /** InputText **/
 .ui-fluid .ui-inputtext {
 	width: 100%;
@@ -2047,12 +2046,10 @@ div.ui-button, .ui-splitbutton {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-} 
-/** Calendar **/
+} /** Calendar **/
 .ui-fluid .ui-calendar, .ui-fluid .ui-calendar input {
 	width: 100%;
-} 
-/** Spinner **/
+} /** Spinner **/
 .ui-fluid .ui-spinner {
 	width: 100%;
 }
@@ -2068,28 +2065,23 @@ div.ui-button, .ui-splitbutton {
 
 .ui-fluid .ui-spinner .ui-spinner-button .ui-icon {
 	left: 6px;
-} 
-/** AutoComplete **/
+} /** AutoComplete **/
 .ui-fluid .ui-autocomplete, .ui-fluid .ui-autocomplete-input {
 	width: 100%;
 }
 
 .ui-fluid .ui-autocomplete .ui-autocomplete-dropdown.ui-button {
 	width: 2.4em;
-} 
-/** InputMask **/
+} /** InputMask **/
 .ui-fluid .ui-inputmask {
 	width: 100%;
-} 
-/** Password **/
+} /** Password **/
 .ui-fluid .ui-password {
 	width: 100%;
-} 
-/** Keyboard **/
+} /** Keyboard **/
 .ui-fluid .ui-keyboard-input {
 	width: 100%;
-} 
-/** CheckboxMenu **/
+} /** CheckboxMenu **/
 .ui-fluid .ui-selectcheckboxmenu {
 	width: 100%;
 }
@@ -2433,9 +2425,8 @@ div.ui-button, .ui-splitbutton {
 
 .ui-lightbox-loading {
 	background:
-	
-		src: url("#{resource['images/loading.gif']}")#000000 
-		center center no-repeat;
+		url("/venture/javax.faces.resource/lightbox/images/loading.gif.xhtml?ln=primefaces&v=5.3")
+		#000000 center center no-repeat;
 }
 
 .ui-lightbox-caption {
@@ -2480,10 +2471,10 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-menu .ui-menu-list .ui-widget-header {
-	clear: both !important;
-	float: left !important;
-	width: 98% !important;
-	margin: 1px 0 !important;
+	clear: both;
+	float: left;
+	width: 98%;
+	margin: 1px 0;
 }
 
 .ui-menu .ui-menuitem {
@@ -2503,35 +2494,35 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-menu .ui-menuitem-link {
-	display: block !important;
-	width: 92% !important;
-	outline: none !important;
-	text-decoration: none !important;
-	font-weight: 400 !important;
-	border: solid 1px transparent !important;
-	float: left !important;
-	line-height: 16px !important;
-	padding: 0.3em !important;
-	cursor: pointer !important;
+	display: block;
+	width: 92%;
+	outline: none;
+	text-decoration: none;
+	font-weight: 400;
+	border: solid 1px transparent;
+	float: left;
+	line-height: 16px;
+	padding: 0.3em;
+	cursor: pointer;
 }
 
 .ui-menu .ui-menuitem-link .ui-menuitem-icon {
-	display: inline-block  !important;
-	float: left  !important;
+	display: inline-block;
+	float: left;
 }
 
 .ui-menu .ui-menuitem-text {
-	float: left !important;
+	float: left;
 }
 
 .ui-menu .ui-widget-header h1, .ui-menu .ui-widget-header h2, .ui-menu .ui-widget-header h3,
 	.ui-menu .ui-widget-header h4, .ui-menu .ui-widget-header h5, .ui-menu .ui-widget-header h6
 	{
-	float: left !important;
-	display: block !important;
-	font-size: 1em !important;
-	margin: 0 auto !important;
-	padding: 0.3em 3% !important;
+	float: left;
+	display: block;
+	font-size: 1em;
+	margin: 0 auto;
+	padding: 0.3em 3%;
 }
 
 .ui-menu .ui-menu-parent .ui-menu-child {
@@ -2551,23 +2542,23 @@ div.ui-button, .ui-splitbutton {
 	position: relative;
 } /* Toggleable Menu */
 .ui-menu.ui-menu-toggleable li.ui-widget-header {
-	position: relative !important;
-	min-height: 0 !important;
+	position: relative;
+	min-height: 0;
 }
 
 .ui-menu.ui-menu-toggleable li.ui-widget-header h3 {
-	padding-left: 2em !important;
+	padding-left: 2em;
 }
 
 .ui-menu.ui-menu-toggleable li.ui-widget-header.ui-state-hover {
-	cursor: pointer !important;
+	cursor: pointer;
 }
 
 .ui-menu.ui-menu-toggleable li.ui-widget-header .ui-icon {
-	position: absolute !important;
-	left: .5em !important;
-	top: 50% !important;
-	margin-top: -8px !important;
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -8px;
 }
 
 .ui-menu .ui-menu-parent .ui-icon-triangle-1-e, .ui-menu .ui-menu-parent .ui-icon-triangle-1-s,
@@ -2613,15 +2604,15 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-menubar .ui-widget-header {
-	clear: none !important;
-	width: auto !important;
-	margin: 0 3px 0 0 !important;
+	clear: none;
+	width: auto;
+	margin: 0 3px 0 0;
 }
 
 .ui-menubar .ui-widget-header h1, .ui-menubar .ui-widget-header h2,
 	.ui-menubar .ui-widget-header h3, .ui-menubar .ui-widget-header h4,
 	.ui-menubar .ui-widget-header h5, .ui-menubar .ui-widget-header h6 {
-	padding: 0.4em 0.3em !important;
+	padding: 0.4em 0.3em;
 }
 
 .ui-menubar .ui-menubar-options {
@@ -3165,7 +3156,7 @@ div.ui-button, .ui-splitbutton {
 
 .ui-outputpanel-loading {
 	background:
-		url("#{resource['images/loading.gif']}");  		
+		url("/venture/javax.faces.resource/outputpanel/images/loading.gif.xhtml?ln=primefaces&v=5.3")
 		center center no-repeat;
 	width: 32px;
 	height: 32px;
@@ -3267,7 +3258,7 @@ div.ui-button, .ui-splitbutton {
 
 .ui-panelgrid.ui-noborder tr.ui-widget-content, .ui-panelgrid.ui-noborder tr.ui-widget-header
 	{
-	border: 0px none !important;
+	border: 0px none;
 }
 
 .ui-panelgrid.ui-panelgrid-blank .ui-panelgrid-content.ui-widget-content,
@@ -3278,8 +3269,8 @@ div.ui-button, .ui-splitbutton {
 	.ui-panelgrid.ui-panelgrid-blank tbody>tr.ui-widget-content>td.ui-panelgrid-cell,
 	.ui-panelgrid.ui-panelgrid-blank .ui-panelgrid-footer>tr.ui-widget-footer
 	{
-	background: none !important;
-	border: 0 none !important;
+	background: none;
+	border: 0 none;
 } /* Grid CSS */
 .ui-panelgrid .ui-grid-responsive .ui-panelgrid-cell {
 	border: 0 none;
@@ -3481,8 +3472,8 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-picklist.ui-picklist-responsive .ui-chkbox-box {
-	width: 18px !important;
-	height: 18px !important;
+	width: 18px;
+	height: 18px;
 } /* Responsive */
 @media ( max-width :640px) {
 	.ui-picklist.ui-picklist-responsive {
@@ -3650,7 +3641,7 @@ div.ui-button, .ui-splitbutton {
 	padding: .2em;
 	zoom: 1;
 }
-/* position:relative prevents IE scroll bug (element with position:relative inside container with overflow:auto appear as "fixed") */
+	/* position:relative prevents IE scroll bug (element with position:relative inside container with overflow:auto appear as "fixed") */
 .ui-tabs .ui-tabs-nav {
 	margin: 0;
 }
@@ -3679,7 +3670,7 @@ div.ui-button, .ui-splitbutton {
 	{
 	cursor: pointer;
 }
-/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor:text overall if defined elsewhere... */
+	/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor:text overall if defined elsewhere... */
 .ui-tabs .ui-tabs-panel {
 	border-width: 0;
 	padding: 1em 1.4em;
@@ -3957,15 +3948,15 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-tree .ui-chkbox-box {
-	cursor: pointer !important;
-	width: 15px !important;
-	height: 15px !important;
-	float: left !important;
+	cursor: pointer;
+	width: 15px;
+	height: 15px;
+	float: left;
 }
 
 .ui-tree .ui-chkbox {
-	display: inline-block !important;
-	zoom: 1 !important;
+	display: inline-block;
+	zoom: 1;
 } /** Horizontal Tree **/
 .ui-tree-horizontal {
 	width: auto;
@@ -4044,8 +4035,8 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-tree.ui-tree-horizontal .ui-chkbox {
-	vertical-align: bottom !important;
-	margin-right: 3px !important;
+	vertical-align: bottom;
+	margin-right: 3px;
 } /** RTL **/
 .ui-tree.ui-tree-rtl {
 	direction: rtl;
@@ -4088,17 +4079,17 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-tree .ui-treenode-content .ui-chkbox.ui-selection {
-	display: none !important;
+	display: none;
 }
 
 .ui-tree .ui-treenode-content.ui-tree-selectable .ui-chkbox.ui-selection
 	{
-	display: inline-block !important;
+	display: inline-block;
 }
 
 .ui-tree.ui-tree-checkbox-all .ui-treenode-content .ui-chkbox.ui-selection
 	{
-	display: inline-block !important;
+	display: inline-block;
 }
 
 .ui-tree .ui-treenode-outline {
@@ -4132,15 +4123,15 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-treetable thead th, .ui-treetable tbody td, .ui-treetable tfoot td {
-	padding: 4px 10px !important;
-	overflow: hidden !important;
-	white-space: nowrap !important;
-	border-width: 1px !important;
-	border-style: solid !important;
+	padding: 4px 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	border-width: 1px;
+	border-style: solid;
 }
 
 .ui-treetable tbody td {
-	border-color: inherit !important;
+	border-color: inherit;
 }
 
 .ui-treetable .ui-treetable-toggler {
@@ -4155,7 +4146,7 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-treetable-scrollable-body {
-	overflow: auto !important;
+	overflow: auto;
 }
 
 .ui-treetable-scrollable-header, .ui-treetable-scrollable-footer {
@@ -4204,7 +4195,7 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-treetable .ui-chkbox {
-	margin-right: 3px !important;
+	margin-right: 3px;
 }
 
 .ui-treetable .ui-treetable-indent {
@@ -4214,13 +4205,13 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-treetable-scrollable-body::-webkit-scrollbar {
-	-webkit-appearance: none !important;
-	width: 15px !important;
-	background-color: transparent !important;
+	-webkit-appearance: none;
+	width: 15px;
+	background-color: transparent;
 }
 
 .ui-treetable-scrollable-body::-webkit-scrollbar-thumb {
-	border-radius: 8px !important;
+	border-radius: 8px;
 	border: 1px solid white;
 	background-color: rgba(194, 194, 194, .5);
 }
@@ -4235,15 +4226,15 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-treetable .ui-chkbox.ui-selection {
-	display: none !important;
+	display: none;
 }
 
 .ui-treetable .ui-treetable-selectable-node .ui-chkbox.ui-selection {
-	display: inline-block !important;
+	display: inline-block;
 }
 
 .ui-treetable.ui-treetable-checkbox-all  .ui-chkbox.ui-selection {
-	display: inline-block !important;
+	display: inline-block;
 }
 
 .ui-treetable-scrollable-theadclone {
@@ -4287,11 +4278,11 @@ div.ui-button, .ui-splitbutton {
 		clear: left;
 	}
 	.ui-treetable-reflow .ui-treetable-data.ui-widget-content {
-		border: 0px none !important;
+		border: 0px none;
 	}
 	.ui-treetable-reflow .ui-treetable-data tr.ui-widget-content {
-		border-left: 0px none !important;
-		border-right: 0px none !important;
+		border-left: 0px none;
+		border-right: 0px none;
 	}
 	.ui-treetable-reflow .ui-treetable-data td .ui-column-title {
 		padding: .4em;

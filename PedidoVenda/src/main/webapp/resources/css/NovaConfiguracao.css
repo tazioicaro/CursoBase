@@ -1,7 +1,7 @@
 font-face {
   font-family: 'enriquetabold';
   
-  src: url( "#{resource['fonts/enriqueta-bold-webfont.eot']}");  
+  src: url("#{resource['fonts/enriqueta-bold-webfont.eot']}");  
   src: url("#{resource['fonts/enriqueta-bold-webfont.eot']}?#iefix")format('embedded-opentype'),  
   url("#{resource['fonts/enriqueta-bold-webfont.woff2']}")format('woff2'),
   url("#{resource['fonts/enriqueta-bold-webfont.woff']}")format('woff'),
@@ -17,7 +17,7 @@ font-face {
 	font-family: 'enriquetaregular';
 	
 		
-	src: url( "#{resource['fonts/enriqueta-regular-webfont.eot']}");  
+	src: url("#{resource['fonts/enriqueta-regular-webfont.eot']}");  
   src: url("#{resource['fonts/enriqueta-regular-webfont.eot']}?#iefix")format('embedded-opentype'),  
   url("#{resource['fonts/enriqueta-regular-webfont.woff2']}")format('woff2'),
   url("#{resource['fonts/enriqueta-regular-webfont.woff']}")format('woff'),

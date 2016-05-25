@@ -6,13 +6,26 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
-	<title>Seleção de cliente</title>
 	
+	
+	<h:outputScript library="js" name="VenturePrimefaces.js" /> 
+	<h:outputScript library="js" name="VentureLayout.js" />	
+	<h:outputStylesheet library="css" name="Venture_Theme.css" />	
+	<h:outputStylesheet library="css" name="venture-font.css" />
+	<h:outputStylesheet library="css" name="venture-layout.css" />	
+	<h:outputStylesheet library="css" name="core-layout.css" />
+	<h:outputStylesheet library="css" name="font-awesome.css" />
 	<h:outputStylesheet library="css" name="sistema.css" />
+	
+	<title>Seleção de cliente</title>
 </h:head>
 <h:body>
 
-	<h:form>
+	<h:form styleClass="layout-portlets-cover"	style="display: block !important;
+    height: 100% !important; font-size: 14px !important; box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;  -webkit-box-sizing: border-box !important;  color: #282828 !important;
+    vertical-align: top !important;   padding: 1rem !important;">
+    
     	<div style="margin-top: 5px">
     		<p:inputText id="nome" size="40" value="#{selecaoClienteBean.nome}" placeholder="Nome do cliente" />
     		<p:spacer width="10px"/>

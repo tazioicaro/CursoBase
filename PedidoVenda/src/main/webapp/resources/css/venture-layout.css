@@ -22,7 +22,7 @@
 @font-face {
 	font-family: 'enriquetaregular';
 	
-	src: url( "#{resource['fonts/enriqueta-regular-webfont.eot']}");  
+	src: url("#{resource['fonts/enriqueta-regular-webfont.eot']}");  
   src: url("#{resource['fonts/enriqueta-regular-webfont.eot']}?#iefix")format('embedded-opentype'),  
   url("#{resource['fonts/enriqueta-regular-webfont.woff2']}")format('woff2'),
   url("#{resource['fonts/enriqueta-regular-webfont.woff']}")format('woff'),
@@ -38,7 +38,7 @@
 	
 	
 		
-	src: url( "#{resource['fonts/poppins-bold-webfont.eot']}");  
+	src: url("#{resource['fonts/poppins-bold-webfont.eot']}");  
   src: url("#{resource['fonts/poppins-bold-webfont.eot']}?#iefix")format('embedded-opentype'),  
   url("#{resource['fonts/poppins-bold-webfont.woff2']}")format('woff2'),
   url("#{resource['fonts/poppins-bold-webfont.woff']}")format('woff'),
@@ -54,7 +54,7 @@
 	
 	
 		
-	src: url( "#{resource['fonts/poppins-semibold-webfont.eot']}");  
+	src: url("#{resource['fonts/poppins-semibold-webfont.eot']}");  
   src: url("#{resource['fonts/poppins-semibold-webfont.eot']}?#iefix")format('embedded-opentype'),  
   url("#{resource['fonts/poppins-semibold-webfont.woff2']}")format('woff2'),
   url("#{resource['fonts/poppins-semibold-webfont.woff']}")format('woff'),
@@ -68,7 +68,7 @@
 	font-family: 'poppinsmedium';
 	
 		
-	src: url( "#{resource['fonts/poppins-medium-webfont.eot']}");  
+	src: url("#{resource['fonts/poppins-medium-webfont.eot']}");  
   src: url("#{resource['fonts/poppins-medium-webfont.eot']}?#iefix")format('embedded-opentype'),  
   url("#{resource['fonts/poppins-medium-webfont.woff2']}")format('woff2'),
   url("#{resource['fonts/poppins-medium-webfont.woff']}")format('woff'),
@@ -83,7 +83,7 @@
 	font-family: 'poppinsregular';
 	
 		
-	src: url( "#{resource['fonts/poppins-regular-webfont.eot']}");  
+	src: url("#{resource['fonts/poppins-regular-webfont.eot']}");  
   src: url("#{resource['fonts/poppins-regular-webfont.eot']}?#iefix")format('embedded-opentype'),  
   url("#{resource['fonts/poppins-regular-webfont.woff2']}")format('woff2'),
   url("#{resource['fonts/poppins-regular-webfont.woff']}")format('woff'),
@@ -98,7 +98,7 @@
 	font-family: 'poppinslight';
 	
 		
-	src: url( "#{resource['fonts/poppins-light-webfont.eot']}");  
+	src: url("#{resource['fonts/poppins-light-webfont.eot']}");  
   src: url("#{resource['fonts/poppins-light-webfont.eot']}?#iefix")format('embedded-opentype'),  
   url("#{resource['fonts/poppins-light-webfont.woff2']}")format('woff2'),
   url("#{resource['fonts/poppins-light-webfont.woff']}")format('woff'),

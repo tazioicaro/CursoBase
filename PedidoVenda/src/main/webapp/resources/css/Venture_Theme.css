@@ -327,8 +327,7 @@ label.ui-state-error {
 }
 
 .ui-icon-blank {
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/blank.svg']}")!important;
 	background-position: center;
 	background-size: 100%;
@@ -1505,9 +1504,7 @@ label {
 .ui-datatable table thead tr .ui-state-default .ui-icon-carat-2-n-s,
 	.ui-datatable .ui-datatable-sticky table thead tr .ui-state-default .ui-icon-carat-2-n-s
 	{
-	background-image:
-	
-	
+	background-image:	
 	 
 		url("/venture/javax.faces.resource/images/updown-arrow.svg.xhtml?ln=primefaces-venture");
 	background-position: center !important;
@@ -1530,11 +1527,8 @@ label {
 .ui-datatable table thead tr .ui-state-active .ui-icon-triangle-1-n,
 	.ui-datatable .ui-datatable-sticky table thead tr .ui-state-active .ui-icon-triangle-1-n
 	{
-	background-image:
-	
-	url("#{resource['images/uparrow.svg']}"); 
-	
-		
+	background-image:	
+	url("#{resource['images/uparrow.svg']}");		
 	background-position: center !important;
 	background-size: 110%;
 	background-repeat: no-repeat;
@@ -1545,10 +1539,7 @@ label {
 	.ui-datatable .ui-datatable-sticky table thead tr .ui-state-active .ui-icon-triangle-1-s
 	{
 	background-image:
-	
-	url("#{resource['images/downarrow.svg']}"); 
-	
-	
+	url("#{resource['images/downarrow.svg']}"); 	
 	background-position: center !important;
 	background-size: 110%;
 	background-repeat: no-repeat;
@@ -1623,8 +1614,7 @@ label {
 
 .ui-datatable>.ui-icon-arrowthick-1-s {
 	background-image:
-	url( "#{resource['images/downarrow.svg']}");  	
-	
+	url( "#{resource['images/downarrow.svg']}"); 	
 	background-position: center !important;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -1632,10 +1622,8 @@ label {
 }
 
 .ui-datatable>.ui-icon-arrowthick-1-n {
-	background-image:
-	
-	 url( "#{resource['images/uparrow.svg']}");  
-	
+	background-image:	
+	 url( "#{resource['images/uparrow.svg']}");	
 	background-position: center !important;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -3492,7 +3480,7 @@ hr.ui-widget-header {
 	font-family: 'poppinsregular';
 }
 
-.ui-panelgrid-content {
+.ui-panelgrid {
 	color: #525252;
 }
 
@@ -3622,10 +3610,8 @@ hr.ui-widget-header {
 
 .ui-tabs-top .ui-tabs-navscroller .ui-tabs-navscroller-btn-left .ui-icon
 	{
-	background-image:
-	
-		url("#{resource['images/left-arrow.svg']}");
-	
+	background-image:	
+		url("#{resource['images/left-arrow.svg']}");	
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 110%;
@@ -4246,10 +4232,8 @@ hr.ui-widget-header {
 
 .ui-lightbox .ui-lightbox-content-wrapper .ui-lightbox-nav-left .ui-icon
 	{
-	background-image:
-	
+	background-image:	
 	url("#{resource['images/left-arrow.svg']}");
-
 	background-position: center !important;
 	background-repeat: no-repeat;
 	background-size: 130%;
@@ -5396,8 +5380,7 @@ hr.ui-widget-header {
 .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-close .ui-icon-circle-close
 	{
 	background-image:
-		url("/venture/javax.faces.resource/images/delete-gray.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url( "#{resource['images/elete-gray.svg']}")!important;
 	background-size: 90%;
 	background-position: center;
 }
@@ -5738,10 +5721,8 @@ hr.ui-widget-header {
 
 .ui-radiobutton .ui-state-active .ui-icon-bullet, .ui-radiobutton .ui-state-focus .ui-icon-bullet
 	{
-	background-image:
-	
-	url( "#{resource['images/radio-on.svg']}")!important; 	
-		
+	background-image:	
+	url("#{resource['images/radio-on.svg']}")!important; 		
 	background-size: 100% !important;
 	background-position: center !important;
 	margin: 0px !important;
@@ -5817,8 +5798,7 @@ hr.ui-widget-header {
 
 .ui-password-panel .ui-password-meter {
 	background-image:
-		url("/venture/javax.faces.resource/images/password-meter.svg.xhtml?ln=primefaces-venture")
-		!important;
+	url("#{resource['images/password-meter.svg']}")!important;
 	background-size: 100% !important;
 }
 /*Style For Input Switch --------------------------------------------------------------------------------------*/

@@ -16,10 +16,11 @@
 		columnClasses="rotulo, campo, rotulo, campo">
 
 		<p:outputLabel value="Data da entrega" for="dataEntrega" />
-		  <p:calendar id="dataEntrega" size="10" pattern="dd/MM/yyyy"
-			value="#{cadastroPedidoBean.pedido.dataEntrega}" disabled="#{cadastroPedidoBean.pedido.naoAlteravel}" 
-			showOn="button"    locale="br" showButtonPanel="true" navigator="true"/>
-		
+		<p:calendar id="dataEntrega" size="10" pattern="dd/MM/yyyy"
+			value="#{cadastroPedidoBean.pedido.dataEntrega}"
+			disabled="#{cadastroPedidoBean.pedido.naoAlteravel}" showOn="button"
+			locale="br" showButtonPanel="true" navigator="true" mask="99/99/9999"/>
+
 		<p:spacer />
 		<p:spacer />
 
@@ -53,6 +54,5 @@
 			value="#{cadastroPedidoBean.pedido.enderecoEntregra.cep}"
 			disabled="#{cadastroPedidoBean.pedido.naoAlteravel}" />
 	</p:panelGrid>
-
-
+	
 </ui:composition>

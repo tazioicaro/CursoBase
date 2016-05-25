@@ -5,24 +5,13 @@
 /* FONT PATH
  * -------------------------- */
 @font-face {
-  font-family: 'FontAwesome';
-  
-  	
-	src: url( "#{resource['fonts/fontawesome-webfont.eot']}");  
+  font-family: 'FontAwesome';  	
+	src: url("#{resource['fonts/fontawesome-webfont.eot']}");  
   src: url("#{resource['fonts/fontawesome-webfont.eot']}?#iefix")format('embedded-opentype'),  
   url("#{resource['fonts/fontawesome-webfont.woff2']}")format('woff2'),
   url("#{resource['fonts/fontawesome-webfont.woff']}")format('woff'),
    url("#{resource['fonts/fontawesome-webfont.ttf']}")format('truetype'),
     url("#{resource['fonts/fontawesome-webfont.svg']}?#fontawesomeregular")format('svg');  
-  
-  /*
-  src: url("/PedidoVenda/javax.faces.resource/fonts/fontawesome-webfont.eot");
-  src: url("/PedidoVenda/javax.faces.resource/fonts/fontawesome-webfont.eot#iefix") format('embedded-opentype'),
-      url("/PedidoVenda/javax.faces.resource/fonts/fontawesome-webfont.woff2") format('woff2'),
-      url("/PedidoVenda/javax.faces.resource/fonts/fontawesome-webfont.woff") format('woff'),
-      url("/PedidoVenda/javax.faces.resource/fonts/fontawesome-webfont.ttf") format('truetype'),
-      url("/PedidoVenda/javax.faces.resource/fonts/fontawesome-webfont.svg#fontawesomeregular") format('svg')*/
-  
   font-weight: normal;
   font-style: normal;
 }
