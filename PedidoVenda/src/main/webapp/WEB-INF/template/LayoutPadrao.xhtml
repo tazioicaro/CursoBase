@@ -11761,11 +11761,12 @@ a, div, span, input, textarea, li, strong, button {
 	
 	<h:outputStylesheet library="css" name="venture-font.css" />
 	<h:outputStylesheet library="css" name="venture-layout.css" />
-	<h:outputStylesheet library="css" name="animate.css" />
 	<h:outputStylesheet library="css" name="core-layout.css" /> 
+	<h:outputStylesheet library="css" name="sistemas.css" />
+	<h:outputStylesheet library="css" name="animate.css" />	
 	<h:outputStylesheet library="css" name="font-awesome.css" />
 	<h:outputStylesheet library="css" name="nanoscroller.css" />
-	<h:outputStylesheet library="css" name="sistemas.css" />
+	
 	
 	<!--
 	    
@@ -11784,18 +11785,18 @@ a, div, span, input, textarea, li, strong, button {
 	<header id="layout-topbar-cover">
 	<div id="layout-topbar-row">
 		
-		<div style="float: left; margin-left: 1%" id="layout-topbar-left">
+		<div style=" margin-left: 1%" id="layout-topbar-left">
 			<h:link outcome="/Home">
-				<h:graphicImage library="images" name="logo-algaworks-branca.png" />
+				<h:graphicImage library="images" name="logo-algaworks-branca.png"  style="margin-top: 2%; margin-left: 1%;"/>
 			</h:link>
 		</div>
 
-		<div style="float: right; margin-right: 4%" id="layout-topbar-right">
+		<div style="margin-right: 4%" id="layout-topbar-right">
 			<span
-				style="float: left; height: 30px; line-height: 30px; margin-right: 60px">
+				style="float: left; line-height: 4rem; margin-right: 2rem; margin-left: 4rem">
 				Olá #{seguranca.nomeUsuario}! </span>
 
-			<h:form id="layout-topbar-menu-cover" style="display: inline-block">
+			<h:form id="layout-topbar-menu-cover" style="display: inline-block; margin-top: 0.1%; margin-right: 0.5%;">
 				<p:menubar styleClass="menu-sistema">
 					<p:submenu label="Cadastros" >
 						<p:menuitem value="Clientes"  />
