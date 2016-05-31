@@ -15,7 +15,7 @@ import org.primefaces.model.chart.LineChartModel;
 public class GraficosPedidosCriadosBean {
 	
 	//
-	private LineChartModel model = new LineChartModel();
+	private LineChartModel model;
 	
 	
 	public void preRender(){
@@ -29,22 +29,25 @@ public class GraficosPedidosCriadosBean {
 		series.set("2", Math.random()*1000);
 		series.set("3", Math.random()*1000);
 		series.set("4", Math.random()*1000);
-		series.set("5", Math.random()*1000);		
+		series.set("5", Math.random()*1000);	
 		this.model.addSeries(series);
 		
 	}
 	
-	private LineChartModel  initCategoryModel(){		
+	private void  initCategoryModel(){		
+		model = new LineChartModel();
+		
 		this.model.setTitle("Pedidos Criados");
 		this.model.setLegendPosition("e");
 		this.model.setShowPointLabels(true);
-		this.model.getAxes().put(AxisType.X, new CategoryAxis("Vendedor"));
+		this.model.getAxes().put(AxisType.X, new CategoryAxis("Vendedor"));	
         this.model.setAnimate(true);
+        this.model.setMouseoverHighlight(true);
 		
-		LineChartModel modelo = new LineChartModel();
+        
 		adcionarSerie("Todos os pedidos");
 		adcionarSerie("Meus os pedidos");
-		return modelo;
+		
 		
 	}
 
