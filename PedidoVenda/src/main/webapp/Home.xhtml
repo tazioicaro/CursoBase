@@ -4,6 +4,11 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
+	
+	<f:metadata >
+	<f:viewParam name="dummy"/>
+	<f:event listener="#{graficosPedidosCriadosBean.preRender}" type="preRenderView"/>
+	</f:metadata>
 
 	<ui:define name="titulo">Dashboard</ui:define>
 
@@ -490,6 +495,9 @@
 							<h1 class="BigTopic">Empty Page</h1>
 							<span class="gray">Use this page to start from scratch and
 								place your custom content.</span>
+								
+								<p:chart type="line" model="#{graficosPedidosCriadosBean.model}" 
+								style="height:400px"/>
 						</div>
 					</div>
 
