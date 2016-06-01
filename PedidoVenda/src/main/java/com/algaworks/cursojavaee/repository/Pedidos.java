@@ -20,11 +20,13 @@ import org.hibernate.Session;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.transform.Transformers;
 import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.type.Type;
 
 import com.algaworks.cursojavaee.model.Pedido;
 import com.algaworks.cursojavaee.model.Usuario;
+import com.algaworks.cursojavaee.model.vo.DataValor;
 import com.algaworks.cursojavaee.repository.filter.PedidoFilter;
 
 
@@ -36,8 +38,9 @@ public class Pedidos implements Serializable {
 	@Inject
 	private EntityManager manager;
 
-	@SuppressWarnings({ "unchecked" })
+	@SuppressWarnings({"unchecked" })
 	public Map<Date, BigDecimal> valoresTotaisPorData(Integer numeroDeDias, Usuario criadoPor) {
+		
 		Session session = manager.unwrap(Session.class);
 		
 		numeroDeDias -= 1;
@@ -66,12 +69,12 @@ public class Pedidos implements Serializable {
 			criteria.add(Restrictions.eq("vendedor", criadoPor));
 		}
 		
-//		List<DataValor> valoresPorData = criteria
-//				.setResultTransformer(Transformers.aliasToBean(DataValor.class)).list();
-//		
-//		for (DataValor dataValor : valoresPorData) {
-//			resultado.put(dataValor.getData(), dataValor.getValor());
-//		}
+		List<DataValor> valoresPorData = criteria
+				.setResultTransformer(Transformers.aliasToBean(DataValor.class)).list();
+		
+		for (DataValor dataValor : valoresPorData) {
+			resultado.put(dataValor.getData(), dataValor.getValor());
+		}
 		
 		return resultado;
 	}
@@ -88,7 +91,11 @@ public class Pedidos implements Serializable {
 		
 		return mapaInicial;
 	}
-	
+	/**
+	 * 
+	 * @param filtro para a página de pesquisaPedidos Bean
+	 * @return
+	 */
 	private Criteria criarCriteriaParaFiltro(PedidoFilter filtro) {
 		Session session = this.manager.unwrap(Session.class);
 		
