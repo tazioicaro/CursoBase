@@ -1,14 +1,93 @@
 <ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
 	xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://xmlns.jcp.org/jsf/html"
-    xmlns:f="http://xmlns.jcp.org/jsf/core"
-    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-    xmlns:p="http://primefaces.org/ui">
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<style>
+.ui-button-text, .ui-button-text-only .ui-button-text {
+    padding: 15px !important;
+    transition: none !important;
+}
+body{
+background-color: #414c47 !important;
+}
+.OrangeBack {
+    background-color: #f15f5f;
+}
+</style>
+
 
 	<ui:define name="titulo">Acesso negado</ui:define>
-	
 	<ui:define name="corpo">
-		<h1>Você não possui permissão para acessar esta página.</h1>
+		<div class="Wid80 MarAuto">
+			<div class="Wid70 MarAuto WidAutoOnMobile TexAlCenter">
+
+				<div class="EmptyBox20 ShowOnDesktop"></div>
+				<div class="EmptyBox20 ShowOnMobile"></div>
+				<div class="Wid50 MarAuto WidAutoOnMobile">
+					<div class="Wid100 FontPoppinsRegular White Fs18">Desculpe-nos, mas
+						Você não possui permissão para acessar esta	página !</div>
+					<div class="EmptyBox30"></div>
+					<div class="Card ui-fluid ShadowEffect OrangeBack">
+						<div class="EmptyBox20"></div>
+						<div class="Container100">
+							<i class="icon-preview Fs100 White"></i>
+						</div>
+						<div class="Container100 FontPoppinsSemiBold Fs28 White Opac50">
+							Acesso negado <br /> Por favor, analise suas permissões.
+						</div>
+						<div class="EmptyBox10"></div>
+						<div class="Container100">
+							<p:commandButton id="voltar" name="voltar" 
+								styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only BlueButton"
+								onclick="window.open('Home.xhtml','_self')" value="Retornar à pagina principal">
+								
+							</p:commandButton>
+							
+						</div>
+
+						<div class="EmptyBox10"></div>
+						<div class="Separator"></div>
+						<div class="EmptyBox10"></div>
+
+						<span class="DispBlock OvHidden FontPoppinsSemiBold Fs16 White">Ou entre
+						em contato com o a gerência</span>
+						<div class="EmptyBox10"></div>
+						<div class="Container100">
+							<p:inputText id="nome" name="nome" 
+								placeholder="Seu E-mail" style="padding: 15px !important;"
+								styleClass="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+							
+						</div>
+						<div class="Container100">
+							<p:inputTextarea id="mensagem" name="mensagem" cols="20" rows="3"
+								placeholder="Sua Mensagem" maxlength="2147483647"
+								style="padding: 15px !important;"
+								styleClass="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all ui-inputtextarea-resizable"></p:inputTextarea>
+							
+						</div>
+						<div class="Container100">
+							<p:commandButton id="enviar" name="enviar"
+								styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only YellowButton"
+								value="Enviar para a Gerência">								
+							</p:commandButton>
+							
+						</div>
+
+					</div>
+
+					<div class="EmptyBox20"></div>
+					<div class="Wid100 FontPoppinsRegular Fs12 TransparentWhite">
+						<i class="fa fa-copyright DispInlBlock"></i> PrimeFaces Venture
+						Personalizado <br />Todos os direitos reservados.
+					</div>
+					<div class="EmptyBox30"></div>
+				</div>
+			</div>
+		</div>
+
 	</ui:define>
-	
 </ui:composition>
+
