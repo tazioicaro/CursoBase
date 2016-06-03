@@ -6,15 +6,40 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core">
 
-	<style>
+
+<h:head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<style>
 .ui-button-text, .ui-button-text-only .ui-button-text {
     padding: 15px !important;
     transition: none !important;
 }
 
-
 </style>
-<body class="PaleBlueBG">
+
+<h:outputScript library="js" name="calendario_pt_BR.js" />
+	<h:outputScript library="js" name="jquery.maskMoney.js" />
+	<h:outputScript library="js" name="validadores.js" />
+	<h:outputScript library="js" name="VenturePrimefaces.js" /> 
+	<h:outputScript library="js" name="VentureLayout.js" />
+	<h:outputScript library="js" name="nanoscroller.js" />
+	
+	
+	<h:outputStylesheet library="css" name="venture-font.css" />
+	<h:outputStylesheet library="css" name="venture-layout.css" />
+	<h:outputStylesheet library="css" name="core-layout.css" /> 
+	<h:outputStylesheet library="css" name="sistemas.css" />
+	<h:outputStylesheet library="css" name="animate.css" />	
+	<h:outputStylesheet library="css" name="font-awesome.css" />
+
+
+</h:head>
+<h:body class="PaleBlueBG">
         
         <h:form styleClass="Wid100 YellowBack" style="height:20rem;">
        
@@ -89,6 +114,6 @@
 		</div>
 
 </h:form>
-</body>
+</h:body>
 </html>
 
