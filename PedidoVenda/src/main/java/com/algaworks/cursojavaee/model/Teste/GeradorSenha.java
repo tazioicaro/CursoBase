@@ -1,4 +1,4 @@
-package com.algaworks.cursojavaee.security;
+package com.algaworks.cursojavaee.model.Teste;
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
