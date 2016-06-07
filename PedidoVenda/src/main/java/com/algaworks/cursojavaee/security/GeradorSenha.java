@@ -2,33 +2,38 @@ package com.algaworks.cursojavaee.security;
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
+import java.text.MessageFormat;
 
-import com.google.common.base.Charsets;
-import com.google.common.hash.Hashing;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class GeradorSenha {
 	
-	public static String geradorHash(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException{
+	public static  String geradorHash(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException{
 		
+		
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String hashedPassword = passwordEncoder.encode(password);
+		
+		/**
 		 String hash
          = Hashing.sha256()
          .hashString(password, Charsets.UTF_8).toString();
 		 
-		 /**
+		 
 		  * Quando for cadastrar utilizar da seguinte forma:
 		  * usuario.setUsuPassword( GeradorSenha.geradorHash(usuario.getUsuPassword()));
 		  */
 
- //String output = MessageFormat.format("{0} hashed to: {1}", password, hash);
+ //String output = MessageFormat.format("{0} hashed to: {1}", password, passwordEncoder.encode(hashedPassword));
 		 
-		 return hash; 
+		 return passwordEncoder.encode(hashedPassword); 
 
  //System.out.println(output);
 }
 
 public static void main(String[] args) throws NoSuchAlgorithmException, UnsupportedEncodingException {
- // you can generate as many as you need ... modify to suite...
-//	geradorHash("tazio");
+//  you can generate as many as you need ... modify to suite...
+//	geradorHash("123");
 //	geradorHash("eduardo");
 //	geradorHash("felipe");
 }
