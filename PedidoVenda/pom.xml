@@ -12,7 +12,7 @@
 
 	</properties>
 
-	<dependencies>	
+	<dependencies>
 
 		<!-- Prime Faces 5.3 -->
 		<dependency>
@@ -20,8 +20,8 @@
 			<artifactId>primefaces</artifactId>
 			<version>5.3</version>
 			<scope>compile</scope>
-		</dependency>		
-		
+		</dependency>
+
 		<!-- JSF MOJARRA 2.2 -->
 		<dependency>
 			<groupId>org.glassfish</groupId>
@@ -191,7 +191,15 @@
 			<artifactId>spring-security-config</artifactId>
 			<version>3.2.5.RELEASE</version>
 		</dependency>
+		
+<!-- Spring Security (criptografia) -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-crypto</artifactId>
+			<version>4.1.0.RELEASE</version>
+		</dependency>
 
+<!-- relatórios -->
 		<dependency>
 			<groupId>net.sf.jasperreports</groupId>
 			<artifactId>jasperreports</artifactId>

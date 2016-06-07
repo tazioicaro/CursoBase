@@ -56,6 +56,8 @@ public class Seguranca {
 	 * Garanti para que apenas os Funcionáro com permissão de Vendedores ou
 	 * Administradores possam emitir ou cancelar um pedido o perfil de auxiliar
 	 * não poderá fazer isso.
+	 * 
+	 * Utilizado no jsf
 	 */
 
 	public boolean isEmitirPedidoPermitido() {
