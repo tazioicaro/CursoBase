@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.algaworks.cursojavaee.model.Grupo;
 import com.algaworks.cursojavaee.model.Usuario;
@@ -25,7 +27,8 @@ public class AppUsersDetailsService implements UserDetailsService {
 	 * A classe UsuarioSistema é um tipo UserDetails
 	 */
 	
-	
+	@Autowired
+	   private BCryptPasswordEncoder encoder;	
 	
 	@Override
 	public UserDetails loadUserByUsername(String email)
@@ -40,8 +43,9 @@ public class AppUsersDetailsService implements UserDetailsService {
 		 if(usuario !=null){
 			user =  new UsuarioSistema(usuario, getGrupos(usuario));
 		 }
-	
-		return user;
+		 
+			 return user;
+			
 	}
 
 	private Collection<? extends GrantedAuthority> getGrupos(Usuario usuario) {

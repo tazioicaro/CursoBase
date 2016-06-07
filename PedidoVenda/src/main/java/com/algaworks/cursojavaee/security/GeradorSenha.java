@@ -8,7 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class GeradorSenha {
 	
-	public static  String geradorHash(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException{
+	public static  void geradorHash(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException{
 		
 		
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -24,16 +24,16 @@ public class GeradorSenha {
 		  * usuario.setUsuPassword( GeradorSenha.geradorHash(usuario.getUsuPassword()));
 		  */
 
- //String output = MessageFormat.format("{0} hashed to: {1}", password, passwordEncoder.encode(hashedPassword));
+ String output = MessageFormat.format("{0} hashed to: {1}", password, hashedPassword);
 		 
-		 return passwordEncoder.encode(hashedPassword); 
+		//return hashedPassword; 
 
- //System.out.println(output);
+ System.out.println(output);
 }
 
 public static void main(String[] args) throws NoSuchAlgorithmException, UnsupportedEncodingException {
 //  you can generate as many as you need ... modify to suite...
-//	geradorHash("123");
+	geradorHash("123");
 //	geradorHash("eduardo");
 //	geradorHash("felipe");
 }

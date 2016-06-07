@@ -83,7 +83,7 @@ pelo servlet mas pelo JSF para o mesmo entender -->
 	<authentication-manager>
 
 		<authentication-provider user-service-ref="appUsersDetailsService">
-			<!----> <password-encoder hash="bcrypt"/> 
+			 <password-encoder hash="bcrypt"/>
 
 		</authentication-provider>
 	</authentication-manager>
