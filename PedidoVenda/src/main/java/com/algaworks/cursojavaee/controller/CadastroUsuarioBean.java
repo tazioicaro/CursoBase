@@ -38,8 +38,15 @@ public class CadastroUsuarioBean implements Serializable {
 	//Adicionar um inicalizar para que possa haver a edição do Usuário
 	
 	
-	public void limpar(){
+	public void inicializar() {
+		if (this.usuario == null) {
+			limpar();
+		}
+	}
 		
+	
+	public void limpar(){
+		usuario = new Usuario();
 	}
 
 	public Usuario getUsuario() {
