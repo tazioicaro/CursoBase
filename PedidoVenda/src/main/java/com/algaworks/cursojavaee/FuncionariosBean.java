@@ -1,4 +1,4 @@
-package com.algaworks.cursojavaee.controller;
+package com.algaworks.cursojavaee;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -9,8 +9,6 @@ import java.util.List;
 
 import javax.faces.bean.SessionScoped;
 import javax.inject.Named;
-
-import com.algaworks.cursojavaee.Funcionario;
 
 @Named
 @SessionScoped

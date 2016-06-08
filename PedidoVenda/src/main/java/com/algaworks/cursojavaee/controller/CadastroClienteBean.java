@@ -6,25 +6,25 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.algaworks.cursojavaee.model.Usuario;
-import com.algaworks.cursojavaee.service.CadastroUsuarioService;
+import com.algaworks.cursojavaee.model.Cliente;
+import com.algaworks.cursojavaee.service.CadastroClienteService;
 import com.algaworks.cursojavaee.service.NegocioException;
 import com.algaworks.cursojavaee.util.jsf.FacesUtil;
 
 @Named
 @ViewScoped
-public class CadastroUsuarioBean implements Serializable {	
+public class CadastroClienteBean implements Serializable {	
 	private static final long serialVersionUID = 1L;
 	
 
-	private Usuario usuario = new Usuario();;
+	private Cliente cliente = new Cliente();;
 	
 	@Inject
-	private CadastroUsuarioService cadastroUsuarioService;
+	private CadastroClienteService cadastroClienteService;
 	
 	
 	
-	public CadastroUsuarioBean() {
+	public CadastroClienteBean() {
 		super();
 		
 	}
@@ -32,7 +32,7 @@ public class CadastroUsuarioBean implements Serializable {
 	public void cadastrar(){
 		try{
 			
-		this.usuario = cadastroUsuarioService.salvar(this.usuario);		
+		this.cliente = cadastroClienteService.salvar(this.cliente);		
 		FacesUtil.addInforMessage("Usuário criado com sucesso!");
 		
 		}catch(NegocioException ne){
@@ -44,27 +44,27 @@ public class CadastroUsuarioBean implements Serializable {
 	
 	
 	public void inicializar() {
-		if (this.usuario == null) {
+		if (this.cliente == null) {
 			limpar();
 		}
 	}
 		
 	
 	public void limpar(){
-		usuario = new Usuario();
+		cliente = new Cliente();
 	}
 
-	public Usuario getUsuario() {
-		return usuario;
+	public Cliente getCliente() {
+		return cliente;
 	}
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setUsuario(Cliente cliente) {
+		this.cliente = cliente;
 	}
 	
 	
 	public boolean isEditando(){
-		return this.usuario.getId() !=null;
+		return this.cliente.getId() !=null;
 	}
 	
 	
