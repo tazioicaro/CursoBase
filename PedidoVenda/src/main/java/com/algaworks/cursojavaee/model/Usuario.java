@@ -8,6 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 public class Usuario implements Serializable {
@@ -22,8 +25,12 @@ public class Usuario implements Serializable {
 	@Id
 	@GeneratedValue
 	private Long id;
+	
+	@NotBlank
 	private String nome;
+	@NotBlank
 	private String email;
+	@NotBlank
 	private String senha;
 	
 	@OneToMany

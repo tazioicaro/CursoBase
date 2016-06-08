@@ -41,5 +41,21 @@ public class Usuarios implements Serializable {
 		}
 		return usuario;
 	}
+	
+	public Usuario guardar (Usuario usuario){
+		return this.manager.merge(usuario);
+	}
+	
+	public Usuario porNome (String nome){
+		Usuario usuario = null;
+		try{
+			usuario = this.manager.createQuery("from Usuario where lower(nome) =:nome", Usuario.class)
+					.setParameter("nome", nome.toLowerCase())
+					.getSingleResult();
+		}catch (NoResultException e){
+			
+		}
+		return usuario;
+	}
 
 }

@@ -66,6 +66,10 @@ pelo servlet mas pelo JSF para o mesmo entender -->
 			access="hasAnyRole('VENDEDORES','AUXILIARES','ADMINISTRADORES')" />
 		
 		<intercept-url pattern="/AcessoNegado.xhtml" access="isAuthenticated()" />
+		
+		<intercept-url pattern="/usuarios/**"
+			access="hasAnyRole('VENDEDORES','ADMINISTRADORES')" />
+			
 
 		<intercept-url pattern="/**" access="denyAll" />
 		
