@@ -14,7 +14,10 @@ public class CadastroClienteService implements Serializable {
 	private Clientes clientes;
 	
 	public Cliente salvar(Cliente cliente){
-		return cliente;
+		/**
+		 * Inserir as restrição para salvamento
+		 */
+		return clientes.guardar(cliente);
 	}
 
 }

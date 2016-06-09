@@ -13,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -77,7 +78,8 @@ public class Cliente  implements Serializable{
 	}
 	public void setDocumntoReceitaFederal(String documntoReceitaFederal) {
 		this.documntoReceitaFederal = documntoReceitaFederal;
-	}
+		
+		}
 	
 	
 	public List<Endereco> getEnderecos() {
@@ -91,6 +93,16 @@ public class Cliente  implements Serializable{
 	}
 	public void setTipo(TipoPessoa tipo) {
 		this.tipo = tipo;
+	}
+	
+	@Transient
+	public boolean isCPF(){
+		return TipoPessoa.FISICA.equals(this.tipo);
+	}
+	
+	@Transient
+	public boolean isCNPJ(){
+		return TipoPessoa.JURIDICA.equals(this.tipo);
 	}
 	
 	@Override

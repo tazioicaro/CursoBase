@@ -8881,8 +8881,8 @@ hr.ui-widget-header {
 			<h:form id="layout-topbar-menu-cover" style="display: inline-block; margin-top: 0.1%; margin-right: 0.5%;">
 				<p:menubar styleClass="menu-sistema">
 					<p:submenu label="Cadastros" >
-						<p:menuitem value="Clientes"  />
-						<p:menuitem value="Usuários" />
+						<p:menuitem value="Clientes"  outcome="/clientes/PesquisaClientes" />
+						<p:menuitem value="Usuários" outcome="/usuarios/PesquisaUsuarios"/>
 						<p:separator />
 						<p:menuitem value="Categorias" />
 						<p:menuitem value="Produtos" outcome="/produtos/PesquisaProdutos" />
@@ -8954,6 +8954,17 @@ hr.ui-widget-header {
 		 configurarMoeda();
 		 
 	 });
+	 
+	 function configurarDocumentoReceitaFederal() {
+		    $('.cpf').click(function () {
+		        $('.cpf').show();
+		        $('.cnpj').hide();
+		    });
+		    $('.radio2').click(function () {
+		        $('.cnpj').show();
+		        $('.cpf').hide();
+		    });
+		});
 	 
 	</script>
 </h:body>

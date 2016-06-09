@@ -23,7 +23,7 @@
 		
 		
 	
-		<h:form  styleClass="layout-portlets-cover"
+		<h:form  id="form" styleClass="layout-portlets-cover"
 			style="
     	display: block !important;
     height: 100% !important;
@@ -48,7 +48,7 @@
 					<p:button value="Novo" outcome="/usuarios/CadastroUsuario" />
 
 					<p:commandButton value="Salvar" id="botaoSalvar"
-						action="#{cadastroUsuarioBean.cadastrar}" update="@form" ajax="true"
+						action="#{cadastroClienteBean.cadastrar}" update="@form" ajax="true"
 						validateClient="true" />
 
 				</p:toolbarGroup>
@@ -62,16 +62,29 @@
 				style="width:100%; margin-top:20px" columnClasses="rotuloP, campoP">
 				<p:outputLabel value="Nome" for="nome"/>
 				<p:inputText id="nome" size="120" maxlength="120"
-					value="#{cadastroUsuarioBean.usuario.nome}"/>
+					value="#{cadastroClienteBean.cliente.nome}"/>
 				
 
 				<p:outputLabel value="E-mail " for="email" />
 				<p:inputText id="email" size="80" maxlength="80"
-					value="#{cadastroUsuarioBean.usuario.email}"/>
+					value="#{cadastroClienteBean.cliente.email}"/>
 				
-				<p:outputLabel value="Senha " for="senha" />
-				<p:password id="senha" size="80" maxlength="80"
-					value="#{cadastroUsuarioBean.usuario.senha}"/>
+				<p:outputLabel value="Pessoa ou Jurídica " for="pessoa" />
+				<p:selectOneRadio value="#{cadastroClienteBean.cliente.tipo}" id="pessoa"
+					styleClass="ui-selectonemenu-label ui-inputfield ui-corner-all" >					
+					<f:selectItems value="#{cadastroClienteBean.tipoPessoa}" var="tipoPessoa" itemLabel="#{tipoPessoa.descricao}"					
+					itemValue="#{tipoPessoa}"  />
+					<p:ajax listener="#{cadastroClienteBean.carregarInputDocumentoIdentificacao}" update="exibir"/>
+					</p:selectOneRadio>										
+				<p:columnGroup id="exibir">
+					<p:outputLabel value="CPF" for="cpf" rendered="#{cadastroClienteBean.cpf}"/>
+					<p:inputMask id="cpf" mask="999.999.999-99" value="#{cadastroClienteBean.cliente.documntoReceitaFederal}" 
+					rendered="#{cadastroClienteBean.cpf}"/>
+					
+					<p:outputLabel value="CNPJ" for="cnpj" rendered="#{cadastroClienteBean.cnpj}"/>
+					<p:inputMask  id="cnpj" mask="99.999.999/9999-99" value="#{cadastroClienteBean.cliente.documntoReceitaFederal}" 
+					rendered="#{cadastroClienteBean.cnpj}"/>					
+					</p:columnGroup>
 
 			</p:panelGrid>
 

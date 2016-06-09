@@ -6,6 +6,9 @@ import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 import javax.inject.Inject;
 
+import org.apache.commons.lang.StringUtils;
+import org.apache.poi.util.StringUtil;
+
 import com.algaworks.cursojavaee.model.Cliente;
 import com.algaworks.cursojavaee.repository.Clientes;
 
@@ -28,7 +31,7 @@ public class ClienteConverter implements Converter {
 	public Object getAsObject(FacesContext context, UIComponent component, String value) {
          Cliente retorno = null;
 		
-         if(value != null){
+         if(StringUtils.isNotEmpty(value)){
         	 
         	 Long id = new Long(value);
         	 retorno =  this.clientes.porID(id);
@@ -41,9 +44,10 @@ public class ClienteConverter implements Converter {
 	@Override
 	public String getAsString(FacesContext context, UIComponent component, Object value) {
 	if(value != null){
-		return ((Cliente) value).getId().toString();
+		Cliente cliente = (Cliente)value;
+		return cliente.getId() == null ? null : cliente.getId().toString();
 	}
-		return null;
+		return "";
 	}
 
 
