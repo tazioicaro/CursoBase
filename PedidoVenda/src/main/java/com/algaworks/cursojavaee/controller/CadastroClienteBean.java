@@ -2,6 +2,8 @@ package com.algaworks.cursojavaee.controller;
 
 import java.io.Serializable;
 
+import javax.faces.component.html.HtmlSelectOneRadio;
+import javax.faces.event.ValueChangeEvent;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -21,18 +23,21 @@ public class CadastroClienteBean implements Serializable {
 	private Cliente cliente;
 	
 	@Inject
-	private CadastroClienteService cadastroClienteService;
+	private CadastroClienteService cadastroClienteService;	
 	
-	
+	private boolean cpf; 
+	private boolean cnpj; 
+	private HtmlSelectOneRadio radio;
 	
 	public CadastroClienteBean() {
 		super();
 		cliente = new Cliente();
-		
+		cpf = false; 
+		 cnpj = false; 
+		 radio = null;
 	}
 	
-	private boolean cpf = false; 
-	private boolean cnpj = false; 
+	
 
 	public void cadastrar(){
 		try{
@@ -48,20 +53,29 @@ public class CadastroClienteBean implements Serializable {
 	
 	public void carregarInputDocumentoIdentificacao(){
 		
-		if(this.cliente.getTipo().equals("FISICA")){
+		if(this.radio.getValue().toString().equals("FISICA")){
 			cliente.setTipo(TipoPessoa.FISICA);
 			this.cpf=true;
-		}else{
-			cliente.setTipo(TipoPessoa.JURIDICA);
+			this.cnpj=false;
+		}else if (this.radio.getValue().toString().equals("JURIDICA")){
+			this.cliente.setTipo(TipoPessoa.JURIDICA);
 			this.cnpj = true;
+			this.cpf = false;
 		}
 		
 	}
 	
+	//Pegando o valor da radiobutton e colocando numa variável
+	public void pegarDadosEscolhido( ValueChangeEvent event ){
+		  radio = (HtmlSelectOneRadio)event.getComponent();  
+		  
+		 // String nome = radio.getValue().toString();		  
+		 // System.out.println("Valor selecionado foi: " + nome);
+		  
+	}
 	
-	//Adicionar um inicalizar para que possa haver a edição do Usuário
 	
-	
+	//Adicionar um inicalizar para que possa haver a edição do Usuário	
 	public void inicializar() {
 		if (this.cliente == null) {
 			limpar();
@@ -77,6 +91,9 @@ public class CadastroClienteBean implements Serializable {
 	
 	public void limpar(){
 		cliente = new Cliente();
+		 cpf = false; 
+		 cnpj = false; 
+		 radio= null;
 	}
 
 	public Cliente getCliente() {
@@ -110,6 +127,18 @@ public class CadastroClienteBean implements Serializable {
 
 	public void setCpf(boolean cpf) {
 		this.cpf = cpf;
+	}
+
+
+
+	public HtmlSelectOneRadio getRadio() {
+		return radio;
+	}
+
+
+
+	public void setRadio(HtmlSelectOneRadio radio) {
+		this.radio = radio;
 	}
 	
 	

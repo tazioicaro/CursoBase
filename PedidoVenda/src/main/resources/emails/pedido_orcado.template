@@ -1,0 +1,389 @@
+<html>
+    <body>
+    
+<table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#151826" style="border-spacing:0;border-collapse:collapse;">
+  <tbody>
+  <tr>
+    <td align="center" valign="top" bgcolor="#151826" style="background-color:#151826;border-collapse:collapse;">
+	
+	<table width="640" border="0" cellspacing="0" cellpadding="0" class="ecxheader-row" style="border-spacing:0;border-collapse:collapse;">
+        <tbody>
+		<tr>
+          <td style="border-collapse:collapse;">
+		  <a href="http://www.pontofrio.com.br?utm_source=PontoFrionews&amp;utm_medium=Transacional&amp;utm_campaign=PedRecebido&amp;cid=10076" target="_blank" style="color:#8a8c93;text-decoration:none;"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fheader-logo.gif" alt="pontofrio.com" width="640" height="81" class="ecxdestaque" style="display:block;border:none;text-decoration:none;"></a> 
+		  <a href="http://www.pontofrio.com.br?utm_source=PontoFrionews&amp;utm_medium=Transacional&amp;utm_campaign=PedRecebido&amp;cid=10076" target="_blank" style="color:#8a8c93;text-decoration:none;" class=""><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fheader-icone.gif" alt="Recebemos seu pedido" width="640" height="150" class="ecxdestaque" style="display:block;border:none;text-decoration:none;"></a>
+		  </td>
+        </tr>
+      </tbody>
+	  </table>
+      <table border="0" width="640" cellpadding="0" cellspacing="0" class="ecxcontent-row" bgcolor="#FFFFFF" style="border-spacing:0;border-collapse:collapse;">
+        <tbody>
+		<tr>
+          <td align="left" valign="top" bgcolor="#FFFFFF" class="ecxcontainer-padding" style="background-color:#FFFFFF;padding-left:30px;padding-right:30px;line-height:22px;font-family:Tahoma, sans-serif;font-size:14px;color:#151826;border-collapse:collapse;">
+		  <div style="height:30px;">&nbsp;</div>
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="ecxexpander" style="border-spacing:0;border-collapse:collapse;">
+              <tbody>
+			  <tr>
+                <td width="50%" align="left" class="ecxforce-col" style="border-collapse:collapse;">
+				<div class="ecxnome-cliente" style="font-size:18px;font-family:Tahoma, sans-serif;text-align:left;color:#151826;">Olá $pedido.cliente.nome,</div>
+				</td>
+                <td width="50%" align="right" class="ecxforce-col" style="border-collapse:collapse;">
+				<div class="ecxn-pedido" style="color:#151826;line-height:30px;font-family:Tahoma, sans-serif;font-size:14px;">Nº do Pedido: <strong>$pedido.id</strong>
+				</div>
+				</td>
+              </tr>
+            </tbody>
+			</table>
+			
+            <div style="height:25px;">&nbsp;</div>
+            <table width="510" border="0" align="center" cellpadding="0" cellspacing="0" class="ecxpassos-compra" style="border-spacing:0;border-collapse:collapse;">
+              <tbody>
+			  <tr>
+                <td width="48" style="border-collapse:collapse;">
+				<img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fpassos-item01.gif" alt="Pedido recebido" width="52" height="83" style="display:block;border:none;text-decoration:none;"></td>
+                <td valign="top" style="border-collapse:collapse;">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ecxexpander" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody>
+					<tr>
+                      <td height="23" style="height:23px;border-collapse:collapse;"></td>
+                    </tr>
+                    <tr>
+                      <td height="2" bgcolor="#d7d7dd" style="background-color:#d7d7dd;height:2px;width:100%;border-collapse:collapse;">
+					  </td>
+                    </tr>
+                  </tbody>
+				  </table>
+				  </td>
+                <td width="58" style="border-collapse:collapse;">
+				<img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fpassos-item02.gif" alt="pedido aprovado" width="58" height="83" style="display:block;border:none;text-decoration:none;">
+				</td>
+                <td valign="top" style="border-collapse:collapse;">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ecxexpander" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody>
+					<tr>
+                      <td height="23" style="height:23px;border-collapse:collapse;">
+					  </td>
+                    </tr>
+                    <tr>
+                      <td height="2" bgcolor="#d7d7dd" style="background-color:#d7d7dd;height:2px;width:100%;border-collapse:collapse;">
+					  </td>
+                    </tr>
+                  </tbody>
+				  </table>
+				  </td>
+                <td width="69" style="border-collapse:collapse;">
+				<img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fpassos-item03.gif" alt="pedido aprovado" width="69" height="83" style="display:block;border:none;text-decoration:none;">
+				</td>
+                <td valign="top" style="border-collapse:collapse;">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ecxexpander" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody>
+					<tr>
+                      <td height="23" style="height:23px;border-collapse:collapse;">
+					  </td>
+                    </tr>
+                    <tr>
+                      <td height="2" bgcolor="#d7d7dd" style="background-color:#d7d7dd;height:2px;width:100%;border-collapse:collapse;">
+					  </td>
+                    </tr>
+                  </tbody>
+				  </table>
+				  </td>
+                <td width="70" style="border-collapse:collapse;">
+				<img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fpassos-item04.gif" alt="pedido aprovado" width="70" height="83" style="display:block;border:none;text-decoration:none;">
+				</td>
+                <td valign="top" style="border-collapse:collapse;">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ecxexpander" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody>
+					<tr>
+                      <td height="23" style="height:23px;border-collapse:collapse;">
+					  </td>
+                    </tr>
+                    <tr>
+                      <td height="2" bgcolor="#d7d7dd" style="background-color:#d7d7dd;height:2px;width:100%;border-collapse:collapse;">
+					  </td>
+                    </tr>
+                  </tbody>
+				  </table>
+				  </td>
+                <td width="54" style="border-collapse:collapse;">
+				<img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fpassos-item05.gif" alt="pedido aprovado" width="54" height="83" style="display:block;border:none;text-decoration:none;">
+				</td>
+              </tr>
+            </tbody>
+			</table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" height="70" style="height:70px;border-spacing:0;border-collapse:collapse;">
+              <tbody>
+			  <tr>
+                <td height="70" valign="middle">
+				<div style="border-bottom:1px solid #f0f0f0;height:1px;line-height:1px;width:100%;display:block;">&nbsp;</div>
+				</td>
+              </tr>
+            </tbody>
+			</table>
+            <div class="ecxtexto-cinza" style="line-height:22px;font-family:Tahoma, sans-serif;color:#8a8c93;font-size:14px;">Obrigado por escolher o <strong>Pontofrio.com</strong>. A partir de agora você receberá todas as etapas da sua compra por e-mail.</div>
+			
+            <div style="height:25px;">&nbsp;</div>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f0eff4" style="background-color:#f0eff4;border-spacing:0;border-collapse:collapse;">
+              <tbody>
+			  <tr>
+                <td style="border-collapse:collapse;">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody>
+					<tr>
+                      <td width="20" style="border-collapse:collapse;">
+					  <img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbox-cinza-tl.gif" width="20" height="20" style="display:block;border:none;text-decoration:none;">
+					  </td>
+                      <td style="border-collapse:collapse;">
+					  <div style="height:20px;">&nbsp;</div>
+					  </td>
+                      <td width="20" style="border-collapse:collapse;">
+					  <img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbox-cinza-tr.gif" width="20" height="20" style="display:block;border:none;text-decoration:none;">
+					  </td>
+                    </tr>
+                  </tbody>
+				  </table>
+				  </td>
+              </tr>
+              <tr>
+                <td valign="top" style="border-collapse:collapse;">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody>
+					<tr>
+                      <td width="20" style="border-collapse:collapse;">&nbsp;</td>
+                      <td style="font-family:Tahoma, sans-serif;color:#8a8c93;font-size:14px;line-height:23px;border-collapse:collapse;">
+					  <span class="ecxtitulo-maior" style="font-family:Tahoma, sans-serif;color:#151826;line-height:22px;font-size:18px;">Próximo passo:</span>
+					  <br>
+                        O seu pedido será entregue <strong>em até 9 dia(s) útil(eis)</strong> após a aprovação do pagamento. E essa confirmação pode acontecer em até dois dias úteis.
+						</td>
+                      <td width="20" style="border-collapse:collapse;">&nbsp;</td>
+                    </tr>
+                  </tbody>
+				  </table>
+				  </td>
+              </tr>
+              <tr>
+                <td style="border-collapse:collapse;">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody>
+					<tr>
+                      <td width="20" style="border-collapse:collapse;">
+					  <img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbox-cinza-bl.gif" width="20" height="20" style="display:block;border:none;text-decoration:none;">
+					  </td>
+                      <td style="border-collapse:collapse;"><div style="height:20px;">&nbsp;</div>
+					  </td>
+                      <td width="20" style="border-collapse:collapse;">
+					  <img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbox-cinza-br.gif" width="20" height="20" style="display:block;border:none;text-decoration:none;">
+					  </td>
+                    </tr>
+                  </tbody>
+				  </table>
+				  </td>
+              </tr>
+            </tbody></table>
+            <div style="height:25px;">&nbsp;</div>
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="ecxexpander" style="border-spacing:0;border-collapse:collapse;">
+              <tbody><tr>
+                <td width="50%" valign="top" class="ecxforce-col" style="border-collapse:collapse;"><table border="0" cellspacing="0" cellpadding="0" width="100%" align="left" class="ecxcol-2" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody><tr>
+                      <td align="left" valign="top" style="border-collapse:collapse;">
+					  <span style="font-family:Tahoma, Geneva, sans-serif;color:#151826;font-size:14px;display:block;line-height:22px;font-weight:normal;">Resumo do pedido:</span>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family:Tahoma, Geneva, sans-serif;font-size:14px;color:#8a8c93;border-spacing:0;border-collapse:collapse;">
+                          <tbody>
+						  #foreach ($item in $pedido.itens)
+            	            #if ($item.produto.id)
+						  <tr>
+                            <td width="12" valign="top"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbullet-seta.gif" width="12" height="20" style="display:block;border:none;text-decoration:none;">
+							</td>
+                            <td style="padding-bottom:15px;">Produto: $item.produto.nome<br>Qtde: $item.quantidade<br>Valor Unitário: $numberTool.format("¤ #0.00", $item.produto.valorUnitario, $locale)<br>Valor Total: $numberTool.format("¤ #0.00", $item.valorTotal, $locale)<br><br> <br>Total Produtos: R$ 225,90<br>Total Frete: R$ 5,06<br>Total Pedido: R$ 230,96</td>
+                          </tr>
+						   #end
+                        #end
+                        </tbody>
+						</table>
+						</td>
+                    </tr>
+                  </tbody>
+				  </table>
+				  </td>
+                <td width="50%" valign="top" class="ecxforce-col" style="border-collapse:collapse;">
+                <table border="0" cellspacing="0" cellpadding="0" width="92%" align="right" class="ecxcol-2" id="ecxlast-col-2" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody>
+                    <tr>
+                      <td align="left" valign="top"><span style="font-family:Tahoma, Geneva, sans-serif;color:#151826;font-size:14px;display:block;line-height:22px;font-weight:normal;">Forma de Pagamento:</span>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family:Tahoma, Geneva, sans-serif;font-size:14px;color:#8a8c93;border-spacing:0;border-collapse:collapse;">
+                          <tbody><tr>
+                            <td width="12" valign="top">
+                            <img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbullet-seta.gif" width="12" height="20" style="display:block;border:none;text-decoration:none;">
+                            </td>
+                            <td style="padding-bottom:15px;">Cartão de Crédito Visa <br>Quantidade de parcela(s): <b>2</b>x de <b>R$ 115,48</b><br>
+                            </td>
+                          </tr>
+                        </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                  </tbody>
+                  </table>
+                  </td>
+              </tr>
+           
+            </tbody>
+            </table>
+            <br><br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" height="70" style="height:70px;border-spacing:0;border-collapse:collapse;">
+              <tbody>
+              <tr>
+                <td height="70" valign="middle"><div style="border-bottom:1px solid #f0f0f0;height:1px;line-height:1px;width:100%;display:block;">&nbsp;</div>
+                </td>                               
+                
+              </tr>              
+            </tbody>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000" align="center">
+                <tbody>
+                    <tr>
+                    	<td align="center" valign="middle"><a style="text-decoration:none;" href="https://ad.doubleclick.net/ddm/jump/N3446.1922129PONTOFRIO/B8813659.121150206%3bsz=580x220%3bord=%5btimestamp%5d?" target="_blank">
+                    	<font style="font-family:Verdana, Aria;font-size:22px;color:#FFFFFF;">
+                    	<img src="https://ad.doubleclick.net/ddm/ad/N3446.1922129PONTOFRIO/B8813659.121150206%3bsz=580x220%3bord=%5btimestamp%5d?" alt="Você acaba de receber um Prêmio de Associação de R$20 na sua próxima compra no Pontofrio.com!" width="580" height="220" style="display:block;" title="Você acaba de receber um Prêmio de Associação de R$20 na sua próxima compra no Pontofrio.com!" border="0">
+                    	</font>
+                    	</a>
+                    	 </td>
+                    </tr>
+                </tbody>
+            </table>            
+            
+			<div style="height:25px;">&nbsp;</div>
+            
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;border-spacing:0;border-collapse:collapse;">
+              <tbody>
+              <tr>
+                <td style="border-collapse:collapse;"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody>
+                    <tr>
+                      <td width="20" style="border-collapse:collapse;"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbox-amarelo-tl.gif" width="20" height="20" style="display:block;border:none;text-decoration:none;">
+                      </td>
+                      <td height="20" style="border-collapse:collapse;"><div style="border-top:2px solid #f7deb1;height:18px;">&nbsp;</div></td>
+                      <td width="20" style="border-collapse:collapse;"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbox-amarelo-tr.gif" width="20" height="20" style="display:block;border:none;text-decoration:none;">
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table>
+                  </td>
+              </tr>
+              <tr>
+                <td valign="top" style="border-collapse:collapse;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing:0;border-collapse:collapse;">
+                    <tbody>
+                    <tr>
+                      <td width="20" style="border-left:2px solid #f7deb1;height:auto;border-collapse:collapse;">&nbsp;</td>
+                      <td style="border-collapse:collapse;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody><tr>
+                            <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody><tr>
+                                  <td width="80"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbox-cinza-titulo.png" alt="Dicas" width="80" height="62" style="display:block;border:none;text-decoration:none;">
+                                  </td>
+                                  <td valign="middle" style="text-align:left;font-family:Tahoma, sans-serif;color:#151826;font-size:18px;display:block;">Dica do Pinguim</td>
+                                </tr>
+                              </tbody>
+                              </table>
+                              </td>
+                          </tr>
+                          
+						  <!--
+                          <tr>
+                            <td style="border-collapse:collapse;padding-left:80px;padding-right:40px;font-family:Tahoma, Geneva, sans-serif;font-size:14px;color:#8a8c93;text-align-last:left;" class="ecxdicas"><span style="color:#151826;font-size:14px;display:block;line-height:22px;font-weight:normal;">Fique por dentro da aprovação da compra:</span>
+                              <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family:Tahoma, Geneva, sans-serif;font-size:14px;color:#8a8c93;">
+                                <tbody><tr>
+                                  <td width="12" valign="top"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbullet-seta.gif" width="12" height="20" style="display:block;border:none;text-decoration:none;"></td>
+                                  <td style="padding-bottom:15px;">Boleto bancário: são necessários até dois dias úteis para que aconteça a compensação bancária. Por isso, pagamentos feitos na sexta-feira podem ficar para segunda ou terça-feira, sempre na virada de dia útil. Lembre-se que o pagamento com boleto deve ser feito em uma única parcela no valor integral do título. Não pague outro valor;</td>
+                                </tr>
+                                <tr>
+                                  <td valign="top"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbullet-seta.gif" width="12" height="20" style="display:block;border:none;text-decoration:none;"></td>
+                                  <td style="padding-bottom:15px;">Cartão de crédito e PayPal: a aprovação costuma ocorrer em alguns minutos. Porém, pode levar até 48 horas úteis quando o sistema identifica alguma divergência. Nestes casos nossa equipe entra em contato para confirmar os dados;</td>
+                                </tr>
+                                <tr>
+                                  <td valign="top"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbullet-seta.gif" width="12" height="20" style="display:block;border:none;text-decoration:none;"></td>
+                                  <td style="padding-bottom:15px;">Qualquer divergência de informações cadastrais ou de pagamento, nós entraremos em contato com você antes de aprovar o pedido, em até dois dias úteis.</td>
+                                </tr>
+                              </tbody>
+                              </table>
+                              <span style="color:#151826;font-size:14px;display:block;line-height:22px;font-weight:normal;">Alteração de pedido:</span>
+                              <table cellpadding="0" cellspacing="0" border="0" style="font-family:Tahoma, Geneva, sans-serif;font-size:14px;color:#8a8c93;">
+                                <tbody><tr>
+                                  <td width="12" valign="top"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbullet-seta.gif" width="12" height="20" style="display:block;border:none;text-decoration:none;"></td>
+                                  <td style="padding-bottom:15px;">A partir deste momento não é possível acrescentar ou tirar itens no pedido. O endereço de entrega também não pode mais ser alterado. </td>
+                                </tr>
+                              </tbody>
+                              </table>
+                              <span style="color:#151826;font-size:14px;display:block;line-height:22px;font-weight:normal;">Sobre a entrega:</span>
+                              <table cellpadding="0" cellspacing="0" border="0" style="font-family:Tahoma, Geneva, sans-serif;font-size:14px;color:#8a8c93;">
+                                <tbody>
+                                <tr>
+                                  <td width="12" valign="top"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbullet-seta.gif" width="12" height="20" style="display:block;border:none;text-decoration:none;"></td>
+                                  <td style="padding-bottom:15px;">Para compras feitas a partir de uma lista de casamento, a entrega será feita na data e local determinado pelos noivos;</td>
+                                </tr>
+                                <tr>
+                                  <td valign="top"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbullet-seta.gif" width="12" height="20" style="display:block;border:none;text-decoration:none;"></td>
+                                  <td style="padding-bottom:15px;">Se você escolheu um produto digital por download e/ou um serviço de suporte/instalação, um novo e-mail chegará contendo o código de ativação e instruções necessárias para o download; </td>
+                                </tr>
+                                <tr>
+                                  <td valign="top"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbullet-seta.gif" width="12" height="20" style="display:block;border:none;text-decoration:none;"></td>
+                                  <td style="padding-bottom:15px;">Confira as dimensões da sua residência para certificar-se de que o produto passará normalmente. Nós não nos responsabilizamos por desmontagens, transporte por escadas/elevadores ou por guincho e içamento. Qualquer despesa é de responsabilidade do cliente.</td>
+                                </tr>
+                              </tbody>
+                              </table>
+                              <span style="color:#151826;font-size:14px;display:block;line-height:22px;font-weight:normal;">Emissão da Nota Fiscal Eletrônica:</span>
+                              <table cellpadding="0" cellspacing="0" border="0" style="font-family:Tahoma, Geneva, sans-serif;font-size:14px;color:#8a8c93;">
+                                <tbody><tr>
+                                  <td width="12" valign="top"><img src="https://snt148.mail.live.com/Handlers/ImageProxy.mvc?bicild=&amp;canary=9zGRNx31c9lAd4QbPAn85Zs9PzlSn%2fwmx2s8rzlPpWo%3d0&amp;url=http%3a%2f%2fwww.pontofrio-imagens.com.br%2fhtml%2fnews%2femails-transacionais%2f001%2fimages%2fbullet-seta.gif" width="12" height="20" style="display:block;border:none;text-decoration:none;"></td>
+                                  <td style="padding-bottom:15px;">Caso tenha adquirido um serviço – ou produto e serviço –, o valor não estará contemplado na Nota Fiscal Eletrônica/DANFE do seu pedido. A Nota Fiscal Eletrônica/DANFE, referente ao serviço, será emitida em seguida pelo prestador de serviço, após sua execução.</td>
+                                </tr>
+                              </tbody>
+                              </table>
+                              </td>
+                          </tr> -->
+                        </tbody>
+						</table>
+						</td>
+                      <td width="20" style="border-right:2px solid #f7deb1;height:auto;border-collapse:collapse;">&nbsp;</td>
+                    </tr>
+                  </tbody>
+				  </table>
+				  </td>
+              </tr>
+              
+            </tbody>
+            </table>
+            </td>
+        </tr>
+      </tbody>
+      </table>
+      
+      <table width="640" border="0" cellspacing="0" cellpadding="0" class="ecxfooter-row" style="border-spacing:0;border-collapse:collapse;">
+        <tbody><tr>
+          <td height="35" bgcolor="#FFFFFF" style="background-color:#FFFFFF;height:35px;border-collapse:collapse;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="57" valign="middle" bgcolor="#a0090e" style="background-color:#a0090e;line-height:22px;font-family:Tahoma, sans-serif;font-size:14px;color:#fbfbfc;text-align:center;border-collapse:collapse;"><strong>Dúvidas?</strong> Fale com a nossa <a href="http://www.pontofrio.com.br/centraldeatendimento/home.aspx?utm_source=PontoFrionews&amp;utm_medium=Transacional&amp;utm_campaign=PedRecebido&amp;cid=10076" target="_blank" style="color:#ecae29;text-decoration:none;">Central de Atendimento</a></td>
+        </tr>
+        <tr>
+          <td height="75" valign="middle" bgcolor="#e6191e" style="background-color:#e6191e;font-family:Tahoma, sans-serif;font-size:14px;color:#fbfbfc;text-align:center;border-collapse:collapse;"> Viva a inovação<br>
+            <strong>www.pontofrio.com</strong></td>
+        </tr>
+        <tr>
+          <td height="3" bgcolor="#a0090e" style="background-color:#a0090e;height:3px;border-collapse:collapse;"></td>
+        </tr>
+      </tbody></table>
+      <table width="640" border="0" cellspacing="0" cellpadding="0" class="ecxcontent-row" style="border-spacing:0;border-collapse:collapse;">
+        <tbody><tr>
+          <td height="70" align="center" style="font-family:Tahoma, Geneva, sans-serif;font-size:11px;color:#afb0bc;border-collapse:collapse;"><span style="color:#f8f7fa;">Atenção:</span> Esta é uma mensagem automática, não é necessário respondê-la. </td>
+        </tr>
+      </tbody>
+      </table>
+      </td>
+  </tr>
+</tbody>
+</table>
+   </body>
+</html>

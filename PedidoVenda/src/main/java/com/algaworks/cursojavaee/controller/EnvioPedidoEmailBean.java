@@ -34,10 +34,10 @@ public class EnvioPedidoEmailBean implements Serializable {
 		MailMessage message = mailer.novaMensagem();
 		
 		message.to(this.pedido.getCliente().getEmail())
-			.subject("Pedido " + this.pedido.getId())
+			.subject("Recebemos seu Pedido de n°: " + this.pedido.getId())
 			.bodyHtml(new VelocityTemplate(getClass().getResourceAsStream("/emails/pedido.template")))
 			.put("pedido", this.pedido)
-			.put("numberTool", new NumberTool())
+			.put("numberTool", new NumberTool()).addHeader("Cabeçalho", "Cabeçalho")
 			.put("locale", new Locale("pt", "BR"))
 			.send();
 		
