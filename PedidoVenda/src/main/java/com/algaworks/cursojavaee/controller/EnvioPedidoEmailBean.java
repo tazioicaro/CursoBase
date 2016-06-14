@@ -10,7 +10,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.apache.velocity.tools.generic.NumberTool;
-import org.olap4j.metadata.Property.ContentType;
 
 import com.algaworks.cursojavaee.model.Pedido;
 import com.algaworks.cursojavaee.util.jsf.FacesUtil;
@@ -37,8 +36,8 @@ public class EnvioPedidoEmailBean implements Serializable {
 		message.to(this.pedido.getCliente().getEmail())
 			.subject("Recebemos seu Pedido de n°: " + this.pedido.getId())
 			.bodyHtml(new VelocityTemplate(getClass().getResourceAsStream("/emails/pedido.template")))
-			.put("pedido", this.pedido).charset("UTF-8")
-			.put("numberTool", new NumberTool()).addHeader("Cabeçalho", "Cabeçalho")
+			.put("pedido", this.pedido).charset("utf-8")
+			.put("numberTool", new NumberTool())
 			.put("locale", new Locale("pt", "BR"))
 			.send();
 		

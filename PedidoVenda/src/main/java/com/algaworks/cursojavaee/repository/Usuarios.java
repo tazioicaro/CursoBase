@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
 import com.algaworks.cursojavaee.model.Usuario;
+import com.algaworks.cursojavaee.util.jpa.Transactional;
 
 public class Usuarios implements Serializable {
 
@@ -42,10 +43,6 @@ public class Usuarios implements Serializable {
 		return usuario;
 	}
 	
-	public Usuario guardar (Usuario usuario){
-		return this.manager.merge(usuario);
-	}
-	
 	public Usuario porNome (String nome){
 		Usuario usuario = null;
 		try{
@@ -57,5 +54,11 @@ public class Usuarios implements Serializable {
 		}
 		return usuario;
 	}
+	
+	@Transactional
+	public Usuario guardar (Usuario usuario){
+		return this.manager.merge(usuario);
+	}
+	
 
 }

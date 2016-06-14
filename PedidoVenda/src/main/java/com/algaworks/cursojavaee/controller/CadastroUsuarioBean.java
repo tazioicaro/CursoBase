@@ -1,12 +1,15 @@
 package com.algaworks.cursojavaee.controller;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import com.algaworks.cursojavaee.model.Grupo;
 import com.algaworks.cursojavaee.model.Usuario;
+import com.algaworks.cursojavaee.repository.Grupos;
 import com.algaworks.cursojavaee.service.CadastroUsuarioService;
 import com.algaworks.cursojavaee.service.NegocioException;
 import com.algaworks.cursojavaee.util.jsf.FacesUtil;
@@ -22,11 +25,23 @@ public class CadastroUsuarioBean implements Serializable {
 	@Inject
 	private CadastroUsuarioService cadastroUsuarioService;
 	
+	@Inject
+	private Grupos repositorioGrupos;
+	
+	private List<Grupo> grupos;
 	
 	
+	
+	
+
 	public CadastroUsuarioBean() {
 		super();
 		
+	}
+	
+	public List<Grupo> obterGrupos(){
+		
+		return this.grupos = repositorioGrupos.porGrupos();
 	}
 
 	public void cadastrar(){
@@ -67,7 +82,13 @@ public class CadastroUsuarioBean implements Serializable {
 		return this.usuario.getId() !=null;
 	}
 	
-	
+	public List<Grupo> getGrupos() {
+		return grupos;
+	}
+
+	public void setGrupos(List<Grupo> grupos) {
+		this.grupos = grupos;
+	}
 	
 	
 

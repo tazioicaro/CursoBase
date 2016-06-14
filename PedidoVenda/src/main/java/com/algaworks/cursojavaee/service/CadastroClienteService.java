@@ -7,7 +7,6 @@ import javax.inject.Inject;
 import com.algaworks.cursojavaee.model.Cliente;
 import com.algaworks.cursojavaee.repository.Clientes;
 import com.algaworks.cursojavaee.util.jpa.Transactional;
-import com.algaworks.cursojavaee.util.jsf.FacesUtil;
 
 public class CadastroClienteService implements Serializable {	
 	private static final long serialVersionUID = 1L;

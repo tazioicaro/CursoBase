@@ -25,7 +25,7 @@ public class CadastroUsuarioService implements Serializable {
 			
 		}
 		
-		if (repositorioUsuarios.porNome(usuario.getNome())!=null){
+		else if (repositorioUsuarios.porNome(usuario.getNome())!=null){
 			throw new NegocioException("O nome " + usuario.getNome() + " já existe. Necessário informar um outro.");
 			
 		}
