@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
 <body>
 
 	<table border="0" width="100%" height="100%" cellpadding="0"
@@ -49,7 +55,7 @@
 												<td width="50%" align="left" class="ecxforce-col"
 													style="border-collapse: collapse;">
 													<div class="ecxnome-cliente"
-														style="font-size: 18px; font-family: Tahoma, sans-serif; text-align: left; color: #151826;">Olá
+														style="font-size: 18px; font-family: Tahoma, sans-serif; text-align: left; color: #151826;"> Olá
 														$pedido.cliente.nome,</div>
 												</td>
 												<td width="50%" align="right" class="ecxforce-col"

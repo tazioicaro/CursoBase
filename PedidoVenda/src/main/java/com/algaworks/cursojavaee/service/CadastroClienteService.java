@@ -6,6 +6,8 @@ import javax.inject.Inject;
 
 import com.algaworks.cursojavaee.model.Cliente;
 import com.algaworks.cursojavaee.repository.Clientes;
+import com.algaworks.cursojavaee.util.jpa.Transactional;
+import com.algaworks.cursojavaee.util.jsf.FacesUtil;
 
 public class CadastroClienteService implements Serializable {	
 	private static final long serialVersionUID = 1L;
@@ -13,10 +15,20 @@ public class CadastroClienteService implements Serializable {
 	@Inject
 	private Clientes clientes;
 	
+	@Transactional
 	public Cliente salvar(Cliente cliente){
-		/**
-		 * Inserir as restrição para salvamento
-		 */
+	
+		Cliente usuarioExistenteNome = clientes.consultarNome(cliente.getNome());
+		Cliente usuarioExistenteEmail = clientes.porEmail(cliente.getEmail());
+		
+		if(usuarioExistenteNome!=null && usuarioExistenteNome.equals(cliente) )
+				{
+			throw new NegocioException("Já existe um usuário com o nome informado!");
+		} else if  (usuarioExistenteEmail!=null && usuarioExistenteEmail.equals(cliente)){
+			
+			throw new NegocioException("Já existe um usuário com o email informado!");
+		}
+		
 		return clientes.guardar(cliente);
 	}
 

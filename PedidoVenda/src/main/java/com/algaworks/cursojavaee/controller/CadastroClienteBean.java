@@ -44,6 +44,7 @@ public class CadastroClienteBean implements Serializable {
 			
 		this.cliente = cadastroClienteService.salvar(this.cliente);		
 		FacesUtil.addInforMessage("Usuário criado com sucesso!");
+		limpar();
 		
 		}catch(NegocioException ne){
 			FacesUtil.addErrorMessage(ne.getMessage());

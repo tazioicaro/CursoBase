@@ -167,13 +167,23 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- Usamos para formatar números em templates -->
+		<!-- Usamos para formatar números em templates 
 		<dependency>
 			<groupId>velocity-tools</groupId>
 			<artifactId>velocity-tools-generic</artifactId>
 			<version>1.1</version>
 			<scope>compile</scope>
-		</dependency>
+		</dependency>-->
+		
+		<!-- http://mvnrepository.com/artifact/org.apache.velocity/velocity-tools -->
+<dependency>
+    <groupId>org.apache.velocity</groupId>
+    <artifactId>velocity-tools</artifactId>
+    <version>2.0</version>
+    <scope>compile</scope>
+</dependency>
+		
+		
 
 		<!-- Spring Security (autenticação e autorização) -->
 		<dependency>

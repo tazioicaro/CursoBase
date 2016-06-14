@@ -56,7 +56,11 @@
 					<p:button value="Pesquisar" />
 				</p:toolbarGroup>
 			</p:toolbar>
-
+			  
+		     <p:outputPanel>
+		     <p:outputLabel style="fa fa-fw fa-edit" value="Teste"></p:outputLabel>
+		     
+		     </p:outputPanel>   
 			<p:panelGrid columns="2" id="painel"
 				style="width:100%; margin-top:20px" columnClasses="rotuloP, campoP">
 				<p:outputLabel value="Nome" for="nome" />
@@ -95,8 +99,7 @@
 						value="#{cadastroClienteBean.cliente.documntoReceitaFederal}"
 						rendered="#{cadastroClienteBean.cnpj}" />
 				</p:outputPanel>
-			</p:panelGrid>
-
+			</p:panelGrid> 			
 		</h:form>
 	</ui:define>
 </ui:composition>
