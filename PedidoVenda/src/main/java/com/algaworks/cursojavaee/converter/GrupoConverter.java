@@ -8,22 +8,22 @@ import javax.inject.Inject;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.algaworks.cursojavaee.model.Usuario;
-import com.algaworks.cursojavaee.repository.Usuarios;
+import com.algaworks.cursojavaee.model.Grupo;
+import com.algaworks.cursojavaee.repository.Grupos;
 
-@FacesConverter(forClass=Usuario.class)
-public class UsuarioConverter implements Converter {
+@FacesConverter(forClass=Grupo.class)
+public class GrupoConverter implements Converter {
 
 	@Inject
-	private Usuarios usuarios;
+	private Grupos grupos;
 	
 	@Override
 	public Object getAsObject(FacesContext context, UIComponent component, String value) {
-		Usuario retorno = null;
+		Grupo retorno = null;
 		
 		if (StringUtils.isNotEmpty(value)) {
 			Long id = new Long(value);
-			retorno = usuarios.porID(id);
+			retorno = grupos.porId(id);
 		}
 		
 		return retorno;
@@ -32,8 +32,8 @@ public class UsuarioConverter implements Converter {
 	@Override
 	public String getAsString(FacesContext context, UIComponent component, Object value) {
 		if (value != null) {
-			Usuario usuario = (Usuario) value;
-			return usuario.getId() == null ? null : usuario.getId().toString();
+			Grupo grupo = (Grupo) value;
+			return grupo.getId() == null ? null : grupo.getId().toString();
 		}
 		
 		return "";

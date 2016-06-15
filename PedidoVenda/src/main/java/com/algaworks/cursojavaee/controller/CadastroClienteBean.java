@@ -29,6 +29,8 @@ public class CadastroClienteBean implements Serializable {
 	private boolean cnpj; 
 	private HtmlSelectOneRadio radio;
 	
+	
+	
 	public CadastroClienteBean() {
 		super();
 		cliente = new Cliente();

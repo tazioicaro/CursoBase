@@ -19,4 +19,10 @@ public class Grupos implements Serializable {
 			return this.manager.createQuery("from Grupo", Grupo.class).getResultList();		
 		
 	}
+
+
+	public Grupo porId(Long id) {
+		
+		return this.manager.find(Grupo.class, id);
+	}
 }

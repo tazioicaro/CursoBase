@@ -1,6 +1,7 @@
 package com.algaworks.cursojavaee.controller;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.view.ViewScoped;
@@ -20,15 +21,15 @@ public class CadastroUsuarioBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 
-	private Usuario usuario = new Usuario();;
+	private Usuario usuario;
 	
 	@Inject
 	private CadastroUsuarioService cadastroUsuarioService;
 	
 	@Inject
-	private Grupos repositorioGrupos;
+    private Grupos repositorioGrupos;
 	
-	private List<Grupo> grupos;
+	private List<Grupo> listaGrupos = null;
 	
 	
 	
@@ -36,15 +37,24 @@ public class CadastroUsuarioBean implements Serializable {
 
 	public CadastroUsuarioBean() {
 		super();
+		limpar();
 		
 	}
 	
 	public List<Grupo> obterGrupos(){
 		
-		return this.grupos = repositorioGrupos.porGrupos();
+		return this.listaGrupos = repositorioGrupos.porGrupos();
 	}
 
 	public void cadastrar(){
+		
+		for (Grupo grupos : this.usuario.getGrupos()){
+			
+			System.out.println("Grupos selecionados: " + grupos.getDescricao());
+			
+		}
+		
+		
 		try{
 			
 		this.usuario = cadastroUsuarioService.salvar(this.usuario);		
@@ -62,11 +72,14 @@ public class CadastroUsuarioBean implements Serializable {
 		if (this.usuario == null) {
 			limpar();
 		}
+		
+		obterGrupos();
 	}
 		
 	
 	public void limpar(){
-		usuario = new Usuario();
+		usuario = new Usuario();		
+		setListaGrupos(new ArrayList<Grupo>());
 	}
 
 	public Usuario getUsuario() {
@@ -81,13 +94,14 @@ public class CadastroUsuarioBean implements Serializable {
 	public boolean isEditando(){
 		return this.usuario.getId() !=null;
 	}
-	
-	public List<Grupo> getGrupos() {
-		return grupos;
+
+	public List<Grupo> getListaGrupos() {
+		return listaGrupos;
 	}
 
-	public void setGrupos(List<Grupo> grupos) {
-		this.grupos = grupos;
+	public List<Grupo> setListaGrupos(List<Grupo> listaGrupos) {
+		this.listaGrupos = listaGrupos;
+		return listaGrupos;
 	}
 	
 	
