@@ -7,7 +7,13 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
+import org.apache.commons.lang3.StringUtils;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+
 import com.algaworks.cursojavaee.model.Usuario;
+import com.algaworks.cursojavaee.repository.filter.UsuarioFilter;
 import com.algaworks.cursojavaee.util.jpa.Transactional;
 
 public class Usuarios implements Serializable {
@@ -31,9 +37,7 @@ public class Usuarios implements Serializable {
 	public Usuario porEmail(String email) {
 		Usuario usuario = null;
 		try {
-			usuario = this.manager
-					.createQuery("from Usuario where lower(email) = :email",
-							Usuario.class)
+			usuario = this.manager.createQuery("from Usuario where lower(email) = :email", Usuario.class)
 					.setParameter("email", email.toLowerCase())
 					.getSingleResult();
 
@@ -42,23 +46,47 @@ public class Usuarios implements Serializable {
 		}
 		return usuario;
 	}
-	
-	public Usuario porNome (String nome){
+
+	public Usuario porNome(String nome) {
 		Usuario usuario = null;
-		try{
+		try {
 			usuario = this.manager.createQuery("from Usuario where lower(nome) =:nome", Usuario.class)
-					.setParameter("nome", nome.toLowerCase())
-					.getSingleResult();
-		}catch (NoResultException e){
-			
+					.setParameter("nome", nome.toLowerCase()).getSingleResult();
+		} catch (NoResultException e) {
+
 		}
 		return usuario;
 	}
-	
+
 	@Transactional
-	public Usuario guardar (Usuario usuario){
+	public Usuario guardar(Usuario usuario) {
 		return this.manager.merge(usuario);
 	}
 	
+	
+	private Criteria criarCriteriaParaFiltro (UsuarioFilter filtro){
+		
+
+		Session session = manager.unwrap(Session.class);
+		
+		Criteria criteria = session.createCriteria(Usuario.class).createAlias("grupo", "gp");
+		
+		
+		if (StringUtils.isNotBlank(filtro.getNome())){
+			criteria.add(Restrictions.eq("nome", filtro.getNome()));
+		}
+		if (StringUtils.isNotBlank(filtro.getTipoAcesso())){
+			criteria.add(Restrictions.ilike("gp.descricao", filtro.getTipoAcesso()));
+		}
+		return criteria;
+		
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Usuario> filtrados(UsuarioFilter filtro) {
+		
+		Criteria criteria = criarCriteriaParaFiltro(filtro);	
+		return criteria.list();
+	}
 
 }

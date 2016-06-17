@@ -1,7 +1,6 @@
 package com.algaworks.cursojavaee.controller;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.view.ViewScoped;
@@ -22,6 +21,7 @@ public class CadastroUsuarioBean implements Serializable {
 	
 
 	private Usuario usuario;
+	private List<Grupo> listaGrupos = null;
 	
 	@Inject
 	private CadastroUsuarioService cadastroUsuarioService;
@@ -29,11 +29,7 @@ public class CadastroUsuarioBean implements Serializable {
 	@Inject
     private Grupos repositorioGrupos;
 	
-	private List<Grupo> listaGrupos = null;
-	
-	
-	
-	
+		
 
 	public CadastroUsuarioBean() {
 		super();
@@ -41,10 +37,17 @@ public class CadastroUsuarioBean implements Serializable {
 		
 	}
 	
-	public List<Grupo> obterGrupos(){
+
+	
+	public void inicializar() {
+		if (this.usuario == null) {
+			limpar();
+		}
 		
-		return this.listaGrupos = repositorioGrupos.porGrupos();
+		obterGrupos();
 	}
+	
+	
 
 	public void cadastrar(){
 		
@@ -55,9 +58,7 @@ public class CadastroUsuarioBean implements Serializable {
 		}
 		
 		
-		try{
-			
-			//this.usuario.setGrupos(this.listaGrupos);
+		try{					
 			
 		this.usuario = cadastroUsuarioService.salvar(this.usuario);		
 		FacesUtil.addInforMessage("Usuário criado com sucesso!");
@@ -68,35 +69,34 @@ public class CadastroUsuarioBean implements Serializable {
 		} 
 	}
 	
-	//Adicionar um inicalizar para que possa haver a edição do Usuário
 	
-	
-	public void inicializar() {
-		if (this.usuario == null) {
-			limpar();
-		}
+	public List<Grupo> obterGrupos(){
 		
-		obterGrupos();
+		return this.listaGrupos = repositorioGrupos.porGrupos();
 	}
-		
+			
 	
 	public void limpar(){
 		usuario = new Usuario();		
-		//setListaGrupos(new ArrayList<Grupo>());
-	}
-
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	
 	}
 	
 	
 	public boolean isEditando(){
 		return this.usuario.getId() !=null;
 	}
+	
+	
+	//G&T
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;		
+	}
+	
 
 	public List<Grupo> getListaGrupos() {
 		return listaGrupos;
@@ -107,6 +107,8 @@ public class CadastroUsuarioBean implements Serializable {
 		return listaGrupos;
 	}
 	
+	
+
 	
 
 }
