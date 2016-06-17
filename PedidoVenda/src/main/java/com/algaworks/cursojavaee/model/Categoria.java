@@ -9,6 +9,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -21,13 +22,21 @@ public class Categoria implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(nullable = false, length = 60)
 	private String descricao;
+	
+	@ManyToOne
+	@JoinColumn(name = "categoria_pai_id")
 	private Categoria categoriaPai;
+	
+	@OneToMany(mappedBy = "categoriaPai", cascade = CascadeType.ALL)
 	private List<Categoria> subcategorias = new ArrayList<>();
 
-	@Id
-	@GeneratedValue
+	
 	public Long getId() {
 		return id;
 	}
@@ -36,7 +45,7 @@ public class Categoria implements Serializable {
 		this.id = id;
 	}
 
-	@Column(nullable = false, length = 60)
+	
 	public String getDescricao() {
 		return descricao;
 	}
@@ -45,8 +54,7 @@ public class Categoria implements Serializable {
 		this.descricao = descricao;
 	}
 
-	@ManyToOne
-	@JoinColumn(name = "categoria_pai_id")
+
 	public Categoria getCategoriaPai() {
 		return categoriaPai;
 	}
@@ -55,7 +63,7 @@ public class Categoria implements Serializable {
 		this.categoriaPai = categoriaPai;
 	}
 
-	@OneToMany(mappedBy = "categoriaPai", cascade = CascadeType.ALL)
+	
 	public List<Categoria> getSubcategorias() {
 		return subcategorias;
 	}

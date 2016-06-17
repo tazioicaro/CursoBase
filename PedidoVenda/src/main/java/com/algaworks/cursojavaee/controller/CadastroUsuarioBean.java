@@ -57,10 +57,11 @@ public class CadastroUsuarioBean implements Serializable {
 		
 		try{
 			
-			this.usuario.setGrupos(this.listaGrupos);
+			//this.usuario.setGrupos(this.listaGrupos);
 			
 		this.usuario = cadastroUsuarioService.salvar(this.usuario);		
 		FacesUtil.addInforMessage("Usuário criado com sucesso!");
+		limpar();
 		
 		}catch(NegocioException ne){
 			FacesUtil.addErrorMessage(ne.getMessage());
@@ -81,7 +82,7 @@ public class CadastroUsuarioBean implements Serializable {
 	
 	public void limpar(){
 		usuario = new Usuario();		
-		setListaGrupos(new ArrayList<Grupo>());
+		//setListaGrupos(new ArrayList<Grupo>());
 	}
 
 	public Usuario getUsuario() {
