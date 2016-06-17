@@ -35,7 +35,7 @@ public class Usuario implements Serializable {
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "usuario_grupo", joinColumns = @JoinColumn(name="usuario_id"),
 	inverseJoinColumns = @JoinColumn(name = "grupo_id"))
-	private List<Grupo> grupos = new ArrayList<>();
+	private List<Grupo> grupos = new ArrayList<Grupo>();
 	
 	
 	

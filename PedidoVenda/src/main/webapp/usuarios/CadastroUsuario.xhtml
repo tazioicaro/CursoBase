@@ -69,7 +69,7 @@
 					value="#{cadastroUsuarioBean.usuario.email}" />
 
 				<p:outputLabel value="Permissão de... " for="gp" />
-				<p:selectCheckboxMenu label="grupos"  value="#{cadastroUsuarioBean.usuario.grupos}" id="gp" >					
+				<p:selectCheckboxMenu label="grupos"  value="#{cadastroUsuarioBean.usuario.grupos}" id="gp" converter="grupoConverter">					
 					<f:selectItems value="#{cadastroUsuarioBean.listaGrupos}"
 						var="grupo" itemLabel="#{grupo.descricao}" itemValue="#{grupo}" />
 				</p:selectCheckboxMenu>

@@ -11,7 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.algaworks.cursojavaee.model.Grupo;
 import com.algaworks.cursojavaee.repository.Grupos;
 
-@FacesConverter(forClass=Grupo.class)
+@FacesConverter(forClass=Grupo.class, value="grupoConverter")
 public class GrupoConverter implements Converter {
 
 	@Inject

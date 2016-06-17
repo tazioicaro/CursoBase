@@ -57,6 +57,8 @@ public class CadastroUsuarioBean implements Serializable {
 		
 		try{
 			
+			this.usuario.setGrupos(this.listaGrupos);
+			
 		this.usuario = cadastroUsuarioService.salvar(this.usuario);		
 		FacesUtil.addInforMessage("Usuário criado com sucesso!");
 		
