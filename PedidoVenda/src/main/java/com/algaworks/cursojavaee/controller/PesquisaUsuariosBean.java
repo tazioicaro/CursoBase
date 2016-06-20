@@ -44,6 +44,10 @@ public class PesquisaUsuariosBean implements Serializable {
     	return grupos.porGrupos();
     	
     }
+    
+    public void excluir(){
+    	
+    }
 	
 	
 	//G&S

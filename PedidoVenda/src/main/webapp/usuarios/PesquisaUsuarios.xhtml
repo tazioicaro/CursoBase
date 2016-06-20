@@ -49,12 +49,30 @@
 				</p:selectManyCheckbox>
 			</p:panelGrid>
 			
-			<p:dataTable id="usuarioTable" value="#{pesquisaUsuariosBean.usuariosFiltrados}" var="usuario"
-			style="margin-top:20px" emptyMessage="Produto não encontrado" rows="20" paginator="true" 
+			<p:dataTable id="usuariosTable" value="#{pesquisaUsuariosBean.usuariosFiltrados}" var="usuario"
+			style="margin-top:20px" emptyMessage="Usuarionão encontrado" rows="13" paginator="true" 
 			paginatorAlwaysVisible="false"	paginatorPosition="bottom">
 			
+			<p:column headerText="Nome" style="text-align: center; width: 100px" sortBy="#{usuario.nome}">
+			<h:outputText value="#{usuario.nome}"/>
+			</p:column>
+			<p:column headerText="E-mail" style="text-align: center; width: 100px" sortBy="#{usuario.email}">
+			<h:outputText value="#{usuario.email}"/>
+			</p:column>
+			
+			<p:column style="width:100px; text-align:center">
+				<p:button icon="ui-icon-pencil" title="Editar" outcome="/usuarios/Cadastrousuario">
+					<f:param name="usuario" value="#{usuario.id}"/>			
+				</p:button>
+			<p:commandButton id="botaoYes" icon="ui-icon-trash" title="Excluir" process="@this" 
+			update=":frmPesquisa:confirmacaoExDlog, :frmPesquisa:usuariosTable" action="#{pesquisaUsuariosBean.excluir}">
+			<p:confirm header="Exclusão de usuário" message="Confirma a exclusão do usuário #{pesquisaUsuariosBean.usuarioSelecionado.nome} ? "/>
 			
 			
+			</p:commandButton>
+			
+			
+			</p:column>
 			
 			</p:dataTable>
 		</h:form>

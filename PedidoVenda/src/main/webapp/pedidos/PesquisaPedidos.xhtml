@@ -68,7 +68,7 @@
 
 			<p:dataTable id="pedidosTable" value="#{pesquisaPedidosBean.model}"
 				var="pedido" style="margin-top: 20px" emptyMessage="Nenhum pedido encontrado." 
-				rows="15" paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom"
+				rows="13" paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom"
 				lazy="true">
 				<p:column headerText="Número" style="text-align: center; width: 100px" sortBy="#{pedido.id}">
 					<h:outputText value="#{pedido.id}" />
