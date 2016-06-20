@@ -39,6 +39,7 @@ readonly="#{facesContext.currentPhaseId.name eq 'RENDER_RESPONSE'}" -->
 	        	ignoreAutoUpdate="true">
 	        	<p:ajax event="dialogReturn" listener="#{cadastroPedidoBean.clienteSelecionado}"
 	        		update="cliente" ignoreAutoUpdate="true" />
+	        		<p:resetInput target="cliente"/>
 	        </p:commandButton>
         </h:panelGroup>
         
