@@ -1,6 +1,8 @@
 package com.algaworks.cursojavaee.controller;
 
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import javax.faces.view.ViewScoped;
@@ -10,6 +12,7 @@ import javax.inject.Named;
 import com.algaworks.cursojavaee.model.Grupo;
 import com.algaworks.cursojavaee.model.Usuario;
 import com.algaworks.cursojavaee.repository.Grupos;
+import com.algaworks.cursojavaee.security.GeradorSenha;
 import com.algaworks.cursojavaee.service.CadastroUsuarioService;
 import com.algaworks.cursojavaee.service.NegocioException;
 import com.algaworks.cursojavaee.util.jsf.FacesUtil;
@@ -22,6 +25,7 @@ public class CadastroUsuarioBean implements Serializable {
 
 	private Usuario usuario;
 	private List<Grupo> listaGrupos = null;
+	private GeradorSenha geradorSenha;
 	
 	@Inject
 	private CadastroUsuarioService cadastroUsuarioService;
@@ -51,20 +55,21 @@ public class CadastroUsuarioBean implements Serializable {
 
 	public void cadastrar(){
 		
-		for (Grupo grupos : this.usuario.getGrupos()){
-			
-			System.out.println("Grupos selecionados: " + grupos.getDescricao());
-			
-		}
+//		for (Grupo grupos : this.usuario.getGrupos()){
+//			
+//			System.out.println("Grupos selecionados: " + grupos.getDescricao());
+//			
+//		}
 		
 		
-		try{					
+		try{	
+			this.usuario.setSenha(geradorSenha.geradorHash((this.usuario.getSenha())));
 			
 		this.usuario = cadastroUsuarioService.salvar(this.usuario);		
 		FacesUtil.addInforMessage("Usuário criado com sucesso!");
 		limpar();
 		
-		}catch(NegocioException ne){
+		}catch(NegocioException | NoSuchAlgorithmException | UnsupportedEncodingException ne){
 			FacesUtil.addErrorMessage(ne.getMessage());
 		} 
 	}
@@ -77,7 +82,8 @@ public class CadastroUsuarioBean implements Serializable {
 			
 	
 	public void limpar(){
-		usuario = new Usuario();		
+		usuario = new Usuario();
+		geradorSenha = new GeradorSenha();
 	
 	}
 	
