@@ -69,14 +69,14 @@ public class Usuarios implements Serializable {
 
 		Session session = manager.unwrap(Session.class);
 		
-		Criteria criteria = session.createCriteria(Usuario.class).createAlias("grupo", "gp");
+		Criteria criteria = session.createCriteria(Usuario.class).createAlias("grupos", "gp");
 		
 		
 		if (StringUtils.isNotBlank(filtro.getNome())){
 			criteria.add(Restrictions.eq("nome", filtro.getNome()));
 		}
-		if (StringUtils.isNotBlank(filtro.getTipoAcesso())){
-			criteria.add(Restrictions.ilike("gp.descricao", filtro.getTipoAcesso()));
+		if (filtro.getGrupos()!= null && filtro.getGrupos().size()>0 ){
+			criteria.add(Restrictions.in("gp.descricao", filtro.getGrupos()));
 		}
 		return criteria;
 		

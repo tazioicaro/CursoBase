@@ -7,7 +7,9 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import com.algaworks.cursojavaee.model.Grupo;
 import com.algaworks.cursojavaee.model.Usuario;
+import com.algaworks.cursojavaee.repository.Grupos;
 import com.algaworks.cursojavaee.repository.Usuarios;
 import com.algaworks.cursojavaee.repository.filter.UsuarioFilter;
 
@@ -20,6 +22,9 @@ public class PesquisaUsuariosBean implements Serializable {
 	@Inject 
 	private Usuarios usuarios;
 	
+	@Inject
+	private Grupos grupos;
+	
 	private UsuarioFilter filtro;
 	private List<Usuario> usuariosFiltrados;
     private Usuario usuarioSelecionado;
@@ -31,6 +36,13 @@ public class PesquisaUsuariosBean implements Serializable {
     
     public void pesquisar(){
     	usuariosFiltrados = usuarios.filtrados(filtro);
+    }
+    
+    
+    public List<Grupo> getLitaGrupos(){
+    	
+    	return grupos.porGrupos();
+    	
     }
 	
 	

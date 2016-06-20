@@ -23,8 +23,8 @@
 			<p:toolbar style="margin-top:20px">
 				<p:toolbarGroup>
 
-					<p:commandButton value="Pesquisar"
-						 update="@form" actionListener=""/>
+					<p:commandButton value="Pesquisar" update="@form"
+						action="#{pesquisaUsuariosBean.pesquisar}" />
 
 				</p:toolbarGroup>
 
@@ -33,6 +33,30 @@
 				</p:toolbarGroup>
 
 			</p:toolbar>
+
+			<p:panelGrid columns="2" id="painel" style="width:100%; margin-top:20px" columnClasses="rotuloP, campoP">
+
+				<p:outputLabel value="Nome" for="nome" />
+				<p:inputText id="nome" size="80"
+					value="#{pesquisaProdutosBean.filtro.sku}" />
+
+				<p:outputLabel value="Permissao Tipo..." for="nome" />
+				<p:selectManyCheckbox label="Selecione"
+					value="#{pesquisaUsuariosBean.filtro.grupos}">
+					<f:selectItems value="#{pesquisaUsuariosBean.litaGrupos}"
+						var="grupos" itemValue="#{grupos}" itemLabel="#{grupos.descricao}" />
+
+				</p:selectManyCheckbox>
+			</p:panelGrid>
+			
+			<p:dataTable id="usuarioTable" value="#{pesquisaUsuariosBean.usuariosFiltrados}" var="usuario"
+			style="margin-top:20px" emptyMessage="Produto não encontrado" rows="20" paginator="true" 
+			paginatorAlwaysVisible="false"	paginatorPosition="bottom">
+			
+			
+			
+			
+			</p:dataTable>
 		</h:form>
 	</ui:define>
 </ui:composition>
