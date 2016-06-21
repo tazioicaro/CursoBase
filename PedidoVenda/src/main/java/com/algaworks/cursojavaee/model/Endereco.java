@@ -43,60 +43,55 @@ public class Endereco implements Serializable {
 	@JoinColumn(name="cliente_id", nullable=false) //Nome da coluna que ficará na tabela Endereço
 	private Cliente cliente;
 
+	
+	//G&S
 	public Long getId() {
 		return id;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
 	public String getLogradouro() {
 		return logradouro;
 	}
-
 	public void setLogradouro(String logradouro) {
 		this.logradouro = logradouro;
 	}
-
 	public String getNumero() {
 		return numero;
 	}
-
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-
 	public String getComplemento() {
 		return complemento;
 	}
-
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
-
 	public String getCidade() {
 		return cidade;
 	}
-
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
-
 	public String getUf() {
 		return uf;
 	}
-
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
-
 	public String getCep() {
 		return cep;
 	}
-
 	public void setCep(String cep) {
 		this.cep = cep;
+	}
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
 	@Override
@@ -122,14 +117,6 @@ public class Endereco implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
-	}
-
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
 	}
 
 }

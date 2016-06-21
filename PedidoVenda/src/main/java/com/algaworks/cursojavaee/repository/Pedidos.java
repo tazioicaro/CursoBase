@@ -18,6 +18,7 @@ import org.apache.commons.lang3.time.DateUtils;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.transform.Transformers;
@@ -139,27 +140,29 @@ public class Pedidos implements Serializable {
 		return criteria;
 	}
 	
+	//Limitar registro na tela par aque haja Lazy no dataTable e ordenação
 	@SuppressWarnings("unchecked")
 	public List<Pedido> filtrados(PedidoFilter filtro) {
 		Criteria criteria = criarCriteriaParaFiltro(filtro);
 		
-//		criteria.setFirstResult(filtro.getPrimeiroRegistro());
-//		criteria.setMaxResults(filtro.getQuantidadeRegistros());
-//		
-//		if (filtro.isAscendente() && filtro.getPropriedadeOrdenacao() != null) {
-//			criteria.addOrder(Order.asc(filtro.getPropriedadeOrdenacao()));
-//		} else if (filtro.getPropriedadeOrdenacao() != null) {
-//			criteria.addOrder(Order.desc(filtro.getPropriedadeOrdenacao()));
-//		}
+		criteria.setFirstResult(filtro.getPrimeiroRegistro());
+		criteria.setMaxResults(filtro.getQuantidadeRegistros());
+		
+		if (filtro.isAscendente() && filtro.getPropriedadeOrdenacao() != null) {
+			criteria.addOrder(Order.asc(filtro.getPropriedadeOrdenacao()));
+		} else if (filtro.getPropriedadeOrdenacao() != null) {
+			criteria.addOrder(Order.desc(filtro.getPropriedadeOrdenacao()));
+		}
 		
 		return criteria.list();
 	}
-	
+	//Número para Paginação dado um filtro
 	public int quantidadeFiltrados(PedidoFilter filtro) {
 		Criteria criteria = criarCriteriaParaFiltro(filtro);
-		
+		//Projeção é avg, média, e contarlinhas
 		criteria.setProjection(Projections.rowCount());
 		
+		//retorna simente uma linha mesmo
 		return ((Number) criteria.uniqueResult()).intValue();
 	}
 
