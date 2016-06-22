@@ -81,10 +81,9 @@
 						<f:param name="produto" value="#{produto.id}" />
 					</p:button>
 					<p:commandButton id="botaoYes" icon="ui-icon-trash" title="Excluir"
-						process="@this"
-						update=":frmPesquisa:confirmacaoExDlog,
-					 :frmPesquisa:produtosTable"
-						action="#{pesquisaProdutosBean.excluir}">
+						process="@this"	update=":frmPesquisa:confirmacaoExDlog,
+					 :frmPesquisa:produtosTable" action="#{pesquisaProdutosBean.excluir}"
+					 validateClient="true">
 						<p:confirm header="Exclusão de Produto"
 							message="Tem certeza que deseja excluir o produto #{pesquisaProdutosBean.produtoSelecionado.sku}?"
 							icon="ui-icon-alert" />

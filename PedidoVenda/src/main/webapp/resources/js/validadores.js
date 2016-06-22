@@ -1,7 +1,11 @@
 PrimeFaces.locales['pt_BR'] = {
 	messages : {
 		'org.hibernate.validator.constraints.NotBlank.message' : '{0} não pode estar em branco',
-		'javax.validation.constraints.NotNull.message' : '{0} não pode ser nulo'
+		'org.hibernate.validator.constraints.NotEmpty.message' : '{0} não pode estar vazio',
+		'javax.validation.constraints.NotNull.message' : '{0} não pode ser nulo',
+		'javax.faces.validator.LengthValidator.MAXIMUM' : '{1} deve ter no máximo {0} caracteres',
+		'javax.faces.component.UIInput.REQUIRED' : '{0} é obrigatório'	
+	
 	}
 };
 
@@ -59,6 +63,32 @@ PrimeFaces.validator.NotBlank = {
 		
 };
 
+PrimeFaces.validator.NotEmpty = {
+		
+		MESSAGE_ID : 'org.hibernate.validator.constraints.NotEmpty.message',
+			
+		validate : function(element, value) {
+			if (value === null || value === undefined || value.trim() === '') {
+				var msg = element.data('msg-notempty');
+				var label = element.data('p-label');
+				var context = PrimeFaces.util.ValidationContext;
+				var msgObj;
+				
+				if (!msg) {
+					msgObj = context.getMessage(this.MESSAGE_ID, label);
+				} else {
+					var msgObj = {
+						summary : msg,
+						detail : msg
+					}
+				}
+				
+				throw msgObj;
+			}
+		}
+			
+	};
+
 PrimeFaces.validator.SKU = {
 	
 	pattern : /^([a-zA-Z]{2}\d{4,18})?$/,
@@ -68,7 +98,7 @@ PrimeFaces.validator.SKU = {
 			var msg = element.data('msg-sku');
 			
 			if (!msg) {
-				msg = 'SKU não é válido.';
+				msg = 'SKU dever ser informado no formato correto (exemplo: XX9999).';
 			}
 			
 			var msgObj = {

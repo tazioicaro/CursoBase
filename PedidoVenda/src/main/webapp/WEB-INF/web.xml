@@ -30,7 +30,7 @@
 
 	<!-- <context-param> <param-name>primefaces.THEME</param-name> <param-value>bootstrap</param-value> 
 		</context-param> -->
-
+<!-- Ativando a validação no lado do cliente -->
 	<context-param>
 		<param-name>primefaces.CLIENT_SIDE_VALIDATION</param-name>
 		<param-value>true</param-value>

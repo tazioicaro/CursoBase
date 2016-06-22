@@ -65,10 +65,10 @@
 					<f:param name="usuario" value="#{usuario.id}"/>			
 				</p:button>
 			<p:commandButton id="botaoYes" icon="ui-icon-trash" title="Excluir" process="@this" 
-			update=":frmPesquisa:confirmacaoExDlog, :frmPesquisa:usuariosTable" action="#{pesquisaUsuariosBean.excluir}">
+			update=":frmPesquisa:confirmacaoExDlog, :frmPesquisa:usuariosTable" action="#{pesquisaUsuariosBean.excluir}"
+			validateClient="true">
 			<p:confirm header="Exclusão de usuário" message="Confirma a exclusão do usuário #{pesquisaUsuariosBean.usuarioSelecionado.nome} ? "/>
-			
-			
+						
 			</p:commandButton>
 			
 			
