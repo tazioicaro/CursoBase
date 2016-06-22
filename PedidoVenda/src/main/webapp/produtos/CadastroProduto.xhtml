@@ -21,12 +21,14 @@
 		</f:metadata>
 
 
-		<h:form styleClass="layout-portlets-cover"
+		<h:form id="form" styleClass="layout-portlets-cover"
 			style="display: block !important;
     height: 100% !important; font-size: 14px !important; box-sizing: border-box !important;
     -moz-box-sizing: border-box !important;  -webkit-box-sizing: border-box !important;  color: #282828 !important;
     vertical-align: top !important;   padding: 1rem !important;">
 
+			<p:focus context="form" />
+			
 			<div id="titulosH1">
 				<h1>#{cadastroProdutoBean.editando ? 'Edição de produto' :
 					'Novo Produto'}</h1>
@@ -43,8 +45,8 @@
 					<p:button value="Novo" outcome="/produtos/CadastroProduto" />
 
 					<p:commandButton value="Salvar" id="botaoSalvar"
-						action="#{cadastroProdutoBean.salvar}" update="@form" ajax="true"
-						validateClient="true" />
+						action="#{cadastroProdutoBean.salvar}" update="@form" 
+						validateClient="false" />
 
 				</p:toolbarGroup>
 
@@ -57,7 +59,11 @@
 				style="width:100%; margin-top:20px" columnClasses="rotulo, campo">
 				<p:outputLabel value="SKU" for="sku" />
 				<p:inputText id="sku" size="20" maxlength="20"
-					value="#{cadastroProdutoBean.produto.sku}" />
+					value="#{cadastroProdutoBean.produto.sku}">
+					<f:validateRegex pattern="(^[a-zA-Z]{2}\\d{4,18}+$)" />
+					<p:clientValidator event="keyup"/>
+				</p:inputText>
+					
 
 				<p:outputLabel value="Nome " for="nome" />
 				<p:inputText id="nome" size="60" maxlength="80"
