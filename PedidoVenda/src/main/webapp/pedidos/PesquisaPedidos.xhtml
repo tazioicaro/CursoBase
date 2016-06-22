@@ -24,7 +24,7 @@
 				<p:toolbarGroup align="right">
 					<p:commandButton value="Exportar para XLS" ajax="false">
 						<p:dataExporter type="xls" target="pedidosTable"
-							fileName="pedidos" />
+							fileName="pedidos" postProcessor="#{pesquisaPedidosBean.posProcessarXls}"/>
 					</p:commandButton>
 
 					<p:button value="Novo" outcome="/pedidos/CadastroPedido" />
