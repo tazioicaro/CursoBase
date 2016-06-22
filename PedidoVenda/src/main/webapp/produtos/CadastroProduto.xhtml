@@ -37,7 +37,9 @@
 			<!-- Filtro para a subCategoria -->
 			<!-- é a categoria no ManagerBean -->
 
-			<p:messages id="msgs" autoUpdate="true" closable="true" />
+			<p:messages id="msgs" autoUpdate="true" closable="true">			
+			</p:messages>
+		
 
 			<p:toolbar style="margin-top:20px">
 				<p:toolbarGroup>
@@ -58,13 +60,14 @@
 			<p:panelGrid columns="2" id="painel"
 				style="width:100%; margin-top:20px" columnClasses="rotulo, campo">
 				<p:outputLabel value="SKU" for="sku" />
+				<p:columnGroup >
 				<p:inputText id="sku" size="20" maxlength="20"
-					value="#{cadastroProdutoBean.produto.sku}">
-					<f:validateRegex pattern="(^[a-zA-Z]{2}\\d{4,18}+$)" />
-					<p:clientValidator event="keyup"/>
+					value="#{cadastroProdutoBean.produto.sku}" >					
+					<p:clientValidator event="keyup" />
+					<f:validateRegex pattern="^(([a-zA-Z]{2})+(\d{4,18}))$" />
 				</p:inputText>
-					
-
+						<!-- <p:message for="sku" id="msgSku" style="display: -webkit-inline-box;" styleClass="msgSku"/> -->
+                  </p:columnGroup>
 				<p:outputLabel value="Nome " for="nome" />
 				<p:inputText id="nome" size="60" maxlength="80"
 					value="#{cadastroProdutoBean.produto.nome}" />

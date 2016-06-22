@@ -4,7 +4,12 @@ PrimeFaces.locales['pt_BR'] = {
 		'org.hibernate.validator.constraints.NotEmpty.message' : '{0} não pode estar vazio',
 		'javax.validation.constraints.NotNull.message' : '{0} não pode ser nulo',
 		'javax.faces.validator.LengthValidator.MAXIMUM' : '{1} deve ter no máximo {0} caracteres',
-		'javax.faces.component.UIInput.REQUIRED' : '{0} é obrigatório'	
+		'javax.faces.component.UIInput.REQUIRED' : '{0} é obrigatório',	
+		'com.algaworks.validator.constraints.SKU.message' : '{0} dever ser informado no formato correto (exemplo: XX9999)',
+		'javax.faces.validator.RegexValidator.MATCH_EXCEPTION' :'{0} expressão regular errada', 
+		'javax.faces.validator.RegexValidator.NOT_MATCHED' : '{0} padrão de escrita não seguido',
+		'javax.faces.validator.RegexValidator.PATTERN_NOT_SET' : '{0} padrão da REGEX não pode ser definido como vazio'
+			
 	
 	}
 };
