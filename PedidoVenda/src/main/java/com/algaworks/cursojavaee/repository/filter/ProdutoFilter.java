@@ -16,6 +16,12 @@ public class ProdutoFilter  implements Serializable{
 	private String sku;
 	private String nome;
 	
+	private int primeiroRegistro;
+	private int quantidadeRegistros;
+	private String propriedadeOrdenacao;
+	private boolean ascendente;
+	
+	
 	
 	@SKU
 	public String getSku() {
@@ -31,6 +37,38 @@ public class ProdutoFilter  implements Serializable{
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public int getPrimeiroRegistro() {
+		return primeiroRegistro;
+	}
+
+	public void setPrimeiroRegistro(int primeiroRegistro) {
+		this.primeiroRegistro = primeiroRegistro;
+	}
+
+	public int getQuantidadeRegistros() {
+		return quantidadeRegistros;
+	}
+
+	public void setQuantidadeRegistros(int quantidadeRegistros) {
+		this.quantidadeRegistros = quantidadeRegistros;
+	}
+
+	public String getPropriedadeOrdenacao() {
+		return propriedadeOrdenacao;
+	}
+
+	public void setPropriedadeOrdenacao(String propriedadeOrdenacao) {
+		this.propriedadeOrdenacao = propriedadeOrdenacao;
+	}
+
+	public boolean isAscendente() {
+		return ascendente;
+	}
+
+	public void setAscendente(boolean ascendente) {
+		this.ascendente = ascendente;
 	}
 	
 	

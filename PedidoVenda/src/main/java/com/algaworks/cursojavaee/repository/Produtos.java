@@ -13,10 +13,12 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
 import com.algaworks.cursojavaee.model.Produto;
 import com.algaworks.cursojavaee.repository.filter.ProdutoFilter;
+import com.algaworks.cursojavaee.repository.filter.UsuarioFilter;
 import com.algaworks.cursojavaee.service.NegocioException;
 import com.algaworks.cursojavaee.util.jpa.Transactional;
 
@@ -45,10 +47,7 @@ public class Produtos  implements Serializable{
 	}
 	
 	
-	//Devido a diversidade, não foi usado JPQL, usado Criteria do Hibernate
-	
-	@SuppressWarnings("unchecked")
-	public List<Produto> filtrados(ProdutoFilter filter){
+	private Criteria criarCriteriosParaFiltro (ProdutoFilter filtro){
 		//Desempacotar Session do Hibernate e colocar na variável Session do Hibernate
 		Session session = manager.unwrap(Session.class);
 		
@@ -61,20 +60,51 @@ public class Produtos  implements Serializable{
 		 * Common Lang3 disponibiliza o StringUtils
 		 * Aqui está verificando se o parametro SKU não está em Branco
 		 */
-		if(StringUtils.isNotBlank(filter.getSku())){		
+		if(StringUtils.isNotBlank(filtro.getSku())){		
 		
 			//Adicionando restrição de igualdade com sku		
-		criteria.add(Restrictions.eq("sku", filter.getSku()));
+		criteria.add(Restrictions.eq("sku", filtro.getSku()));
 		}
 		
-		if(StringUtils.isNotBlank(filter.getNome())){
+		if(StringUtils.isNotBlank(filtro.getNome())){
 			//ilike é case "insensitive"			
 			//MatchMode é o %, que no caso será antes e depois
-			criteria.add(Restrictions.ilike("nome", filter.getNome(), MatchMode.ANYWHERE));
+			criteria.add(Restrictions.ilike("nome", filtro.getNome(), MatchMode.ANYWHERE));
 		}
 		
-		//Retornando todos os resultados ordenados por nome
-		return criteria.addOrder(Order.asc("nome")).list();
+		return criteria;
+	}
+	
+	
+	//Devido a diversidade, não foi usado JPQL, usado Criteria do Hibernate
+	
+	@SuppressWarnings("unchecked")
+	public List<Produto> filtrados(ProdutoFilter filter){
+			
+		Criteria criteria = criarCriteriosParaFiltro(filter);
+		
+		criteria.setFirstResult(filter.getPrimeiroRegistro());
+		criteria.setMaxResults(filter.getQuantidadeRegistros());
+		
+		if(filter.isAscendente() && filter.getPropriedadeOrdenacao() != null){
+			criteria.addOrder(Order.asc(filter.getPropriedadeOrdenacao()));
+		} else if(filter.getPropriedadeOrdenacao() !=null){
+			criteria.addOrder(Order.desc( filter.getPropriedadeOrdenacao()));
+		}		
+		
+		//Retornando todos os resultados ordenados 
+		return criteria.list();
+	}
+	
+	//Retorna a quantidade de linhas capturadas no banco
+	public int quantidadesFiltrados(ProdutoFilter filtro){
+		
+		Criteria criteria = criarCriteriosParaFiltro(filtro);
+		
+		criteria.setProjection(Projections.rowCount());
+		
+		return ((Number)  criteria.uniqueResult()).intValue();
+		
 	}
 
 	public Produto porID(Long id) {

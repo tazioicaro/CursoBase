@@ -46,9 +46,9 @@
 			
 
 			<p:dataTable id="produtosTable"
-				value="#{pesquisaProdutosBean.produtosFiltrados}" var="produto"	style="margin-top:20px" 
-				emptyMessage="Produto não encontrado" rows="13" paginator="true" paginatorAlwaysVisible="false"
-				paginatorPosition="bottom">
+				value="#{pesquisaProdutosBean.model}" var="produto"	style="margin-top:20px" 
+				emptyMessage="Produto não encontrado" rows="10" paginator="true" paginatorAlwaysVisible="false"
+				paginatorPosition="bottom" lazy="true">
 
 				<p:column style="text-align:center; width:100px" headerText="SKU">
 					<h:outputText value="#{produto.sku}" />
