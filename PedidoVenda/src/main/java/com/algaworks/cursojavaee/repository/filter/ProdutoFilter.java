@@ -23,7 +23,7 @@ public class ProdutoFilter  implements Serializable{
 	
 	
 	
-	@SKU
+
 	public String getSku() {
 		return sku;
 	}
