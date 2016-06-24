@@ -7,7 +7,16 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
+import org.apache.commons.digester.SetRootRule;
+import org.apache.commons.lang.StringUtils;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
+
 import com.algaworks.cursojavaee.model.Cliente;
+import com.algaworks.cursojavaee.repository.filter.ClienteFilter;
 import com.algaworks.cursojavaee.util.jpa.Transactional;
 
 public class Clientes implements Serializable{
@@ -53,6 +62,52 @@ public class Clientes implements Serializable{
 			
 		}
 		return null;
+	}
+
+	
+	private Criteria criarCriteriosParaFiltro(ClienteFilter filtro){
+		Session session = manager.unwrap(Session.class);
+		
+		Criteria criteria = session.createCriteria(Cliente.class);
+		
+		if (StringUtils.isNotBlank(filtro.getNome())){
+			criteria.add(Restrictions.ilike("nome", filtro.getNome()));
+		}
+		
+		if (StringUtils.isNotEmpty(filtro.getDocumntoReceitaFederal())){
+			criteria.add(Restrictions.eq("doc_receita_federal", filtro.getDocumntoReceitaFederal()));
+		}
+		
+		return criteria;
+		
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Cliente> filtrados(ClienteFilter filtro) {
+		
+		Criteria criteria = criarCriteriosParaFiltro(filtro);
+		
+		criteria.setFirstResult(filtro.getPrimeiroRegistro());
+		criteria.setMaxResults(filtro.getQuantidadeRegistros());
+		
+		if(filtro.isAscendente() && filtro.getPropriedadeOrdenacao() != null){
+			criteria.addOrder(Order.asc(filtro.getPropriedadeOrdenacao()));
+		}else if ( filtro.getPropriedadeOrdenacao() != null){
+			criteria.addOrder(Order.desc(filtro.getPropriedadeOrdenacao()));
+		}
+		
+	
+		return criteria.list();
+	}
+
+	public int quantidadeFiltrados(ClienteFilter filtro) {
+		
+		Criteria criteria = criarCriteriosParaFiltro(filtro);
+		
+		criteria.setProjection(Projections.rowCount());
+		
+	
+		return ((Number) criteria.uniqueResult()).intValue();
 	}
 
 }

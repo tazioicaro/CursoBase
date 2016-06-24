@@ -10,6 +10,13 @@ public class ClienteFilter implements Serializable {
 	private String email;
 	private String documntoReceitaFederal;
 	
+	private int primeiroRegistro;
+	private int quantidadeRegistros;
+	private String propriedadeOrdenacao;
+	private boolean ascendente;
+	
+	
+	
 	
 	//G&S
 	public String getEmail() {
@@ -30,7 +37,28 @@ public class ClienteFilter implements Serializable {
 	public void setDocumntoReceitaFederal(String documntoReceitaFederal) {
 		this.documntoReceitaFederal = documntoReceitaFederal;
 	}
-	
-	
-
+	public int getPrimeiroRegistro() {
+		return primeiroRegistro;
+	}
+	public void setPrimeiroRegistro(int primeiroRegistro) {
+		this.primeiroRegistro = primeiroRegistro;
+	}
+	public int getQuantidadeRegistros() {
+		return quantidadeRegistros;
+	}
+	public void setQuantidadeRegistros(int quantidadeRegistros) {
+		this.quantidadeRegistros = quantidadeRegistros;
+	}
+	public String getPropriedadeOrdenacao() {
+		return propriedadeOrdenacao;
+	}
+	public void setPropriedadeOrdenacao(String propriedadeOrdenacao) {
+		this.propriedadeOrdenacao = propriedadeOrdenacao;
+	}
+	public boolean isAscendente() {
+		return ascendente;
+	}
+	public void setAscendente(boolean ascendente) {
+		this.ascendente = ascendente;
+	}	
 }

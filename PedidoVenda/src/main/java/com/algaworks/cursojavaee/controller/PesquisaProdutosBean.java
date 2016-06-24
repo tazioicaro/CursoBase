@@ -31,6 +31,8 @@ public class PesquisaProdutosBean implements Serializable {
 	private Produtos produtos;
 	
 	private ProdutoFilter filtro;
+	
+	//Remover
     //private List<Produto> produtosFiltrados;
 	private LazyDataModel<Produto> model;
 	
