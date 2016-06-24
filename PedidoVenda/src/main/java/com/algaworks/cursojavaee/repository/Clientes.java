@@ -7,7 +7,6 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
-import org.apache.commons.digester.SetRootRule;
 import org.apache.commons.lang.StringUtils;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -37,13 +36,15 @@ public class Clientes implements Serializable{
 	 * Assim é possível fazer um filtro 
 	 */
 	public List<Cliente> porNome (String nome){
-		return this.manager.createQuery("from Cliente where upper(nome) like :nome", Cliente.class)
+		return this.manager.createQuery("from Cliente where upper(nome)like =:nome", Cliente.class)
 				.setParameter("nome", nome.toUpperCase() + "%").getResultList();
 	}
 	
 	public Cliente consultarNome (String nome){
-		try {return this.manager.createQuery("from Cliente where upper(nome) :nome", Cliente.class)
-				.setParameter("nome", nome.toUpperCase() + "%").getSingleResult();} catch (NoResultException e){
+		try {
+			return this.manager.createQuery("from Cliente where lower(nome) =:nome", Cliente.class)
+				.setParameter("nome", nome.toLowerCase()).getSingleResult();
+			} catch (NoResultException e){
 					
 				}
 		return null;
@@ -56,9 +57,19 @@ public class Clientes implements Serializable{
 
 	public Cliente porEmail(String email) {
 		try{
-			return this.manager.createQuery("from Cliente where upper(email) :email", Cliente.class)
+			return this.manager.createQuery("from Cliente where upper(email) =:email", Cliente.class)
 					.setParameter("email", email.toUpperCase()).getSingleResult();
 		}catch (NoResultException e) {
+			
+		}
+		return null;
+	}
+	
+	public Cliente porDocumntoReceitaFederal(String documntoReceitaFederal){
+		try{
+			return this.manager.createQuery("from Cliente where lower(doc_receita_federal) =:doc", Cliente.class)
+					.setParameter("doc", documntoReceitaFederal.toLowerCase()).getSingleResult();
+		}catch(NoResultException e){
 			
 		}
 		return null;

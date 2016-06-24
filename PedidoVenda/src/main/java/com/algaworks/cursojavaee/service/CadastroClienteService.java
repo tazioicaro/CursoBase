@@ -19,16 +19,20 @@ public class CadastroClienteService implements Serializable {
 	
 		Cliente usuarioExistenteNome = clientes.consultarNome(cliente.getNome());
 		Cliente usuarioExistenteEmail = clientes.porEmail(cliente.getEmail());
+		Cliente usuarioExistenteDoc = clientes.porDocumntoReceitaFederal(cliente.getDocumntoReceitaFederal());
 		
-		if(usuarioExistenteNome!=null && usuarioExistenteNome.equals(cliente) )
+		if(usuarioExistenteNome!=null && usuarioExistenteNome.getNome().equals(cliente.getNome()) )
 				{
 			throw new NegocioException("Já existe um usuário com o nome informado!");
-		} else if  (usuarioExistenteEmail!=null && usuarioExistenteEmail.equals(cliente)){
+		} if  (usuarioExistenteEmail!=null && usuarioExistenteEmail.getEmail().equals(cliente.getEmail())){
 			
-			throw new NegocioException("Já existe um usuário com o email informado!");
+			throw new NegocioException("Já existe um usuário com o e-mail informado!");
+		}if (usuarioExistenteDoc !=null && usuarioExistenteDoc.getDocumntoReceitaFederal().equals(cliente.getDocumntoReceitaFederal())){
+			//Incluir um if para personalizar mensagem de cpf e cnpj
+			throw new NegocioException("Já existe um cliente com o Documento de identitificação informado");
 		}
-		
-		return clientes.guardar(cliente);
+		cliente = this.clientes.guardar(cliente);
+		return cliente;
 	}
 
 }

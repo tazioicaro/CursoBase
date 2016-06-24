@@ -29,7 +29,7 @@ public class Produtos  implements Serializable{
 	@Inject
 	private EntityManager manager;
 
-	@Transactional
+	//@Transactional
 	public Produto guardar(Produto produto) {	
 	 
 		return manager.merge(produto);	
