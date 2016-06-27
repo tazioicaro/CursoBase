@@ -29,7 +29,7 @@ public class CadastroClienteService implements Serializable {
 			throw new NegocioException("Já existe um usuário com o e-mail informado!");
 		}if (usuarioExistenteDoc !=null && usuarioExistenteDoc.getDocumntoReceitaFederal().equals(cliente.getDocumntoReceitaFederal())){
 			//Incluir um if para personalizar mensagem de cpf e cnpj
-			throw new NegocioException("Já existe um cliente com o Documento de identitificação informado");
+			throw new NegocioException("Já existe um cliente com o Documento de identitificação informado, consulte a lista de clientes!");
 		}
 		cliente = this.clientes.guardar(cliente);
 		return cliente;

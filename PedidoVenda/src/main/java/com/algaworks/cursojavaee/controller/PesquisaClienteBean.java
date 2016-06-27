@@ -15,6 +15,8 @@ import com.algaworks.cursojavaee.model.Cliente;
 import com.algaworks.cursojavaee.model.Usuario;
 import com.algaworks.cursojavaee.repository.Clientes;
 import com.algaworks.cursojavaee.repository.filter.ClienteFilter;
+import com.algaworks.cursojavaee.service.NegocioException;
+import com.algaworks.cursojavaee.util.jsf.FacesUtil;
 
 @Named
 @ViewScoped
@@ -26,7 +28,7 @@ public class PesquisaClienteBean implements Serializable {
 	
 	private LazyDataModel<Cliente> model;
 	
-	private Usuario usuarioFiltrado;
+	private Cliente clienteSelecionado;
 
 	private ClienteFilter filtro;
 	
@@ -58,14 +60,25 @@ public class PesquisaClienteBean implements Serializable {
 		};
 	}
 	
+	public void excluir(){
+		
+		try{
+			clientes.removerCliente(clienteSelecionado);
+			FacesUtil.addInforMessage("O usuário " + clienteSelecionado.getNome() + " excluído com sucesso!");  
+		}catch(NegocioException ne){
+			FacesUtil.addErrorMessage(ne.getMessage());
+		}
+		
+	}
+	
 	//G&S
 	
-	public Usuario getUsuarioFiltrado() {
-		return usuarioFiltrado;
+	public Cliente getClienteSelecionado() {
+		return clienteSelecionado;
 	}
 
-	public void setUsuarioFiltrado(Usuario usuarioFiltrado) {
-		this.usuarioFiltrado = usuarioFiltrado;
+	public void setClienteSelecionado(Cliente clienteSelecionado) {
+		this.clienteSelecionado = clienteSelecionado;
 	}
 
 	public LazyDataModel<Cliente> getModel() {

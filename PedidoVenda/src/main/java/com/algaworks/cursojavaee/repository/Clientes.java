@@ -121,4 +121,9 @@ public class Clientes implements Serializable{
 		return ((Number) criteria.uniqueResult()).intValue();
 	}
 
+	public void removerCliente(Cliente clienteSelecionado) {
+		manager.remove(clienteSelecionado);
+		
+	}
+
 }

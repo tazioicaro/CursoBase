@@ -50,8 +50,8 @@
 			</p:panelGrid>
 			
 			<p:dataTable id="usuariosTable" value="#{pesquisaUsuariosBean.usuariosFiltrados}" var="usuario"
-			style="margin-top:20px" emptyMessage="Usuarionão encontrado" rows="13" paginator="true" 
-			paginatorAlwaysVisible="false"	paginatorPosition="bottom">
+			style="margin-top:20px" emptyMessage="Usuario(s) não encontrado" rows="10" paginator="true" 
+			paginatorAlwaysVisible="false"	paginatorPosition="bottom" lazy="true">
 			
 			<p:column headerText="Nome" style="text-align: center; width: 100px" sortBy="#{usuario.nome}">
 			<h:outputText value="#{usuario.nome}"/>

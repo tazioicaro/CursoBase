@@ -32,7 +32,7 @@
 
 			</p:toolbar>
 			<p:panelGrid columns="2" id="painel"
-				style="width:100%; margin-top:20px" columnClasses="rotulo, campo">
+				style="width:100%; margin-top:20px" columnClasses="rotuloP, campoP">
 				<p:outputLabel value="SKU" for="sku" />
 				<p:inputText id="sku" size="20"
 					value="#{pesquisaProdutosBean.filtro.sku}" />
@@ -84,7 +84,7 @@
 					 :frmPesquisa:produtosTable" action="#{pesquisaProdutosBean.excluir}"
 					 validateClient="true">
 						<p:confirm header="Exclusão de Produto"
-							message="Tem certeza que deseja excluir o produto #{pesquisaProdutosBean.produtoSelecionado.sku}?"
+							message="Tem certeza que deseja excluir o produto #{produto.nome}?"
 							icon="ui-icon-alert" />
 						<f:setPropertyActionListener value="#{produto}"
 							target="#{pesquisaProdutosBean.produtoSelecionado}" />
