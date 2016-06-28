@@ -49,11 +49,9 @@
 
 			</p:panelGrid>
 
-			<p:dataTable id="clientesTable" value="#{pesquisaClienteBean.model}"
-				var="cliente" style="margin-top:20px"
-				emptyMessage="Nenhum usuário não encontrado" rows="10"
-				paginator="true" paginatorAlwaysVisible="false"
-				paginatorPosition="bottom" lazy="true">
+			<p:dataTable id="clientesTable" value="#{pesquisaClienteBean.model}" 
+			var="cliente" style="margin-top:20px" emptyMessage="Nenhum usuário não encontrado" rows="10"
+				paginator="true" paginatorAlwaysVisible="false" 	paginatorPosition="bottom" lazy="true">
 
 				<p:column style="text-align:center; width:100px" headerText="Nome">
 					<h:outputText value="#{cliente.nome}" />

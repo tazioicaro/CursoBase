@@ -6,9 +6,11 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui">
-
+	
+	
+<div accesskey="layout-menu-cover">
 	<ui:define name="titulo">#{cadastroProdutoBean.editando ? 'Edição de produto' : 'Novo Produto'}</ui:define>
-
+</div>
 	<ui:define name="corpo">
 
 
@@ -61,6 +63,7 @@
 				style="width:100%; margin-top:20px" columnClasses="rotulo, campo">
 				<p:outputLabel value="SKU" for="sku" />
 				<p:columnGroup >
+				
 				<p:inputText id="sku" size="20" maxlength="20"
 					value="#{cadastroProdutoBean.produto.sku}" >					
 					<p:clientValidator event="keyup" />

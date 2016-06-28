@@ -32,14 +32,16 @@ public class CadastroClienteBean implements Serializable {
 	
 	
 	public CadastroClienteBean() {
-		super();
-		cliente = new Cliente();
-		cpf = false; 
-		 cnpj = false; 
-		 radio = null;
+		limpar();
+		
 	}
 	
-	
+	//Adicionar um inicalizar para que possa haver a edição do Usuário	
+		public void inicializar() {
+			if (this.cliente == null) {
+				
+			}
+		}
 
 	public void cadastrar(){
 		try{
@@ -78,13 +80,7 @@ public class CadastroClienteBean implements Serializable {
 	}
 	
 	
-	//Adicionar um inicalizar para que possa haver a edição do Usuário	
-	public void inicializar() {
-		if (this.cliente == null) {
-			limpar();
-		}
-	}
-	
+		
 	//Exibir na tela os enuns
 	
 	public TipoPessoa[] getTipoPessoa(){
@@ -96,18 +92,11 @@ public class CadastroClienteBean implements Serializable {
 		cliente = new Cliente();
 		 cpf = false; 
 		 cnpj = false; 
-		 radio= null;
+		 radio= null;	
 	}
 
-	public Cliente getCliente() {
-		return cliente;
-	}
+	
 
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-	
-	
 	public boolean isEditando(){
 		return this.cliente.getId() !=null;
 	}
@@ -131,8 +120,17 @@ public class CadastroClienteBean implements Serializable {
 	public void setCpf(boolean cpf) {
 		this.cpf = cpf;
 	}
+	
+	
+	//G&S
+	public Cliente getCliente() {
+		return cliente;
+	}
 
-
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+		
 
 	public HtmlSelectOneRadio getRadio() {
 		return radio;
@@ -143,9 +141,6 @@ public class CadastroClienteBean implements Serializable {
 	public void setRadio(HtmlSelectOneRadio radio) {
 		this.radio = radio;
 	}
-	
-	
-	
 	
 
 }

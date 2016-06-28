@@ -7,7 +7,6 @@ import javax.faces.convert.FacesConverter;
 import javax.inject.Inject;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.poi.util.StringUtil;
 
 import com.algaworks.cursojavaee.model.Cliente;
 import com.algaworks.cursojavaee.repository.Clientes;

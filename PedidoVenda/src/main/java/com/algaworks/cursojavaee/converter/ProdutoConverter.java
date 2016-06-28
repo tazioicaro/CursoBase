@@ -4,22 +4,22 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
+import javax.inject.Inject;
 
 import com.algaworks.cursojavaee.model.Produto;
 import com.algaworks.cursojavaee.repository.Produtos;
-import com.algaworks.cursojavaee.util.cdi.CDIServiceLocator;
 
 @FacesConverter(forClass=Produto.class)
 public class ProdutoConverter implements Converter {
 
-	//@Inject Verificar na versão Mojarra 2.3 pronta o funcionamento do  Inject
+	@Inject 
 	private Produtos produtos;
 	
 	//Para driblar a falta do Inject
-	public ProdutoConverter() {
-		produtos = CDIServiceLocator.getBean(Produtos.class);
-	}
-	
+//	public ProdutoConverter() {
+//		produtos = CDIServiceLocator.getBean(Produtos.class);
+//	}
+//	
 	
 	//Trabalhando com ID como referencia
 	@Override
