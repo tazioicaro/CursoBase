@@ -69,7 +69,7 @@
 						itemValue="#{tipoPessoa}" />
 
 					<p:ajax event="change" update="exibir exibirNome"
-						ignoreAutoUpdate="false" process="@this"
+						ignoreAutoUpdate="true" process="@this"
 						listener="#{cadastroClienteBean.carregarInputDocumentoIdentificacao}" />
 
 				</p:selectOneRadio>
