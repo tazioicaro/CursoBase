@@ -93,8 +93,8 @@ public class CadastroClienteBean implements Serializable {
 				&& isMaiorZero()) {
 			this.cpf = true;
 			this.cnpj = false;
-		} else if (isMaiorZero()
-				&& this.cliente.getDocumntoReceitaFederal().length()> 14) {
+		} else if (this.cliente.getDocumntoReceitaFederal().length()> 14 && 
+				isMaiorZero()) {
 			this.cpf = false;
 			this.cnpj = true;
 		}
