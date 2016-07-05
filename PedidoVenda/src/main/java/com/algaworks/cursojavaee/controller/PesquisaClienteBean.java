@@ -12,7 +12,6 @@ import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.SortOrder;
 
 import com.algaworks.cursojavaee.model.Cliente;
-import com.algaworks.cursojavaee.model.Usuario;
 import com.algaworks.cursojavaee.repository.Clientes;
 import com.algaworks.cursojavaee.repository.filter.ClienteFilter;
 import com.algaworks.cursojavaee.service.NegocioException;

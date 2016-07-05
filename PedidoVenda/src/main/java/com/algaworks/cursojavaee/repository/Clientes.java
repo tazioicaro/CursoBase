@@ -50,11 +50,7 @@ public class Clientes implements Serializable{
 		return null;
 	}
 	
-	@Transactional
-	public Cliente guardar (Cliente cliente){
-		return manager.merge(cliente);
-	}
-
+	
 	public Cliente porEmail(String email) {
 		try{
 			return this.manager.createQuery("from Cliente where upper(email) =:email", Cliente.class)
@@ -119,6 +115,11 @@ public class Clientes implements Serializable{
 		
 	
 		return ((Number) criteria.uniqueResult()).intValue();
+	}
+	
+	@Transactional
+	public Cliente guardar (Cliente cliente){
+		return manager.merge(cliente);
 	}
 
 	public void removerCliente(Cliente clienteSelecionado) {

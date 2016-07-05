@@ -10,6 +10,7 @@ import javax.persistence.NoResultException;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
 import com.algaworks.cursojavaee.model.Usuario;
@@ -63,6 +64,12 @@ public class Usuarios implements Serializable {
 		return this.manager.merge(usuario);
 	}
 	
+public void removerUsuario(Usuario usuarioSelecionado){
+		
+		manager.remove(usuarioSelecionado);
+	}
+
+	
 	
 	private Criteria criarCriteriaParaFiltro (UsuarioFilter filtro){
 		
@@ -89,4 +96,11 @@ public class Usuarios implements Serializable {
 		return criteria.list();
 	}
 
+	public int quantidadesFiltrados(UsuarioFilter filtro) {
+		Criteria criteria = criarCriteriaParaFiltro(filtro);
+		criteria.setProjection(Projections.rowCount());
+		return ((Number) criteria.uniqueResult()).intValue();
+	}
+	
+	
 }

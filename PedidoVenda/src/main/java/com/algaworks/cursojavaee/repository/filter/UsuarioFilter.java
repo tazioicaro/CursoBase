@@ -13,7 +13,10 @@ public class UsuarioFilter implements Serializable {
 	private String nome;
 	private List<Grupo>grupos;
 	
-	
+	private int primeiroRegistro;
+	private int qtdeRegistros;
+	private String propriedadeOrdenacao;
+	private boolean ascendente;
 	
 	
 	//G&S
@@ -30,5 +33,31 @@ public class UsuarioFilter implements Serializable {
 	public void setGrupos(List<Grupo> grupos) {
 		this.grupos = grupos;
 	}
+	public int getPrimeiroRegistro() {
+		return primeiroRegistro;
+	}
+	public void setPrimeiroRegistro(int primeiroRegistro) {
+		this.primeiroRegistro = primeiroRegistro;
+	}
+	public int getQtdeRegistros() {
+		return qtdeRegistros;
+	}
+	public void setQtdeRegistros(int qtdeRegistros) {
+		this.qtdeRegistros = qtdeRegistros;
+	}
+	public String getPropriedadeOrdenacao() {
+		return propriedadeOrdenacao;
+	}
+	public void setPropriedadeOrdenacao(String propriedadeOrdenacao) {
+		this.propriedadeOrdenacao = propriedadeOrdenacao;
+	}
+	public boolean isAscendente() {
+		return ascendente;
+	}
+	public void setAscendente(boolean ascendente) {
+		this.ascendente = ascendente;
+	}
+	
+	
 
 }
