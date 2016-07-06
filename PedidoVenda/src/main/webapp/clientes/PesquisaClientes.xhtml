@@ -51,13 +51,13 @@
 
 			<p:dataTable id="clientesTable" value="#{pesquisaClienteBean.model}" 
 			var="cliente" style="margin-top:20px" emptyMessage="Nenhum usuário não encontrado" rows="10"
-				paginator="true" paginatorAlwaysVisible="false" 	paginatorPosition="bottom" lazy="true">
+				paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom" lazy="true" >
 
-				<p:column style="text-align:center; width:100px" headerText="Nome">
+				<p:column style="text-align:center; width:100px" headerText="Nome" sortBy="#{cliente.nome}">
 					<h:outputText value="#{cliente.nome}" />
 				</p:column>
 
-				<p:column style="text-align:center; width:100px" headerText="E-mail">
+				<p:column style="text-align:center; width:100px" headerText="E-mail" sortBy="#{cliente.email}">
 					<h:outputText value="#{cliente.email}" />
 				</p:column>
 
@@ -88,12 +88,10 @@
 			</p:dataTable>
 
 			<p:confirmDialog global="true" id="confirmacaoExDlg">
-				<p:button value="Não" icon="ui-icon-close"
-					styleClass="ui-confirmdialog-no"
+				<p:button value="Não" icon="ui-icon-close" 	styleClass="ui-confirmdialog-no"
 					update=":frmPesquisa:clientesTable" />
 				<p:commandButton type="button" value="Sim" icon="ui-icon-check"
-					styleClass="ui-confirmdialog-yes" process="@this"
-					update=":frmPesquisa:clientesTable" />
+					styleClass="ui-confirmdialog-yes" process="@this" update=":frmPesquisa:clientesTable" />
 			</p:confirmDialog>
 
 		</h:form>

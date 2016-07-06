@@ -3,6 +3,7 @@ package com.algaworks.cursojavaee.controller;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.view.ViewScoped;
@@ -22,25 +23,24 @@ import com.algaworks.cursojavaee.util.jsf.FacesUtil;
 public class CadastroUsuarioBean implements Serializable {	
 	private static final long serialVersionUID = 1L;
 	
-
-	private Usuario usuario;
-	private List<Grupo> listaGrupos = null;
-	private GeradorSenha geradorSenha;
-	
 	@Inject
 	private CadastroUsuarioService cadastroUsuarioService;
+	
+	private Usuario usuario;
+	private List<Grupo> listaGrupos;
+	private GeradorSenha geradorSenha;
+	
+
 	
 	@Inject
     private Grupos repositorioGrupos;
 	
 		
 
-	public CadastroUsuarioBean() {
-		super();
+	public CadastroUsuarioBean() {	
 		limpar();
 		
 	}
-	
 
 	
 	public void inicializar() {
@@ -53,14 +53,8 @@ public class CadastroUsuarioBean implements Serializable {
 	
 	
 
-	public void cadastrar(){
-		
-//		for (Grupo grupos : this.usuario.getGrupos()){
-//			
-//			System.out.println("Grupos selecionados: " + grupos.getDescricao());
-//			
-//		}
-		
+	public void cadastrar(){		
+
 		
 		try{	
 			this.usuario.setSenha(geradorSenha.geradorHash((this.usuario.getSenha())));
@@ -83,6 +77,7 @@ public class CadastroUsuarioBean implements Serializable {
 	
 	public void limpar(){
 		usuario = new Usuario();
+		listaGrupos = new ArrayList<Grupo>();
 		geradorSenha = new GeradorSenha();
 	
 	}

@@ -10,6 +10,7 @@ import javax.persistence.NoResultException;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
@@ -92,7 +93,15 @@ public void removerUsuario(Usuario usuarioSelecionado){
 	@SuppressWarnings("unchecked")
 	public List<Usuario> filtrados(UsuarioFilter filtro) {
 		
-		Criteria criteria = criarCriteriaParaFiltro(filtro);	
+		Criteria criteria = criarCriteriaParaFiltro(filtro);
+		criteria.setFirstResult(filtro.getPrimeiroRegistro());
+		criteria.setMaxResults(filtro.getQtdeRegistros());
+		
+		if(filtro.isAscendente() && filtro.getPropriedadeOrdenacao() != null){
+			criteria.addOrder(Order.asc(filtro.getPropriedadeOrdenacao()));
+		}else if(filtro.getPropriedadeOrdenacao() !=null){
+			criteria.addOrder(Order.desc(filtro.getPropriedadeOrdenacao()));
+		}
 		return criteria.list();
 	}
 

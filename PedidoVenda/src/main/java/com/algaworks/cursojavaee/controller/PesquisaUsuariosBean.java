@@ -26,13 +26,12 @@ public class PesquisaUsuariosBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Inject 
-	private Usuarios usuarios;
-	
+	private Usuarios usuarios;	
 	@Inject
 	private Grupos grupos;
 	
 	private UsuarioFilter filtro;
-	//private List<Usuario> usuariosFiltrados;	
+	
     private Usuario usuarioSelecionado;
     
     private LazyDataModel<Usuario> model;
@@ -62,10 +61,6 @@ public class PesquisaUsuariosBean implements Serializable {
     		
     	};
     }
-    
-//    public void pesquisar(){
-//    	usuariosFiltrados = usuarios.filtrados(filtro);
-//    }
     
     
     public List<Grupo> getLitaGrupos(){
@@ -102,20 +97,8 @@ public class PesquisaUsuariosBean implements Serializable {
 		this.usuarioSelecionado = usuarioSelecionado;
 	}
 
-//	public List<Usuario> getUsuariosFiltrados() {
-//		return usuariosFiltrados;
-//	}
-//
-//	public void setUsuariosFiltrados(List<Usuario> usuariosFiltrados) {
-//		this.usuariosFiltrados = usuariosFiltrados;
-//	}
-
 	public LazyDataModel<Usuario> getModel() {
 		return model;
-	}
-
-	public void setModel(LazyDataModel<Usuario> model) {
-		this.model = model;
 	}
 
 }
