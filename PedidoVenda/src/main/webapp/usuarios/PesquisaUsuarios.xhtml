@@ -22,9 +22,9 @@
 
 			<p:toolbar style="margin-top:20px">
 				<p:toolbarGroup>
-				
+
 					<p:commandButton value="Pesquisar" update="@form" />
-					
+
 				</p:toolbarGroup>
 
 				<p:toolbarGroup align="right">
@@ -55,16 +55,33 @@
 				paginatorAlwaysVisible="false" paginatorPosition="bottom"
 				lazy="true">
 
-				<p:column headerText="Nome" style="text-align: center; width: 100px"
+				<p:column headerText="Nome" style="text-align: center; width: 80px"
 					sortBy="#{usuario.nome}">
 					<h:outputText value="#{usuario.nome}" />
 				</p:column>
 				<p:column headerText="E-mail"
-					style="text-align: center; width: 100px" sortBy="#{usuario.email}">
+					style="text-align: center; width: 70px" sortBy="#{usuario.email}">
 					<h:outputText value="#{usuario.email}" />
 				</p:column>
 
-				<p:column style="width:100px; text-align:center">
+				<p:column headerText="Permissão"
+					style="text-align: center; width: 110px">
+					<p:columnGroup>
+
+						<p:dataGrid columns="3" value="#{usuario.grupos}"
+							emptyMessage="Usuários sem permissões" var="uso" layout="grid">
+							<p:column>
+								<h:outputText value="#{uso.nome}" />
+							</p:column>		
+
+
+						</p:dataGrid >
+
+					</p:columnGroup>
+
+				</p:column>
+
+				<p:column style="width:20px; text-align:center">
 					<p:button icon="ui-icon-pencil" title="Editar"
 						outcome="/usuarios/CadastroUsuario">
 						<f:param name="usuario" value="#{usuario.id}" />
