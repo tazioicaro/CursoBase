@@ -36,6 +36,12 @@ public class Cliente  implements Serializable{
 	@Column(nullable= false)
 	private String email;
 	
+	@Column (nullable=true, length = 11)
+	private String telefone;
+	
+	@Column (nullable=true, length = 6)
+	private String ramal;	
+	
 	@Column(name="doc_receita_federal", nullable=false, length=14)
 	private String documntoReceitaFederal;
 	
@@ -48,6 +54,17 @@ public class Cliente  implements Serializable{
 	@OneToMany(mappedBy="cliente", cascade= CascadeType.ALL) //Quando salvar o cliente, Persisitir o seu endereço 
 	private List<Endereco> enderecos = new ArrayList<>();
 	
+		
+	@Transient
+	public boolean isCPF(){
+		return TipoPessoa.FISICA.equals(this.tipo);
+	}
+	
+	@Transient
+	public boolean isCNPJ(){
+		return TipoPessoa.JURIDICA.equals(this.tipo);
+	}
+		
 	//G&S	
 	public Long getId() {
 		return id;
@@ -84,17 +101,21 @@ public class Cliente  implements Serializable{
 	}
 	public void setEnderecos(List<Endereco> enderecos) {
 		this.enderecos = enderecos;
+	}	
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}	
+	public String getRamal() {
+		return ramal;
+	}
+	public void setRamal(String ramal) {
+		this.ramal = ramal;
 	}
 	
-	@Transient
-	public boolean isCPF(){
-		return TipoPessoa.FISICA.equals(this.tipo);
-	}
 	
-	@Transient
-	public boolean isCNPJ(){
-		return TipoPessoa.JURIDICA.equals(this.tipo);
-	}
 	
 	@Override
 	public int hashCode() {
@@ -120,4 +141,5 @@ public class Cliente  implements Serializable{
 			return false;
 		return true;
 	}
+	
 }

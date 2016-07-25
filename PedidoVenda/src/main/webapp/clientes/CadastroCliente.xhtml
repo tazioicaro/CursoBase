@@ -59,8 +59,17 @@
 				<p:outputLabel value="E-mail " for="email" />
 				<p:inputText id="email" size="80" maxlength="80"
 					value="#{cadastroClienteBean.cliente.email}" />
+					
+					<p:outputLabel value="Telefone " for="telefone"/>				
+				<p:inputText id="telefone" size="40" maxlength="14"
+				 value="#{cadastroClienteBean.cliente.telefone}"/>
+				 
+				 <p:outputLabel value="Ramal " for="ramal"/>				
+				<p:inputText id="ramal" size="20" maxlength="8"
+				 value="#{cadastroClienteBean.cliente.ramal}"/>		
+				
 
-				<p:outputLabel value="Pessoa ou Jurídica " for="pessoa" />
+				<p:outputLabel value="Pessoa ou Jurídica " for="pessoa" />				
 				<p:selectOneRadio value="#{cadastroClienteBean.cliente.tipo}"
 					id="pessoa" valueChangeListener="#{cadastroClienteBean.pegarDadosEscolhido}"
 					styleClass="ui-selectonemenu-label ui-inputfield ui-corner-all" >
@@ -87,6 +96,8 @@
 						value="#{cadastroClienteBean.cliente.documntoReceitaFederal}"
 						rendered="#{cadastroClienteBean.cnpj}" />
 				</p:outputPanel>
+				
+				 
 			</p:panelGrid> 			
 		</h:form>
 	</ui:define>

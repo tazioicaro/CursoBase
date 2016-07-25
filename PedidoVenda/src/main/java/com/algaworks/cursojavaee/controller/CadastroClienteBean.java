@@ -89,6 +89,7 @@ public class CadastroClienteBean implements Serializable {
 	}
 
 	public boolean isEditando() {
+		if (cliente.getId() != null){
 		if (this.cliente.getDocumntoReceitaFederal().length() <= 14
 				&& isMaiorZero()) {
 			this.cpf = true;
@@ -98,7 +99,10 @@ public class CadastroClienteBean implements Serializable {
 			this.cpf = false;
 			this.cnpj = true;
 		}
-		return this.cliente.getId() != null;
+		
+		return true;
+	}
+		return false;
 	}	
 
 	public boolean isMaiorZero() {

@@ -53,20 +53,30 @@
 			var="cliente" style="margin-top:20px" emptyMessage="Nenhum usuário não encontrado" rows="10"
 				paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom" lazy="true" >
 
-				<p:column style="text-align:center; width:100px" headerText="Nome" sortBy="#{cliente.nome}">
+				<p:column style="text-align:center; width:110px" headerText="Nome" sortBy="#{cliente.nome}">
 					<h:outputText value="#{cliente.nome}" />
 				</p:column>
 
-				<p:column style="text-align:center; width:100px" headerText="E-mail" sortBy="#{cliente.email}">
+				<p:column style="text-align:center; width:80px" headerText="E-mail" sortBy="#{cliente.email}">
 					<h:outputText value="#{cliente.email}" />
 				</p:column>
 
-				<p:column style="text-align:center; width:100px"
+				<p:column style="text-align:center; width:50px"
 					headerText="Identificação">
 					<h:outputText value="#{cliente.documntoReceitaFederal}" />
 				</p:column>
+				
+				<p:column style="text-align:center; width:40px"
+					headerText="Telefone">
+					<h:outputText value="#{cliente.telefone}" />
+				</p:column>
+				
+					<p:column style="text-align:center; width:20px"
+					headerText="Ramal">
+					<h:outputText value="#{cliente.ramal}" />
+				</p:column>
 
-				<p:column style="width:100px; text-align:center">
+				<p:column style="width:30px; text-align:center" headerText="Opções">
 
 					<p:button icon="ui-icon-pencil" title="Editar"
 						outcome="/clientes/CadastroCliente">
