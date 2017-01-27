@@ -14,7 +14,7 @@
 
 	<dependencies>
 
-		<!-- Prime Faces 5.3 -->
+		<!-- Prime Faces 5.3  há versão 6-->
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
@@ -22,7 +22,7 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- JSF MOJARRA 2.2 -->
+		<!-- JSF MOJARRA 2.2  há versão 14-->
 		<dependency>
 			<groupId>org.glassfish</groupId>
 			<artifactId>javax.faces</artifactId>
@@ -41,7 +41,7 @@
 
 
 
-		<!-- Wel (Implementação do CDI) -->
+		<!-- Wel (Implementação do CDI)  há nova versão-->
 		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet</artifactId>
