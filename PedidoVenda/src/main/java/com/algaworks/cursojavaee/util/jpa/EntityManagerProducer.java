@@ -13,22 +13,25 @@ import javax.persistence.Persistence;
  */
 @ApplicationScoped
 public class EntityManagerProducer {
-	
+
 	private EntityManagerFactory factory;
 
-	public EntityManagerProducer() {	
-		 factory= Persistence.createEntityManagerFactory("PedidoPU");
+	public EntityManagerProducer() {
+		factory = Persistence.createEntityManagerFactory("PedidoPU");
 
 	}
-	//Um Entitymanager produzido pelo método tem um escopo de requisição
-	@Produces @RequestScoped
-	public EntityManager createEntityManager(){		
+
+	// Um Entitymanager produzido pelo método tem um escopo de requisição
+	@Produces
+	@RequestScoped
+	public EntityManager createEntityManager() {
 		return factory.createEntityManager();
-		
+
 	}
-	
-	// Quando finalizar a requisição o @Disposes será executado para fechar o entityM
-	public void closeEntityManager(@Disposes EntityManager manager){
+
+	// Quando finalizar a requisição o @Disposes será executado para fechar o
+	// entityM
+	public void closeEntityManager(@Disposes EntityManager manager) {
 		manager.close();
 	}
 }

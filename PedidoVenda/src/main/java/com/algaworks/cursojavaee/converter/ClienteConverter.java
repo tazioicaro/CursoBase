@@ -28,24 +28,20 @@ public class ClienteConverter implements Converter {
 	//Trabalhando com ID como referencia
 	@Override
 	public Object getAsObject(FacesContext context, UIComponent component, String value) {
-         Cliente retorno = null;
-		
-         if(StringUtils.isNotEmpty(value)){
-        	 
-        	 Long id = new Long(value);
-        	 retorno =  this.clientes.porID(id);
-         }
+		Cliente retorno = null;
+
+		if (value != null) {
+			retorno = this.clientes.porID(new Long(value));
+		}
+
 		return retorno;
 	}
 
-	
-	//Recebe Objeto e retorna String
 	@Override
 	public String getAsString(FacesContext context, UIComponent component, Object value) {
-	if(value != null){
-		Cliente cliente = (Cliente)value;
-		return cliente.getId() == null ? null : cliente.getId().toString();
-	}
+		if (value != null) {
+			return ((Cliente) value).getId().toString();
+		}
 		return "";
 	}
 

@@ -20,22 +20,19 @@ public class UsuarioConverter implements Converter {
 	@Override
 	public Object getAsObject(FacesContext context, UIComponent component, String value) {
 		Usuario retorno = null;
-		
+
 		if (StringUtils.isNotEmpty(value)) {
-			Long id = new Long(value);
-			retorno = usuarios.porID(id);
+			retorno = this.usuarios.porID(new Long(value));
 		}
-		
+
 		return retorno;
 	}
 
 	@Override
 	public String getAsString(FacesContext context, UIComponent component, Object value) {
 		if (value != null) {
-			Usuario usuario = (Usuario) value;
-			return usuario.getId() == null ? null : usuario.getId().toString();
+			return ((Usuario) value).getId().toString();
 		}
-		
 		return "";
 	}
 

@@ -31,6 +31,7 @@ public class CadastroClienteService implements Serializable {
 			//Incluir um if para personalizar mensagem de cpf e cnpj
 			throw new NegocioException("Já existe um cliente com o Documento de identitificação informado, consulte a lista de clientes!");
 		}
+		
 		cliente = this.clientes.guardar(cliente);
 		return cliente;
 	}

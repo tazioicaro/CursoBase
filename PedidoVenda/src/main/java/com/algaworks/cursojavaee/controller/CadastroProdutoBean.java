@@ -42,17 +42,13 @@ public class CadastroProdutoBean implements Serializable {
 		limpar();
 	}
 	
-		
-	
 	public void inicializar() {
-		if (this.produto == null) {
-			limpar();
-		}
-		
-		categoriasRaizes = categorias.raizes();
-		
-		if (this.categoriaPai != null) {
-			carregarSubcategorias();
+		if (FacesUtil.isNotPostBack()) {
+			categoriasRaizes = categorias.raizes();
+			
+			if (this.categoriaPai != null) {
+				carregarSubcategorias();
+			}
 		}
 	}
 	

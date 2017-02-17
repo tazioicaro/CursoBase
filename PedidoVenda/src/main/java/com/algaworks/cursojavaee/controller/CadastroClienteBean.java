@@ -36,8 +36,11 @@ public class CadastroClienteBean implements Serializable {
 	// Adicionar um inicalizar para que possa haver a edição do Usuário
 	public void inicializar() {
 		if (this.cliente == null) {
+			
+			limpar();
 
 		}
+		
 	}
 
 	public void cadastrar() {

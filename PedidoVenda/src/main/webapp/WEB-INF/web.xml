@@ -23,22 +23,28 @@
 	</servlet-mapping>
 
 
-	<context-param>
-		<param-name>primefaces.skin</param-name>
-		<param-value>none</param-value>
-	</context-param>
 
 	<!-- <context-param> <param-name>primefaces.THEME</param-name> <param-value>bootstrap</param-value> 
 		</context-param> -->
 <!-- Ativando a validação no lado do cliente -->
+
+
+
+
 	<context-param>
 		<param-name>primefaces.CLIENT_SIDE_VALIDATION</param-name>
 		<param-value>true</param-value>
 	</context-param>
+	
 	<context-param>
 		<param-name>javax.faces.FACELETS_REFRESH_PERIOD</param-name>
 		<param-value>0</param-value>
 	</context-param>
+	
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/Erro.xhtml</location>
+	</error-page>
 
 
 
